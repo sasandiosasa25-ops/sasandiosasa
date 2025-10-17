@@ -7,6 +7,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import Hero from '@/components/Hero';
+import Services from '@/components/Services';
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -97,7 +99,7 @@ export default function HomePage() {
   const destinations = [
     {
       name: 'Serengeti',
-      image: '/serengeti.jpg',
+      image: '/serengeti1.jpeg',
       description: language === 'en' 
         ? 'Vast plains where sky and earth meet in endless openness'
         : 'Weite Ebenen, wo Himmel und Erde sich in endloser Offenheit treffen',
@@ -177,177 +179,12 @@ export default function HomePage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-stone-900 flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-stone-900/95 via-stone-800/90 to-stone-900/95" />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 z-10 w-full">
-          <div className="max-w-6xl">
-            <div className="mb-16">
-              <div className="inline-block border border-white/20 px-8 py-3 mb-12">
-                <span className="text-white/70 font-medium text-sm tracking-[0.2em] uppercase">{t.experienceTanzania}</span>
-              </div>
-              
-              <h1 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-black text-white mb-6 leading-[0.85] tracking-tighter">
-                {t.heroTitle}
-              </h1>
-              
-              <p className="text-2xl md:text-3xl text-stone-400 mb-16 leading-relaxed font-light max-w-3xl">
-                {t.heroSubtitle}
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 mb-16">
-                <Button asChild size="lg" className="group bg-stone-100 text-stone-900 hover:bg-white px-12 py-7 text-xl transform hover:scale-105 transition-all duration-300">
-                  <Link href="/destinations">
-                    <span className="flex items-center">
-                      {t.exploreDestinations}
-                      <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="group border-2 border-white/30 bg-transparent text-white hover:bg-white/10 px-12 py-7 text-xl">
-                  <Link href="/language-learning">
-                    <span className="flex items-center">
-                      {t.languagePrograms}
-                      <BookOpen className="ml-3 h-6 w-6 group-hover:rotate-12 transition-transform" />
-                    </span>
-                  </Link>
-                </Button>
-              </div>
-              
-              <div className="flex gap-16 pt-12 border-t border-white/10">
-                <div>
-                  <div className="text-5xl font-black text-white mb-1">15+</div>
-                  <div className="text-stone-500 font-medium tracking-wide text-sm">{t.years}</div>
-                </div>
-                <div>
-                  <div className="text-5xl font-black text-white mb-1">500+</div>
-                  <div className="text-stone-500 font-medium tracking-wide text-sm">{t.travelers}</div>
-                </div>
-                <div>
-                  <div className="text-5xl font-black text-white mb-1">12</div>
-                  <div className="text-stone-500 font-medium tracking-wide text-sm">{t.destinations}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+ <Hero />
 
-      {/* About Section */}
-      <section className="py-32 bg-stone-50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-20">
-              <div className="inline-block border border-stone-300 px-6 py-2 mb-8">
-                <span className="text-stone-600 font-medium text-xs tracking-[0.2em] uppercase">{t.ourPhilosophy}</span>
-              </div>
-              
-              <h2 className="text-[4rem] md:text-[6rem] font-black text-stone-900 mb-12 leading-[0.9] tracking-tighter">
-                {t.sustainableTravel}
-              </h2>
-              
-              <div className="space-y-6 text-stone-700 text-lg leading-relaxed font-light">
-                <p>{t.philosophyText1}</p>
-                <p>{t.philosophyText2}</p>
-              </div>
-            </div>
-
-            {/* Mission & Vision Grid */}
-            <div className="grid md:grid-cols-2 gap-12 mt-20">
-              <div className="border-l-2 border-stone-900 pl-8">
-                <div className="flex items-center mb-6">
-                  <Target className="h-8 w-8 text-stone-900 mr-4" strokeWidth={1.5} />
-                  <h3 className="text-3xl font-black text-stone-900 tracking-tight">
-                    {t.mission}
-                  </h3>
-                </div>
-                <p className="text-stone-700 font-light leading-relaxed text-lg">
-                  {t.missionText}
-                </p>
-              </div>
-
-              <div className="border-l-2 border-stone-900 pl-8">
-                <div className="flex items-center mb-6">
-                  <Eye className="h-8 w-8 text-stone-900 mr-4" strokeWidth={1.5} />
-                  <h3 className="text-3xl font-black text-stone-900 tracking-tight">
-                    {t.vision}
-                  </h3>
-                </div>
-                <p className="text-stone-700 font-light leading-relaxed text-lg">
-                  {t.visionText}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+ 
 
       {/* Services Section */}
-      <section className="py-32 bg-stone-900 text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="mb-20">
-            <div className="inline-block border border-white/20 px-6 py-2 mb-8">
-              <span className="text-white/70 font-medium text-xs tracking-[0.2em] uppercase">{t.whatWeOffer}</span>
-            </div>
-            
-            <h2 className="text-[4rem] md:text-[6rem] font-black mb-8 leading-[0.9] tracking-tighter">
-              {t.experiences}
-            </h2>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Tours Card */}
-            <Card className="group bg-stone-800 border-2 border-stone-700 hover:border-stone-500 transition-all duration-500 overflow-hidden">
-              <CardHeader className="p-12">
-                <div className="bg-white w-16 h-16 flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-500">
-                  <MapPin className="h-8 w-8 text-stone-900" strokeWidth={1.5} />
-                </div>
-                <CardTitle className="text-5xl text-white mb-6 font-black leading-tight tracking-tight">
-                  {t.culturalSafaris}
-                </CardTitle>
-                <CardDescription className="text-xl text-stone-400 leading-relaxed font-light">
-                  {t.culturalSafarisDesc}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="p-12 pt-0">
-                <Button asChild className="group/btn bg-white hover:bg-stone-100 text-stone-900 px-10 py-6 text-lg transform hover:scale-105 transition-all duration-300">
-                  <Link href="/destinations">
-                    <span className="flex items-center">
-                      {t.explore}
-                      <ArrowRight className="ml-3 h-6 w-6 group-hover/btn:translate-x-1 transition-transform" />
-                    </span>
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Language Learning Card */}
-            <Card className="group bg-stone-800 border-2 border-stone-700 hover:border-stone-500 transition-all duration-500 overflow-hidden">
-              <CardHeader className="p-12">
-                <div className="bg-white w-16 h-16 flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-500">
-                  <BookOpen className="h-8 w-8 text-stone-900" strokeWidth={1.5} />
-                </div>
-                <CardTitle className="text-5xl text-white mb-6 font-black leading-tight tracking-tight">
-                  {t.languageProgramsTitle}
-                </CardTitle>
-                <CardDescription className="text-xl text-stone-400 leading-relaxed font-light">
-                  {t.languageProgramsDesc}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="p-12 pt-0">
-                <Button asChild className="group/btn bg-white hover:bg-stone-100 text-stone-900 px-10 py-6 text-lg transform hover:scale-105 transition-all duration-300">
-                  <Link href="/language-learning">
-                    <span className="flex items-center">
-                      {t.learnMore}
-                      <ArrowRight className="ml-3 h-6 w-6 group-hover/btn:translate-x-1 transition-transform" />
-                    </span>
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+  <Services /> 
 
       {/* Destinations Grid */}
       <section className="py-32 bg-stone-50 relative overflow-hidden">
