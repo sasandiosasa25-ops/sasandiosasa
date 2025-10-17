@@ -1,13 +1,15 @@
 'use client';
 
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function DestinationsGrid() {
   const { language } = useLanguage();
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const translations = {
     en: {
@@ -78,64 +80,96 @@ export default function DestinationsGrid() {
   ];
 
   return (
-    <section className="py-32 bg-stone-50 relative overflow-hidden">
+    <section className="py-24 sm:py-32 md:py-40 bg-gradient-to-b from-white via-brand-menu-hover to-white relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-border to-transparent" />
+      <div className="absolute top-20 -right-40 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-40 -left-40 w-96 h-96 bg-brand-secondary/5 rounded-full blur-3xl" />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="mb-20">
-          <div className="inline-block border border-stone-300 px-6 py-2 mb-8">
-            <span className="text-stone-600 font-medium text-xs tracking-[0.2em] uppercase">{t.featured}</span>
+        <div className="mb-20 text-center">
+          <div className="inline-block border-2 border-brand-primary/30 bg-white/80 backdrop-blur-sm px-6 sm:px-8 py-3 mb-8 sm:mb-10 rounded-full shadow-sm">
+            <span className="text-brand-heading/70 font-semibold text-xs tracking-[0.25em] uppercase">{t.featured}</span>
           </div>
           
-          <h2 className="text-[2rem] md:text-[6rem] font-black text-stone-900 mb-8 leading-[0.9] tracking-tighter">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 leading-[0.9] tracking-tighter bg-gradient-to-br from-brand-primary via-brand-heading to-brand-secondary bg-clip-text text-transparent">
             {t.destinationsTitle}
           </h2>
-          <p className="text-xl text-stone-600 max-w-3xl font-light">
+          
+          {/* Decorative underline */}
+          <div className="flex justify-center mb-8">
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-brand-primary to-transparent rounded-full" />
+          </div>
+          
+          <p className="text-lg sm:text-xl text-brand-heading/70 max-w-3xl mx-auto leading-relaxed">
             {t.destinationsDesc}
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
           {destinations.map((destination, index) => (
-            <div key={index} className="group cursor-pointer">
-              <div className="relative overflow-hidden bg-stone-200 aspect-[3/4] mb-6 group-hover:shadow-2xl transition-all duration-700">
+            <Link 
+              href="/destinations"
+              key={index} 
+              className="group cursor-pointer"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <div className="relative overflow-hidden bg-brand-border aspect-[3/4] mb-6 rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-700">
                 {/* Image */}
                 <Image
                   src={destination.image}
                   alt={destination.name}
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
                 />
                 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-stone-900/60 group-hover:bg-stone-900/40 transition-all duration-700 z-10" />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-heading via-brand-heading/60 to-transparent opacity-80 group-hover:opacity-70 transition-opacity duration-700 z-10" />
                 
-                {/* Highlight Badge */}
+                {/* Highlight Badge with icon */}
                 <div className="absolute top-6 left-6 z-20">
-                  <span className="bg-white text-stone-900 px-4 py-2 text-xs font-bold tracking-wider uppercase">
-                    {destination.highlight}
-                  </span>
+                  <div className="flex items-center gap-2 bg-brand-primary text-white px-4 py-2.5 rounded-full shadow-lg">
+                    <MapPin className="w-3.5 h-3.5" />
+                    <span className="text-xs font-bold tracking-wider uppercase">
+                      {destination.highlight}
+                    </span>
+                  </div>
                 </div>
+                
+                {/* Corner accent - animates on hover */}
+                <div className={`absolute top-0 right-0 w-24 h-24 bg-brand-primary/20 rounded-bl-full transition-all duration-500 ${hoveredIndex === index ? 'scale-150 opacity-100' : 'scale-100 opacity-0'}`} />
                 
                 {/* Destination Info */}
-                <div className="absolute bottom-8 left-8 right-8 z-20">
-                  <h3 className="text-4xl font-black text-white mb-3 leading-tight tracking-tight">
+                <div className="absolute bottom-0 left-0 right-0 p-8 z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <h3 className="text-4xl font-black text-white mb-3 leading-tight tracking-tight group-hover:text-brand-menu-hover transition-colors duration-300">
                     {destination.name}
                   </h3>
-                  <p className="text-stone-300 text-base font-light leading-relaxed">
+                  <p className="text-white/90 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                     {destination.description}
                   </p>
+                  
+                  {/* Animated underline */}
+                  <div className="mt-4 h-1 bg-brand-primary rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         
         <div className="text-center mt-20">
-          <Button asChild size="lg" className="bg-stone-900 hover:bg-stone-800 text-white px-16 py-8 text-xl transform hover:scale-105 transition-all duration-300">
+          <Button 
+            asChild 
+            size="lg" 
+            className="group/btn relative bg-brand-primary hover:bg-brand-secondary text-white px-14 sm:px-16 py-7 sm:py-8 text-lg sm:text-xl font-semibold transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl rounded-lg overflow-hidden"
+          >
             <Link href="/destinations">
-              <span className="flex items-center">
+              {/* Shine effect */}
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover/btn:translate-x-[200%] transition-transform duration-700" />
+              <span className="relative flex items-center">
                 {t.viewAllDestinations}
-                <ArrowRight className="ml-4 h-6 w-6" />
+                <ArrowRight className="ml-4 h-5 w-5 sm:h-6 sm:w-6 group-hover/btn:translate-x-2 transition-transform duration-300" />
               </span>
             </Link>
           </Button>
