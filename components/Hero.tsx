@@ -65,37 +65,32 @@ export default function Hero() {
   const t = translations[language];
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen bg-stone-900 flex items-center overflow-hidden">
-      <video
-        ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover"
-        loop
-        muted={false}
-        playsInline
-        preload="auto"
-      >
-        <source src="/pro1.mp4" type="video/mp4" />
-      </video>
-      
-      <div className="absolute inset-0 bg-gradient-to-b from-stone-900/50 via-stone-800/40 to-stone-900/50" />
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 z-10 w-full">
-        <div className="max-w-6xl">
-          <div className="mb-16">
-            <div className="inline-block border border-white/20 px-8 py-3 mb-12">
-              <span className="text-white/70 font-medium text-sm tracking-[0.2em] uppercase">{t.experienceTanzania}</span>
-            </div>
-            
-            <h1 className="text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[14rem] font-black md:font-black sm:font-extrabold font-bold text-white mb-6 leading-[0.85] tracking-tighter">
-              {t.heroTitle}
-            </h1>
-            
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-stone-400 mb-16 leading-relaxed font-light max-w-3xl">
-              {t.heroSubtitle}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 mb-16">
-              <Button asChild size="lg" className="group bg-stone-100 text-stone-900 hover:bg-white px-8 sm:px-12 py-6 sm:py-7 text-lg sm:text-xl transform hover:scale-105 transition-all duration-300">
+    <>
+      {/* Video Section - Full screen, no overlay, no text */}
+      <section ref={sectionRef} className="relative min-h-screen bg-stone-900 overflow-hidden">
+        <video
+          ref={videoRef}
+          className="w-full h-screen object-cover"
+          loop
+          muted={false}
+          playsInline
+          preload="auto"
+        >
+          <source src="/pro1.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      {/* Content Section - Below Video with Brand Theme */}
+      <section className="relative bg-brand-menu-hover py-20 sm:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
+              <Button 
+                asChild 
+                size="lg" 
+                className="group bg-brand-primary text-white hover:bg-brand-secondary px-8 sm:px-12 py-6 sm:py-7 text-lg sm:text-xl transform hover:scale-105 transition-all duration-300 shadow-lg"
+              >
                 <Link href="/paths">
                   <span className="flex items-center">
                     {t.explorePaths}
@@ -103,7 +98,12 @@ export default function Hero() {
                   </span>
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="group border-2 border-white/30 bg-transparent text-white hover:bg-white/10 px-8 sm:px-12 py-6 sm:py-7 text-lg sm:text-xl">
+              <Button 
+                asChild 
+                variant="outline" 
+                size="lg" 
+                className="group border-2 border-brand-primary bg-transparent text-brand-primary hover:bg-brand-primary hover:text-white px-8 sm:px-12 py-6 sm:py-7 text-lg sm:text-xl transition-all duration-300"
+              >
                 <Link href="/experience">
                   <span className="flex items-center">
                     {t.ourExperiences}
@@ -113,23 +113,24 @@ export default function Hero() {
               </Button>
             </div>
             
-            <div className="flex gap-8 sm:gap-16 pt-12 border-t border-white/10">
+            {/* Stats */}
+            <div className="flex justify-center gap-12 sm:gap-20 pt-12 border-t border-brand-border">
               <div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold sm:font-black text-white mb-1">15+</div>
-                <div className="text-stone-500 font-medium tracking-wide text-xs sm:text-sm">{t.years}</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-2">15+</div>
+                <div className="text-brand-heading/60 font-medium tracking-wide text-sm sm:text-base uppercase">{t.years}</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold sm:font-black text-white mb-1">500+</div>
-                <div className="text-stone-500 font-medium tracking-wide text-xs sm:text-sm">{t.travelers}</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-2">500+</div>
+                <div className="text-brand-heading/60 font-medium tracking-wide text-sm sm:text-base uppercase">{t.travelers}</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold sm:font-black text-white mb-1">12</div>
-                <div className="text-stone-500 font-medium tracking-wide text-xs sm:text-sm">{t.destinations}</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-2">12</div>
+                <div className="text-brand-heading/60 font-medium tracking-wide text-sm sm:text-base uppercase">{t.destinations}</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

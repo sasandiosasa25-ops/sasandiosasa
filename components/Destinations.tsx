@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function DestinationsGrid() {
   const { language } = useLanguage();
@@ -84,7 +85,7 @@ export default function DestinationsGrid() {
             <span className="text-stone-600 font-medium text-xs tracking-[0.2em] uppercase">{t.featured}</span>
           </div>
           
-          <h2 className="text-[3rem] md:text-[6rem] font-black text-stone-900 mb-8 leading-[0.9] tracking-tighter">
+          <h2 className="text-[2rem] md:text-[6rem] font-black text-stone-900 mb-8 leading-[0.9] tracking-tighter">
             {t.destinationsTitle}
           </h2>
           <p className="text-xl text-stone-600 max-w-3xl font-light">
@@ -96,15 +97,27 @@ export default function DestinationsGrid() {
           {destinations.map((destination, index) => (
             <div key={index} className="group cursor-pointer">
               <div className="relative overflow-hidden bg-stone-200 aspect-[3/4] mb-6 group-hover:shadow-2xl transition-all duration-700">
-                <div className="absolute inset-0 bg-stone-900/60 group-hover:bg-stone-900/40 transition-all duration-700" />
+                {/* Image */}
+                <Image
+                  src={destination.image}
+                  alt={destination.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                />
                 
-                <div className="absolute top-6 left-6">
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-stone-900/60 group-hover:bg-stone-900/40 transition-all duration-700 z-10" />
+                
+                {/* Highlight Badge */}
+                <div className="absolute top-6 left-6 z-20">
                   <span className="bg-white text-stone-900 px-4 py-2 text-xs font-bold tracking-wider uppercase">
                     {destination.highlight}
                   </span>
                 </div>
                 
-                <div className="absolute bottom-8 left-8 right-8">
+                {/* Destination Info */}
+                <div className="absolute bottom-8 left-8 right-8 z-20">
                   <h3 className="text-4xl font-black text-white mb-3 leading-tight tracking-tight">
                     {destination.name}
                   </h3>

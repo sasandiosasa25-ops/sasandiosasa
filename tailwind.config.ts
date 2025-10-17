@@ -20,6 +20,16 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
+        // Custom brand colors
+        brand: {
+          primary: '#c3512f',      // Primary color for links
+          secondary: '#883d1f',    // Secondary color for link and button hover
+          heading: '#382410',      // Heading color
+          border: '#ebe8e2',       // Border colors
+          'menu-hover': '#f8f6f2', // Alternate background menu hover
+        },
+        
+        // Existing shadcn/ui colors
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
