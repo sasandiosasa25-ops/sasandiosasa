@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, MapPin, Users, BookOpen, Star, Sparkles, Globe, Award, Compass, Heart, Camera, Eye, Target } from 'lucide-react';
+import { ArrowRight, MapPin, Users, BookOpen, Star, Globe, Award, Compass, Heart, Camera, Eye, Target, Mountain, Waves, Bird, Trees } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,111 +9,223 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 export default function HomePage() {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
+
+  const translations = {
+    en: {
+      experienceTanzania: 'Experience Tanzania',
+      heroTitle: 'TANZANIA',
+      heroSubtitle: 'Where vast landscapes meet profound stillness',
+      exploreDestinations: 'Explore Destinations',
+      languagePrograms: 'Language Programs',
+      years: 'YEARS',
+      travelers: 'TRAVELERS',
+      destinations: 'DESTINATIONS',
+      ourPhilosophy: 'Our Philosophy',
+      sustainableTravel: 'SUSTAINABLE TRAVEL',
+      philosophyText1: 'Our approach aligns with the UN Sustainable Development Goals, creating journeys that restore balance, promote education, and strengthen communities through fair partnerships.',
+      philosophyText2: 'Every experience is designed with conscious use of resources, respect for nature as our teacher, and collaboration that connects guests and communities in meaningful ways.',
+      mission: 'MISSION',
+      missionText: 'Creating journeys that restore balance, resilience, and shared strength in life. We design experiences where learning is woven into every step.',
+      vision: 'VISION',
+      visionText: 'Building strong collaborations that connect guests, communities, and global impact through responsible travel and meaningful partnerships.',
+      whatWeOffer: 'What We Offer',
+      experiences: 'EXPERIENCES',
+      culturalSafaris: 'Cultural Safaris',
+      culturalSafarisDesc: 'Explore Tanzania\'s vast wilderness, from the Serengeti\'s endless plains to ancient baobabs in Tarangire, discovering nature\'s raw beauty and timeless rhythm.',
+      explore: 'Explore',
+      languageProgramsTitle: 'Language Programs',
+      languageProgramsDesc: 'Learn English or German through immersive programs with native speakers, combining education with cultural practice and real-world conversation.',
+      learnMore: 'Learn More',
+      featured: 'Featured',
+      destinationsTitle: 'DESTINATIONS',
+      destinationsDesc: 'Explore landscapes shaped by time, where nature writes in bold lines and every view reminds us of beauty\'s power and fragility.',
+      viewAllDestinations: 'View All Destinations',
+      testimonials: 'Testimonials',
+      travelersTitle: 'TRAVELERS',
+      startYourJourney: 'Start Your Journey',
+      beginHere: 'BEGIN HERE',
+      ctaText: 'Join travelers who have discovered Tanzania\'s profound beauty through experiences that balance adventure, education, and sustainable impact.',
+      contactUs: 'Contact Us',
+      viewDestinations: 'View Destinations',
+      rating: 'RATING',
+      awardWinning: 'AWARD WINNING',
+    },
+    de: {
+      experienceTanzania: 'Erleben Sie Tansania',
+      heroTitle: 'TANSANIA',
+      heroSubtitle: 'Wo weite Landschaften auf tiefe Stille treffen',
+      exploreDestinations: 'Reiseziele Erkunden',
+      languagePrograms: 'Sprachprogramme',
+      years: 'JAHRE',
+      travelers: 'REISENDE',
+      destinations: 'REISEZIELE',
+      ourPhilosophy: 'Unsere Philosophie',
+      sustainableTravel: 'NACHHALTIGES REISEN',
+      philosophyText1: 'Unser Ansatz orientiert sich an den UN-Zielen für nachhaltige Entwicklung und schafft Reisen, die Gleichgewicht wiederherstellen, Bildung fördern und Gemeinschaften durch faire Partnerschaften stärken.',
+      philosophyText2: 'Jede Erfahrung wird mit bewusstem Ressourceneinsatz, Respekt vor der Natur als unserer Lehrerin und Zusammenarbeit gestaltet, die Gäste und Gemeinschaften auf sinnvolle Weise verbindet.',
+      mission: 'MISSION',
+      missionText: 'Reisen schaffen, die Gleichgewicht, Widerstandsfähigkeit und gemeinsame Stärke im Leben wiederherstellen. Wir gestalten Erlebnisse, bei denen Lernen in jeden Schritt eingewoben ist.',
+      vision: 'VISION',
+      visionText: 'Starke Kooperationen aufbauen, die Gäste, Gemeinschaften und globale Wirkung durch verantwortungsvolles Reisen und bedeutungsvolle Partnerschaften verbinden.',
+      whatWeOffer: 'Was Wir Anbieten',
+      experiences: 'ERLEBNISSE',
+      culturalSafaris: 'Kultur-Safaris',
+      culturalSafarisDesc: 'Erkunden Sie Tansanias weite Wildnis, von den endlosen Ebenen der Serengeti bis zu den uralten Baobabs in Tarangire, und entdecken Sie die raue Schönheit und zeitlose Rhythmus der Natur.',
+      explore: 'Erkunden',
+      languageProgramsTitle: 'Sprachprogramme',
+      languageProgramsDesc: 'Lernen Sie Englisch oder Deutsch durch immersive Programme mit Muttersprachlern, die Bildung mit kultureller Praxis und realen Gesprächen verbinden.',
+      learnMore: 'Mehr Erfahren',
+      featured: 'Ausgewählt',
+      destinationsTitle: 'REISEZIELE',
+      destinationsDesc: 'Erkunden Sie von der Zeit geformte Landschaften, wo die Natur in kühnen Linien schreibt und jede Aussicht uns an die Kraft und Zerbrechlichkeit der Schönheit erinnert.',
+      viewAllDestinations: 'Alle Reiseziele Ansehen',
+      testimonials: 'Erfahrungsberichte',
+      travelersTitle: 'REISENDE',
+      startYourJourney: 'Beginnen Sie Ihre Reise',
+      beginHere: 'HIER BEGINNEN',
+      ctaText: 'Schließen Sie sich Reisenden an, die Tansanias tiefgreifende Schönheit durch Erlebnisse entdeckt haben, die Abenteuer, Bildung und nachhaltige Wirkung in Einklang bringen.',
+      contactUs: 'Kontaktieren Sie Uns',
+      viewDestinations: 'Reiseziele Ansehen',
+      rating: 'BEWERTUNG',
+      awardWinning: 'PREISGEKRÖNT',
+    }
+  };
+
+  const t = translations[language];
 
   const destinations = [
     {
-      name: 'Stone Town',
-      image: '/st1.jpg',
-      description: 'UNESCO World Heritage Site',
-      highlight: 'Historic',
-      gradient: 'from-amber-500 to-orange-600'
+      name: 'Serengeti',
+      image: '/serengeti.jpg',
+      description: language === 'en' 
+        ? 'Vast plains where sky and earth meet in endless openness'
+        : 'Weite Ebenen, wo Himmel und Erde sich in endloser Offenheit treffen',
+      highlight: language === 'en' ? 'Wilderness' : 'Wildnis',
     },
     {
-      name: 'Nungwi Beach',
-      image: '/nungwi1.jpg',
-      description: 'Pristine white sand beaches',
-      highlight: 'Paradise',
-      gradient: 'from-sky-500 to-blue-600'
+      name: 'Lake Victoria',
+      image: '/victoria.jpg',
+      description: language === 'en'
+        ? 'Africa\'s largest lake alive with rhythm and life'
+        : 'Afrikas größter See voller Rhythmus und Leben',
+      highlight: language === 'en' ? 'Lakeside' : 'Seeufer',
     },
     {
-      name: 'Spice Farms',
-      image: '/spice1.jpg',
-      description: 'Aromatic spice plantations',
-      highlight: 'Authentic',
-      gradient: 'from-emerald-500 to-green-600'
+      name: 'Tarangire',
+      image: '/tarangire.jpg',
+      description: language === 'en'
+        ? 'Land of giants with ancient baobabs and elephant herds'
+        : 'Land der Riesen mit uralten Baobabs und Elefantenherden',
+      highlight: language === 'en' ? 'Wildlife' : 'Tierwelt',
     },
+    {
+      name: 'Lake Natron',
+      image: '/natron.jpg',
+      description: language === 'en'
+        ? 'Dramatic waters watched over by the Mountain of God'
+        : 'Dramatische Gewässer, bewacht vom Berg Gottes',
+      highlight: language === 'en' ? 'Volcanic' : 'Vulkanisch',
+    },
+    {
+      name: 'Arusha',
+      image: '/arusha.jpg',
+      description: language === 'en'
+        ? 'City in motion where tradition meets modern life'
+        : 'Stadt in Bewegung, wo Tradition auf modernes Leben trifft',
+      highlight: language === 'en' ? 'Gateway' : 'Tor',
+    },
+    {
+      name: 'Selous',
+      image: '/selous.jpg',
+      description: language === 'en'
+        ? 'Wilderness at its most powerful and untamed'
+        : 'Wildnis in ihrer mächtigsten und ungezähmtesten Form',
+      highlight: language === 'en' ? 'Reserve' : 'Reservat',
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      country: language === 'en' ? "United Kingdom" : "Vereinigtes Königreich",
+      text: language === 'en'
+        ? "The Serengeti exceeded every expectation. The vastness, the wildlife, the profound silence—it changed how I see the world."
+        : "Die Serengeti übertraf jede Erwartung. Die Weite, die Tierwelt, die tiefe Stille – es veränderte meine Sicht auf die Welt.",
+      rating: 5,
+    },
+    {
+      name: "Klaus Müller",
+      country: language === 'en' ? "Germany" : "Deutschland", 
+      text: language === 'en'
+        ? "Learning with local guides while experiencing Tanzania's landscapes was transformative. A perfect blend of education and adventure."
+        : "Mit lokalen Guides zu lernen und gleichzeitig Tansanias Landschaften zu erleben, war transformativ. Eine perfekte Mischung aus Bildung und Abenteuer.",
+      rating: 5,
+    },
+    {
+      name: "Emma Chen",
+      country: language === 'en' ? "Australia" : "Australien",
+      text: language === 'en'
+        ? "From Lake Natron's dramatic beauty to Tarangire's ancient baobabs—every destination told a unique story. Unforgettable."
+        : "Von Lake Natrons dramatischer Schönheit bis zu Tarangires uralten Baobabs – jedes Reiseziel erzählte eine einzigartige Geschichte. Unvergesslich.",
+      rating: 5,
+    }
   ];
 
   return (
     <>
       <Navigation />
       
-      {/* Hero Section with Advanced Parallax */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-emerald-900 flex items-center overflow-hidden">
-        {/* Dynamic Background Elements */}
-  <div className="absolute inset-0">
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="absolute inset-0 w-full h-full object-cover opacity-15"
-    >
-      <source src="/zanz.mp4" type="video/mp4" />
-      {/* Fallback to image if video fails */}
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  {/* Dynamic Background Elements */}
-  <div className="absolute inset-0">
-    <div className="absolute top-20 left-10 w-[500px] h-[500px] bg-gradient-to-br from-orange-500/30 to-pink-500/30 rounded-full blur-3xl animate-pulse" />
-    <div className="absolute bottom-20 right-10 w-[400px] h-[400px] bg-gradient-to-br from-emerald-500/30 to-cyan-500/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}} />
-    <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] bg-gradient-to-br from-sky-500/20 to-blue-500/20 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}} />
-  </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 z-10">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div className="mb-12">
-              {/* Hero Badge */}
-              <div className="inline-flex items-center bg-white/10 backdrop-blur-xl rounded-full px-8 py-4 mb-8 border border-white/20 shadow-2xl">
-                <Sparkles className="w-6 h-6 text-orange-400 mr-3 animate-spin" style={{animationDuration: '3s'}} />
-                <span className="text-white/90 font-semibold text-lg">Experience Authentic Zanzibar</span>
+      {/* Hero Section */}
+      <section className="relative min-h-screen bg-stone-900 flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-900/95 via-stone-800/90 to-stone-900/95" />
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 z-10 w-full">
+          <div className="max-w-6xl">
+            <div className="mb-16">
+              <div className="inline-block border border-white/20 px-8 py-3 mb-12">
+                <span className="text-white/70 font-medium text-sm tracking-[0.2em] uppercase">{t.experienceTanzania}</span>
               </div>
               
-              {/* Main Title */}
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-10 leading-none tracking-tight">
-                <span className="block bg-gradient-to-r from-white via-sky-200 to-emerald-300 bg-clip-text text-transparent drop-shadow-2xl">
-                  Discover Zanzibar
-                </span>
+              <h1 className="text-[6rem] md:text-[10rem] lg:text-[14rem] font-black text-white mb-6 leading-[0.85] tracking-tighter">
+                {t.heroTitle}
               </h1>
               
-              {/* Subtitle */}
-             
+              <p className="text-2xl md:text-3xl text-stone-400 mb-16 leading-relaxed font-light max-w-3xl">
+                {t.heroSubtitle}
+              </p>
               
-              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-6 mb-16">
-                <Button asChild size="lg" className="group bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white px-12 py-6 text-xl rounded-2xl shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 border border-white/20">
-                  <Link href="/tours">
+                <Button asChild size="lg" className="group bg-stone-100 text-stone-900 hover:bg-white px-12 py-7 text-xl transform hover:scale-105 transition-all duration-300">
+                  <Link href="/destinations">
                     <span className="flex items-center">
-                      Explore Tours
+                      {t.exploreDestinations}
                       <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="group border-2 border-white/40 bg-white/10 backdrop-blur-xl text-white hover:bg-white/20 hover:border-white/60 px-12 py-6 text-xl rounded-2xl shadow-xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-500">
+                <Button asChild variant="outline" size="lg" className="group border-2 border-white/30 bg-transparent text-white hover:bg-white/10 px-12 py-7 text-xl">
                   <Link href="/language-learning">
                     <span className="flex items-center">
-                      Learn Swahili
+                      {t.languagePrograms}
                       <BookOpen className="ml-3 h-6 w-6 group-hover:rotate-12 transition-transform" />
                     </span>
                   </Link>
                 </Button>
               </div>
               
-              {/* Stats */}
-              <div className="flex flex-wrap gap-8 opacity-90 justify-center">
-                <div className="text-center backdrop-blur-sm bg-white/10 rounded-2xl px-6 py-4 border border-white/20">
-                  <div className="text-3xl font-black text-white">500+</div>
-                  <div className="text-sky-200 font-medium">Happy Travelers</div>
+              <div className="flex gap-16 pt-12 border-t border-white/10">
+                <div>
+                  <div className="text-5xl font-black text-white mb-1">15+</div>
+                  <div className="text-stone-500 font-medium tracking-wide text-sm">{t.years}</div>
                 </div>
-                <div className="text-center backdrop-blur-sm bg-white/10 rounded-2xl px-6 py-4 border border-white/20">
-                  <div className="text-3xl font-black text-white">15+</div>
-                  <div className="text-sky-200 font-medium">Years Experience</div>
+                <div>
+                  <div className="text-5xl font-black text-white mb-1">500+</div>
+                  <div className="text-stone-500 font-medium tracking-wide text-sm">{t.travelers}</div>
                 </div>
-                <div className="text-center backdrop-blur-sm bg-white/10 rounded-2xl px-6 py-4 border border-white/20">
-                  <div className="text-3xl font-black text-white">50+</div>
-                  <div className="text-sky-200 font-medium">Cultural Sites</div>
+                <div>
+                  <div className="text-5xl font-black text-white mb-1">12</div>
+                  <div className="text-stone-500 font-medium tracking-wide text-sm">{t.destinations}</div>
                 </div>
               </div>
             </div>
@@ -121,197 +233,87 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Welcome Section with Modern Design */}
-      <section className="py-32 bg-gradient-to-br from-slate-50 via-white to-sky-50 relative overflow-hidden">
-        {/* Advanced Background Patterns */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-sky-200/30 to-emerald-200/30 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-orange-200/30 to-pink-200/30 rounded-full blur-3xl" />
-          <div className="absolute top-1/3 right-10 w-[400px] h-[400px] bg-gradient-to-br from-emerald-300/20 to-sky-300/20 rounded-full blur-2xl" />
-        </div>
-        
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-20 animate-bounce">
-          <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-500 rounded-full opacity-60 shadow-xl" />
-        </div>
-        <div className="absolute bottom-32 right-32 animate-bounce" style={{animationDelay: '1.5s'}}>
-          <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-green-500 rounded-2xl rotate-45 opacity-50 shadow-lg" />
-        </div>
-        
+      {/* About Section */}
+      <section className="py-32 bg-stone-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center">
-          {/* Icon Badge */}
-          <div className="inline-flex items-center justify-center p-6 bg-gradient-to-br from-sky-500 via-sky-600 to-emerald-600 rounded-3xl mb-12 shadow-2xl transform hover:scale-110 transition-transform duration-300">
-            <Globe className="w-10 h-10 text-white animate-spin" style={{animationDuration: '8s'}} />
-          </div>
-          
-          <div className="space-y-12">
-            {/* Founder Message */}
-            <div>
-              <h3 className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-sky-600 via-emerald-600 to-orange-600 bg-clip-text mb-8 tracking-tight">
-                Message from Our Founder
-              </h3>
+          <div className="max-w-5xl mx-auto">
+            <div className="mb-20">
+              <div className="inline-block border border-stone-300 px-6 py-2 mb-8">
+                <span className="text-stone-600 font-medium text-xs tracking-[0.2em] uppercase">{t.ourPhilosophy}</span>
+              </div>
               
-              <div className="glass-strong rounded-4xl p-10 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 bg-white/90 backdrop-blur-xl border-2 border-sky-100">
-                <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8 mb-8">
-                  <div className="relative group">
-                    <div className="absolute -inset-2 bg-gradient-to-r from-sky-400 via-emerald-400 to-orange-400 rounded-3xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                    <img
-                      src="/munuo.png"
-                      alt="Munuo - Founder & Managing Director"
-                      className="relative w-32 h-32 md:w-40 md:h-40 rounded-3xl object-cover shadow-2xl ring-4 ring-white transform group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-full border-4 border-white flex items-center justify-center shadow-xl">
-                      <MapPin className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  
-                  <div className="text-center md:text-left flex-1">
-                    <p className="text-2xl md:text-3xl font-black text-slate-800 mb-2">
-                      Davis Munuo
-                    </p>
-                    <p className="text-base md:text-lg font-bold text-transparent bg-gradient-to-r from-sky-600 to-emerald-600 bg-clip-text uppercase tracking-wider mb-3">
-                      Founder & Managing Director
-                    </p>
-                    <div className="flex flex-wrap justify-center md:justify-start gap-2">
-                      <span className="inline-flex items-center bg-gradient-to-r from-sky-100 to-sky-50 text-sky-700 px-4 py-2 rounded-full text-sm font-semibold">
-                        <Award className="w-4 h-4 mr-2" />
-                        15+ Years Experience
-                      </span>
-                      <span className="inline-flex items-center bg-gradient-to-r from-emerald-100 to-emerald-50 text-emerald-700 px-4 py-2 rounded-full text-sm font-semibold">
-                        <Heart className="w-4 h-4 mr-2" />
-                        500+ Happy Travelers
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                
-                <blockquote className="text-slate-700 leading-relaxed font-medium text-lg md:text-xl border-l-4 border-gradient-to-b from-sky-500 via-emerald-500 to-orange-500 pl-6 md:pl-8 italic bg-gradient-to-r from-sky-50/50 to-emerald-50/50 p-6 rounded-r-2xl">
-                  "At Munuo Travels, we believe that true travel goes beyond sightseeing—it's about connection, culture, and creating memories that last a lifetime. Our passion is to share the authentic beauty of Zanzibar and Tanzania with the world, offering experiences that touch the heart and broaden the mind. Every journey with us is crafted with care, guided by local expertise, and infused with the warmth of Tanzanian hospitality."
-                </blockquote>
+              <h2 className="text-[4rem] md:text-[6rem] font-black text-stone-900 mb-12 leading-[0.9] tracking-tighter">
+                {t.sustainableTravel}
+              </h2>
+              
+              <div className="space-y-6 text-stone-700 text-lg leading-relaxed font-light">
+                <p>{t.philosophyText1}</p>
+                <p>{t.philosophyText2}</p>
               </div>
             </div>
 
-            {/* Mission & Vision */}
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Mission */}
-              <div className="glass rounded-4xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-sky-500 bg-white/80 backdrop-blur-sm">
+            {/* Mission & Vision Grid */}
+            <div className="grid md:grid-cols-2 gap-12 mt-20">
+              <div className="border-l-2 border-stone-900 pl-8">
                 <div className="flex items-center mb-6">
-                  <div className="bg-gradient-to-br from-sky-500 to-sky-600 p-4 rounded-2xl shadow-lg mr-4">
-                    <Target className="h-7 w-7 text-white" strokeWidth={2.5} />
-                  </div>
-                  <h3 className="text-3xl font-black text-slate-800 tracking-tight">
-                    Our Mission
+                  <Target className="h-8 w-8 text-stone-900 mr-4" strokeWidth={1.5} />
+                  <h3 className="text-3xl font-black text-stone-900 tracking-tight">
+                    {t.mission}
                   </h3>
                 </div>
-                <p className="text-slate-700 font-medium leading-relaxed text-lg">
-                  To provide transformative travel experiences that connect visitors with the rich cultural heritage, natural beauty, and authentic spirit of Zanzibar and Tanzania, while promoting sustainable tourism and supporting local communities.
+                <p className="text-stone-700 font-light leading-relaxed text-lg">
+                  {t.missionText}
                 </p>
               </div>
 
-              {/* Vision */}
-              <div className="glass rounded-4xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-orange-500 bg-white/80 backdrop-blur-sm">
+              <div className="border-l-2 border-stone-900 pl-8">
                 <div className="flex items-center mb-6">
-                  <div className="bg-gradient-to-br from-orange-500 to-red-600 p-4 rounded-2xl shadow-lg mr-4">
-                    <Eye className="h-7 w-7 text-white" strokeWidth={2.5} />
-                  </div>
-                  <h3 className="text-3xl font-black text-slate-800 tracking-tight">
-                    Our Vision
+                  <Eye className="h-8 w-8 text-stone-900 mr-4" strokeWidth={1.5} />
+                  <h3 className="text-3xl font-black text-stone-900 tracking-tight">
+                    {t.vision}
                   </h3>
                 </div>
-                <p className="text-slate-700 font-medium leading-relaxed text-lg">
-                  To be East Africa's most trusted and beloved travel partner, recognized for creating meaningful cultural exchanges, exceptional service, and unforgettable adventures that inspire travelers to explore, learn, and grow.
+                <p className="text-stone-700 font-light leading-relaxed text-lg">
+                  {t.visionText}
                 </p>
               </div>
             </div>
           </div>
-          
-          {/* Main Heading */}
-          <h2 className="text-6xl md:text-8xl font-black mb-10 leading-tight mt-16">
-            <span className="bg-gradient-to-r from-slate-800 via-sky-700 to-emerald-700 bg-clip-text text-transparent">
-              Welcome to Paradise
-            </span>
-          </h2>
-          
-          {/* Description */}
-          <p className="text-2xl md:text-3xl text-slate-600 max-w-5xl mx-auto leading-relaxed font-light mb-16">
-            Experience the magic of Zanzibar through authentic cultural immersion and language learning adventures
-          </p>
-          
-          {/* Enhanced Stats Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="group text-center p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-sky-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
-                <Heart className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-black text-sky-600 mb-2">500+</div>
-              <div className="text-slate-600 font-semibold text-lg">Happy Travelers</div>
-            </div>
-            
-            <div className="group text-center p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-emerald-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
-                <Award className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-black text-emerald-600 mb-2">15+</div>
-              <div className="text-slate-600 font-semibold text-lg">Years Experience</div>
-            </div>
-            
-            <div className="group text-center p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-orange-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
-                <Compass className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-4xl font-black text-orange-600 mb-2">50+</div>
-              <div className="text-slate-600 font-semibold text-lg">Cultural Sites</div>
-            </div>
-          </div>
-        </div>
         </div>
       </section>
 
-      {/* Enhanced Services Section */}
-      <section className="py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
-   
-        
-        {/* Background Effects */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-sky-500/20 to-blue-600/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-emerald-500/20 to-green-600/20 rounded-full blur-3xl" />
-        </div>
-        
+      {/* Services Section */}
+      <section className="py-32 bg-stone-900 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-8xl font-black mb-8">
-              <span className="bg-gradient-to-r from-white via-sky-200 to-emerald-200 bg-clip-text text-transparent">
-                Our Services
-              </span>
+          <div className="mb-20">
+            <div className="inline-block border border-white/20 px-6 py-2 mb-8">
+              <span className="text-white/70 font-medium text-xs tracking-[0.2em] uppercase">{t.whatWeOffer}</span>
+            </div>
+            
+            <h2 className="text-[4rem] md:text-[6rem] font-black mb-8 leading-[0.9] tracking-tighter">
+              {t.experiences}
             </h2>
-            <p className="text-2xl text-slate-300 max-w-3xl mx-auto font-light">
-              Discover Zanzibar through our expertly crafted experiences
-            </p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Enhanced Tours Card */}
-            <Card className="group bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl border border-slate-700/50 hover:border-sky-500/50 transition-all duration-700 transform hover:scale-105 hover:shadow-2xl overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-sky-400 to-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
-              
-              <CardHeader className="p-12 relative z-10">
-                <div className="bg-gradient-to-br from-sky-400 to-sky-600 w-24 h-24 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl">
-                  <MapPin className="h-12 w-12 text-white" />
+            {/* Tours Card */}
+            <Card className="group bg-stone-800 border-2 border-stone-700 hover:border-stone-500 transition-all duration-500 overflow-hidden">
+              <CardHeader className="p-12">
+                <div className="bg-white w-16 h-16 flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-500">
+                  <MapPin className="h-8 w-8 text-stone-900" strokeWidth={1.5} />
                 </div>
-                <CardTitle className="text-4xl md:text-5xl text-white mb-6 font-black leading-tight">
-                  Cultural Tours
+                <CardTitle className="text-5xl text-white mb-6 font-black leading-tight tracking-tight">
+                  {t.culturalSafaris}
                 </CardTitle>
-                <CardDescription className="text-xl text-slate-300 leading-relaxed font-light">
-                  Explore Stone Town's winding alleys, visit spice plantations, and discover hidden gems with local guides
+                <CardDescription className="text-xl text-stone-400 leading-relaxed font-light">
+                  {t.culturalSafarisDesc}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="p-12 pt-0 relative z-10">
-                <Button asChild className="group/btn bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-white rounded-2xl px-10 py-6 text-lg transform hover:scale-105 transition-all duration-300 shadow-xl border border-sky-400/20">
-                  <Link href="/tours">
+              <CardContent className="p-12 pt-0">
+                <Button asChild className="group/btn bg-white hover:bg-stone-100 text-stone-900 px-10 py-6 text-lg transform hover:scale-105 transition-all duration-300">
+                  <Link href="/destinations">
                     <span className="flex items-center">
-                      Learn More
+                      {t.explore}
                       <ArrowRight className="ml-3 h-6 w-6 group-hover/btn:translate-x-1 transition-transform" />
                     </span>
                   </Link>
@@ -319,27 +321,24 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            {/* Enhanced Language Learning Card */}
-            <Card className="group bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-700 transform hover:scale-105 hover:shadow-2xl overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-400 to-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
-              
-              <CardHeader className="p-12 relative z-10">
-                <div className="bg-gradient-to-br from-emerald-400 to-emerald-600 w-24 h-24 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl">
-                  <BookOpen className="h-12 w-12 text-white" />
+            {/* Language Learning Card */}
+            <Card className="group bg-stone-800 border-2 border-stone-700 hover:border-stone-500 transition-all duration-500 overflow-hidden">
+              <CardHeader className="p-12">
+                <div className="bg-white w-16 h-16 flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-500">
+                  <BookOpen className="h-8 w-8 text-stone-900" strokeWidth={1.5} />
                 </div>
-                <CardTitle className="text-4xl md:text-5xl text-white mb-6 font-black leading-tight">
-                  Swahili Learning
+                <CardTitle className="text-5xl text-white mb-6 font-black leading-tight tracking-tight">
+                  {t.languageProgramsTitle}
                 </CardTitle>
-                <CardDescription className="text-xl text-slate-300 leading-relaxed font-light">
-                  Master Swahili through immersive lessons with native speakers and real-world practice
+                <CardDescription className="text-xl text-stone-400 leading-relaxed font-light">
+                  {t.languageProgramsDesc}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="p-12 pt-0 relative z-10">
-                <Button asChild className="group/btn bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white rounded-2xl px-10 py-6 text-lg transform hover:scale-105 transition-all duration-300 shadow-xl border border-emerald-400/20">
+              <CardContent className="p-12 pt-0">
+                <Button asChild className="group/btn bg-white hover:bg-stone-100 text-stone-900 px-10 py-6 text-lg transform hover:scale-105 transition-all duration-300">
                   <Link href="/language-learning">
                     <span className="flex items-center">
-                      Learn More
+                      {t.learnMore}
                       <ArrowRight className="ml-3 h-6 w-6 group-hover/btn:translate-x-1 transition-transform" />
                     </span>
                   </Link>
@@ -350,58 +349,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced Popular Destinations */}
-      <section className="py-32 bg-gradient-to-br from-white via-slate-50 to-sky-50 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-32 left-16 w-64 h-64 bg-gradient-to-br from-orange-200/40 to-red-200/40 rounded-full blur-3xl" />
-          <div className="absolute bottom-32 right-16 w-80 h-80 bg-gradient-to-br from-emerald-200/40 to-teal-200/40 rounded-full blur-3xl" />
-        </div>
-        
+      {/* Destinations Grid */}
+      <section className="py-32 bg-stone-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center bg-gradient-to-r from-sky-100 via-white to-emerald-100 rounded-full px-10 py-5 mb-10 shadow-xl border border-sky-200/50">
-              <Camera className="w-7 h-7 text-sky-600 mr-4" />
-              <span className="text-slate-700 font-bold text-lg">Featured Destinations</span>
+          <div className="mb-20">
+            <div className="inline-block border border-stone-300 px-6 py-2 mb-8">
+              <span className="text-stone-600 font-medium text-xs tracking-[0.2em] uppercase">{t.featured}</span>
             </div>
-            <h2 className="text-6xl md:text-8xl font-black text-slate-800 mb-8 leading-tight">
-              Popular Destinations
+            
+            <h2 className="text-[4rem] md:text-[6rem] font-black text-stone-900 mb-8 leading-[0.9] tracking-tighter">
+              {t.destinationsTitle}
             </h2>
-            <p className="text-2xl text-slate-600 max-w-4xl mx-auto font-light">
-              Explore the most captivating locations that make Zanzibar unforgettable
+            <p className="text-xl text-stone-600 max-w-3xl font-light">
+              {t.destinationsDesc}
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-3 gap-8">
             {destinations.map((destination, index) => (
               <div key={index} className="group cursor-pointer">
-                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-700 transform group-hover:scale-105 group-hover:-translate-y-2">
-                  <img
-                    src={destination.image}
-                    alt={destination.name}
-                    className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-1000"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                <div className="relative overflow-hidden bg-stone-200 aspect-[3/4] mb-6 group-hover:shadow-2xl transition-all duration-700">
+                  <div className="absolute inset-0 bg-stone-900/60 group-hover:bg-stone-900/40 transition-all duration-700" />
                   
-                  {/* Highlight Badge */}
                   <div className="absolute top-6 left-6">
-                    <span className={`bg-gradient-to-r ${destination.gradient} text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg backdrop-blur-sm border border-white/20`}>
+                    <span className="bg-white text-stone-900 px-4 py-2 text-xs font-bold tracking-wider uppercase">
                       {destination.highlight}
                     </span>
                   </div>
                   
-                  {/* Content */}
                   <div className="absolute bottom-8 left-8 right-8">
-                    <h3 className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">{destination.name}</h3>
-                    <p className="text-sky-200 text-lg font-light leading-relaxed">{destination.description}</p>
-                    
-                    {/* Hover Arrow */}
-                    <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="inline-flex items-center text-white font-semibold">
-                        <span>Explore</span>
-                        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </div>
+                    <h3 className="text-4xl font-black text-white mb-3 leading-tight tracking-tight">
+                      {destination.name}
+                    </h3>
+                    <p className="text-stone-300 text-base font-light leading-relaxed">
+                      {destination.description}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -409,11 +391,11 @@ export default function HomePage() {
           </div>
           
           <div className="text-center mt-20">
-            <Button asChild size="lg" className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white px-16 py-8 text-2xl rounded-3xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-2xl border border-orange-400/20">
-              <Link href="/gallery">
+            <Button asChild size="lg" className="bg-stone-900 hover:bg-stone-800 text-white px-16 py-8 text-xl transform hover:scale-105 transition-all duration-300">
+              <Link href="/destinations">
                 <span className="flex items-center">
-                  View Gallery
-                  <ArrowRight className="ml-4 h-7 w-7" />
+                  {t.viewAllDestinations}
+                  <ArrowRight className="ml-4 h-6 w-6" />
                 </span>
               </Link>
             </Button>
@@ -421,73 +403,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced Testimonials Section */}
-      <section className="py-32 bg-gradient-to-br from-sky-900 via-slate-900 to-emerald-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-20 w-[500px] h-[500px] bg-sky-400 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 right-20 w-[400px] h-[400px] bg-emerald-400 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}} />
-          <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-orange-400 rounded-full blur-3xl animate-pulse" style={{animationDelay: '0.5s'}} />
-        </div>
-        
+      {/* Testimonials */}
+      <section className="py-32 bg-stone-900 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-8xl font-black mb-8">
-              <span className="bg-gradient-to-r from-white via-sky-200 to-emerald-200 bg-clip-text text-transparent">
-                Happy Travelers
-              </span>
+          <div className="mb-20">
+            <div className="inline-block border border-white/20 px-6 py-2 mb-8">
+              <span className="text-white/70 font-medium text-xs tracking-[0.2em] uppercase">{t.testimonials}</span>
+            </div>
+            
+            <h2 className="text-[4rem] md:text-[6rem] font-black mb-8 leading-[0.9] tracking-tighter">
+              {t.travelersTitle}
             </h2>
-            <p className="text-2xl text-slate-300 max-w-4xl mx-auto font-light">
-              Hear from those who've experienced the magic of Zanzibar with us
-            </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-10">
-            {[
-              {
-                name: "Sarah Johnson",
-                country: "United Kingdom",
-                text: "Learning Swahili in Zanzibar was incredible! The cultural immersion made all the difference.",
-                rating: 5,
-                gradient: "from-sky-500 to-blue-600"
-              },
-              {
-                name: "Marco Silva",
-                country: "Brazil", 
-                text: "The Stone Town tour was fascinating. Our guide was knowledgeable and passionate about the history.",
-                rating: 5,
-                gradient: "from-emerald-500 to-green-600"
-              },
-              {
-                name: "Emma Chen",
-                country: "Australia",
-                text: "Perfect blend of tourism and learning. The spice tour and language lessons exceeded my expectations!",
-                rating: 5,
-                gradient: "from-orange-500 to-red-600"
-              }
-            ].map((testimonial, index) => (
-              <Card key={index} className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 shadow-2xl">
+          <div className="grid md:grid-cols-3 gap-12">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="bg-stone-800 border-2 border-stone-700 hover:border-stone-500 transition-all duration-500">
                 <CardContent className="p-10">
-                  {/* Rating Stars */}
-                  <div className="flex mb-8 justify-center">
+                  <div className="flex mb-6">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-7 w-7 text-orange-400 fill-current mx-1" />
+                      <Star key={i} className="h-5 w-5 text-white fill-current" strokeWidth={0} />
                     ))}
                   </div>
                   
-                  {/* Quote */}
-                  <p className="text-slate-200 mb-10 italic leading-relaxed text-xl font-light text-center">
+                  <p className="text-stone-300 mb-8 leading-relaxed text-lg font-light">
                     "{testimonial.text}"
                   </p>
                   
-                  {/* Avatar & Info */}
-                  <div className="text-center">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${testimonial.gradient} rounded-full mx-auto mb-4 flex items-center justify-center shadow-xl`}>
-                      <span className="text-white font-bold text-xl">
-                        {testimonial.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
-                    <p className="font-bold text-white text-xl">{testimonial.name}</p>
-                    <p className="text-sky-300 text-lg font-medium">{testimonial.country}</p>
+                  <div className="border-t border-stone-700 pt-6">
+                    <p className="font-bold text-white text-lg">{testimonial.name}</p>
+                    <p className="text-stone-500 text-sm font-medium tracking-wide">{testimonial.country}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -496,67 +441,57 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced CTA Section */}
-      <section className="py-32 bg-gradient-to-br from-orange-600 via-orange-500 to-emerald-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10" />
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-10 left-10 w-[400px] h-[400px] bg-white rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-sky-300 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}} />
-          <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-emerald-300 rounded-full blur-3xl animate-pulse" style={{animationDelay: '0.5s'}} />
-        </div>
-        
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="mb-12">
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-xl rounded-full px-8 py-4 mb-8 border border-white/20 shadow-2xl">
-              <Sparkles className="w-6 h-6 text-white mr-3 animate-spin" style={{animationDuration: '3s'}} />
-              <span className="text-white/90 font-semibold text-lg">Ready for Adventure?</span>
+      {/* CTA Section */}
+      <section className="py-32 bg-stone-50 relative overflow-hidden">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="mb-16">
+            <div className="inline-block border border-stone-300 px-6 py-2 mb-8">
+              <span className="text-stone-600 font-medium text-xs tracking-[0.2em] uppercase">{t.startYourJourney}</span>
             </div>
             
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight">
-              <span className="bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent drop-shadow-2xl">
-                Start Your Journey Today
-              </span>
+            <h2 className="text-[4rem] md:text-[7rem] font-black text-stone-900 mb-8 leading-[0.9] tracking-tighter">
+              {t.beginHere}
             </h2>
             
-            <p className="text-2xl md:text-3xl text-white/90 max-w-4xl mx-auto leading-relaxed font-light mb-12">
-              Join thousands of travelers who have discovered the magic of Zanzibar through authentic cultural experiences
+            <p className="text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed font-light mb-12">
+              {t.ctaText}
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-16">
-            <Button asChild size="lg" className="group bg-white/20 backdrop-blur-xl hover:bg-white/30 text-white border-2 border-white/40 hover:border-white/60 px-16 py-8 text-2xl rounded-3xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-2xl">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+            <Button asChild size="lg" className="bg-stone-900 hover:bg-stone-800 text-white px-16 py-8 text-xl transform hover:scale-105 transition-all duration-300">
               <Link href="/contact">
                 <span className="flex items-center">
-                  <Users className="mr-4 h-8 w-8 group-hover:rotate-12 transition-transform" />
-                  Contact Us
-                  <ArrowRight className="ml-4 h-8 w-8 group-hover:translate-x-1 transition-transform" />
+                  <Users className="mr-4 h-6 w-6" />
+                  {t.contactUs}
+                  <ArrowRight className="ml-4 h-6 w-6" />
                 </span>
               </Link>
             </Button>
             
-            <Button asChild size="lg" className="group bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-600 hover:via-blue-600 hover:to-indigo-600 text-white px-16 py-8 text-2xl rounded-3xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-2xl border border-sky-400/20">
-              <Link href="/tours">
+            <Button asChild size="lg" variant="outline" className="border-2 border-stone-900 bg-transparent text-stone-900 hover:bg-stone-900 hover:text-white px-16 py-8 text-xl">
+              <Link href="/destinations">
                 <span className="flex items-center">
-                  <MapPin className="mr-4 h-8 w-8 group-hover:bounce transition-transform" />
-                  Book Now
-                  <ArrowRight className="ml-4 h-8 w-8 group-hover:translate-x-1 transition-transform" />
+                  <MapPin className="mr-4 h-6 w-6" />
+                  {t.viewDestinations}
+                  <ArrowRight className="ml-4 h-6 w-6" />
                 </span>
               </Link>
             </Button>
           </div>
           
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-90">
-            <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-4 border border-white/20">
-              <Star className="w-6 h-6 text-yellow-300 fill-current mr-2" />
-              <span className="text-white font-semibold">4.9/5 Rating</span>
+          <div className="flex flex-wrap justify-center items-center gap-12 pt-12 border-t border-stone-200">
+            <div className="flex items-center">
+              <Star className="w-5 h-5 text-stone-900 fill-current mr-2" strokeWidth={0} />
+              <span className="text-stone-700 font-medium text-sm tracking-wide">4.9/5 {t.rating}</span>
             </div>
-            <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-4 border border-white/20">
-              <Award className="w-6 h-6 text-orange-300 mr-2" />
-              <span className="text-white font-semibold">Award Winning</span>
+            <div className="flex items-center">
+              <Award className="w-5 h-5 text-stone-900 mr-2" strokeWidth={1.5} />
+              <span className="text-stone-700 font-medium text-sm tracking-wide">{t.awardWinning}</span>
             </div>
-            <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-4 border border-white/20">
-              <Heart className="w-6 h-6 text-pink-300 mr-2" />
-              <span className="text-white font-semibold">500+ Happy Customers</span>
+            <div className="flex items-center">
+              <Heart className="w-5 h-5 text-stone-900 mr-2" strokeWidth={1.5} />
+              <span className="text-stone-700 font-medium text-sm tracking-wide">500+ {t.travelers}</span>
             </div>
           </div>
         </div>
