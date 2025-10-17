@@ -71,7 +71,7 @@ export default function Hero() {
   return (
     <>
   {/* Video Section - Full screen with subtle gradient overlay */}
-      <section ref={sectionRef} className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen overflow-hidden bg-brand-heading">
+      <section ref={sectionRef} className="relative w-full h-[60vh] sm:h-[50vh] md:h-[80vh] lg:h-screen overflow-hidden pb-0">
         <video
           ref={videoRef}
           className="absolute inset-0 w-full h-full object-contain sm:object-cover"
@@ -84,15 +84,13 @@ export default function Hero() {
         </video>
         
         {/* Subtle gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-menu-hover/30 pointer-events-none" />
+       
       </section>
 
       {/* Content Section - Enhanced with animations and depth */}
-      <section className="relative bg-gradient-to-b from-brand-menu-hover to-white py-16 sm:py-24 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-b from-brand-menu-hover to-white py-4 sm:py-8 md:py-16 overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brand-border to-transparent" />
-        <div className="absolute -top-32 -right-32 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-brand-secondary/5 rounded-full blur-3xl" />
+
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
