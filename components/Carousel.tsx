@@ -48,8 +48,8 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-brand-menu-hover via-white to-brand-border flex items-center justify-center p-4 md:p-8">
-      <div className="w-full max-w-7xl">
+    <div className="w-full min-h-screen bg-gradient-to-br from-brand-menu-hover via-white to-brand-border flex items-center justify-center p-4 px-0 md:p-8">
+      <div className="w-full max-w-7xl ">
         <div className="text-center mb-12 animate-in fade-in duration-1000">
           <h1 className="text-4xl md:text-6xl font-bold text-brand-heading mb-4 font-comfortaa tracking-tight">
             Our Commitment to SDGs
@@ -93,11 +93,11 @@ const ImageCarousel = () => {
                 spaceBetween: 30,
               },
             }}
-            className="rounded-2xl pb-16"
+            className="px-0 pb-16"
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}>
-                <div className="relative w-full h-72 md:h-96 overflow-hidden rounded-xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/20 group/card">
+                <div className="relative w-full h-72 md:h-96 overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/20 group/card">
                   <img
                     src={image.url}
                     alt={image.alt}
@@ -108,7 +108,7 @@ const ImageCarousel = () => {
                       <h3 className="text-2xl md:text-3xl font-bold text-white font-comfortaa mb-2">
                         {image.title}
                       </h3>
-                      <div className="w-16 h-1 bg-brand-primary rounded-full"></div>
+                      <div className="w-16 h-1 bg-brand-primary "></div>
                     </div>
                   </div>
                   <div className="absolute top-4 right-4 bg-brand-primary text-white px-4 py-2 rounded-full text-sm font-semibold font-poppins shadow-lg transform transition-all duration-300 hover:bg-brand-secondary hover:scale-110">
