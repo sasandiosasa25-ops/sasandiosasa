@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, BookOpen } from 'lucide-react';
+import { ArrowRight, Compass } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -44,8 +44,8 @@ export default function Hero() {
       experienceTanzania: 'Experience Tanzania',
       heroTitle: 'TANZANIA',
       heroSubtitle: 'Where vast landscapes meet profound stillness',
-      exploreDestinations: 'Explore Destinations',
-      languagePrograms: 'Language Programs',
+      explorePaths: 'Explore Paths',
+      ourExperiences: 'Our Experiences',
       years: 'YEARS',
       travelers: 'TRAVELERS',
       destinations: 'DESTINATIONS',
@@ -54,8 +54,8 @@ export default function Hero() {
       experienceTanzania: 'Erleben Sie Tansania',
       heroTitle: 'TANSANIA',
       heroSubtitle: 'Wo weite Landschaften auf tiefe Stille treffen',
-      exploreDestinations: 'Reiseziele Erkunden',
-      languagePrograms: 'Sprachprogramme',
+      explorePaths: 'Pfade Erkunden',
+      ourExperiences: 'Unsere Erfahrungen',
       years: 'JAHRE',
       travelers: 'REISENDE',
       destinations: 'REISEZIELE',
@@ -96,18 +96,18 @@ export default function Hero() {
             
             <div className="flex flex-col sm:flex-row gap-6 mb-16">
               <Button asChild size="lg" className="group bg-stone-100 text-stone-900 hover:bg-white px-8 sm:px-12 py-6 sm:py-7 text-lg sm:text-xl transform hover:scale-105 transition-all duration-300">
-                <Link href="/destinations">
+                <Link href="/paths">
                   <span className="flex items-center">
-                    {t.exploreDestinations}
+                    {t.explorePaths}
                     <ArrowRight className="ml-3 h-5 sm:h-6 w-5 sm:w-6 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="group border-2 border-white/30 bg-transparent text-white hover:bg-white/10 px-8 sm:px-12 py-6 sm:py-7 text-lg sm:text-xl">
-                <Link href="/language-learning">
+                <Link href="/experience">
                   <span className="flex items-center">
-                    {t.languagePrograms}
-                    <BookOpen className="ml-3 h-5 sm:h-6 w-5 sm:w-6 group-hover:rotate-12 transition-transform" />
+                    {t.ourExperiences}
+                    <Compass className="ml-3 h-5 sm:h-6 w-5 sm:w-6 group-hover:rotate-12 transition-transform" />
                   </span>
                 </Link>
               </Button>
