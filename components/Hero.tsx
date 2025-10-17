@@ -128,43 +128,7 @@ export default function Hero() {
               </Button>
             </div>
             
-            {/* Stats with enhanced styling and animation */}
-            <div className={`transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="flex flex-col xs:flex-row justify-center gap-8 xs:gap-12 sm:gap-16 md:gap-24 pt-12 sm:pt-16 relative">
-                {/* Decorative top border */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 xs:w-32 h-1 bg-gradient-to-r from-transparent via-brand-primary to-transparent rounded-full" />
-                
-                <div className="group cursor-default">
-                  <div className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black bg-gradient-to-br from-brand-primary to-brand-secondary bg-clip-text text-transparent mb-2 xs:mb-3 group-hover:scale-110 transition-transform duration-300">
-                    15+
-                  </div>
-                  <div className="text-brand-heading/70 font-semibold tracking-wider text-xs xs:text-sm uppercase relative">
-                    {t.years}
-                    <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-brand-primary/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                  </div>
-                </div>
-                
-                <div className="group cursor-default">
-                  <div className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black bg-gradient-to-br from-brand-primary to-brand-secondary bg-clip-text text-transparent mb-2 xs:mb-3 group-hover:scale-110 transition-transform duration-300">
-                    500+
-                  </div>
-                  <div className="text-brand-heading/70 font-semibold tracking-wider text-xs xs:text-sm uppercase relative">
-                    {t.travelers}
-                    <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-brand-primary/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                  </div>
-                </div>
-                
-                <div className="group cursor-default">
-                  <div className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-black bg-gradient-to-br from-brand-primary to-brand-secondary bg-clip-text text-transparent mb-2 xs:mb-3 group-hover:scale-110 transition-transform duration-300">
-                    12
-                  </div>
-                  <div className="text-brand-heading/70 font-semibold tracking-wider text-xs xs:text-sm uppercase relative">
-                    {t.destinations}
-                    <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-brand-primary/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                  </div>
-                </div>
-              </div>
-            </div>
+      
           </div>
         </div>
       </section>
