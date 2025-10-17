@@ -49,7 +49,7 @@ export default function Services() {
       <div className="absolute -top-40 -left-40 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl" />
       <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-brand-secondary/5 rounded-full blur-3xl" />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 relative z-10">
         <div className="mb-16 sm:mb-20 md:mb-24 text-center">
           <div className="inline-block border-2 border-brand-primary/30 bg-white/80 backdrop-blur-sm px-6 sm:px-8 py-3 mb-8 sm:mb-10 rounded-full shadow-sm">
             <span className="text-brand-heading/70 font-semibold text-xs tracking-[0.25em] uppercase">{t.whatWeOffer}</span>
