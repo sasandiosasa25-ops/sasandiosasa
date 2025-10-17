@@ -86,7 +86,7 @@ export default function DestinationsGrid() {
       <div className="absolute top-20 -right-40 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-40 -left-40 w-96 h-96 bg-brand-secondary/5 rounded-full blur-3xl" />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 relative z-10">
         <div className="mb-20 text-center">
           <div className="inline-block border-2 border-brand-primary/30 bg-white/80 backdrop-blur-sm px-6 sm:px-8 py-3 mb-8 sm:mb-10 rounded-full shadow-sm">
             <span className="text-brand-heading/70 font-semibold text-xs tracking-[0.25em] uppercase">{t.featured}</span>
@@ -115,7 +115,7 @@ export default function DestinationsGrid() {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="relative overflow-hidden bg-brand-border aspect-[3/4] mb-6 rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-700">
+              <div className="relative overflow-hidden bg-brand-border aspect-[3/4] mb-6 shadow-lg group-hover:shadow-2xl transition-all duration-700">
                 {/* Image */}
                 <Image
                   src={destination.image}
@@ -129,14 +129,7 @@ export default function DestinationsGrid() {
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-heading via-brand-heading/60 to-transparent opacity-80 group-hover:opacity-70 transition-opacity duration-700 z-10" />
                 
                 {/* Highlight Badge with icon */}
-                <div className="absolute top-6 left-6 z-20">
-                  <div className="flex items-center gap-2 bg-brand-primary text-white px-4 py-2.5 rounded-full shadow-lg">
-                    <MapPin className="w-3.5 h-3.5" />
-                    <span className="text-xs font-bold tracking-wider uppercase">
-                      {destination.highlight}
-                    </span>
-                  </div>
-                </div>
+             
                 
                 {/* Corner accent - animates on hover */}
                 <div className={`absolute top-0 right-0 w-24 h-24 bg-brand-primary/20 rounded-bl-full transition-all duration-500 ${hoveredIndex === index ? 'scale-150 opacity-100' : 'scale-100 opacity-0'}`} />

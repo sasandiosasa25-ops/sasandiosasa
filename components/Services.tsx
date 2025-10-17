@@ -68,7 +68,7 @@ export default function Services() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
           {/* Safaris Card */}
           <Card 
-            className="group bg-white border-2 border-brand-border hover:border-brand-primary/50 transition-all duration-500 overflow-hidden hover:shadow-2xl rounded-2xl"
+            className="group bg-white border-2 border-brand-border hover:border-brand-primary/50 transition-all duration-500 overflow-hidden hover:shadow-2xl "
             onMouseEnter={() => setHoveredCard(0)}
             onMouseLeave={() => setHoveredCard(null)}
           >
@@ -111,7 +111,7 @@ export default function Services() {
 
           {/* Inner Safari Card */}
           <Card 
-            className="group bg-white border-2 border-brand-border hover:border-brand-primary/50 transition-all duration-500 overflow-hidden hover:shadow-2xl rounded-2xl"
+            className="group bg-white border-2 border-brand-border hover:border-brand-primary/50 transition-all duration-500 overflow-hidden hover:shadow-2xl "
             onMouseEnter={() => setHoveredCard(1)}
             onMouseLeave={() => setHoveredCard(null)}
           >
@@ -154,7 +154,7 @@ export default function Services() {
 
           {/* Retreats Card */}
           <Card 
-            className="group bg-white border-2 border-brand-border hover:border-brand-primary/50 transition-all duration-500 overflow-hidden hover:shadow-2xl rounded-2xl"
+            className="group bg-white border-2 border-brand-border hover:border-brand-primary/50 transition-all duration-500 overflow-hidden hover:shadow-2xl "
             onMouseEnter={() => setHoveredCard(2)}
             onMouseLeave={() => setHoveredCard(null)}
           >
