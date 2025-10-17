@@ -1,6 +1,6 @@
 'use client';
 
-import { MapPin, Phone, Mail, Globe, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, Mail, Globe, ArrowRight, Instagram, Facebook, Linkedin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 
@@ -61,26 +61,59 @@ export default function Footer() {
                 <MapPin className="h-5 w-5 text-stone-500 mt-1 group-hover:text-white transition-colors" strokeWidth={1.5} />
                 <div>
                   <p className="text-stone-400 group-hover:text-white transition-colors">
-                    Dar es Salaam, Tanzania
+                    Arusha, Tanzania
                   </p>
                 </div>
               </div>
               <div className="flex items-center space-x-3 group">
                 <Phone className="h-5 w-5 text-stone-500 group-hover:text-white transition-colors" strokeWidth={1.5} />
-                <a href="tel:+255755688091" className="text-stone-400 group-hover:text-white transition-colors">
-                  +255 755 688 091
+                <a href="tel:+255759744701" className="text-stone-400 group-hover:text-white transition-colors">
+                  +255 759 744 701
                 </a>
               </div>
               <div className="flex items-center space-x-3 group">
                 <Mail className="h-5 w-5 text-stone-500 group-hover:text-white transition-colors" strokeWidth={1.5} />
-                <a href="mailto:info@sasandiosasa.com" className="text-stone-400 group-hover:text-white transition-colors">
-                  info@sasandiosasa.com
+                <a href="mailto:Safari@sasandiosasa.co.tz" className="text-stone-400 group-hover:text-white transition-colors">
+                  Safari@sasandiosasa.co.tz
                 </a>
               </div>
               <div className="flex items-center space-x-3 group">
                 <Globe className="h-5 w-5 text-stone-500 group-hover:text-white transition-colors" strokeWidth={1.5} />
-                <span className="text-stone-400 group-hover:text-white transition-colors">sasandiosasa.com</span>
+                <a href="https://sasandiosasa.co.tz" target="_blank" rel="noopener noreferrer" className="text-stone-400 group-hover:text-white transition-colors">
+                  sasandiosasa.co.tz
+                </a>
               </div>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="flex items-center space-x-4 mt-8">
+              <a 
+                href="https://www.instagram.com/sasandiosasa?igsh=MTExOG1odTY4ZXh5MQ==" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-stone-800 p-3 rounded-full hover:bg-white hover:text-stone-900 transition-all duration-300 group"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" strokeWidth={1.5} />
+              </a>
+              <a 
+                href="https://www.facebook.com/profile.php?id=61579332057519" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-stone-800 p-3 rounded-full hover:bg-white hover:text-stone-900 transition-all duration-300 group"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" strokeWidth={1.5} />
+              </a>
+              <a 
+                href="https://www.linkedin.com/company/sasandiosasa" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-stone-800 p-3 rounded-full hover:bg-white hover:text-stone-900 transition-all duration-300 group"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" strokeWidth={1.5} />
+              </a>
             </div>
           </div>
 
@@ -155,7 +188,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center space-x-6">
             <a 
-              href="https://wa.me/255755688091" 
+              href="https://wa.me/255759744701" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-stone-500 hover:text-white transition-colors text-sm font-medium"

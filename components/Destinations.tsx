@@ -47,7 +47,7 @@ export default function DestinationsGrid() {
     },
     {
       name: 'Tarangire',
-      image: '/tarangire.jpg',
+      image: '/tara1.jpg',
       description: language === 'en'
         ? 'Land of giants with ancient baobabs and elephant herds'
         : 'Land der Riesen mit uralten Baobabs und Elefantenherden',
@@ -109,7 +109,8 @@ export default function DestinationsGrid() {
         <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
           {destinations.map((destination, index) => (
             <Link 
-              href="/destinations"
+              href="/destinatio
+              ns"
               key={index} 
               className="group cursor-pointer"
               onMouseEnter={() => setHoveredIndex(index)}
