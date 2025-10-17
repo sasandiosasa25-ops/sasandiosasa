@@ -10,6 +10,7 @@ import Link from 'next/link';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import DestinationsGrid from '@/components/Destinations';
+import Testimonials from '@/components/Testmonial';
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -191,42 +192,7 @@ export default function HomePage() {
    <DestinationsGrid />
 
       {/* Testimonials */}
-      <section className="py-32 bg-stone-900 text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="mb-20">
-            <div className="inline-block border border-white/20 px-6 py-2 mb-8">
-              <span className="text-white/70 font-medium text-xs tracking-[0.2em] uppercase">{t.testimonials}</span>
-            </div>
-            
-            <h2 className="text-[4rem] md:text-[6rem] font-black mb-8 leading-[0.9] tracking-tighter">
-              {t.travelersTitle}
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-12">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-stone-800 border-2 border-stone-700 hover:border-stone-500 transition-all duration-500">
-                <CardContent className="p-10">
-                  <div className="flex mb-6">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-white fill-current" strokeWidth={0} />
-                    ))}
-                  </div>
-                  
-                  <p className="text-stone-300 mb-8 leading-relaxed text-lg font-light">
-                    "{testimonial.text}"
-                  </p>
-                  
-                  <div className="border-t border-stone-700 pt-6">
-                    <p className="font-bold text-white text-lg">{testimonial.name}</p>
-                    <p className="text-stone-500 text-sm font-medium tracking-wide">{testimonial.country}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+    <Testimonials />
 
       {/* CTA Section */}
       <section className="py-32 bg-stone-50 relative overflow-hidden">
