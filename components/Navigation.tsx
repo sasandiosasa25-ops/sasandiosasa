@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
   const { language, setLanguage } = useLanguage();
 
   const navItems = [
@@ -42,7 +43,7 @@ export default function Navigation() {
       href: '/travel-compass', 
       label: language === 'de' ? 'Reisekompass' : 'Travel Compass',
       dropdown: [
-        { href: '/travel-compass/why-choose-us', label: language === 'de' ? 'Warum uns wählen' : 'Why Choose Sasandiosasa' },
+        { href: '/travel-compass/why-choose-us', label: language === 'de' ? 'Warum uns wählen' : 'Why Choose Us' },
         { href: '/travel-compass/seasonal-advice', label: language === 'de' ? 'Saisonale Beratung' : 'Seasonal Advice' },
         { href: '/travel-compass/airline-recommendations', label: language === 'de' ? 'Flugempfehlungen' : 'Airline Recommendations' },
         { href: '/travel-compass/travel-permit', label: language === 'de' ? 'Reisegenehmigung' : 'Travel Permit' },
@@ -53,17 +54,23 @@ export default function Navigation() {
     },
   ];
 
+  const toggleMobileDropdown = (href: string) => {
+    setMobileDropdown(mobileDropdown === href ? null : href);
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-stone-200 z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-stone-900 backdrop-blur-lg border-b border-stone-800 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="bg-stone-900 text-white p-2">
-              <span className="font-bold text-lg">SS</span>
-            </div>
+          <Link href="/" className="flex items-center space-x-3 group">
+            <img 
+              src="/logo.jpeg" 
+              alt="SasaNdioSasa" 
+              className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
             <div>
-              <span className="font-black text-xl text-stone-900 tracking-tight">Sasandiosasa</span>
+              <span className="font-black text-xl text-white tracking-tight">SasaNdioSasa</span>
             </div>
           </Link>
 
@@ -78,20 +85,30 @@ export default function Navigation() {
               >
                 <Link
                   href={item.href}
-                  className="flex items-center px-4 py-2 text-stone-700 hover:text-stone-900 transition-colors duration-200 font-medium"
+                  className="flex items-center px-4 py-2 text-stone-300 hover:text-white transition-all duration-200 font-medium text-[15px] tracking-tight"
                 >
                   {item.label}
-                  {item.dropdown && <ChevronDown className="ml-1 h-4 w-4" />}
+                  {item.dropdown && (
+                    <ChevronDown 
+                      className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                        openDropdown === item.href ? 'rotate-180' : ''
+                      }`} 
+                    />
+                  )}
                 </Link>
 
                 {/* Dropdown Menu */}
                 {item.dropdown && openDropdown === item.href && (
-                  <div className="absolute top-full left-0 mt-0 w-64 bg-white border border-stone-200 shadow-xl">
-                    {item.dropdown.map((subItem) => (
+                  <div className="absolute top-full left-0 mt-1 w-72 bg-stone-800 border border-stone-700 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
+                    {item.dropdown.map((subItem, index) => (
                       <Link
                         key={subItem.href}
                         href={subItem.href}
-                        className="block px-6 py-3 text-stone-700 hover:bg-stone-50 hover:text-stone-900 transition-colors duration-200 border-b border-stone-100 last:border-b-0"
+                        className={`block px-6 py-4 text-stone-300 hover:bg-stone-700 hover:text-white transition-all duration-150 text-[14px] border-b border-stone-700 last:border-b-0 hover:pl-8 ${
+                          index === 0 ? 'pt-5' : ''
+                        } ${
+                          index === item.dropdown.length - 1 ? 'pb-5' : ''
+                        }`}
                       >
                         {subItem.label}
                       </Link>
@@ -102,40 +119,42 @@ export default function Navigation() {
             ))}
             
             {/* Language Switcher */}
-            <div className="flex items-center space-x-2 border-l border-stone-200 pl-6 ml-4">
-              <Globe className="h-4 w-4 text-stone-500" />
-              <Button
-                variant={language === 'en' ? 'default' : 'outline'}
-                size="sm"
+            <div className="flex items-center space-x-2 border-l border-stone-700 pl-6 ml-4">
+              <Globe className="h-4 w-4 text-stone-400" />
+              <button
                 onClick={() => setLanguage('en')}
-                className="h-8 px-3 bg-stone-900 hover:bg-stone-800"
+                className={`h-9 px-4 text-sm font-medium transition-all duration-200 ${
+                  language === 'en' 
+                    ? 'bg-white text-stone-900' 
+                    : 'text-stone-300 hover:text-white hover:bg-stone-800'
+                }`}
               >
                 EN
-              </Button>
-              <Button
-                variant={language === 'de' ? 'default' : 'outline'}
-                size="sm"
+              </button>
+              <button
                 onClick={() => setLanguage('de')}
-                className="h-8 px-3 bg-stone-900 hover:bg-stone-800"
+                className={`h-9 px-4 text-sm font-medium transition-all duration-200 ${
+                  language === 'de' 
+                    ? 'bg-white text-stone-900' 
+                    : 'text-stone-300 hover:text-white hover:bg-stone-800'
+                }`}
               >
                 DE
-              </Button>
+              </button>
             </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center space-x-4">
-            <Button
-              variant="outline"
-              size="sm"
+          <div className="lg:hidden flex items-center space-x-3">
+            <button
               onClick={() => setLanguage(language === 'en' ? 'de' : 'en')}
-              className="border-stone-300"
+              className="h-9 px-4 text-sm font-medium border border-stone-700 text-stone-300 hover:bg-stone-800 hover:text-white transition-colors duration-200"
             >
               {language.toUpperCase()}
-            </Button>
+            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-stone-700 hover:text-stone-900"
+              className="text-stone-300 hover:text-white p-2 hover:bg-stone-800 transition-colors duration-200"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -144,24 +163,38 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden border-t border-stone-200">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
+          <div className="lg:hidden border-t border-stone-800 animate-in slide-in-from-top duration-200">
+            <div className="px-2 pt-4 pb-4 space-y-2 bg-stone-900 max-h-[calc(100vh-80px)] overflow-y-auto">
               {navItems.map((item) => (
                 <div key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="block px-3 py-2 text-stone-700 hover:text-stone-900 hover:bg-stone-50 transition-colors duration-200 font-medium"
-                    onClick={() => !item.dropdown && setIsOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                  {item.dropdown && (
-                    <div className="pl-6 space-y-1">
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={item.href}
+                      className="flex-1 px-4 py-3 text-stone-300 hover:text-white hover:bg-stone-800 transition-colors duration-200 font-medium text-[15px]"
+                      onClick={() => !item.dropdown && setIsOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                    {item.dropdown && (
+                      <button
+                        onClick={() => toggleMobileDropdown(item.href)}
+                        className="px-4 py-3 text-stone-400 hover:text-white transition-colors duration-200"
+                      >
+                        <ChevronDown 
+                          className={`h-5 w-5 transition-transform duration-200 ${
+                            mobileDropdown === item.href ? 'rotate-180' : ''
+                          }`} 
+                        />
+                      </button>
+                    )}
+                  </div>
+                  {item.dropdown && mobileDropdown === item.href && (
+                    <div className="pl-8 pr-4 py-2 space-y-1 bg-stone-800 animate-in slide-in-from-top duration-150">
                       {item.dropdown.map((subItem) => (
                         <Link
                           key={subItem.href}
                           href={subItem.href}
-                          className="block px-3 py-2 text-sm text-stone-600 hover:text-stone-900 hover:bg-stone-50 transition-colors duration-200"
+                          className="block px-4 py-3 text-sm text-stone-400 hover:text-white hover:bg-stone-700 transition-colors duration-200 border-l-2 border-transparent hover:border-white"
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.label}
