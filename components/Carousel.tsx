@@ -93,7 +93,7 @@ const ImageCarousel = () => {
                 spaceBetween: 30,
               },
             }}
-            className="px-0 pb-16"
+            className="pb-16"
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}>
