@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
+import { Inter, Poppins, Comfortaa } from 'next/font/google';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import { Toaster } from '@/components/ui/sonner';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -10,6 +10,11 @@ const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-poppins'
+});
+const comfortaa = Comfortaa({ 
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-comfortaa'
 });
 
 export const metadata: Metadata = {
@@ -59,7 +64,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${poppins.variable}`}>
+      <body className={`${comfortaa.variable} ${poppins.variable} font-comfortaa`}>
         <LanguageProvider>
           {children}
           <WhatsAppButton />
