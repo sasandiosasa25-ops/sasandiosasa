@@ -70,11 +70,11 @@ export default function Hero() {
 
   return (
     <>
-      {/* Video Section - Full screen with subtle gradient overlay */}
-      <section ref={sectionRef} className="relative w-full h-screen overflow-hidden bg-brand-heading">
+  {/* Video Section - Full screen with subtle gradient overlay */}
+      <section ref={sectionRef} className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen overflow-hidden bg-brand-heading">
         <video
           ref={videoRef}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain sm:object-cover"
           loop
           muted={false}
           playsInline
