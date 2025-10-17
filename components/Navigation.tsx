@@ -65,7 +65,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <img 
-              src="/logo4.jpeg" 
+              src="/logo.jpeg" 
               alt="SasaNdioSasa" 
               className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
