@@ -9,6 +9,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
+import DestinationsGrid from '@/components/Destinations';
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -187,58 +188,7 @@ export default function HomePage() {
   <Services /> 
 
       {/* Destinations Grid */}
-      <section className="py-32 bg-stone-50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="mb-20">
-            <div className="inline-block border border-stone-300 px-6 py-2 mb-8">
-              <span className="text-stone-600 font-medium text-xs tracking-[0.2em] uppercase">{t.featured}</span>
-            </div>
-            
-            <h2 className="text-[4rem] md:text-[6rem] font-black text-stone-900 mb-8 leading-[0.9] tracking-tighter">
-              {t.destinationsTitle}
-            </h2>
-            <p className="text-xl text-stone-600 max-w-3xl font-light">
-              {t.destinationsDesc}
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {destinations.map((destination, index) => (
-              <div key={index} className="group cursor-pointer">
-                <div className="relative overflow-hidden bg-stone-200 aspect-[3/4] mb-6 group-hover:shadow-2xl transition-all duration-700">
-                  <div className="absolute inset-0 bg-stone-900/60 group-hover:bg-stone-900/40 transition-all duration-700" />
-                  
-                  <div className="absolute top-6 left-6">
-                    <span className="bg-white text-stone-900 px-4 py-2 text-xs font-bold tracking-wider uppercase">
-                      {destination.highlight}
-                    </span>
-                  </div>
-                  
-                  <div className="absolute bottom-8 left-8 right-8">
-                    <h3 className="text-4xl font-black text-white mb-3 leading-tight tracking-tight">
-                      {destination.name}
-                    </h3>
-                    <p className="text-stone-300 text-base font-light leading-relaxed">
-                      {destination.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-20">
-            <Button asChild size="lg" className="bg-stone-900 hover:bg-stone-800 text-white px-16 py-8 text-xl transform hover:scale-105 transition-all duration-300">
-              <Link href="/destinations">
-                <span className="flex items-center">
-                  {t.viewAllDestinations}
-                  <ArrowRight className="ml-4 h-6 w-6" />
-                </span>
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+   <DestinationsGrid />
 
       {/* Testimonials */}
       <section className="py-32 bg-stone-900 text-white relative overflow-hidden">

@@ -57,8 +57,7 @@ export default function Navigation() {
   const toggleMobileDropdown = (href: string) => {
     setMobileDropdown(mobileDropdown === href ? null : href);
   };
-
-  return (
+return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-stone-200/50 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
@@ -70,7 +69,7 @@ export default function Navigation() {
               className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
             <div>
-              <span className="font-bold text-2xl text-stone-900 tracking-tight uppercase">SasaNdioSasa</span>
+              <span className="font-bold text-lg sm:text-xl md:text-2xl text-stone-900 tracking-tight uppercase">SasaNdioSasa</span>
             </div>
           </Link>
 
