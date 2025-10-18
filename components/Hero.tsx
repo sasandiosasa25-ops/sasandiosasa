@@ -71,7 +71,7 @@ export default function Hero() {
   return (
     <>
 {/* Video Section - Full screen with subtle gradient overlay */}
-    <section ref={sectionRef} className="relative w-full h-[50vh] sm:h-[65vh] md:h-[80vh] lg:h-screen overflow-hidden bg-brand-heading">
+<section ref={sectionRef} className="relative w-full h-[50vh] sm:h-[65vh] md:h-[80vh] lg:h-screen overflow-hidden bg-brand-heading">
         <video
           ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover"

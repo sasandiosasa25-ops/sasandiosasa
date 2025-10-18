@@ -42,9 +42,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-5">
             <Link href="/" className="inline-flex items-center space-x-2 mb-8 group">
-              <div className="bg-white text-stone-900 p-2">
-                <span className="font-bold text-xl">SS</span>
-              </div>
+            
               <div>
                 <span className="font-black text-2xl tracking-tight">SasaNdioSasa</span>
               </div>
