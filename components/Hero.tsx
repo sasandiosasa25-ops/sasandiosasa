@@ -70,11 +70,11 @@ export default function Hero() {
 
   return (
     <>
-  {/* Video Section - Full screen with subtle gradient overlay */}
-      <section ref={sectionRef} className="relative w-full h-[60vh] sm:h-[50vh] md:h-[80vh] lg:h-screen overflow-hidden pb-0">
+{/* Video Section - Full screen with subtle gradient overlay */}
+    <section ref={sectionRef} className="relative w-full h-[50vh] sm:h-[65vh] md:h-[80vh] lg:h-screen overflow-hidden bg-brand-heading">
         <video
           ref={videoRef}
-          className="absolute inset-0 w-full h-full object-contain sm:object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
           loop
           muted={false}
           playsInline
@@ -84,7 +84,7 @@ export default function Hero() {
         </video>
         
         {/* Subtle gradient overlay for depth */}
-       
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-menu-hover/30 pointer-events-none" />
       </section>
 
       {/* Content Section - Enhanced with animations and depth */}
