@@ -12,6 +12,7 @@ import Services from '@/components/Services';
 import DestinationsGrid from '@/components/Destinations';
 import Testimonials from '@/components/Testmonial';
 import ImageCarousel from '@/components/Carousel';
+import HeroIntro from '@/components/HeroIntro';
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -182,7 +183,7 @@ export default function HomePage() {
       <Navigation />
       
       {/* Hero Section */}
- <Hero />
+ <HeroIntro />
 
  
 
