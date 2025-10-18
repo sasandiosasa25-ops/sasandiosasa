@@ -15,11 +15,11 @@ export default function Services() {
     en: {
       whatWeOffer: 'What We Offer',
       experiences: 'EXPERIENCES',
-      safaris: 'SasaNdioSasa Safaris',
+      safaris: 'Safaris',
       safarisDesc: 'Explore Tanzania\'s vast wilderness, from the Serengeti\'s endless plains to ancient baobabs in Tarangire, discovering nature\'s raw beauty and timeless rhythm.',
-      innerSafari: 'SasaNdioSasa Inner Safari',
+      innerSafari: 'Inner Safari',
       innerSafariDesc: 'Journey inward through reflection and silence. Connect with yourself while surrounded by Tanzania\'s landscapes, creating space for clarity and renewal.',
-      retreats: 'SasaNdioSasa Retreats',
+      retreats: 'Retreats',
       retreatsDesc: 'Immersive experiences that restore balance, combining nature\'s wisdom with personal growth, leadership development, and sustainable living.',
       explore: 'Explore',
       learnMore: 'Learn More',
@@ -28,11 +28,11 @@ export default function Services() {
     de: {
       whatWeOffer: 'Was Wir Anbieten',
       experiences: 'ERLEBNISSE',
-      safaris: 'SasaNdioSasa Safaris',
+      safaris: 'Safaris',
       safarisDesc: 'Erkunden Sie Tansanias weite Wildnis, von den endlosen Ebenen der Serengeti bis zu den uralten Baobabs in Tarangire, und entdecken Sie die raue Schönheit und zeitlose Rhythmus der Natur.',
-      innerSafari: 'SasaNdioSasa Innere Safari',
+      innerSafari: 'Innere Safari',
       innerSafariDesc: 'Reise nach innen durch Reflexion und Stille. Verbinde dich mit dir selbst, umgeben von Tansanias Landschaften, und schaffe Raum für Klarheit und Erneuerung.',
-      retreats: 'SasaNdioSasa Rückzüge',
+      retreats: 'Rückzüge',
       retreatsDesc: 'Immersive Erlebnisse, die das Gleichgewicht wiederherstellen, indem sie die Weisheit der Natur mit persönlichem Wachstum, Führungsentwicklung und nachhaltigem Leben verbinden.',
       explore: 'Erkunden',
       learnMore: 'Mehr Erfahren',
@@ -79,14 +79,16 @@ export default function Services() {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-heading/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              {/* Floating icon */}
-           
             </div>
             
             <CardHeader className="p-8 sm:p-10 md:p-12">
               <CardTitle className="text-3xl sm:text-4xl md:text-5xl text-brand-heading mb-4 sm:mb-6 font-black leading-tight tracking-tight">
-                {t.safaris}
+                <span className="inline-block relative">
+                  <span className="text-brand-primary bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent font-comfortaa tracking-wide">SasaNdioSasa</span>
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-brand-primary/40 to-transparent"></span>
+                </span>
+                {' '}
+                <span className="text-brand-heading">{t.safaris}</span>
               </CardTitle>
               <CardDescription className="text-base sm:text-lg text-brand-heading/70 leading-relaxed">
                 {t.safarisDesc}
@@ -122,14 +124,16 @@ export default function Services() {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-heading/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              {/* Floating icon */}
-          
             </div>
             
             <CardHeader className="p-8 sm:p-10 md:p-12">
               <CardTitle className="text-3xl sm:text-4xl md:text-5xl text-brand-heading mb-4 sm:mb-6 font-black leading-tight tracking-tight">
-                {t.innerSafari}
+                <span className="inline-block relative">
+                  <span className="text-brand-primary bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent font-comfortaa tracking-wide">SasaNdioSasa</span>
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-brand-primary/40 to-transparent"></span>
+                </span>
+                {' '}
+                <span className="text-brand-heading">{t.innerSafari}</span>
               </CardTitle>
               <CardDescription className="text-base sm:text-lg text-brand-heading/70 leading-relaxed">
                 {t.innerSafariDesc}
@@ -165,14 +169,16 @@ export default function Services() {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-heading/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              {/* Floating icon */}
-            
             </div>
             
             <CardHeader className="p-8 sm:p-10 md:p-12">
               <CardTitle className="text-3xl sm:text-4xl md:text-5xl text-brand-heading mb-4 sm:mb-6 font-black leading-tight tracking-tight">
-                {t.retreats}
+                <span className="inline-block relative">
+                  <span className="text-brand-primary bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent font-comfortaa tracking-wide">SasaNdioSasa</span>
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-brand-primary/40 to-transparent"></span>
+                </span>
+                {' '}
+                <span className="text-brand-heading">{t.retreats}</span>
               </CardTitle>
               <CardDescription className="text-base sm:text-lg text-brand-heading/70 leading-relaxed">
                 {t.retreatsDesc}
