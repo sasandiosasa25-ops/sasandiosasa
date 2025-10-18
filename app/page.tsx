@@ -180,7 +180,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Navigation />
+
       
       {/* Hero Section */}
  <Hero />
@@ -252,7 +252,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Footer />
+
     </>
   );
 }

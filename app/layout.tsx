@@ -4,6 +4,8 @@ import { Inter, Poppins, Comfortaa } from 'next/font/google';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import { Toaster } from '@/components/ui/sonner';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation';
 
 const inter = Inter({ subsets: ['latin'] });
 const poppins = Poppins({ 
@@ -66,9 +68,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${comfortaa.variable} ${poppins.variable} font-comfortaa`}>
         <LanguageProvider>
+          <Navigation />
+          <div className="pt-16" /> 
           {children}
           <WhatsAppButton />
           <Toaster />
+          <Footer />
         </LanguageProvider>
       </body>
     </html>

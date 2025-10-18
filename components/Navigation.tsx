@@ -105,8 +105,9 @@ export default function Navigation() {
 
                 {/* Dropdown Menu - More spacious and elegant */}
                 {item.dropdown && openDropdown === item.href && (
-                  <div className="absolute top-full left-0 mt-3 w-80 bg-white border-2 border-brand-border/20 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-300 overflow-hidden">
-                    <div className="py-3">
+                     <div className="absolute top-full left-0 pt-3 w-80">
+                    <div className="bg-white border-2 border-brand-border/20 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-300 overflow-hidden">
+                      <div className="py-3">
                       {item.dropdown.map((subItem, index) => (
                         <Link
                           key={subItem.href}
@@ -120,6 +121,7 @@ export default function Navigation() {
                           </span>
                         </Link>
                       ))}
+                    </div>
                     </div>
                   </div>
                 )}
