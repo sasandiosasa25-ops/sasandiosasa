@@ -18,6 +18,33 @@ export default function Hero() {
 
     if (!videoElement || !sectionElement) return;
 
+    let hasScrolled = false;
+
+    // Attempt to play immediately on load if visible
+    const attemptAutoplay = () => {
+      if (videoElement.readyState >= 2) {
+        videoElement.play().catch((err) => {
+          console.log('Initial autoplay prevented:', err);
+        });
+      }
+    };
+
+    // Unmute after user scrolls
+    const handleScroll = () => {
+      if (!hasScrolled) {
+        hasScrolled = true;
+        videoElement.muted = false;
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+
+    // Try to play as soon as video can play
+    videoElement.addEventListener('canplay', attemptAutoplay);
+    attemptAutoplay();
+
+    // Listen for scroll to unmute
+    window.addEventListener('scroll', handleScroll);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -30,7 +57,7 @@ export default function Hero() {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.25 }
     );
 
     observer.observe(sectionElement);
@@ -39,6 +66,8 @@ export default function Hero() {
     setTimeout(() => setIsVisible(true), 100);
 
     return () => {
+      videoElement.removeEventListener('canplay', attemptAutoplay);
+      window.removeEventListener('scroll', handleScroll);
       observer.disconnect();
     };
   }, []);
@@ -70,13 +99,13 @@ export default function Hero() {
 
   return (
     <>
-{/* Video Section - Full screen with subtle gradient overlay */}
-<section ref={sectionRef} className="relative w-full h-[50vh] sm:h-[65vh] md:h-[80vh] lg:h-screen overflow-hidden bg-brand-heading">
+      {/* Video Section - Full screen with subtle gradient overlay */}
+      <section ref={sectionRef} className="relative w-full h-[50vh] sm:h-[65vh] md:h-[80vh] lg:h-screen overflow-hidden bg-brand-heading">
         <video
           ref={videoRef}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
           loop
-          muted={false}
+          muted={true}
           playsInline
           preload="auto"
         >
