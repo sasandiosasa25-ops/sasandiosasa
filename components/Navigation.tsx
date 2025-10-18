@@ -31,15 +31,7 @@ export default function Navigation() {
         { href: '/experience/living-leading-abroad', label: language === 'de' ? 'Leben und Führen im Ausland' : 'Living and Leading Abroad' },
       ]
     },
-    { 
-      href: '/impact', 
-      label: language === 'de' ? 'Wirkung' : 'Impact'
-    },
-    { 
-      href: '/team', 
-      label: language === 'de' ? 'Team' : 'Team'
-    },
-    { 
+     { 
       href: '/travel-compass', 
       label: language === 'de' ? 'Reisekompass' : 'Travel Compass',
       dropdown: [
@@ -52,6 +44,15 @@ export default function Navigation() {
         { href: '/travel-compass/road-map', label: language === 'de' ? 'Routenplan' : 'Road Map' },
       ]
     },
+    { 
+      href: '/impact', 
+      label: language === 'de' ? 'Wirkung' : 'Impact'
+    },
+    { 
+      href: '/team', 
+      label: language === 'de' ? 'Team' : 'Team'
+    },
+   
   ];
 
   const toggleMobileDropdown = (href: string) => {

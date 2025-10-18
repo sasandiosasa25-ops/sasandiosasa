@@ -183,7 +183,7 @@ export default function HomePage() {
       <Navigation />
       
       {/* Hero Section */}
- <HeroIntro />
+ <Hero />
 
  
 
