@@ -13,6 +13,7 @@ import DestinationsGrid from '@/components/Destinations';
 import Testimonials from '@/components/Testmonial';
 import ImageCarousel from '@/components/Carousel';
 import HeroIntro from '@/components/HeroIntro';
+import Manifesto from '@/components/Manifesto';
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -184,11 +185,12 @@ export default function HomePage() {
       
       {/* Hero Section */}
  <Hero />
+ <Manifesto />
 
  
 
       {/* Services Section */}
-  <Services /> 
+  
 
       {/* Destinations Grid */}
    <ImageCarousel />
