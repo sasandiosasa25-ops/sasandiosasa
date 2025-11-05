@@ -103,14 +103,7 @@ const ImageCarousel = () => {
                     alt={image.alt}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-500">
-                    <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover/card:translate-y-0 transition-transform duration-500">
-                      <h3 className="text-2xl md:text-3xl font-bold text-white font-comfortaa mb-2">
-                        {image.title}
-                      </h3>
-                      <div className="w-16 h-1 bg-brand-primary "></div>
-                    </div>
-                  </div>
+                
                   <div className="absolute top-4 right-4 bg-brand-primary text-white px-4 py-2 rounded-full text-sm font-semibold font-poppins shadow-lg transform transition-all duration-300 hover:bg-brand-secondary hover:scale-110">
                     #{index + 1}
                   </div>
