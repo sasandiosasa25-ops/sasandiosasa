@@ -69,21 +69,21 @@ export default function CTASection() {
           <Button 
             asChild 
             size="lg" 
-            className="group relative bg-brand-primary hover:bg-brand-secondary text-white px-12 sm:px-16 py-6 sm:py-8 text-lg sm:text-xl font-bold uppercase tracking-wider transform hover:scale-105 transition-all duration-500 shadow-2xl hover:shadow-brand-primary/50 overflow-hidden"
+            className="group relative bg-brand-primary hover:bg-brand-secondary text-white px-6 sm:px-12 md:px-16 py-4 sm:py-6 md:py-8 text-base sm:text-lg md:text-xl font-bold uppercase tracking-wide sm:tracking-wider transform hover:scale-105 transition-all duration-500 shadow-2xl hover:shadow-brand-primary/50 overflow-hidden w-full sm:w-auto"
           >
-            <Link href="#">
+            <Link href="#" className="w-full sm:w-auto">
               {/* Animated background shimmer */}
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
               
-              <span className="relative flex items-center">
-                {text.buttonText}
-                <ArrowRight className="ml-4 h-6 w-6 transform group-hover:translate-x-2 transition-transform duration-300" />
+              <span className="relative flex items-center justify-center">
+                <span className="truncate">{text.buttonText}</span>
+                <ArrowRight className="ml-2 sm:ml-4 h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 transform group-hover:translate-x-2 transition-transform duration-300" />
               </span>
             </Link>
           </Button>
         </div>
         
-      
+     
       </div>
 
       {/* Bottom decorative gradient */}
