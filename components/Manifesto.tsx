@@ -54,7 +54,7 @@ export default function Manifesto() {
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-8 sm:space-y-10 lg:space-y-12">
           {/* Brand Name */}
-          <h1 className="font-comfortaa italic text-brand-primary text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-wide drop-shadow-2xl">
+          <h1 className="font-comfortaa italic text-brand-primary text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-bold tracking-wide drop-shadow-2xl">
             SasaNdioSasa
           </h1>
 
