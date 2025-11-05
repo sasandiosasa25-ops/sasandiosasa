@@ -14,6 +14,7 @@ import Testimonials from '@/components/Testmonial';
 import ImageCarousel from '@/components/Carousel';
 import HeroIntro from '@/components/HeroIntro';
 import Manifesto from '@/components/Manifesto';
+import SpecialEvents from '@/components/SpecialEvents';
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -187,7 +188,7 @@ export default function HomePage() {
  <Hero />
  <Manifesto />
 
- 
+ <SpecialEvents />
 
       {/* Services Section */}
   
@@ -195,8 +196,7 @@ export default function HomePage() {
       {/* Destinations Grid */}
    <ImageCarousel />
 
-      {/* Testimonials */}
-    <Testimonials />
+    
 
       {/* CTA Section */}
       <section className="py-32 bg-stone-50 relative overflow-hidden">
