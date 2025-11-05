@@ -15,6 +15,7 @@ import ImageCarousel from '@/components/Carousel';
 import HeroIntro from '@/components/HeroIntro';
 import Manifesto from '@/components/Manifesto';
 import SpecialEvents from '@/components/SpecialEvents';
+import CTASection from '@/components/CTA';
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -199,61 +200,7 @@ export default function HomePage() {
     
 
       {/* CTA Section */}
-      <section className="py-32 bg-stone-50 relative overflow-hidden">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="mb-16">
-            <div className="inline-block border border-stone-300 px-6 py-2 mb-8">
-              <span className="text-stone-600 font-medium text-xs tracking-[0.2em] uppercase">{t.startYourJourney}</span>
-            </div>
-            
-            <h2 className="text-[4rem] md:text-[7rem] font-black text-stone-900 mb-8 leading-[0.9] tracking-tighter">
-              {t.beginHere}
-            </h2>
-            
-            <p className="text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed font-light mb-12">
-              {t.ctaText}
-            </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <Button asChild size="lg" className="bg-stone-900 hover:bg-stone-800 text-white px-16 py-8 text-xl transform hover:scale-105 transition-all duration-300">
-              <Link href="/contact">
-                <span className="flex items-center">
-                  <Users className="mr-4 h-6 w-6" />
-                  {t.contactUs}
-                  <ArrowRight className="ml-4 h-6 w-6" />
-                </span>
-              </Link>
-            </Button>
-            
-            <Button asChild size="lg" variant="outline" className="border-2 border-stone-900 bg-transparent text-stone-900 hover:bg-stone-900 hover:text-white px-16 py-8 text-xl">
-              <Link href="/destinations">
-                <span className="flex items-center">
-                  <MapPin className="mr-4 h-6 w-6" />
-                  {t.viewDestinations}
-                  <ArrowRight className="ml-4 h-6 w-6" />
-                </span>
-              </Link>
-            </Button>
-          </div>
-          
-          <div className="flex flex-wrap justify-center items-center gap-12 pt-12 border-t border-stone-200">
-            <div className="flex items-center">
-              <Star className="w-5 h-5 text-stone-900 fill-current mr-2" strokeWidth={0} />
-              <span className="text-stone-700 font-medium text-sm tracking-wide">4.9/5 {t.rating}</span>
-            </div>
-            <div className="flex items-center">
-              <Award className="w-5 h-5 text-stone-900 mr-2" strokeWidth={1.5} />
-              <span className="text-stone-700 font-medium text-sm tracking-wide">{t.awardWinning}</span>
-            </div>
-            <div className="flex items-center">
-              <Heart className="w-5 h-5 text-stone-900 mr-2" strokeWidth={1.5} />
-              <span className="text-stone-700 font-medium text-sm tracking-wide">500+ {t.travelers}</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
+     <CTASection />
 
     </>
   );
