@@ -14,18 +14,18 @@ export default function Footer() {
         {
           subtitle: language === 'de' ? 'Safaris' : 'Safaris',
           links: [
-            { href: '/road-map#flow', label: 'The Flow' },
-            { href: '/road-map#shift', label: 'The Shift' },
-            { href: '/road-map#unfolding', label: 'The Unfolding' },
-            { href: '/road-map#pause', label: 'Pause' },
-            { href: '/road-map#little-tracks', label: 'Little Tracks' },
+            { href: '/road-map/#flow', label: 'The Flow' },
+            { href: '/road-map/#shift', label: 'The Shift' },
+            { href: '/road-map/#unfolding', label: 'The Unfolding' },
+            { href: '/road-map/#pause', label: 'Pause' },
+            { href: '/road-map/#little-tracks', label: 'Little Tracks' },
           ]
         },
         {
           subtitle: language === 'de' ? 'Strand' : 'Beach',
           links: [
-            { href: '/road-map#exhale', label: 'The Exhale' },
-            { href: '/road-map#return', label: 'The Return' },
+            { href: '/road-map/#exhale', label: 'The Exhale' },
+            { href: '/road-map/#return', label: 'The Return' },
           ]
         },
         {
