@@ -2,99 +2,15 @@
 
 import { Mountain, ArrowRight, Compass, ChevronDown } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 // Mock useLanguage hook - replace with your actual context
 type Language = 'en' | 'de';
 
-const useLanguage = () => {
-  const [language, setLanguage] = useState<Language>('en');
-  return { language, setLanguage };
-};
+
 
 // ===== HERO COMPONENT =====
-const Hero = () => {
-  const { language } = useLanguage();
-  const videoRef = useRef(null);
-  const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => setIsVisible(true), 100);
-  }, []);
-
-  const translations = {
-    en: {
-      explorePaths: 'Explore Paths',
-      ourExperiences: 'Our Experiences',
-    },
-    de: {
-      explorePaths: 'Pfade Erkunden',
-      ourExperiences: 'Unsere Erfahrungen',
-    }
-  };
-
-  const t = translations[language];
-
-  return (
-    <>
-      <section ref={sectionRef} className="relative w-full h-screen overflow-hidden bg-brand-heading">
-        {/* Video Background */}
-        <video
-          ref={videoRef}
-          className="absolute inset-0 w-full h-full object-cover"
-          loop
-          muted
-          playsInline
-          preload="auto"
-        >
-          <source src="/pro1.mp4" type="video/mp4" />
-        </video>
-
-        {/* Premium gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-heading/60" />
-        
-        {/* Animated accent elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-
-        {/* Content */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4">
-          <div className={`text-center max-w-4xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <h1 className="font-comfortaa text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-              TANZANIA
-            </h1>
-            <p className="font-poppins text-xl md:text-2xl text-white/90 mb-12 leading-relaxed">
-              Where vast landscapes meet profound stillness
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-              <button className="group relative bg-brand-primary text-white px-8 sm:px-12 py-4 text-lg font-semibold rounded-lg overflow-hidden hover:bg-brand-secondary transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-                <span className="relative flex items-center justify-center gap-2">
-                  {t.explorePaths}
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </button>
-
-              <button className="group relative border-2 border-white text-white px-8 sm:px-12 py-4 text-lg font-semibold rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-                <span className="flex items-center justify-center gap-2">
-                  {t.ourExperiences}
-                  <Compass className="w-5 h-5 group-hover:rotate-90 transition-transform duration-500" />
-                </span>
-              </button>
-            </div>
-          </div>
-
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 animate-bounce">
-            <ChevronDown className="w-8 h-8 text-white/70" />
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
 
 // ===== PEAKS PAGE COMPONENT =====
 const PeaksPage = () => {
@@ -269,7 +185,7 @@ const PeaksPage = () => {
 export default function Page() {
   return (
     <div>
-      <Hero />
+  
       <PeaksPage />
     </div>
   );
