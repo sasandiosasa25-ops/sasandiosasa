@@ -106,7 +106,7 @@ const TeamPage = () => {
   const t = translations[language];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-stone-50 via-slate-50 to-stone-100">
+    <div className="min-h-screen  bg-light ">
       {/* Hero Section */}
       <div className="relative h-[55vh] md:h-[65vh] bg-gradient-to-br from-brand-heading via-brand-secondary to-brand-primary flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-60">

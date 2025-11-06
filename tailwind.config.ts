@@ -28,7 +28,8 @@ const config: Config = {
         brand: {
           primary: '#c3512f',      // Primary color for links
           secondary: '#883d1f',    // Secondary color for link and button hover
-          heading: '#382410',      // Heading color
+          heading: '#382410', 
+           'bg-light': '#faf8f5',      // Heading color
           border: '#ebe8e2',       // Border colors
           'menu-hover': '#f8f6f2', // Alternate background menu hover
         },
