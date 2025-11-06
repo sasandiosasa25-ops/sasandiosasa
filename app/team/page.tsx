@@ -111,7 +111,7 @@ const TeamPage = () => {
       <div className="relative h-[55vh] md:h-[65vh] bg-gradient-to-br from-brand-heading via-brand-secondary to-brand-primary flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-60">
           <img 
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop" 
+            src="/ele.jpeg" 
             alt="Team together" 
             className="w-full h-full object-cover"
           />
@@ -195,7 +195,7 @@ const TeamPage = () => {
               style={{ transitionDelay: `${idx * 100}ms` }}
             >
               {/* Image */}
-              <div className="relative h-96 overflow-hidden bg-gradient-to-br from-brand-primary to-brand-secondary">
+              <div className="relative overflow-hidden bg-gradient-to-br from-brand-primary to-brand-secondary">
                 <img 
                   src={member.image} 
                   alt={member.name}
@@ -249,61 +249,7 @@ const TeamPage = () => {
         </div>
       </div>
 
-      {/* Values Section */}
-      <div className="bg-brand-heading text-white py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h3 className="font-comfortaa text-4xl mb-12 text-center font-bold">
-            {language === 'en' ? 'What We Stand For' : 'Wofür wir stehen'}
-          </h3>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Leaf className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="font-comfortaa text-2xl mb-4 font-bold">
-                {language === 'en' ? 'Connection' : 'Verbindung'}
-              </h4>
-              <p className="font-poppins text-white/80">
-                {language === 'en' 
-                  ? 'To the land, the people, and ourselves'
-                  : 'Zum Land, zu den Menschen und zu uns selbst'
-                }
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="font-comfortaa text-2xl mb-4 font-bold">
-                {language === 'en' ? 'Authenticity' : 'Authentizität'}
-              </h4>
-              <p className="font-poppins text-white/80">
-                {language === 'en'
-                  ? 'In everything we create and share'
-                  : 'In allem, was wir schaffen und teilen'
-                }
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-brand-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="font-comfortaa text-2xl mb-4 font-bold">
-                {language === 'en' ? 'Growth' : 'Wachstum'}
-              </h4>
-              <p className="font-poppins text-white/80">
-                {language === 'en'
-                  ? 'Through meaningful experiences'
-                  : 'Durch bedeutungsvolle Erfahrungen'
-                }
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
