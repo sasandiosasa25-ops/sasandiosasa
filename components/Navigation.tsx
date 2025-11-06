@@ -72,8 +72,7 @@ export default function Navigation() {
           items: [
             { href: '/experience/inner-safari', label: language === 'de' ? 'Innere Safari' : 'Inner Safari' },
             { href: '/experience/retreat', label: language === 'de' ? 'Rückzug' : 'Retreat' },
-            { href: '/experience/living-leading-abroad', label: language === 'de' ? 'Leben und Führen im Ausland' : 'Living and Leading Abroad' },
-          ]
+            ]
         }
       ]
     },
