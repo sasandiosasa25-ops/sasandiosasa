@@ -106,10 +106,10 @@ const TeamPage = () => {
   const t = translations[language];
 
   return (
-    <div className="min-h-screen  bg-light ">
+    <div className="min-h-screen bg-gradient-to-b from-stone-50 via-slate-50 to-stone-100">
       {/* Hero Section */}
       <div className="relative h-[55vh] md:h-[65vh] bg-gradient-to-br from-brand-heading via-brand-secondary to-brand-primary flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-60">
+        <div className="absolute inset-0 opacity-40">
           <img 
             src="/ele.jpeg" 
             alt="Team together" 
@@ -117,8 +117,7 @@ const TeamPage = () => {
           />
         </div>
 
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/25 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-secondary/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
+           <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-secondary/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
 
         <div className={`relative z-10 text-center max-w-4xl px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h1 className="font-comfortaa text-6xl md:text-7xl lg:text-8xl text-white mb-6 font-black tracking-tight">
@@ -201,18 +200,17 @@ const TeamPage = () => {
                   alt={member.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-             
-              </div>
+                     </div>
 
               {/* Content */}
               <div className="p-8">
-                <h3 className="font-comfortaa text-3xl text-brand-heading mb-2 font-bold">
-                  {member.name}
-                </h3>
-                <p className="font-poppins text-sm text-brand-primary font-semibold mb-4 flex items-center gap-2">
+                <p className="font-poppins text-sm text-brand-primary font-semibold mb-2 flex items-center gap-2">
                   <Heart className="w-4 h-4" />
                   {member.role}
                 </p>
+                <h3 className="font-comfortaa text-3xl text-brand-heading mb-4 font-bold">
+                  {member.name}
+                </h3>
 
                 <p className="font-poppins text-stone-700 leading-relaxed mb-6">
                   {member.bio}
@@ -249,7 +247,7 @@ const TeamPage = () => {
         </div>
       </div>
 
-
+ 
     </div>
   );
 };
