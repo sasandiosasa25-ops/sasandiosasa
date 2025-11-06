@@ -75,7 +75,7 @@ const TeamPage: FC = () => {
           section: 'guides',
           name: 'Kilidove / Mawe Lodges',
           role: 'Our Trusted Partner',
-          image: '/kilidove.jpeg',
+          image: '/MaweLodgesTeam.jpg',
           bio: 'We are proud to introduce Kilidove / Mawe Lodges, a partner who shares what we value most: Tanzanian hospitality. Every detail, from carefully curated menus and locally sourced suppliers to thoughtfully designed décor and coachings, reflects their commitment to quality and authenticity. Currently working toward Travelife Sustainable Certification, Kilidove / Mawe Lodges mirror and live by the SasaNdioSasa values every day.',
           imagePosition: 'left'
         },
@@ -298,6 +298,20 @@ const TeamPage: FC = () => {
         {teamBySection.guides.map((member, idx) => renderTeamMember(member, idx))}
       </div>
 
+        {/* Coaches Section */}
+      <div className="max-w-6xl mx-auto px-6 py-20 border-t-4 border-brand-primary">
+        <div className="mb-16">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-16 h-1 bg-brand-primary rounded-full" />
+            <h2 className="font-comfortaa text-5xl text-brand-heading font-black">
+              {t.coaches}
+            </h2>
+          </div>
+        </div>
+
+        {teamBySection.coaches.map((member, idx) => renderTeamMember(member, idx))}
+      </div>
+
       {/* Office Section */}
       <div className="max-w-6xl mx-auto px-6 py-20 border-t-4 border-brand-primary">
         <div className="mb-16">
@@ -312,19 +326,7 @@ const TeamPage: FC = () => {
         {teamBySection.office.map((member, idx) => renderTeamMember(member, idx))}
       </div>
 
-      {/* Coaches Section */}
-      <div className="max-w-6xl mx-auto px-6 py-20 border-t-4 border-brand-primary">
-        <div className="mb-16">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-16 h-1 bg-brand-primary rounded-full" />
-            <h2 className="font-comfortaa text-5xl text-brand-heading font-black">
-              {t.coaches}
-            </h2>
-          </div>
-        </div>
-
-        {teamBySection.coaches.map((member, idx) => renderTeamMember(member, idx))}
-      </div>
+    
     </div>
   );
 };
