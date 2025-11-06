@@ -90,12 +90,7 @@ export default function Footer() {
                   Arusha, Tanzania
                 </p>
               </div>
-              <div className="flex items-center space-x-3 group">
-                <Phone className="h-5 w-5 text-brand-primary flex-shrink-0" strokeWidth={2} />
-                <a href="tel:+255759744701" className="text-brand-border/80 group-hover:text-brand-primary transition-colors font-medium">
-                  +255 759 744 701
-                </a>
-              </div>
+             
               <div className="flex items-center space-x-3 group">
                 <Mail className="h-5 w-5 text-brand-primary flex-shrink-0" strokeWidth={2} />
                 <a href="mailto:Safari@sasandiosasa.co.tz" className="text-brand-border/80 group-hover:text-brand-primary transition-colors font-medium">
