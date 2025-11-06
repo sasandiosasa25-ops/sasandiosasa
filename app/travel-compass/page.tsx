@@ -378,7 +378,7 @@ const TravelCompassPage = () => {
           alt="Tanzania Landscape" 
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-900/90 via-amber-800/80 to-emerald-900/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-900/90 via-amber-800/80 to-amber-900/90" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className={`text-center text-white transition-all duration-1000 px-4 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <Compass className="w-20 h-20 mx-auto mb-6 animate-pulse drop-shadow-2xl" />

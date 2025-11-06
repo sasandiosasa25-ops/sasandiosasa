@@ -52,7 +52,7 @@ export default function Footer() {
         { href: '/travel-compass/travel-permit', label: language === 'de' ? 'Reisegenehmigung' : 'Travel Permit' },
         { href: '/travel-compass/packing-lists', label: language === 'de' ? 'Packlisten' : 'Packing Lists' },
         { href: '/travel-compass/faqs', label: language === 'de' ? 'Dos und Don\'ts (FAQs)' : 'Dos and Don\'ts (FAQs)' },
-        { href: '/travel-compass/road-map', label: language === 'de' ? 'Routenplan' : 'Road Map' },
+        { href: '/road-map', label: language === 'de' ? 'Routenplan' : 'Road Map' },
       ]
     },
     company: {
