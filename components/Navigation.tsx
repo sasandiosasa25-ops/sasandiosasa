@@ -226,10 +226,10 @@ export default function Navigation() {
                     </Link>
                   )}
 
-                  {/* Dropdown Menu - Elegant sections */}
+                  {/* Dropdown Menu - Elegant sections with scrolling */}
                   {item.hasDropdown && openDropdown === item.label && (
                     <div className="absolute top-full left-0 pt-3 w-[420px]">
-                      <div className="bg-white border-2 border-brand-border/20 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-300 overflow-hidden">
+                      <div className="bg-white border-2 border-brand-border/20 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-300 overflow-hidden max-h-[calc(100vh-200px)] overflow-y-auto">
                         <div className="py-2">
                           {item.sections?.map((section, sectionIndex) => (
                             <div key={sectionIndex} className={sectionIndex > 0 ? 'border-t-2 border-brand-border/20 pt-2 mt-2' : ''}>
@@ -283,7 +283,7 @@ export default function Navigation() {
           {isOpen && (
             <div className="lg:hidden border-t-2 border-brand-border/30 animate-in slide-in-from-top duration-300">
               <div className="px-3 pt-6 pb-6 space-y-2 bg-white max-h-[calc(100vh-96px)] overflow-y-auto">
-                {navItems.filter(item => item.label !== 'Team').map((item) => (
+                {navItems.map((item) => (
                   <div key={item.label} className="border-b border-brand-border/10 last:border-b-0">
                     <div className="flex items-center justify-between">
                       {item.hasDropdown ? (
