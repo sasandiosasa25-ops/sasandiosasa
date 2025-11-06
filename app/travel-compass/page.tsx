@@ -351,29 +351,6 @@ const TravelCompassPage = () => {
           'Akzeptieren oder verwenden Sie keine Plastiktüten. Sie sind in Tansania verboten. Bringen Sie wiederverwendbare Taschen mit oder fragen Sie uns nach nachhaltigen Optionen.'
         ]
       },
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       roadMap: {
         title: 'Straßenkarte',
         description: 'Erkunden Sie unsere sorgfältig kuratierten Pfade und entdecken Sie Ihre Reise.',
@@ -395,49 +372,84 @@ const TravelCompassPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-emerald-50">
       {/* Hero Section */}
-      <div className="relative h-[60vh] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-900/90 to-emerald-900/90" />
+      <div className="relative h-[70vh] overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600&q=80" 
+          alt="Tanzania Landscape" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-900/90 via-amber-800/80 to-emerald-900/90" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className={`text-center text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <Compass className="w-20 h-20 mx-auto mb-6 animate-pulse" />
-            <h1 className="text-5xl md:text-7xl font-bold mb-4">{t.title}</h1>
-            <p className="text-xl md:text-2xl font-light">{t.subtitle}</p>
+          <div className={`text-center text-white transition-all duration-1000 px-4 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <Compass className="w-20 h-20 mx-auto mb-6 animate-pulse drop-shadow-2xl" />
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-2xl">{t.title}</h1>
+            <p className="text-xl md:text-2xl font-light drop-shadow-lg">{t.subtitle}</p>
           </div>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-4 py-16 space-y-20">
+      <div className="max-w-7xl mx-auto px-4 py-16 space-y-24">
         
         {/* Why Choose Us Section */}
-        <section className="space-y-8">
-          <h2 className="text-4xl font-bold text-amber-900 flex items-center gap-3">
-            <Compass className="w-10 h-10" />
-            {t.whyChooseUs.title}
-          </h2>
-          <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-            {t.whyChooseUs.intro.map((paragraph, index) => (
-              <p key={index} className="italic">{paragraph}</p>
-            ))}
-            <p className="font-medium">{t.whyChooseUs.content}</p>
+        <section id="why-choose-us" className="space-y-8">
+          <div className="relative">
+            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-amber-500 to-emerald-500 rounded-full"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4 mb-8">
+              <Compass className="w-12 h-12 text-emerald-600" />
+              {t.whyChooseUs.title}
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+              {t.whyChooseUs.intro.map((paragraph, index) => (
+                <p key={index} className="italic text-gray-600">{paragraph}</p>
+              ))}
+            </div>
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&q=80" 
+                alt="African Landscape" 
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+              />
+            </div>
+          </div>
+
+          <div className="space-y-6 text-lg text-gray-700 leading-relaxed bg-white p-8 rounded-2xl shadow-lg">
+            <p className="font-medium text-xl text-emerald-800">{t.whyChooseUs.content}</p>
             <p>{t.whyChooseUs.simone}</p>
             <p>{t.whyChooseUs.choose}</p>
-            <p className="text-xl font-semibold text-emerald-800 pt-4">{t.whyChooseUs.tagline}</p>
+            <p className="text-2xl font-semibold text-amber-800 pt-6 border-t-2 border-amber-200">{t.whyChooseUs.tagline}</p>
           </div>
         </section>
 
         {/* Seasonal Advice Section */}
-        <section className="space-y-8">
-          <h2 className="text-4xl font-bold text-amber-900 flex items-center gap-3">
-            <Calendar className="w-10 h-10" />
-            {t.seasonalAdvice.title}
-          </h2>
-          <p className="text-xl text-gray-600 italic">{t.seasonalAdvice.subtitle}</p>
-          <p className="text-lg text-gray-700 leading-relaxed">{t.seasonalAdvice.intro}</p>
+        <section id="seasonal-advice" className="space-y-8">
+          <div className="relative">
+            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-emerald-500 to-blue-500 rounded-full"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4 mb-4">
+              <Calendar className="w-12 h-12 text-emerald-600" />
+              {t.seasonalAdvice.title}
+            </h2>
+            <p className="text-2xl text-gray-600 italic font-light">{t.seasonalAdvice.subtitle}</p>
+          </div>
+
+          <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl mb-8">
+            <img 
+              src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&q=80" 
+              alt="Tanzania Wildlife" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+              <p className="text-white text-xl p-8 leading-relaxed">{t.seasonalAdvice.intro}</p>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-6">
             {t.seasonalAdvice.seasons.map((season, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-bold text-emerald-700 mb-3">{season.title}</h3>
+              <div key={index} className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-emerald-500 hover:border-amber-500">
+                <h3 className="text-2xl font-bold text-emerald-700 mb-4 group-hover:text-amber-700 transition-colors">{season.title}</h3>
                 <p className="text-gray-700 leading-relaxed">{season.description}</p>
               </div>
             ))}
@@ -445,51 +457,87 @@ const TravelCompassPage = () => {
         </section>
 
         {/* Airline Recommendations Section */}
-        <section className="space-y-8">
-          <h2 className="text-4xl font-bold text-amber-900 flex items-center gap-3">
-            <Plane className="w-10 h-10" />
-            {t.airlineRecommendations.title}
-          </h2>
-          <p className="text-lg text-gray-700 leading-relaxed">{t.airlineRecommendations.intro}</p>
-          <div className="grid md:grid-cols-2 gap-4">
+        <section id="airline-recommendations" className="space-y-8">
+          <div className="relative">
+            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-indigo-500 rounded-full"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4">
+              <Plane className="w-12 h-12 text-blue-600" />
+              {t.airlineRecommendations.title}
+            </h2>
+          </div>
+
+          <div className="relative h-72 rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80" 
+              alt="Airplane" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-indigo-900/90 flex items-center justify-center">
+              <p className="text-white text-xl px-8 text-center leading-relaxed max-w-4xl">{t.airlineRecommendations.intro}</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {t.airlineRecommendations.airlines.map((airline, index) => (
-              <div key={index} className="bg-gradient-to-r from-amber-50 to-white p-5 rounded-lg border-l-4 border-amber-500">
-                <h3 className="text-lg font-bold text-gray-800 mb-2">{airline.name}</h3>
-                <p className="text-gray-600">{airline.description}</p>
+              <div key={index} className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl border border-blue-100 hover:border-blue-400 transition-all duration-300 hover:shadow-xl">
+                <div className="flex items-center gap-3 mb-3">
+                  <Plane className="w-6 h-6 text-blue-600" />
+                  <h3 className="text-xl font-bold text-gray-800">{airline.name}</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed">{airline.description}</p>
               </div>
             ))}
           </div>
-          <p className="text-gray-600 italic bg-emerald-50 p-4 rounded-lg">{t.airlineRecommendations.note}</p>
+
+          <div className="bg-gradient-to-r from-emerald-50 to-blue-50 p-8 rounded-2xl border-l-4 border-emerald-500">
+            <p className="text-gray-700 italic text-lg">{t.airlineRecommendations.note}</p>
+          </div>
         </section>
 
         {/* Travel Permit Section */}
-        <section className="space-y-8">
-          <h2 className="text-4xl font-bold text-amber-900 flex items-center gap-3">
-            <FileText className="w-10 h-10" />
-            {t.travelPermit.title}
-          </h2>
-          <p className="text-xl text-gray-600 italic">{t.travelPermit.subtitle}</p>
-          <p className="text-lg text-gray-700">{t.travelPermit.intro}</p>
-          
-          <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 p-8 rounded-xl shadow-lg text-white">
-            <h3 className="text-2xl font-bold mb-3">{t.travelPermit.websiteTitle}</h3>
+        <section id="travel-permit" className="space-y-8">
+          <div className="relative">
+            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-red-500 to-orange-500 rounded-full"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4 mb-4">
+              <FileText className="w-12 h-12 text-red-600" />
+              {t.travelPermit.title}
+            </h2>
+            <p className="text-2xl text-gray-600 italic font-light">{t.travelPermit.subtitle}</p>
+          </div>
+
+          <div className="relative h-64 rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1569098644584-210bcd375b59?w=1600&q=80" 
+              alt="Passport and Travel" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-red-900/80 to-orange-900/80 flex items-center justify-center">
+              <p className="text-white text-xl px-8 text-center leading-relaxed max-w-3xl">{t.travelPermit.intro}</p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 p-10 rounded-2xl shadow-2xl text-white">
+            <h3 className="text-3xl font-bold mb-4">{t.travelPermit.websiteTitle}</h3>
             <a 
               href={`https://${t.travelPermit.website}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-3xl font-bold flex items-center gap-3 hover:text-amber-200 transition-colors"
+              className="text-4xl font-bold flex items-center gap-4 hover:text-amber-200 transition-colors group"
             >
               {t.travelPermit.website}
-              <ExternalLink className="w-8 h-8" />
+              <ExternalLink className="w-10 h-10 group-hover:translate-x-2 transition-transform" />
             </a>
           </div>
 
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-emerald-800">{t.travelPermit.prepareTitle}</h3>
-            <p className="text-gray-700">{t.travelPermit.prepareText}</p>
-            <div className="space-y-3">
+          <div className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
+            <h3 className="text-3xl font-bold text-emerald-800 flex items-center gap-3">
+              <Check className="w-8 h-8" />
+              {t.travelPermit.prepareTitle}
+            </h3>
+            <p className="text-gray-700 text-lg">{t.travelPermit.prepareText}</p>
+            <div className="grid md:grid-cols-2 gap-4">
               {requirements.map((req, index) => (
-                <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
+                <div key={index} className="flex items-start gap-4 bg-emerald-50 p-5 rounded-xl border-l-4 border-emerald-500 hover:shadow-md transition-shadow">
                   <div className="text-emerald-600 mt-1">{req.icon}</div>
                   <span className="text-gray-700">{req.text}</span>
                 </div>
@@ -497,150 +545,195 @@ const TravelCompassPage = () => {
             </div>
           </div>
 
-          <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-500">
-            <p className="text-gray-700 mb-4">{t.travelPermit.guidelinesText}</p>
+          <div className="bg-amber-50 p-8 rounded-2xl border-l-4 border-amber-500 space-y-4">
+            <p className="text-gray-700 text-lg">{t.travelPermit.guidelinesText}</p>
             <a 
               href="https://immigration.go.tz"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-emerald-700 font-semibold hover:text-emerald-900 flex items-center gap-2"
+              className="text-emerald-700 font-semibold text-xl hover:text-emerald-900 flex items-center gap-3 group"
             >
               immigration.go.tz
-              <ExternalLink className="w-4 h-4" />
+              <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-emerald-800">{t.travelPermit.processingTitle}</h3>
-            <p className="text-gray-700">{t.travelPermit.processingText}</p>
-            <p className="text-gray-700 bg-blue-50 p-4 rounded-lg">{t.travelPermit.arrivalText}</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-blue-50 p-8 rounded-2xl border-l-4 border-blue-500">
+              <h3 className="text-2xl font-bold text-blue-800 mb-4">{t.travelPermit.processingTitle}</h3>
+              <p className="text-gray-700 leading-relaxed">{t.travelPermit.processingText}</p>
+            </div>
+            <div className="bg-green-50 p-8 rounded-2xl border-l-4 border-green-500">
+              <h3 className="text-2xl font-bold text-green-800 mb-4">Arrival Option</h3>
+              <p className="text-gray-700 leading-relaxed">{t.travelPermit.arrivalText}</p>
+            </div>
           </div>
         </section>
 
         {/* Packing Lists Section */}
-        <section className="space-y-12">
-          <h2 className="text-4xl font-bold text-amber-900 flex items-center gap-3">
-            <Backpack className="w-10 h-10" />
-            {t.packingLists.title}
-          </h2>
+        <section id="packing-lists" className="space-y-12">
+          <div className="relative">
+            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4">
+              <Backpack className="w-12 h-12 text-purple-600" />
+              {t.packingLists.title}
+            </h2>
+          </div>
 
           {/* Safari Packing */}
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-emerald-700">{t.packingLists.safari.title}</h3>
-            <p className="text-lg text-gray-600 italic">{t.packingLists.safari.subtitle}</p>
-            
-            <div className="space-y-4">
-              <h4 className="text-2xl font-semibold text-gray-800">{t.packingLists.safari.essentialsTitle}</h4>
-              {t.packingLists.safari.essentials.map((item, index) => (
-                <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
-                  <Check className="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">{item}</span>
-                </div>
-              ))}
+          <div className="space-y-8">
+            <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1535338454770-a320e0bcaaeb?w=1600&q=80" 
+                alt="Safari Vehicle" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-10">
+                <h3 className="text-4xl font-bold text-white mb-3">{t.packingLists.safari.title}</h3>
+                <p className="text-xl text-white/90 italic">{t.packingLists.safari.subtitle}</p>
+              </div>
             </div>
 
-            <p className="text-gray-700 bg-amber-50 p-4 rounded-lg">{t.packingLists.safari.electricity}</p>
-            <p className="text-gray-700 bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">{t.packingLists.safari.sun}</p>
+            <div className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
+              <h4 className="text-3xl font-semibold text-gray-800 border-b-4 border-emerald-500 pb-3 inline-block">{t.packingLists.safari.essentialsTitle}</h4>
+              <div className="grid gap-4">
+                {t.packingLists.safari.essentials.map((item, index) => (
+                  <div key={index} className="flex items-start gap-4 bg-emerald-50 p-5 rounded-xl hover:bg-emerald-100 transition-colors">
+                    <Check className="w-6 h-6 text-emerald-600 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700 leading-relaxed">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-            <div className="space-y-4">
-              <h4 className="text-2xl font-semibold text-gray-800">{t.packingLists.safari.mindTitle}</h4>
-              {t.packingLists.safari.mind.map((item, index) => (
-                <div key={index} className="flex items-start gap-3 bg-gradient-to-r from-purple-50 to-blue-50 p-4 rounded-lg">
-                  <Check className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">{item}</span>
-                </div>
-              ))}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl border-l-4 border-amber-500">
+                <p className="text-gray-700 leading-relaxed">{t.packingLists.safari.electricity}</p>
+              </div>
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl border-l-4 border-orange-500">
+                <p className="text-gray-700 leading-relaxed font-medium">{t.packingLists.safari.sun}</p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-2xl shadow-lg">
+              <h4 className="text-3xl font-semibold text-purple-800 mb-6">{t.packingLists.safari.mindTitle}</h4>
+              <div className="space-y-4">
+                {t.packingLists.safari.mind.map((item, index) => (
+                  <div key={index} className="flex items-start gap-4 bg-white p-5 rounded-xl">
+                    <Check className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700 leading-relaxed">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Peaks Packing */}
-          <div className="space-y-6 border-t-2 border-gray-200 pt-12">
-            <h3 className="text-3xl font-bold text-emerald-700">{t.packingLists.peaks.title}</h3>
-            <p className="text-lg text-gray-700 leading-relaxed">{t.packingLists.peaks.intro}</p>
-
-            <div className="space-y-4">
-              <h4 className="text-2xl font-semibold text-gray-800">{t.packingLists.peaks.clothingTitle}</h4>
-              {t.packingLists.peaks.clothing.map((item, index) => (
-                <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
-                  <Check className="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">{item}</span>
-                </div>
-              ))}
+          <div className="space-y-8 border-t-4 border-gray-200 pt-12">
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1589553416260-f586c8f1514f?w=1600&q=80" 
+                alt="Mount Kilimanjaro" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-10">
+                <h3 className="text-5xl font-bold text-white mb-4">{t.packingLists.peaks.title}</h3>
+                <p className="text-xl text-white/90 leading-relaxed max-w-3xl">{t.packingLists.peaks.intro}</p>
+              </div>
             </div>
 
-            <div className="space-y-4">
-              <h4 className="text-2xl font-semibold text-gray-800">{t.packingLists.peaks.gearTitle}</h4>
-              {t.packingLists.peaks.gear.map((item, index) => (
-                <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
-                  <Check className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">{item}</span>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
+                <h4 className="text-3xl font-semibold text-blue-800 border-b-4 border-blue-500 pb-3 inline-block">{t.packingLists.peaks.clothingTitle}</h4>
+                <div className="space-y-3">
+                  {t.packingLists.peaks.clothing.map((item, index) => (
+                    <div key={index} className="flex items-start gap-4 bg-blue-50 p-4 rounded-xl">
+                      <Check className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{item}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              <div className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
+                <h4 className="text-3xl font-semibold text-indigo-800 border-b-4 border-indigo-500 pb-3 inline-block">{t.packingLists.peaks.gearTitle}</h4>
+                <div className="space-y-3">
+                  {t.packingLists.peaks.gear.map((item, index) => (
+                    <div key={index} className="flex items-start gap-4 bg-indigo-50 p-4 rounded-xl">
+                      <Check className="w-5 h-5 text-indigo-600 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
-            <div className="bg-gradient-to-r from-emerald-700 to-blue-700 p-6 rounded-xl text-white">
-              <h4 className="text-2xl font-semibold mb-3">{t.packingLists.peaks.mindsetTitle}</h4>
-              <p className="text-lg leading-relaxed">{t.packingLists.peaks.mindset}</p>
+            <div className="bg-gradient-to-r from-emerald-700 via-blue-700 to-indigo-700 p-10 rounded-2xl text-white shadow-2xl">
+              <h4 className="text-3xl font-semibold mb-5 flex items-center gap-3">
+                <Compass className="w-10 h-10" />
+                {t.packingLists.peaks.mindsetTitle}
+              </h4>
+              <p className="text-xl leading-relaxed">{t.packingLists.peaks.mindset}</p>
             </div>
           </div>
         </section>
 
         {/* FAQs Section */}
-        <section className="space-y-8">
-          <h2 className="text-4xl font-bold text-amber-900 flex items-center gap-3">
-            <AlertCircle className="w-10 h-10" />
-            {t.faqs.title}
-          </h2>
+        <section id="faqs" className="space-y-8">
+          <div className="relative">
+            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-yellow-500 to-red-500 rounded-full"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4">
+              <AlertCircle className="w-12 h-12 text-yellow-600" />
+              {t.faqs.title}
+            </h2>
+          </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="relative h-64 rounded-2xl overflow-hidden shadow-2xl mb-8">
+            <img 
+              src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1600&q=80" 
+              alt="Travel Safety" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-900/80 to-red-900/80"></div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10">
             {/* Do's */}
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-emerald-700 flex items-center gap-2">
-                <Check className="w-8 h-8" />
-                {t.faqs.dosTitle}
-              </h3>
-              <div className="space-y-3">
+            <div className="space-y-6">
+              <div className="bg-emerald-600 p-6 rounded-2xl shadow-lg">
+                <h3 className="text-3xl font-bold text-white flex items-center gap-3">
+                  <Check className="w-10 h-10" />
+                  {t.faqs.dosTitle}
+                </h3>
+              </div>
+              <div className="space-y-4">
                 {t.faqs.dos.map((item, index) => (
-                  <div key={index} className="flex items-start gap-3 bg-emerald-50 p-4 rounded-lg">
-                    <Check className="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">{item}</span>
+                  <div key={index} className="flex items-start gap-4 bg-emerald-50 p-6 rounded-xl border-l-4 border-emerald-500 hover:shadow-lg transition-shadow">
+                    <Check className="w-6 h-6 text-emerald-600 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700 leading-relaxed">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Don'ts */}
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-red-700 flex items-center gap-2">
-                <X className="w-8 h-8" />
-                {t.faqs.dontsTitle}
-              </h3>
-              <div className="space-y-3">
+            <div className="space-y-6">
+              <div className="bg-red-600 p-6 rounded-2xl shadow-lg">
+                <h3 className="text-3xl font-bold text-white flex items-center gap-3">
+                  <X className="w-10 h-10" />
+                  {t.faqs.dontsTitle}
+                </h3>
+              </div>
+              <div className="space-y-4">
                 {t.faqs.donts.map((item, index) => (
-                  <div key={index} className="flex items-start gap-3 bg-red-50 p-4 rounded-lg">
-                    <X className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">{item}</span>
+                  <div key={index} className="flex items-start gap-4 bg-red-50 p-6 rounded-xl border-l-4 border-red-500 hover:shadow-lg transition-shadow">
+                    <X className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700 leading-relaxed">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-        </section>
-
-        {/* Road Map Section */}
-        <section className="space-y-6">
-          <h2 className="text-4xl font-bold text-amber-900 flex items-center gap-3">
-            <Map className="w-10 h-10" />
-            {t.roadMap.title}
-          </h2>
-          <p className="text-lg text-gray-700">{t.roadMap.description}</p>
-          <a 
-            href="/roadmap"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-emerald-700 hover:to-emerald-800 transition-all shadow-lg hover:shadow-xl"
-          >
-            {t.roadMap.linkText}
-            <ExternalLink className="w-5 h-5" />
-          </a>
         </section>
 
       </div>
