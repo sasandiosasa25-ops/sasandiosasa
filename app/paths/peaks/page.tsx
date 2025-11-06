@@ -169,9 +169,7 @@ const PeaksPage = () => {
                   {peak.details}
                 </p>
 
-                <button className="w-full py-3 bg-brand-primary text-white font-poppins font-semibold rounded-lg hover:bg-brand-secondary transition-all duration-300 group-hover:shadow-lg transform hover:scale-105">
-                  {t.learnMore}
-                </button>
+             
               </div>
             </div>
           ))}
