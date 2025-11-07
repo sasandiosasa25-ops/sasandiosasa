@@ -394,9 +394,9 @@ const TravelCompassPage = () => {
         {/* Why Choose Us Section */}
         <section id="why-choose-us" className="space-y-8">
           <div className="relative">
-            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-amber-500 to-emerald-500 rounded-full"></div>
+            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-amber-500 to-amber-900rounded-full"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4 mb-8">
-              <Compass className="w-12 h-12 text-emerald-600" />
+              <Compass className="w-12 h-12 text-amber-900" />
               {t.whyChooseUs.title}
             </h2>
           </div>
@@ -427,15 +427,15 @@ const TravelCompassPage = () => {
         {/* Seasonal Advice Section */}
         <section id="seasonal-advice" className="space-y-8">
           <div className="relative">
-            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-emerald-500 to-blue-500 rounded-full"></div>
+            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-amber-900 to-amber-500 rounded-full"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4 mb-4">
-              <Calendar className="w-12 h-12 text-emerald-600" />
+              <Calendar className="w-12 h-12 text-amber-600" />
               {t.seasonalAdvice.title}
             </h2>
             <p className="text-2xl text-gray-600 italic font-light">{t.seasonalAdvice.subtitle}</p>
           </div>
 
-          <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl mb-8">
+          <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl mb-8">
             <img 
               src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&q=80" 
               alt="Tanzania Wildlife" 
@@ -459,20 +459,20 @@ const TravelCompassPage = () => {
         {/* Airline Recommendations Section */}
         <section id="airline-recommendations" className="space-y-8">
           <div className="relative">
-            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-indigo-500 rounded-full"></div>
+            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-amber-500 to-amber-900 rounded-full"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4">
-              <Plane className="w-12 h-12 text-blue-600" />
+              <Plane className="w-12 h-12 text-amber-600" />
               {t.airlineRecommendations.title}
             </h2>
           </div>
 
-          <div className="relative h-72 rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80" 
               alt="Airplane" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-indigo-900/90 flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-900/70 to-amber-900/70 flex items-center justify-center">
               <p className="text-white text-xl px-8 text-center leading-relaxed max-w-4xl">{t.airlineRecommendations.intro}</p>
             </div>
           </div>
@@ -481,7 +481,7 @@ const TravelCompassPage = () => {
             {t.airlineRecommendations.airlines.map((airline, index) => (
               <div key={index} className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl border border-blue-100 hover:border-blue-400 transition-all duration-300 hover:shadow-xl">
                 <div className="flex items-center gap-3 mb-3">
-                  <Plane className="w-6 h-6 text-blue-600" />
+                  <Plane className="w-6 h-6 text-amber-600" />
                   <h3 className="text-xl font-bold text-gray-800">{airline.name}</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">{airline.description}</p>
@@ -505,7 +505,7 @@ const TravelCompassPage = () => {
             <p className="text-2xl text-gray-600 italic font-light">{t.travelPermit.subtitle}</p>
           </div>
 
-          <div className="relative h-64 rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="https://images.unsplash.com/photo-1569098644584-210bcd375b59?w=1600&q=80" 
               alt="Passport and Travel" 
@@ -516,7 +516,7 @@ const TravelCompassPage = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 p-10 rounded-2xl shadow-2xl text-white">
+          <div className="bg-gradient-to-r from-amber-600 to-amber-700 p-10 rounded-2xl shadow-2xl text-white">
             <h3 className="text-3xl font-bold mb-4">{t.travelPermit.websiteTitle}</h3>
             <a 
               href={`https://${t.travelPermit.website}`}
@@ -530,7 +530,7 @@ const TravelCompassPage = () => {
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
-            <h3 className="text-3xl font-bold text-emerald-800 flex items-center gap-3">
+            <h3 className="text-3xl font-bold text-amber-800 flex items-center gap-3">
               <Check className="w-8 h-8" />
               {t.travelPermit.prepareTitle}
             </h3>
@@ -538,8 +538,8 @@ const TravelCompassPage = () => {
             <div className="grid md:grid-cols-2 gap-4">
               {requirements.map((req, index) => (
                 <div key={index} className="flex items-start gap-4 bg-emerald-50 p-5 rounded-xl border-l-4 border-emerald-500 hover:shadow-md transition-shadow">
-                  <div className="text-emerald-600 mt-1">{req.icon}</div>
-                  <span className="text-gray-700">{req.text}</span>
+                  <div className="text-amber-600 mt-1">{req.icon}</div>
+                  <span className="text-amber-700">{req.text}</span>
                 </div>
               ))}
             </div>
@@ -551,7 +551,7 @@ const TravelCompassPage = () => {
               href="https://immigration.go.tz"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-emerald-700 font-semibold text-xl hover:text-emerald-900 flex items-center gap-3 group"
+              className="text-emerald-700 font-semibold text-lg hover:text-emerald-900 flex items-center gap-3 group"
             >
               immigration.go.tz
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -560,12 +560,12 @@ const TravelCompassPage = () => {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-blue-50 p-8 rounded-2xl border-l-4 border-blue-500">
-              <h3 className="text-2xl font-bold text-blue-800 mb-4">{t.travelPermit.processingTitle}</h3>
-              <p className="text-gray-700 leading-relaxed">{t.travelPermit.processingText}</p>
+              <h3 className="text-2xl font-bold text-amber-800 mb-4">{t.travelPermit.processingTitle}</h3>
+              <p className="text-amber-700 leading-relaxed">{t.travelPermit.processingText}</p>
             </div>
             <div className="bg-green-50 p-8 rounded-2xl border-l-4 border-green-500">
-              <h3 className="text-2xl font-bold text-green-800 mb-4">Arrival Option</h3>
-              <p className="text-gray-700 leading-relaxed">{t.travelPermit.arrivalText}</p>
+              <h3 className="text-2xl font-bold text-amber-800 mb-4">Arrival Option</h3>
+              <p className="text-amber-700 leading-relaxed">{t.travelPermit.arrivalText}</p>
             </div>
           </div>
         </section>
@@ -575,14 +575,14 @@ const TravelCompassPage = () => {
           <div className="relative">
             <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4">
-              <Backpack className="w-12 h-12 text-purple-600" />
+              <Backpack className="w-12 h-12 text-amber-600" />
               {t.packingLists.title}
             </h2>
           </div>
 
           {/* Safari Packing */}
           <div className="space-y-8">
-            <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1535338454770-a320e0bcaaeb?w=1600&q=80" 
                 alt="Safari Vehicle" 
@@ -599,7 +599,7 @@ const TravelCompassPage = () => {
               <div className="grid gap-4">
                 {t.packingLists.safari.essentials.map((item, index) => (
                   <div key={index} className="flex items-start gap-4 bg-emerald-50 p-5 rounded-xl hover:bg-emerald-100 transition-colors">
-                    <Check className="w-6 h-6 text-emerald-600 mt-1 flex-shrink-0" />
+                    <Check className="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" />
                     <span className="text-gray-700 leading-relaxed">{item}</span>
                   </div>
                 ))}
@@ -616,11 +616,11 @@ const TravelCompassPage = () => {
             </div>
 
             <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-2xl shadow-lg">
-              <h4 className="text-3xl font-semibold text-purple-800 mb-6">{t.packingLists.safari.mindTitle}</h4>
+              <h4 className="text-3xl font-semibold text-amber-800 mb-6">{t.packingLists.safari.mindTitle}</h4>
               <div className="space-y-4">
                 {t.packingLists.safari.mind.map((item, index) => (
                   <div key={index} className="flex items-start gap-4 bg-white p-5 rounded-xl">
-                    <Check className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
+                    <Check className="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" />
                     <span className="text-gray-700 leading-relaxed">{item}</span>
                   </div>
                 ))}
@@ -644,23 +644,23 @@ const TravelCompassPage = () => {
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
-                <h4 className="text-3xl font-semibold text-blue-800 border-b-4 border-blue-500 pb-3 inline-block">{t.packingLists.peaks.clothingTitle}</h4>
+                <h4 className="text-3xl font-semibold text-amber-800 border-b-4 border-amber-500 pb-3 inline-block">{t.packingLists.peaks.clothingTitle}</h4>
                 <div className="space-y-3">
                   {t.packingLists.peaks.clothing.map((item, index) => (
                     <div key={index} className="flex items-start gap-4 bg-blue-50 p-4 rounded-xl">
-                      <Check className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{item}</span>
+                      <Check className="w-5 h-5 text-amber-600 mt-1 flex-shrink-0" />
+                      <span className="text-amber-700">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
-                <h4 className="text-3xl font-semibold text-indigo-800 border-b-4 border-indigo-500 pb-3 inline-block">{t.packingLists.peaks.gearTitle}</h4>
+                <h4 className="text-3xl font-semibold text-amber-800 border-b-4 pb-3 inline-block">{t.packingLists.peaks.gearTitle}</h4>
                 <div className="space-y-3">
                   {t.packingLists.peaks.gear.map((item, index) => (
                     <div key={index} className="flex items-start gap-4 bg-indigo-50 p-4 rounded-xl">
-                      <Check className="w-5 h-5 text-indigo-600 mt-1 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-amber-600 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">{item}</span>
                     </div>
                   ))}
@@ -668,7 +668,7 @@ const TravelCompassPage = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-emerald-700 via-blue-700 to-indigo-700 p-10 rounded-2xl text-white shadow-2xl">
+            <div className="bg-gradient-to-r from-amber-500 via-amber-700 to-amber-900 p-10 rounded-2xl text-white shadow-2xl">
               <h4 className="text-3xl font-semibold mb-5 flex items-center gap-3">
                 <Compass className="w-10 h-10" />
                 {t.packingLists.peaks.mindsetTitle}
@@ -700,7 +700,7 @@ const TravelCompassPage = () => {
           <div className="grid lg:grid-cols-2 gap-10">
             {/* Do's */}
             <div className="space-y-6">
-              <div className="bg-emerald-600 p-6 rounded-2xl shadow-lg">
+              <div className="bg-amber-600 p-6 rounded-2xl shadow-lg">
                 <h3 className="text-3xl font-bold text-white flex items-center gap-3">
                   <Check className="w-10 h-10" />
                   {t.faqs.dosTitle}
@@ -709,7 +709,7 @@ const TravelCompassPage = () => {
               <div className="space-y-4">
                 {t.faqs.dos.map((item, index) => (
                   <div key={index} className="flex items-start gap-4 bg-emerald-50 p-6 rounded-xl border-l-4 border-emerald-500 hover:shadow-lg transition-shadow">
-                    <Check className="w-6 h-6 text-emerald-600 mt-1 flex-shrink-0" />
+                    <Check className="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" />
                     <span className="text-gray-700 leading-relaxed">{item}</span>
                   </div>
                 ))}
