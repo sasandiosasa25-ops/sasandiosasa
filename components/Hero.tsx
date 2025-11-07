@@ -130,7 +130,7 @@ export default function Hero() {
                 size="lg" 
                 className="group relative bg-brand-primary text-white hover:bg-brand-secondary px-8 sm:px-14 py-6 sm:py-8 text-base sm:text-xl font-semibold transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl rounded-lg overflow-hidden"
               >
-                <Link href="/paths">
+                <Link href="/road-map">
                   {/* Shine effect */}
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
                   <span className="relative flex items-center justify-center">
