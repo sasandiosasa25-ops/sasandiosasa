@@ -249,7 +249,7 @@ export default function Navigation() {
                                 >
                                   <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/item:scale-y-100 transition-transform duration-300 origin-top" />
                                   <span className="relative z-10 block transform transition-transform duration-300 group-hover/item:translate-x-2">
-                                    {subItem.label}
+                                   <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {subItem.label}
                                   </span>
                                 </Link>
                               ))}
@@ -334,7 +334,7 @@ export default function Navigation() {
                                 className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-white transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-medium"
                                 onClick={() => setIsOpen(false)}
                               >
-                                {subItem.label}
+                              <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span>  {subItem.label}
                               </Link>
                             ))}
                           </div>
