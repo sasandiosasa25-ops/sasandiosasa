@@ -225,16 +225,15 @@ export default function RoadMapPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-brand-heading">
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-heading/90 to-brand-heading/70" />
-        </div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/map2.jpeg')" }}
+        />
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight">
             {text.pageTitle}
           </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-brand-border font-light">
-            {text.pageSubtitle}
-          </p>
+        
         </div>
       </section>
 
