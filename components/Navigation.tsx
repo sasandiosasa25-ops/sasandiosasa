@@ -71,8 +71,8 @@ export default function Navigation() {
       sections: [
         {
           items: [
-            { href: '/experience/inner-safari', label: language === 'de' ? 'Innere Safari' : 'Inner Safari' },
-            { href: '/experience/retreat', label: language === 'de' ? 'Rückzug' : 'Retreat' },
+            { href: '/experience/#inner-safari', label: language === 'de' ? 'Innere Safari' : 'Inner Safari' },
+            { href: '/experience/#retreat', label: language === 'de' ? 'Rückzug' : 'Retreat' },
             ]
         }
       ]
