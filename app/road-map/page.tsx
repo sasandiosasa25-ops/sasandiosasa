@@ -230,9 +230,7 @@ export default function RoadMapPage() {
           style={{ backgroundImage: "url('/map2.jpeg')" }}
         />
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight">
-            {text.pageTitle}
-          </h1>
+         
         
         </div>
       </section>
