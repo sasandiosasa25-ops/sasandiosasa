@@ -195,7 +195,7 @@ export default function RoadMapPage() {
                       alt={dest.name}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-heading to-transparent" />
+          
                   </div>
 
                   <div className="p-8 lg:p-12">
