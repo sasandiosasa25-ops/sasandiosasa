@@ -103,19 +103,19 @@ const ImageCarousel = () => {
                 spaceBetween: 16,
               },
               640: {
-                slidesPerView: 1.5,
+                slidesPerView: 1.2,
                 spaceBetween: 20,
               },
               768: {
-                slidesPerView: 2,
+                slidesPerView: 1.5,
                 spaceBetween: 24,
               },
               1024: {
-                slidesPerView: 2.5,
+                slidesPerView: 2,
                 spaceBetween: 28,
               },
               1280: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 32,
               },
             }}
