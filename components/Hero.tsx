@@ -98,14 +98,14 @@ export default function Hero() {
   const t = translations[language];
 
   return (
-    <div className="w-screen overflow-x-hidden mt-10" style={{ maxWidth: '100vw' }}>
+    <div className="w-screen overflow-x-hidden mt-12" style={{ maxWidth: '100vw' }}>
       {/* Video Section - Full video visible, especially on small screens */}
       <section 
         ref={sectionRef} 
         className="relative bg-brand-heading flex items-center justify-center"
-        style={{ width: '100vw', maxWidth: '100vw', overflow: 'hidden' }}
+        style={{ width: '100vw', maxWidth: '100vw', overflow: 'visible' }}
       >
-        <div className="w-full flex items-center justify-center" style={{ overflow: 'hidden' }}>
+        <div className="w-full flex items-center justify-center">
           <video
             ref={videoRef}
             style={{ 
@@ -125,10 +125,7 @@ export default function Hero() {
         </div>
         
         {/* Brand-themed gradient overlay for depth and readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-heading/50 via-transparent to-brand-heading/40 pointer-events-none" />
-        
-        {/* Bottom fade for smooth transition */}
-        <div className="absolute bottom-0 left-0 right-0 h-18 bg-gradient-to-t from-brand-bg-light to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-heading/30 via-transparent to-transparent pointer-events-none" style={{ pointerEvents: 'none' }} />
       </section>
 
       {/* Content Section - Enhanced with brand colors and premium feel */}
