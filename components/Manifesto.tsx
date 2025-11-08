@@ -38,15 +38,16 @@ export default function Manifesto() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16 sm:py-20 lg:py-24">
-      {/* Background Image with Overlay - Optimized for all screens */}
+      {/* Background Image with Overlay - Optimized to show full image on all screens */}
       <div className="absolute inset-0 z-0">
-        {/* High quality background with proper scaling */}
+        {/* Background image that shows the complete picture without excessive zoom */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('/kili.jpeg')",
-            backgroundSize: 'cover',
+            backgroundSize: 'contain',
             backgroundPosition: 'center center',
+            backgroundColor: '#1a1a1a',
             imageRendering: 'crisp-edges',
             WebkitBackfaceVisibility: 'hidden',
             backfaceVisibility: 'hidden',
