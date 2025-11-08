@@ -150,40 +150,9 @@ export default function RoadMapPage() {
     },
   };
 
-  const safariExperiences: SafariExperience[] = [
- 
-    
-    {
-      id: 'little-tracks',
-      name: 'Little Tracks',
-      tagline: 'Family Safari',
-      duration: '6-8 days',
-      destinations: ['arusha-np', 'tarangire', 'ngorongoro'],
-      description: 'Designed for families. Where children discover wonder and parents rediscover joy in nature\'s rhythm.',
-      image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=1200&auto=format&fit=crop'
-    },
-  ];
 
-  const beachExperiences: BeachExperience[] = [
-    {
-      id: 'exhale',
-      name: 'The Exhale',
-      tagline: 'Zanzibar\'s timeless embrace',
-      duration: '4-7 days',
-      destinations: [],
-      description: 'After the safari, let the ocean restore you. Zanzibar offers white sands, turquoise waters, and a rhythm that invites you to simply breathe.',
-      image: 'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1200&auto=format&fit=crop'
-    },
-    {
-      id: 'return',
-      name: 'The Return',
-      tagline: 'Coastal authenticity',
-      duration: '3-5 days',
-      destinations: ['pangani', 'maziwe'],
-      description: 'Experience Tanzania\'s coast away from the crowds. Where history whispers, tides reveal hidden islands, and life moves at its own pace.',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&auto=format&fit=crop'
-    },
-  ];
+
+ 
 
   const text = content[language];
 
@@ -212,69 +181,7 @@ export default function RoadMapPage() {
             <div className="h-1 w-24 bg-brand-primary mx-auto" />
           </div>
 
-          <div className="space-y-32">
-            {safariExperiences.map((experience, index) => (
-              <div key={experience.id} id={experience.id} className="scroll-mt-32">
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-                  {/* Image */}
-                  <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <div className="relative h-96 lg:h-[500px] overflow-hidden border-4 border-brand-primary shadow-2xl">
-                      <img 
-                        src={experience.image} 
-                        alt={experience.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    {/* Floating Badge */}
-                    <div className="absolute -top-6 -right-6 bg-brand-primary text-white px-8 py-4 shadow-xl">
-                      <p className="text-sm font-bold uppercase tracking-wider">{text.duration}</p>
-                      <p className="text-2xl font-black">{experience.duration}</p>
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                    <div className="inline-block bg-brand-primary text-white px-4 py-2 mb-4 text-xs uppercase tracking-widest font-bold">
-                      Safari Experience
-                    </div>
-                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-heading mb-4">
-                      {experience.name}
-                    </h3>
-                    <p className="text-xl text-brand-primary font-semibold italic mb-6">
-                      {experience.tagline}
-                    </p>
-                    <p className="text-lg text-brand-heading/70 leading-relaxed mb-8">
-                      {experience.description}
-                    </p>
-
-                    {/* Destinations */}
-                    <div className="border-t-2 border-brand-border pt-6">
-                      <h4 className="text-sm font-bold uppercase tracking-wider text-brand-heading mb-4 flex items-center">
-                        <MapPin className="h-4 w-4 mr-2 text-brand-primary" />
-                        {text.destinations}
-                      </h4>
-                      <div className="space-y-3">
-                        {experience.destinations.map((destId) => (
-                          <a
-                            key={destId}
-                            href={`#${destId}`}
-                            className="block group"
-                          >
-                            <div className="flex items-center space-x-3 p-4 bg-white border-l-4 border-brand-border hover:border-brand-primary transition-all duration-300 hover:shadow-lg">
-                              <div className="h-2 w-2 bg-brand-primary rounded-full" />
-                              <span className="text-brand-heading group-hover:text-brand-primary font-medium transition-colors">
-                                {destinations[destId].name}
-                              </span>
-                            </div>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        
         </div>
       </section>
 
@@ -289,69 +196,6 @@ export default function RoadMapPage() {
             <div className="h-1 w-24 bg-brand-primary mx-auto" />
           </div>
 
-          <div className="space-y-32">
-            {beachExperiences.map((experience, index) => (
-              <div key={experience.id} id={experience.id} className="scroll-mt-32">
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}>
-                  {/* Image */}
-                  <div className={`relative ${index % 2 === 0 ? 'lg:order-2' : ''}`}>
-                    <div className="relative h-96 lg:h-[500px] overflow-hidden border-4 border-brand-primary shadow-2xl">
-                      <img 
-                        src={experience.image} 
-                        alt={experience.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="absolute -top-6 -right-6 bg-brand-primary text-white px-8 py-4 shadow-xl">
-                      <p className="text-sm font-bold uppercase tracking-wider">{text.duration}</p>
-                      <p className="text-2xl font-black">{experience.duration}</p>
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className={index % 2 === 0 ? 'lg:order-1' : ''}>
-                    <div className="inline-block bg-brand-primary text-white px-4 py-2 mb-4 text-xs uppercase tracking-widest font-bold">
-                      Beach Retreat
-                    </div>
-                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-heading mb-4">
-                      {experience.name}
-                    </h3>
-                    <p className="text-xl text-brand-primary font-semibold italic mb-6">
-                      {experience.tagline}
-                    </p>
-                    <p className="text-lg text-brand-heading/70 leading-relaxed mb-8">
-                      {experience.description}
-                    </p>
-
-                    {experience.destinations.length > 0 && (
-                      <div className="border-t-2 border-brand-border pt-6">
-                        <h4 className="text-sm font-bold uppercase tracking-wider text-brand-heading mb-4 flex items-center">
-                          <MapPin className="h-4 w-4 mr-2 text-brand-primary" />
-                          {text.destinations}
-                        </h4>
-                        <div className="space-y-3">
-                          {experience.destinations.map((destId) => (
-                            <a
-                              key={destId}
-                              href={`#${destId}`}
-                              className="block group"
-                            >
-                              <div className="flex items-center space-x-3 p-4 bg-white border-l-4 border-brand-border hover:border-brand-primary transition-all duration-300 hover:shadow-lg">
-                                <div className="h-2 w-2 bg-brand-primary rounded-full" />
-                                <span className="text-brand-heading group-hover:text-brand-primary font-medium transition-colors">
-                                  {destinations[destId].name}
-                                </span>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
