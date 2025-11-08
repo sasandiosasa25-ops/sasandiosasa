@@ -156,11 +156,11 @@ export default function RoadMapPage() {
   const text = content[language];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-16">
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[100vh] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat "
           style={{ backgroundImage: "url('/map2.jpeg')" }}
         />
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
