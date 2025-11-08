@@ -99,43 +99,52 @@ export default function Hero() {
 
   return (
     <>
-      {/* Video Section - Full screen with subtle gradient overlay */}
+      {/* Video Section - Full screen optimized for all devices */}
       <section ref={sectionRef} className="relative w-full h-[50vh] sm:h-[65vh] md:h-[80vh] lg:h-screen overflow-hidden bg-brand-heading">
-        <video
-          ref={videoRef}
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          loop
-          muted={true}
-          playsInline
-          preload="auto"
-        >
-          <source src="/pro1.mp4" type="video/mp4" />
-        </video>
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            ref={videoRef}
+            className="w-full h-full object-cover"
+            loop
+            muted={true}
+            playsInline
+            preload="auto"
+          >
+            <source src="/pro1.mp4" type="video/mp4" />
+          </video>
+        </div>
         
-        {/* Subtle gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-menu-hover/30 pointer-events-none" />
+        {/* Brand-themed gradient overlay for depth and readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-heading/50 via-transparent to-brand-heading/40 pointer-events-none" />
+        
+        {/* Bottom fade for smooth transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-18 bg-gradient-to-t from-brand-bg-light to-transparent pointer-events-none" />
       </section>
 
-      {/* Content Section - Enhanced with animations and depth */}
-      <section className="relative bg-gradient-to-b from-brand-menu-hover to-white py-4 sm:py-8 md:py-16 overflow-hidden">
-        {/* Decorative elements */}
-
+      {/* Content Section - Enhanced with brand colors and premium feel */}
+      <section className="relative bg-gradient-to-b from-brand-bg-light via-white to-brand-menu-hover py-8 sm:py-12 md:py-16 lg:py-24 overflow-hidden">
+        {/* Decorative brand-colored elements */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
+          <div className="absolute top-20 left-10 w-96 h-96 bg-brand-primary rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-brand-secondary rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Action Buttons with staggered animation */}
-            <div className={`flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-12 sm:mb-20 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="max-w-5xl mx-auto text-center">
+            {/* Action Buttons with staggered animation and brand colors */}
+            <div className={`flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 lg:gap-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <Button 
                 asChild 
                 size="lg" 
-                className="group relative bg-brand-primary text-white hover:bg-brand-secondary px-8 sm:px-14 py-6 sm:py-8 text-base sm:text-xl font-semibold transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl rounded-lg overflow-hidden"
+                className="group relative bg-brand-primary text-white hover:bg-brand-secondary px-10 sm:px-14 lg:px-16 py-6 sm:py-7 lg:py-8 text-lg sm:text-xl lg:text-2xl font-bold transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-brand-primary/50 rounded-lg overflow-hidden border-2 border-brand-primary hover:border-brand-secondary"
               >
                 <Link href="/road-map">
                   {/* Shine effect */}
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
                   <span className="relative flex items-center justify-center">
+                    <span className="font-comfortaa italic normal-case text-white mr-2">SasaNdioSasa</span>
                     {t.explorePaths}
-                    <ArrowRight className="ml-2 sm:ml-3 h-4 sm:h-6 w-4 sm:w-6 group-hover:translate-x-2 transition-transform duration-300" />
+                    <ArrowRight className="ml-2 sm:ml-3 h-5 sm:h-6 lg:h-7 w-5 sm:w-6 lg:w-7 group-hover:translate-x-2 transition-transform duration-300" />
                   </span>
                 </Link>
               </Button>
@@ -144,20 +153,25 @@ export default function Hero() {
                 asChild 
                 variant="outline" 
                 size="lg" 
-                className="group relative border-2 border-brand-primary bg-white/80 backdrop-blur-sm text-brand-primary hover:bg-brand-primary hover:text-white px-8 sm:px-14 py-6 sm:py-8 text-base sm:text-xl font-semibold transition-all duration-300 hover:shadow-xl rounded-lg"
+                className="group relative border-3 border-brand-primary bg-white hover:bg-brand-primary text-brand-heading hover:text-white px-10 sm:px-14 lg:px-16 py-6 sm:py-7 lg:py-8 text-lg sm:text-xl lg:text-2xl font-bold transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-brand-primary/40 rounded-lg transform hover:scale-105"
               >
                 <Link href="/experience">
                   <span className="flex items-center justify-center">
+                    <span className="font-comfortaa italic normal-case text-brand-primary group-hover:text-white mr-2">SasaNdioSasa</span>
                     {t.ourExperiences}
-                    <Compass className="ml-2 sm:ml-3 h-4 sm:h-6 w-4 sm:w-6 group-hover:rotate-90 transition-transform duration-500" />
+                    <Compass className="ml-2 sm:ml-3 h-5 sm:h-6 lg:h-7 w-5 sm:w-6 lg:w-7 group-hover:rotate-90 transition-transform duration-500" />
                   </span>
                 </Link>
               </Button>
             </div>
-            
-      
+
+            {/* Optional: Tagline or subheading */}
+        
           </div>
         </div>
+
+        {/* Bottom decorative border */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 sm:w-32 h-1 bg-brand-primary rounded-full" />
       </section>
     </>
   );
