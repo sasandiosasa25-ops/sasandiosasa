@@ -235,28 +235,7 @@ export default function Footer() {
           <p className="text-brand-border/60 text-sm font-light">
             © {new Date().getFullYear()} <span className="font-comfortaa italic text-brand-primary">SasaNdioSasa</span>. {language === 'de' ? 'Alle Rechte vorbehalten.' : 'All rights reserved.'}
           </p>
-          <div className="flex items-center space-x-6">
-            <a 
-              href="https://wa.me/255759744701" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-brand-border/60 hover:text-brand-primary transition-colors text-sm font-medium uppercase tracking-wide"
-            >
-              WhatsApp
-            </a>
-            <a 
-              href="/privacy" 
-              className="text-brand-border/60 hover:text-brand-primary transition-colors text-sm font-medium uppercase tracking-wide"
-            >
-              {language === 'de' ? 'Datenschutz' : 'Privacy'}
-            </a>
-            <a 
-              href="/terms" 
-              className="text-brand-border/60 hover:text-brand-primary transition-colors text-sm font-medium uppercase tracking-wide"
-            >
-              {language === 'de' ? 'AGB' : 'Terms'}
-            </a>
-          </div>
+      
         </div>
       </div>
     </footer>
