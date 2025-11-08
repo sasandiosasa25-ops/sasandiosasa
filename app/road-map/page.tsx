@@ -51,7 +51,8 @@ export default function RoadMapPage() {
     en: {
       pageTitle: "Road Map",
       pageSubtitle: "Journey through Tanzania's transformative landscapes",
-     
+      safariSection: "Safari Experiences",
+      beachSection: "Beach Retreats",
       duration: "Duration",
       highlights: "Highlights",
       destinations: "Destinations",
@@ -77,7 +78,7 @@ export default function RoadMapPage() {
       name: 'Dar es Salaam',
       description: "Dar es Salaam is more than just a city. It is a living mosaic of cultures, stories, and contrasts. Between the wide Indian Ocean and the vibrant streets unfolds an energy that is contagious. Here, tradition and modern life meet, spices linger in the markets, and conversations carry the sound of many languages.\n\nThe city moves to its own rhythm. The call of the ocean, the beat of music drifting through the night, the pulse of people gathering in cafés and along the shore. Dar is vibrant and restless, yet always open for a moment of stillness when the sea breeze cools the air and the horizon stretches wide.",
       region: 'Southern Tanzania',
-      image: '/dar.jpg',
+      image: 'https://images.unsplash.com/photo-1568643586940-5e0231b8e043?w=1200&auto=format&fit=crop',
       coordinates: '6.7924° S, 39.2083° E',
       mapUrl: 'https://www.google.com/maps/place/Dar+es+Salaam,+Tanzania/@-6.7924,39.2083,11z'
     },
@@ -104,7 +105,7 @@ export default function RoadMapPage() {
       region: 'Northern Circuit',
       image: 'https://images.unsplash.com/photo-1609198092357-520a8d915a89?w=1200&auto=format&fit=crop',
       coordinates: '3.2333° S, 36.8833° E',
-      mapUrl: '/still.jpeg'
+      mapUrl: 'https://www.google.com/maps/place/Arusha+National+Park/@-3.2333,36.8833,11z'
     },
     'tarangire': {
       name: 'Tarangire National Park',
@@ -149,29 +150,247 @@ export default function RoadMapPage() {
     },
   };
 
+  const safariExperiences: SafariExperience[] = [
+    {
+      id: 'flow',
+      name: 'The Flow',
+      tagline: 'A journey through rhythm and wilderness',
+      duration: '7-10 days',
+      destinations: ['dar-es-salaam', 'selous', 'mikumi'],
+      description: 'Begin where ocean meets city, then flow into the raw wilderness of southern Tanzania. Experience the rhythm of nature in its most powerful form.',
+      image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&auto=format&fit=crop'
+    },
+    {
+      id: 'shift',
+      name: 'The Shift',
+      tagline: 'Transform through Tanzania\'s iconic landscapes',
+      duration: '8-12 days',
+      destinations: ['tarangire', 'serengeti', 'ngorongoro'],
+      description: 'Move through the land of giants, witness the great migration, and stand in awe at the crater that holds a world within itself.',
+      image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&auto=format&fit=crop'
+    },
+    {
+      id: 'unfolding',
+      name: 'The Unfolding',
+      tagline: 'A complete immersion into Tanzania\'s soul',
+      duration: '12-15 days',
+      destinations: ['arusha-np', 'tarangire', 'serengeti', 'ngorongoro'],
+      description: 'The ultimate journey. Walk with the Maasai, witness moving herds, and discover how presence and connection unfold across Tanzania\'s most iconic landscapes.',
+      image: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1200&auto=format&fit=crop'
+    },
+    {
+      id: 'pause',
+      name: 'Pause',
+      tagline: 'Stillness in the wild',
+      duration: '5-7 days',
+      destinations: ['arusha-np', 'tarangire'],
+      description: 'A gentle introduction to Tanzania\'s northern circuit. Perfect for those seeking depth without rushing.',
+      image: 'https://images.unsplash.com/photo-1609198092357-520a8d915a89?w=1200&auto=format&fit=crop'
+    },
+    {
+      id: 'little-tracks',
+      name: 'Little Tracks',
+      tagline: 'Family Safari',
+      duration: '6-8 days',
+      destinations: ['arusha-np', 'tarangire', 'ngorongoro'],
+      description: 'Designed for families. Where children discover wonder and parents rediscover joy in nature\'s rhythm.',
+      image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=1200&auto=format&fit=crop'
+    },
+  ];
 
-
- 
+  const beachExperiences: BeachExperience[] = [
+    {
+      id: 'exhale',
+      name: 'The Exhale',
+      tagline: 'Zanzibar\'s timeless embrace',
+      duration: '4-7 days',
+      destinations: [],
+      description: 'After the safari, let the ocean restore you. Zanzibar offers white sands, turquoise waters, and a rhythm that invites you to simply breathe.',
+      image: 'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1200&auto=format&fit=crop'
+    },
+    {
+      id: 'return',
+      name: 'The Return',
+      tagline: 'Coastal authenticity',
+      duration: '3-5 days',
+      destinations: ['pangani', 'maziwe'],
+      description: 'Experience Tanzania\'s coast away from the crowds. Where history whispers, tides reveal hidden islands, and life moves at its own pace.',
+      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&auto=format&fit=crop'
+    },
+  ];
 
   const text = content[language];
 
   return (
-    <div className="min-h-screen bg-white pt-16">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-[100vh] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat "
-          style={{ backgroundImage: "url('/map2.jpeg')" }}
-        />
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-brand-heading">
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-heading/90 to-brand-heading/70" />
+        </div>
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-         
-        
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight">
+            {text.pageTitle}
+          </h1>
+          <p className="text-xl sm:text-2xl md:text-3xl text-brand-border font-light">
+            {text.pageSubtitle}
+          </p>
         </div>
       </section>
 
-   
+      {/* Safari Experiences Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-brand-menu-hover">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <Trees className="h-12 w-12 text-brand-primary mx-auto mb-4" />
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-4">
+              {text.safariSection}
+            </h2>
+            <div className="h-1 w-24 bg-brand-primary mx-auto" />
+          </div>
 
-     
+          <div className="space-y-32">
+            {safariExperiences.map((experience, index) => (
+              <div key={experience.id} id={experience.id} className="scroll-mt-32">
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                  {/* Image */}
+                  <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                    <div className="relative h-96 lg:h-[500px] overflow-hidden border-4 border-brand-primary shadow-2xl">
+                      <img 
+                        src={experience.image} 
+                        alt={experience.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    {/* Floating Badge */}
+                    <div className="absolute -top-6 -right-6 bg-brand-primary text-white px-8 py-4 shadow-xl">
+                      <p className="text-sm font-bold uppercase tracking-wider">{text.duration}</p>
+                      <p className="text-2xl font-black">{experience.duration}</p>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                    <div className="inline-block bg-brand-primary text-white px-4 py-2 mb-4 text-xs uppercase tracking-widest font-bold">
+                      Safari Experience
+                    </div>
+                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-heading mb-4">
+                      {experience.name}
+                    </h3>
+                    <p className="text-xl text-brand-primary font-semibold italic mb-6">
+                      {experience.tagline}
+                    </p>
+                    <p className="text-lg text-brand-heading/70 leading-relaxed mb-8">
+                      {experience.description}
+                    </p>
+
+                    {/* Destinations */}
+                    <div className="border-t-2 border-brand-border pt-6">
+                      <h4 className="text-sm font-bold uppercase tracking-wider text-brand-heading mb-4 flex items-center">
+                        <MapPin className="h-4 w-4 mr-2 text-brand-primary" />
+                        {text.destinations}
+                      </h4>
+                      <div className="space-y-3">
+                        {experience.destinations.map((destId) => (
+                          <a
+                            key={destId}
+                            href={`#${destId}`}
+                            className="block group"
+                          >
+                            <div className="flex items-center space-x-3 p-4 bg-white border-l-4 border-brand-border hover:border-brand-primary transition-all duration-300 hover:shadow-lg">
+                              <div className="h-2 w-2 bg-brand-primary rounded-full" />
+                              <span className="text-brand-heading group-hover:text-brand-primary font-medium transition-colors">
+                                {destinations[destId].name}
+                              </span>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Beach Experiences Section */}
+      <section className="py-20 bg-gradient-to-b from-brand-menu-hover to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <Waves className="h-12 w-12 text-brand-primary mx-auto mb-4" />
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-4">
+              {text.beachSection}
+            </h2>
+            <div className="h-1 w-24 bg-brand-primary mx-auto" />
+          </div>
+
+          <div className="space-y-32">
+            {beachExperiences.map((experience, index) => (
+              <div key={experience.id} id={experience.id} className="scroll-mt-32">
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}>
+                  {/* Image */}
+                  <div className={`relative ${index % 2 === 0 ? 'lg:order-2' : ''}`}>
+                    <div className="relative h-96 lg:h-[500px] overflow-hidden border-4 border-brand-primary shadow-2xl">
+                      <img 
+                        src={experience.image} 
+                        alt={experience.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="absolute -top-6 -right-6 bg-brand-primary text-white px-8 py-4 shadow-xl">
+                      <p className="text-sm font-bold uppercase tracking-wider">{text.duration}</p>
+                      <p className="text-2xl font-black">{experience.duration}</p>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className={index % 2 === 0 ? 'lg:order-1' : ''}>
+                    <div className="inline-block bg-brand-primary text-white px-4 py-2 mb-4 text-xs uppercase tracking-widest font-bold">
+                      Beach Retreat
+                    </div>
+                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-heading mb-4">
+                      {experience.name}
+                    </h3>
+                    <p className="text-xl text-brand-primary font-semibold italic mb-6">
+                      {experience.tagline}
+                    </p>
+                    <p className="text-lg text-brand-heading/70 leading-relaxed mb-8">
+                      {experience.description}
+                    </p>
+
+                    {experience.destinations.length > 0 && (
+                      <div className="border-t-2 border-brand-border pt-6">
+                        <h4 className="text-sm font-bold uppercase tracking-wider text-brand-heading mb-4 flex items-center">
+                          <MapPin className="h-4 w-4 mr-2 text-brand-primary" />
+                          {text.destinations}
+                        </h4>
+                        <div className="space-y-3">
+                          {experience.destinations.map((destId) => (
+                            <a
+                              key={destId}
+                              href={`#${destId}`}
+                              className="block group"
+                            >
+                              <div className="flex items-center space-x-3 p-4 bg-white border-l-4 border-brand-border hover:border-brand-primary transition-all duration-300 hover:shadow-lg">
+                                <div className="h-2 w-2 bg-brand-primary rounded-full" />
+                                <span className="text-brand-heading group-hover:text-brand-primary font-medium transition-colors">
+                                  {destinations[destId].name}
+                                </span>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Destinations Details Section */}
       <section className="py-20 bg-brand-heading text-white">
@@ -195,7 +414,7 @@ export default function RoadMapPage() {
                       alt={dest.name}
                       className="w-full h-full object-cover"
                     />
-          
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-heading to-transparent" />
                   </div>
 
                   <div className="p-8 lg:p-12">

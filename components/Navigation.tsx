@@ -53,7 +53,6 @@ export default function Navigation() {
           title: language === 'de' ? 'Strand' : 'Beach',
           items: [
             { href: '/road-map/#exhale', label: 'The Exhale — Zanzibar' },
-          
             { href: '/road-map/#return', label: 'The Return — Pangani • Maziwe Island' },
           ]
         },
@@ -73,11 +72,11 @@ export default function Navigation() {
           items: [
             { href: '/experience/#inner-safari', label: language === 'de' ? 'Innere Safari' : 'Inner Safari' },
             { href: '/experience/#retreat', label: language === 'de' ? 'Rückzug' : 'Retreat' },
-            ]
+          ]
         }
       ]
     },
-     { 
+    { 
       label: language === 'de' ? 'Wirkung' : 'Impact',
       hasDropdown: true,
       sections: [
@@ -99,7 +98,7 @@ export default function Navigation() {
         }
       ]
     },
-     { 
+    { 
       href: '/team', 
       label: language === 'de' ? 'Team' : 'Team',
       hasDropdown: false,
@@ -121,8 +120,6 @@ export default function Navigation() {
         }
       ]
     },
-   
-   
   ];
 
   const toggleMobileDropdown = (label: string) => {
@@ -130,13 +127,13 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-lg z-50 shadow-sm ">
+    <nav className="fixed top-0 left-0 right-0 bg-white/40 backdrop-blur-xl z-50 shadow-lg">
       {/* Top Bar */}
-      <div className="bg-white/95 backdrop-blur-lg border-b border-brand-border/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-          <div className="hidden lg:flex justify-end items-center h-12 space-x-6 ">
+      <div className="bg-white/30 backdrop-blur-xl border-b border-white/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="hidden lg:flex justify-end items-center h-12 space-x-6">
             {/* Quick Links */}
-         <Link 
+            <Link 
               href="/" 
               className="text-brand-heading hover:text-brand-primary transition-colors text-sm font-semibold uppercase tracking-wide"
             >
@@ -149,14 +146,14 @@ export default function Navigation() {
               <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {language === 'de' ? 'Team' : 'Team'}
             </Link>
             {/* Language Switcher in Top Bar */}
-            <div className="flex items-center space-x-2 border-l border-brand-border/30 pl-6">
+            <div className="flex items-center space-x-2 border-l border-white/30 pl-6">
               <Globe className="h-4 w-4 text-brand-heading/60" />
               <button
                 onClick={() => setLanguage('en')}
                 className={`h-8 px-3 text-xs font-bold tracking-wider transition-all duration-300 ${
                   language === 'en' 
                     ? 'bg-brand-primary text-white' 
-                    : 'text-brand-heading hover:text-brand-primary hover:bg-brand-menu-hover'
+                    : 'text-brand-heading hover:text-brand-primary hover:bg-white/40'
                 }`}
               >
                 EN
@@ -166,7 +163,7 @@ export default function Navigation() {
                 className={`h-8 px-3 text-xs font-bold tracking-wider transition-all duration-300 ${
                   language === 'de' 
                     ? 'bg-brand-primary text-white' 
-                    : 'text-brand-heading hover:text-brand-primary hover:bg-brand-menu-hover'
+                    : 'text-brand-heading hover:text-brand-primary hover:bg-white/40'
                 }`}
               >
                 DE
@@ -177,7 +174,7 @@ export default function Navigation() {
       </div>
 
       {/* Main Navigation */}
-      <div className="bg-white/95 backdrop-blur-lg border-b border-brand-border py-6">
+      <div className="bg-white/30 backdrop-blur-xl border-b border-white/30 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20 md:h-24 lg:h-28">
             {/* Logo - Maximum impact and presence */}
@@ -231,10 +228,10 @@ export default function Navigation() {
                   {/* Dropdown Menu - Elegant sections with scrolling */}
                   {item.hasDropdown && openDropdown === item.label && (
                     <div className="absolute top-full left-0 pt-3 w-[420px]">
-                      <div className="bg-white border-2 border-brand-border/20 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-300 overflow-hidden max-h-[calc(100vh-200px)] overflow-y-auto">
+                      <div className="bg-white/90 backdrop-blur-xl border-2 border-white/40 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-300 overflow-hidden max-h-[calc(100vh-200px)] overflow-y-auto">
                         <div className="py-2">
                           {item.sections?.map((section, sectionIndex) => (
-                            <div key={sectionIndex} className={sectionIndex > 0 ? 'border-t-2 border-brand-border/20 pt-2 mt-2' : ''}>
+                            <div key={sectionIndex} className={sectionIndex > 0 ? 'border-t-2 border-white/30 pt-2 mt-2' : ''}>
                               {section.title && (
                                 <div className="px-8 py-3">
                                   <h3 className="text-brand-heading font-bold text-sm uppercase tracking-wider">
@@ -246,11 +243,11 @@ export default function Navigation() {
                                 <Link
                                   key={subItem.href}
                                   href={subItem.href}
-                                  className="group/item relative block px-8 py-3.5 text-brand-heading hover:bg-brand-menu-hover hover:text-brand-primary transition-all duration-300 text-sm font-medium overflow-hidden"
+                                  className="group/item relative block px-8 py-3.5 text-brand-heading hover:bg-white/50 hover:text-brand-primary transition-all duration-300 text-sm font-medium overflow-hidden"
                                 >
                                   <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/item:scale-y-100 transition-transform duration-300 origin-top" />
                                   <span className="relative z-10 block transform transition-transform duration-300 group-hover/item:translate-x-2">
-                                   <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {subItem.label}
+                                    <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {subItem.label}
                                   </span>
                                 </Link>
                               ))}
@@ -268,13 +265,13 @@ export default function Navigation() {
             <div className="lg:hidden flex items-center space-x-3">
               <button
                 onClick={() => setLanguage(language === 'en' ? 'de' : 'en')}
-                className="h-10 px-4 text-sm font-bold tracking-wider border-2 border-brand-border/30 text-brand-heading hover:bg-brand-menu-hover hover:text-brand-primary transition-all duration-300"
+                className="h-10 px-4 text-sm font-bold tracking-wider border-2 border-white/40 text-brand-heading hover:bg-white/50 hover:text-brand-primary transition-all duration-300"
               >
                 {language.toUpperCase()}
               </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-brand-heading hover:text-brand-primary p-3 hover:bg-brand-menu-hover transition-all duration-300 border-2 border-brand-border/30 hover:border-brand-primary"
+                className="text-brand-heading hover:text-brand-primary p-3 hover:bg-white/50 transition-all duration-300 border-2 border-white/40 hover:border-brand-primary"
               >
                 {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -283,22 +280,22 @@ export default function Navigation() {
 
           {/* Mobile Navigation - Spacious and elegant */}
           {isOpen && (
-            <div className="lg:hidden border-t-2 border-brand-border/30 animate-in slide-in-from-top duration-300">
-              <div className="px-3 pt-6 pb-6 space-y-2 bg-white max-h-[calc(100vh-96px)] overflow-y-auto">
+            <div className="lg:hidden border-t-2 border-white/30 animate-in slide-in-from-top duration-300">
+              <div className="px-3 pt-6 pb-6 space-y-2 bg-white/30 backdrop-blur-xl max-h-[calc(100vh-96px)] overflow-y-auto">
                 {navItems.map((item) => (
-                  <div key={item.label} className="border-b border-brand-border/10 last:border-b-0">
+                  <div key={item.label} className="border-b border-white/20 last:border-b-0">
                     <div className="flex items-center justify-between">
                       {item.hasDropdown ? (
                         <button
                           onClick={() => toggleMobileDropdown(item.label)}
-                          className="flex-1 text-left px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-brand-menu-hover transition-all duration-300 font-semibold text-base sm:text-lg uppercase tracking-wide"
+                          className="flex-1 text-left px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-white/40 transition-all duration-300 font-semibold text-base sm:text-lg uppercase tracking-wide"
                         >
                           <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {item.label}
                         </button>
                       ) : (
                         <Link
                           href={item.href!}
-                          className="flex-1 px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-brand-menu-hover transition-all duration-300 font-semibold text-base sm:text-lg uppercase tracking-wide"
+                          className="flex-1 px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-white/40 transition-all duration-300 font-semibold text-base sm:text-lg uppercase tracking-wide"
                           onClick={() => setIsOpen(false)}
                         >
                           <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {item.label}
@@ -318,7 +315,7 @@ export default function Navigation() {
                       )}
                     </div>
                     {item.hasDropdown && mobileDropdown === item.label && (
-                      <div className="pl-6 pr-4 py-3 space-y-1 bg-brand-menu-hover/50 animate-in slide-in-from-top duration-300">
+                      <div className="pl-6 pr-4 py-3 space-y-1 bg-white/40 backdrop-blur-xl animate-in slide-in-from-top duration-300">
                         {item.sections?.map((section, sectionIndex) => (
                           <div key={sectionIndex}>
                             {section.title && (
@@ -332,10 +329,10 @@ export default function Navigation() {
                               <Link
                                 key={subItem.href}
                                 href={subItem.href}
-                                className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-white transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-medium"
+                                className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-white/60 transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-medium"
                                 onClick={() => setIsOpen(false)}
                               >
-                              <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span>  {subItem.label}
+                                <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {subItem.label}
                               </Link>
                             ))}
                           </div>
