@@ -104,7 +104,7 @@ export default function RoadMapPage() {
       region: 'Northern Circuit',
       image: 'https://images.unsplash.com/photo-1609198092357-520a8d915a89?w=1200&auto=format&fit=crop',
       coordinates: '3.2333° S, 36.8833° E',
-      mapUrl: 'https://www.google.com/maps/place/Arusha+National+Park/@-3.2333,36.8833,11z'
+      mapUrl: '/still.jpeg'
     },
     'tarangire': {
       name: 'Tarangire National Park',
