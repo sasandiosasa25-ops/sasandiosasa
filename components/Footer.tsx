@@ -46,12 +46,12 @@ export default function Footer() {
     travelCompass: {
       title: language === 'de' ? 'Reisekompass' : 'Travel Compass',
       links: [
-        { href: '/travel-compass/why-choose-us', label: language === 'de' ? 'Warum uns wählen' : 'Why Choose Us' },
-        { href: '/travel-compass/seasonal-advice', label: language === 'de' ? 'Saisonale Beratung' : 'Seasonal Advice' },
-        { href: '/travel-compass/airline-recommendations', label: language === 'de' ? 'Flugempfehlungen' : 'Airline Recommendations' },
-        { href: '/travel-compass/travel-permit', label: language === 'de' ? 'Reisegenehmigung' : 'Travel Permit' },
-        { href: '/travel-compass/packing-lists', label: language === 'de' ? 'Packlisten' : 'Packing Lists' },
-        { href: '/travel-compass/faqs', label: language === 'de' ? 'Dos und Don\'ts (FAQs)' : 'Dos and Don\'ts (FAQs)' },
+        { href: '/travel-compass/#why-choose-us', label: language === 'de' ? 'Warum uns wählen' : 'Why Choose Us' },
+        { href: '/travel-compass/#seasonal-advice', label: language === 'de' ? 'Saisonale Beratung' : 'Seasonal Advice' },
+        { href: '/travel-compass/#airline-recommendations', label: language === 'de' ? 'Flugempfehlungen' : 'Airline Recommendations' },
+        { href: '/travel-compass/#travel-permit', label: language === 'de' ? 'Reisegenehmigung' : 'Travel Permit' },
+        { href: '/travel-compass/#packing-lists', label: language === 'de' ? 'Packlisten' : 'Packing Lists' },
+        { href: '/travel-compass/#faqs', label: language === 'de' ? 'Dos und Don\'ts (FAQs)' : 'Dos and Don\'ts (FAQs)' },
         { href: '/road-map', label: language === 'de' ? 'Routenplan' : 'Road Map' },
       ]
     },
