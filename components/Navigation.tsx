@@ -183,7 +183,7 @@ export default function Navigation() {
             <Link href="/" className="flex items-center space-x-4 group relative z-10">
               <div className="relative">
                 <img 
-                  src="/logo.jpeg" 
+                  src="/logos.png" 
                   alt="SasaNdioSasa" 
                   className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-500 group-hover:scale-110 drop-shadow-md"
                 />
