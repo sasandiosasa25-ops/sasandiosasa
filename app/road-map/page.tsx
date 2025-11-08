@@ -151,33 +151,7 @@ export default function RoadMapPage() {
   };
 
   const safariExperiences: SafariExperience[] = [
-    {
-      id: 'flow',
-      name: 'The Flow',
-      tagline: 'A journey through rhythm and wilderness',
-      duration: '7-10 days',
-      destinations: ['dar-es-salaam', 'selous', 'mikumi'],
-      description: 'Begin where ocean meets city, then flow into the raw wilderness of southern Tanzania. Experience the rhythm of nature in its most powerful form.',
-      image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&auto=format&fit=crop'
-    },
-    {
-      id: 'shift',
-      name: 'The Shift',
-      tagline: 'Transform through Tanzania\'s iconic landscapes',
-      duration: '8-12 days',
-      destinations: ['tarangire', 'serengeti', 'ngorongoro'],
-      description: 'Move through the land of giants, witness the great migration, and stand in awe at the crater that holds a world within itself.',
-      image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&auto=format&fit=crop'
-    },
-    {
-      id: 'unfolding',
-      name: 'The Unfolding',
-      tagline: 'A complete immersion into Tanzania\'s soul',
-      duration: '12-15 days',
-      destinations: ['arusha-np', 'tarangire', 'serengeti', 'ngorongoro'],
-      description: 'The ultimate journey. Walk with the Maasai, witness moving herds, and discover how presence and connection unfold across Tanzania\'s most iconic landscapes.',
-      image: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1200&auto=format&fit=crop'
-    },
+ 
     {
       id: 'pause',
       name: 'Pause',
