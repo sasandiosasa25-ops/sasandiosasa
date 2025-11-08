@@ -66,8 +66,8 @@ export default function SpecialEvents() {
           </p>
         </div>
 
-        {/* Events Grid - Flyers Only */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
+           {/* Events Grid - Flyers Only - Two columns layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-6xl mx-auto">
           {events.map((event) => (
             <Link
               key={event.id}
