@@ -99,6 +99,11 @@ export default function Navigation() {
         }
       ]
     },
+     { 
+      href: '/team', 
+      label: language === 'de' ? 'Team' : 'Team',
+      hasDropdown: false,
+    },
     { 
       label: language === 'de' ? 'Reisekompass' : 'Travel Compass',
       hasDropdown: true,
@@ -117,11 +122,7 @@ export default function Navigation() {
       ]
     },
    
-    { 
-      href: '/team', 
-      label: language === 'de' ? 'Team' : 'Team',
-      hasDropdown: false,
-    },
+   
   ];
 
   const toggleMobileDropdown = (label: string) => {

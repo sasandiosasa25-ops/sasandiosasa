@@ -152,15 +152,7 @@ export default function RoadMapPage() {
 
   const safariExperiences: SafariExperience[] = [
  
-    {
-      id: 'pause',
-      name: 'Pause',
-      tagline: 'Stillness in the wild',
-      duration: '5-7 days',
-      destinations: ['arusha-np', 'tarangire'],
-      description: 'A gentle introduction to Tanzania\'s northern circuit. Perfect for those seeking depth without rushing.',
-      image: '/still.jpeg'
-    },
+    
     {
       id: 'little-tracks',
       name: 'Little Tracks',
