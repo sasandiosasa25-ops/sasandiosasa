@@ -51,8 +51,7 @@ export default function RoadMapPage() {
     en: {
       pageTitle: "Road Map",
       pageSubtitle: "Journey through Tanzania's transformative landscapes",
-      safariSection: "Safari Experiences",
-      beachSection: "Beach Retreats",
+     
       duration: "Duration",
       highlights: "Highlights",
       destinations: "Destinations",
@@ -170,34 +169,9 @@ export default function RoadMapPage() {
         </div>
       </section>
 
-      {/* Safari Experiences Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-brand-menu-hover">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Trees className="h-12 w-12 text-brand-primary mx-auto mb-4" />
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-4">
-              {text.safariSection}
-            </h2>
-            <div className="h-1 w-24 bg-brand-primary mx-auto" />
-          </div>
+   
 
-        
-        </div>
-      </section>
-
-      {/* Beach Experiences Section */}
-      <section className="py-20 bg-gradient-to-b from-brand-menu-hover to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Waves className="h-12 w-12 text-brand-primary mx-auto mb-4" />
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-4">
-              {text.beachSection}
-            </h2>
-            <div className="h-1 w-24 bg-brand-primary mx-auto" />
-          </div>
-
-        </div>
-      </section>
+     
 
       {/* Destinations Details Section */}
       <section className="py-20 bg-brand-heading text-white">
