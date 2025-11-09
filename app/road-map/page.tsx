@@ -136,7 +136,7 @@ export default function RoadMapPage() {
       name: 'Pangani',
       description: "Here, life moves slower. Wooden boats drift along the river, fishermen return with the tide, and the sound of waves mixes with quiet voices on the shore. There is depth in this simplicity, a sense of being held by time rather than chased by it.\n\nPangani is not about spectacle, but about presence. Its streets and riverbanks carry echoes of history. Stories of trade, of encounters, of lives that shaped this place. To spend time here is also to pause with awareness, to take a moment for reflection, and to sense the quiet responsibility that comes when we see ourselves as part of a longer story.",
       region: 'Coast',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&auto=format&fit=crop',
+      image: '/still.jpeg',
       coordinates: '5.4167° S, 38.9833° E',
       mapUrl: 'https://www.google.com/maps/place/Pangani,+Tanzania/@-5.4167,38.9833,12z'
     },
@@ -144,7 +144,7 @@ export default function RoadMapPage() {
       name: 'Maziwe Island',
       description: "Maziwe Island appears only when the tide is low. A fleeting stretch of sand surrounded by the vast Indian Ocean. For a few hours it rises from the water, bare and open, where sky and sea meet in a rare moment of simplicity. Its beauty is not constant, but revealed, as if the ocean itself uncovers it for those who take the time to wait.\n\nBeneath the surface, another world unfolds. Coral reefs circle the island, alive with color and movement, inviting you to dive or snorkel and witness the hidden richness of marine life. What is invisible at first glance becomes clear once you look deeper.\n\nMaziwe is a reminder that some treasures appear only when the right conditions align when something is laid bare, when we pause to see, and when we dare to step below the surface.",
       region: 'Coast',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&auto=format&fit=crop',
+      image: '/maziwe.jpeg',
       coordinates: '5.2833° S, 39.0500° E',
       mapUrl: 'https://www.google.com/maps/place/Maziwe+Island/@-5.2833,39.0500,13z'
     },
