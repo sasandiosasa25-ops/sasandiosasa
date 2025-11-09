@@ -47,19 +47,19 @@ export default function Navigation(): JSX.Element {
           title: language === 'de' ? 'Safaris' : 'Safaris',
           hasDropdown: true,
           items: [
-            { href: '/road-map/#flow', label: 'The Flow — Dar es Salaam • Selous • Mikumi NP' },
-            { href: '/road-map/#shift', label: 'The Shift — Tarangire NP • Serengeti • Ngorongoro Crater' },
-            { href: '/road-map/#unfolding', label: 'The Unfolding — Arusha NP • Maasai Experience • Tarangire NP • Serengeti • Ngorongoro Crater' },
-            { href: '/road-map/#pause', label: 'Pause — Arusha NP • Maasai Lodge • Tarangire NP' },
-            { href: '/road-map/#little-tracks', label: 'Little Tracks — Family Safari' },
+            { href: '/road-map/#flow', label: 'The Flow - Dar es Salaam • Selous • Mikumi NP' },
+            { href: '/road-map/#shift', label: 'The Shift - Tarangire NP • Serengeti • Ngorongoro Crater' },
+            { href: '/road-map/#unfolding', label: 'The Unfolding - Arusha NP • Maasai Experience • Tarangire NP • Serengeti • Ngorongoro Crater' },
+            { href: '/road-map/#pause', label: 'Pause - Arusha NP • Maasai Lodge • Tarangire NP' },
+            { href: '/road-map/#little-tracks', label: 'Little Tracks - Family Safari' },
           ]
         },
         {
           title: language === 'de' ? 'Strand' : 'Beach',
           hasDropdown: true,
           items: [
-            { href: '/road-map/#exhale', label: 'The Exhale — Zanzibar' },
-            { href: '/road-map/#return', label: 'The Return — Pangani • Maziwe Island' },
+            { href: '/road-map/#exhale', label: 'The Exhale - Zanzibar' },
+            { href: '/road-map/#return', label: 'The Return - Pangani • Maziwe Island' },
           ]
         },
         {
