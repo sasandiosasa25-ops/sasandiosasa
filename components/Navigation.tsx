@@ -137,13 +137,13 @@ export default function Navigation() {
               href="/" 
               className="text-brand-heading hover:text-brand-primary transition-colors text-sm font-semibold uppercase tracking-wide"
             >
-              <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {language === 'de' ? 'Basis' : 'Base'}
+              <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {language === 'de' ? 'Basis' : 'Base'}
             </Link>
             <Link 
               href="/team" 
               className="text-brand-heading hover:text-brand-primary transition-colors text-sm font-semibold uppercase tracking-wide"
             >
-              <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {language === 'de' ? 'Team' : 'Team'}
+              <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {language === 'de' ? 'Team' : 'Team'}
             </Link>
             {/* Language Switcher in Top Bar */}
             <div className="flex items-center space-x-2 border-l border-white/30 pl-6">
@@ -292,7 +292,7 @@ export default function Navigation() {
                           onClick={() => toggleMobileDropdown(item.label)}
                           className="flex-1 text-left px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-white/40 transition-all duration-300 font-semibold text-base sm:text-lg uppercase tracking-wide"
                         >
-                          <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {item.label}
+                          <span className="font-comfortaa normal-case">SasaNdioSasa</span> {item.label}
                         </button>
                       ) : (
                         <Link
@@ -300,7 +300,7 @@ export default function Navigation() {
                           className="flex-1 px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-white/40 transition-all duration-300 font-semibold text-base sm:text-lg uppercase tracking-wide"
                           onClick={() => setIsOpen(false)}
                         >
-                          <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {item.label}
+                          <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {item.label}
                         </Link>
                       )}
                       {item.hasDropdown && (
@@ -323,7 +323,7 @@ export default function Navigation() {
                             {section.title && (
                               <div className="px-6 py-2">
                                 <h3 className="text-brand-heading font-bold text-xs uppercase tracking-wider">
-                                  <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {section.title}
+                                  <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {section.title}
                                 </h3>
                               </div>
                             )}
@@ -334,7 +334,7 @@ export default function Navigation() {
                                 className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-white/60 transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-medium"
                                 onClick={() => setIsOpen(false)}
                               >
-                                <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {subItem.label}
+                                <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {subItem.label}
                               </Link>
                             ))}
                           </div>
