@@ -71,7 +71,7 @@ export default function RootLayout({
           <Navigation />
           <div className="pt-20" /> 
           {children}
-          <WhatsAppButton />
+      
           <Toaster />
           <Footer />
         </LanguageProvider>
