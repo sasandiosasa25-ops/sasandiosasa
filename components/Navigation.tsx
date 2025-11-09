@@ -227,7 +227,7 @@ export default function Navigation() {
 
                   {/* Dropdown Menu - Elegant sections with scrolling */}
                   {item.hasDropdown && openDropdown === item.label && (
-                    <div className="absolute top-full left-0 pt-3 w-[420px]">
+                    <div className="absolute top-10 left-0 pt-3 mt-3 w-[420px]">
                       <div className="bg-white/90 backdrop-blur-xl border-2 border-white/40 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-300 overflow-hidden max-h-[calc(100vh-200px)] overflow-y-auto">
                         <div className="py-2">
                           {item.sections?.map((section, sectionIndex) => (
@@ -280,7 +280,7 @@ export default function Navigation() {
 
           {/* Mobile Navigation - Spacious and elegant */}
           {isOpen && (
-            <div className="lg:hidden border-t-2 border-white/30 animate-in slide-in-from-top duration-300">
+            <div className="lg:hidden border-t-2 border-white/30 animate-in slide-in-from-top duration-300 mt-6">
               <div className="px-3 pt-6 pb-6 space-y-2 bg-white/30 backdrop-blur-xl max-h-[calc(100vh-96px)] overflow-y-auto">
                 {navItems.map((item) => (
                   <div key={item.label} className="border-b border-white/20 last:border-b-0">
