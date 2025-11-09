@@ -71,7 +71,7 @@ export default function Navigation(): JSX.Element {
         },
       ]
     },
-    
+
     { 
       label: language === 'de' ? 'Erfahrung' : 'Experience',
       hasDropdown: true,
@@ -91,18 +91,7 @@ export default function Navigation(): JSX.Element {
         {
           items: [
             { href: '/impact', label: language === 'de' ? 'Wirkung Übersicht' : 'Impact Overview' },
-          ]
-        },
-        {
-          title: language === 'de' ? 'UN-Nachhaltigkeitsziele' : 'UN Sustainability Goals',
-          hasDropdown: true,
-          items: [
-            { href: '/impact/#good-health', label: language === 'de' ? 'Gesundheit und Wohlbefinden' : 'Good Health and Well-being', noPrefix: true },
-            { href: '/impact/#quality-education', label: language === 'de' ? 'Hochwertige Bildung' : 'Quality Education', noPrefix: true },
-            { href: '/impact/#decent-work', label: language === 'de' ? 'Menschenwürdige Arbeit und Wirtschaftswachstum' : 'Decent Work and Economic Growth', noPrefix: true },
-            { href: '/impact/#responsible-consumption', label: language === 'de' ? 'Verantwortungsvolle Konsum- und Produktionsmuster' : 'Responsible Production and Consumption', noPrefix: true },
-            { href: '/impact/#life-on-land', label: language === 'de' ? 'Leben an Land' : 'Life on Land', noPrefix: true },
-            { href: '/impact/#partnerships', label: language === 'de' ? 'Partnerschaften zur Erreichung der Ziele' : 'Partnerships for the Goals', noPrefix: true },
+            { href: '/impact', label: language === 'de' ? 'UN-Nachhaltigkeitsziele' : 'UN Sustainability Goals' },
           ]
         }
       ]
