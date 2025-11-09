@@ -202,7 +202,7 @@ export default function RoadMapPage() {
     {
       id: 'exhale',
       name: 'The Exhale',
-      tagline: 'Zanzibar\'s timeless embrace',
+      tagline: 'Zanzibar\'s Timeless Embrace',
       duration: '4-7 days',
       destinations: [],
       description: 'After the safari, let the ocean restore you. Zanzibar offers white sands, turquoise waters, and a rhythm that invites you to simply breathe.',
@@ -211,7 +211,7 @@ export default function RoadMapPage() {
     {
       id: 'return',
       name: 'The Return',
-      tagline: 'Coastal authenticity',
+      tagline: 'Coastal Authenticity',
       duration: '3-5 days',
       destinations: ['pangani', 'maziwe'],
       description: 'Experience Tanzania\'s coast away from the crowds. Where history whispers, tides reveal hidden islands, and life moves at its own pace.',
