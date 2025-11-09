@@ -45,7 +45,7 @@ export default function SpecialEvents() {
   const text = content[language];
 
   return (
-    <section className="relative py-16 sm:py-20 lg:py-28 bg-gradient-to-b from-white via-brand-menu-hover to-white overflow-hidden">
+    <section className="relative py-16 sm:py-20 lg:py-28  overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-brand-primary rounded-full blur-3xl" />
