@@ -12,7 +12,7 @@ const TravelCompassPage = () => {
     setTimeout(() => setIsVisible(true), 100);
   }, []);
 
-  const airlineLogos = {
+  const airlineLogos: { [key: string]: string } = {
   'Lufthansa': '/luft.jpeg',
   'Discover Airlines': '/discover.jpeg',
   'KLM Royal Dutch Airlines': '/klm.jpeg',
@@ -510,7 +510,7 @@ const TravelCompassPage = () => {
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                   const fallback = e.currentTarget.nextElementSibling;
-                  if (fallback) fallback.style.display = 'block';
+                  if (fallback && fallback instanceof HTMLElement) fallback.style.display = 'block';
                 }}
               />
               <Plane className="w-8 h-8 text-amber-600 hidden" />
