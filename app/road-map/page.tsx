@@ -119,7 +119,7 @@ export default function RoadMapPage() {
       name: 'Serengeti National Park',
       description: "The Serengeti is vast. Its plains stretch endlessly, where sky and earth seem to meet. In this openness, you may feel small, as if a part of yourself dissolves into the horizon, yet it is a gentle kind of losing, one that creates space for clarity.\n\nHerds move like living currents across the land, their rhythm carrying a sense of belonging that reaches beyond the individual. In the flow of so many lives, the balance of nature becomes visible and deeply felt.\n\nThe Serengeti invites you to let go of boundaries and to rest in its immensity. What seems like being lost is, in truth, the beginning of finding yourself within something greater.",
       region: 'Northern Circuit',
-      image: '/leopard2.jpeg',
+      image: '/simbas1.jpeg',
       coordinates: '2.3333° S, 34.8333° E',
       mapUrl: 'https://www.google.com/maps/place/Serengeti+National+Park/@-2.3333,34.8333,9z'
     },

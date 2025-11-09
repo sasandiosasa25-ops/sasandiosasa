@@ -6,27 +6,31 @@ import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 
-type MenuItem = {
+interface MenuItem {
   href: string;
   label: string;
-};
+  noPrefix?: boolean;
+}
 
-type Section = {
+interface Section {
   title?: string;
+  hasDropdown?: boolean;
   items: MenuItem[];
-};
+}
 
-type NavItem = {
+interface NavItem {
   href?: string;
   label: string;
   hasDropdown: boolean;
   sections?: Section[];
-};
+}
 
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Navigation(): JSX.Element {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null);
   const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
+  const [mobileSubDropdown, setMobileSubDropdown] = useState<string | null>(null);
   const { language, setLanguage } = useLanguage();
 
   const navItems: NavItem[] = [
@@ -41,6 +45,7 @@ export default function Navigation() {
       sections: [
         {
           title: language === 'de' ? 'Safaris' : 'Safaris',
+          hasDropdown: true,
           items: [
             { href: '/road-map/#flow', label: 'The Flow — Dar es Salaam • Selous • Mikumi NP' },
             { href: '/road-map/#shift', label: 'The Shift — Tarangire NP • Serengeti • Ngorongoro Crater' },
@@ -51,6 +56,7 @@ export default function Navigation() {
         },
         {
           title: language === 'de' ? 'Strand' : 'Beach',
+          hasDropdown: true,
           items: [
             { href: '/road-map/#exhale', label: 'The Exhale — Zanzibar' },
             { href: '/road-map/#return', label: 'The Return — Pangani • Maziwe Island' },
@@ -58,6 +64,7 @@ export default function Navigation() {
         },
         {
           title: language === 'de' ? 'Gipfel' : 'Peaks',
+          hasDropdown: true,
           items: [
             { href: '/paths/peaks', label: language === 'de' ? 'Gipfel erkunden' : 'Explore Peaks' },
           ]
@@ -87,13 +94,14 @@ export default function Navigation() {
         },
         {
           title: language === 'de' ? 'UN-Nachhaltigkeitsziele' : 'UN Sustainability Goals',
+          hasDropdown: true,
           items: [
-            { href: '/impact/#good-health', label: language === 'de' ? 'Gesundheit und Wohlbefinden' : 'Good Health and Well-being' },
-            { href: '/impact/#quality-education', label: language === 'de' ? 'Hochwertige Bildung' : 'Quality Education' },
-            { href: '/impact/#decent-work', label: language === 'de' ? 'Menschenwürdige Arbeit und Wirtschaftswachstum' : 'Decent Work and Economic Growth' },
-            { href: '/impact/#responsible-consumption', label: language === 'de' ? 'Verantwortungsvolle Konsum- und Produktionsmuster' : 'Responsible Production and Consumption' },
-            { href: '/impact/#life-on-land', label: language === 'de' ? 'Leben an Land' : 'Life on Land' },
-            { href: '/impact/#partnerships', label: language === 'de' ? 'Partnerschaften zur Erreichung der Ziele' : 'Partnerships for the Goals' },
+            { href: '/impact/#good-health', label: language === 'de' ? 'Gesundheit und Wohlbefinden' : 'Good Health and Well-being', noPrefix: true },
+            { href: '/impact/#quality-education', label: language === 'de' ? 'Hochwertige Bildung' : 'Quality Education', noPrefix: true },
+            { href: '/impact/#decent-work', label: language === 'de' ? 'Menschenwürdige Arbeit und Wirtschaftswachstum' : 'Decent Work and Economic Growth', noPrefix: true },
+            { href: '/impact/#responsible-consumption', label: language === 'de' ? 'Verantwortungsvolle Konsum- und Produktionsmuster' : 'Responsible Production and Consumption', noPrefix: true },
+            { href: '/impact/#life-on-land', label: language === 'de' ? 'Leben an Land' : 'Life on Land', noPrefix: true },
+            { href: '/impact/#partnerships', label: language === 'de' ? 'Partnerschaften zur Erreichung der Ziele' : 'Partnerships for the Goals', noPrefix: true },
           ]
         }
       ]
@@ -109,20 +117,20 @@ export default function Navigation() {
       sections: [
         {
           items: [
-            { href: '/travel-compass/#why-choose-us', label: language === 'de' ? 'Warum uns wählen' : 'Why Choose Us' },
-            { href: '/travel-compass/#seasonal-advice', label: language === 'de' ? 'Saisonale Beratung' : 'Seasonal Advice' },
-            { href: '/travel-compass/#airline-recommendations', label: language === 'de' ? 'Flugempfehlungen' : 'Airline Recommendations' },
-            { href: '/travel-compass/#travel-permit', label: language === 'de' ? 'Reisegenehmigung' : 'Travel Permit' },
-            { href: '/travel-compass/#packing-lists', label: language === 'de' ? 'Packlisten' : 'Packing Lists' },
-            { href: '/travel-compass/#faqs', label: language === 'de' ? 'Dos und Don\'ts (FAQs)' : 'Dos and Don\'ts (FAQs)' },
-            { href: '/road-map', label: language === 'de' ? 'Routenplan' : 'Road Map' },
+            { href: '/travel-compass/#why-choose-us', label: language === 'de' ? 'Warum uns wählen' : 'Why Choose Us', noPrefix: true },
+            { href: '/travel-compass/#seasonal-advice', label: language === 'de' ? 'Saisonale Beratung' : 'Seasonal Advice', noPrefix: true },
+            { href: '/travel-compass/#airline-recommendations', label: language === 'de' ? 'Flugempfehlungen' : 'Airline Recommendations', noPrefix: true },
+            { href: '/travel-compass/#travel-permit', label: language === 'de' ? 'Reisegenehmigung' : 'Travel Permit', noPrefix: true },
+            { href: '/travel-compass/#packing-lists', label: language === 'de' ? 'Packlisten' : 'Packing Lists', noPrefix: true },
+            { href: '/travel-compass/#faqs', label: language === 'de' ? 'Dos und Don\'ts (FAQs)' : 'Dos and Don\'ts (FAQs)', noPrefix: true },
+            { href: '/road-map', label: language === 'de' ? 'Routenplan' : 'Road Map', noPrefix: true },
           ]
         }
       ]
     },
   ];
 
-  const toggleMobileDropdown = (label: string) => {
+  const toggleMobileDropdown = (label: string): void => {
     setMobileDropdown(mobileDropdown === label ? null : label);
   };
 
@@ -137,13 +145,13 @@ export default function Navigation() {
               href="/" 
               className="text-brand-heading hover:text-brand-primary transition-colors text-sm font-semibold uppercase tracking-wide"
             >
-              <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {language === 'de' ? 'Basis' : 'Base'}
+              <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{language === 'de' ? 'Basis' : 'Base'}</span>
             </Link>
             <Link 
               href="/team" 
               className="text-brand-heading hover:text-brand-primary transition-colors text-sm font-semibold uppercase tracking-wide"
             >
-              <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {language === 'de' ? 'Team' : 'Team'}
+              <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{language === 'de' ? 'Team' : 'Team'}</span>
             </Link>
             {/* Language Switcher in Top Bar */}
             <div className="flex items-center space-x-2 border-l border-white/30 pl-6">
@@ -204,9 +212,7 @@ export default function Navigation() {
                       className="flex items-center px-5 xl:px-6 py-3 text-brand-heading hover:text-brand-primary transition-all duration-300 font-semibold text-base xl:text-lg tracking-wide uppercase relative overflow-hidden group"
                     >
                       <span className="relative z-10">
-                        {/* <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {item.label}
-            */}
-                        <span className="font-comfortaa normal-case">SasaNdioSasa</span> {item.label}
+                        <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{item.label}</span>
                         <ChevronDown 
                           className={`inline-block ml-1.5 h-4 w-4 xl:h-5 xl:w-5 transition-transform duration-300 ${
                             openDropdown === item.label ? 'rotate-180' : ''
@@ -221,7 +227,7 @@ export default function Navigation() {
                       className="flex items-center px-5 xl:px-6 py-3 text-brand-heading hover:text-brand-primary transition-all duration-300 font-semibold text-base xl:text-lg tracking-wide uppercase relative overflow-hidden group"
                     >
                       <span className="relative z-10">
-                        <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {item.label}
+                        <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{item.label}</span>
                       </span>
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-primary transition-all duration-300 group-hover:w-full" />
                     </Link>
@@ -235,21 +241,79 @@ export default function Navigation() {
                           {item.sections?.map((section, sectionIndex) => (
                             <div key={sectionIndex} className={sectionIndex > 0 ? 'border-t-2 border-white/30 pt-2 mt-2' : ''}>
                               {section.title && (
-                                <div className="px-8 py-3">
-                                  <h3 className="text-brand-heading font-bold text-sm uppercase tracking-wider">
-                                    <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {section.title}
-                                  </h3>
-                                </div>
+                                <>
+                                  {section.hasDropdown ? (
+                                    <div className="relative group/section">
+                                      <button
+                                        onMouseEnter={() => setOpenSubDropdown(section.title!)}
+                                        onMouseLeave={() => setOpenSubDropdown(null)}
+                                        className="w-full px-8 py-3 text-left group/sectionbtn relative block hover:bg-white/50 hover:text-brand-primary transition-all duration-300 overflow-hidden"
+                                      >
+                                        <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/sectionbtn:scale-y-100 transition-transform duration-300 origin-top" />
+                                        <h3 className="text-brand-heading font-normal text-sm uppercase tracking-wider relative z-10 flex items-center justify-between">
+                                          <span>
+                                            <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{section.title}</span>
+                                          </span>
+                                          <ChevronDown 
+                                            className={`h-4 w-4 transition-transform duration-300 ${
+                                              openSubDropdown === section.title ? 'rotate-180' : ''
+                                            }`} 
+                                          />
+                                        </h3>
+                                      </button>
+                                      
+                                      {/* Sub-dropdown */}
+                                      {openSubDropdown === section.title && (
+                                        <div 
+                                          onMouseEnter={() => setOpenSubDropdown(section.title!)}
+                                          onMouseLeave={() => setOpenSubDropdown(null)}
+                                          className="bg-white/95 backdrop-blur-xl border-l-4 border-brand-primary animate-in fade-in slide-in-from-left-3 duration-300"
+                                        >
+                                          {section.items.map((subItem) => (
+                                            <Link
+                                              key={subItem.href}
+                                              href={subItem.href}
+                                              className="group/item relative block px-10 py-3.5 text-brand-heading hover:bg-white/70 hover:text-brand-primary transition-all duration-300 text-sm font-normal overflow-hidden"
+                                            >
+                                              <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/item:scale-y-100 transition-transform duration-300 origin-top" />
+                                              <span className="relative z-10 block transform transition-transform duration-300 group-hover/item:translate-x-2">
+                                                {subItem.noPrefix ? (
+                                                  <span className="font-normal">{subItem.label}</span>
+                                                ) : (
+                                                  <>
+                                                    <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{subItem.label}</span>
+                                                  </>
+                                                )}
+                                              </span>
+                                            </Link>
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
+                                  ) : (
+                                    <div className="px-8 py-3">
+                                      <h3 className="text-brand-heading font-normal text-sm uppercase tracking-wider">
+                                        <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{section.title}</span>
+                                      </h3>
+                                    </div>
+                                  )}
+                                </>
                               )}
-                              {section.items.map((subItem) => (
+                              {!section.hasDropdown && section.items.map((subItem) => (
                                 <Link
                                   key={subItem.href}
                                   href={subItem.href}
-                                  className="group/item relative block px-8 py-3.5 text-brand-heading hover:bg-white/50 hover:text-brand-primary transition-all duration-300 text-sm font-medium overflow-hidden"
+                                  className="group/item relative block px-8 py-3.5 text-brand-heading hover:bg-white/50 hover:text-brand-primary transition-all duration-300 text-sm font-normal overflow-hidden"
                                 >
                                   <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/item:scale-y-100 transition-transform duration-300 origin-top" />
                                   <span className="relative z-10 block transform transition-transform duration-300 group-hover/item:translate-x-2">
-                                    <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {subItem.label}
+                                    {subItem.noPrefix ? (
+                                      <span className="font-normal">{subItem.label}</span>
+                                    ) : (
+                                      <>
+                                        <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{subItem.label}</span>
+                                      </>
+                                    )}
                                   </span>
                                 </Link>
                               ))}
@@ -290,17 +354,17 @@ export default function Navigation() {
                       {item.hasDropdown ? (
                         <button
                           onClick={() => toggleMobileDropdown(item.label)}
-                          className="flex-1 text-left px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-white/40 transition-all duration-300 font-semibold text-base sm:text-lg uppercase tracking-wide"
+                          className="flex-1 text-left px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-white/40 transition-all duration-300 font-normal text-base sm:text-lg uppercase tracking-wide"
                         >
-                          <span className="font-comfortaa normal-case">SasaNdioSasa</span> {item.label}
+                          <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{item.label}</span>
                         </button>
                       ) : (
                         <Link
                           href={item.href!}
-                          className="flex-1 px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-white/40 transition-all duration-300 font-semibold text-base sm:text-lg uppercase tracking-wide"
+                          className="flex-1 px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-white/40 transition-all duration-300 font-normal text-base sm:text-lg uppercase tracking-wide"
                           onClick={() => setIsOpen(false)}
                         >
-                          <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {item.label}
+                          <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{item.label}</span>
                         </Link>
                       )}
                       {item.hasDropdown && (
@@ -321,20 +385,66 @@ export default function Navigation() {
                         {item.sections?.map((section, sectionIndex) => (
                           <div key={sectionIndex}>
                             {section.title && (
-                              <div className="px-6 py-2">
-                                <h3 className="text-brand-heading font-bold text-xs uppercase tracking-wider">
-                                  <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {section.title}
-                                </h3>
-                              </div>
+                              <>
+                                {section.hasDropdown ? (
+                                  <div>
+                                    <button
+                                      onClick={() => section.title && setMobileSubDropdown(mobileSubDropdown === section.title ? null : section.title)}
+                                      className="w-full flex items-center justify-between px-6 py-3 text-brand-heading hover:text-brand-primary hover:bg-white/60 transition-all duration-300"
+                                    >
+                                      <h3 className="text-brand-heading font-normal text-xs uppercase tracking-wider">
+                                        <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{section.title}</span>
+                                      </h3>
+                                      <ChevronDown 
+                                        className={`h-4 w-4 transition-transform duration-300 ${
+                                          mobileSubDropdown === section.title ? 'rotate-180' : ''
+                                        }`} 
+                                      />
+                                    </button>
+                                    {mobileSubDropdown === section.title && (
+                                      <div className="pl-4 bg-white/50 animate-in slide-in-from-top duration-300">
+                                        {section.items.map((subItem) => (
+                                          <Link
+                                            key={subItem.href}
+                                            href={subItem.href}
+                                            className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-white/60 transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-normal"
+                                            onClick={() => setIsOpen(false)}
+                                          >
+                                            {subItem.noPrefix ? (
+                                              <span className="font-normal">{subItem.label}</span>
+                                            ) : (
+                                              <>
+                                                <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{subItem.label}</span>
+                                              </>
+                                            )}
+                                          </Link>
+                                        ))}
+                                      </div>
+                                    )}
+                                  </div>
+                                ) : (
+                                  <div className="px-6 py-2">
+                                    <h3 className="text-brand-heading font-normal text-xs uppercase tracking-wider">
+                                      <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{section.title}</span>
+                                    </h3>
+                                  </div>
+                                )}
+                              </>
                             )}
-                            {section.items.map((subItem) => (
+                            {!section.hasDropdown && section.items.map((subItem) => (
                               <Link
                                 key={subItem.href}
                                 href={subItem.href}
-                                className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-white/60 transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-medium"
+                                className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-white/60 transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-normal"
                                 onClick={() => setIsOpen(false)}
                               >
-                                <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {subItem.label}
+                                {subItem.noPrefix ? (
+                                  <span className="font-normal">{subItem.label}</span>
+                                ) : (
+                                  <>
+                                    <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{subItem.label}</span>
+                                  </>
+                                )}
                               </Link>
                             ))}
                           </div>
