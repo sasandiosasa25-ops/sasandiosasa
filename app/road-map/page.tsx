@@ -78,7 +78,7 @@ export default function RoadMapPage() {
       name: 'Dar es Salaam',
       description: "Dar es Salaam is more than just a city. It is a living mosaic of cultures, stories, and contrasts. Between the wide Indian Ocean and the vibrant streets unfolds an energy that is contagious. Here, tradition and modern life meet, spices linger in the markets, and conversations carry the sound of many languages.\n\nThe city moves to its own rhythm. The call of the ocean, the beat of music drifting through the night, the pulse of people gathering in cafés and along the shore. Dar is vibrant and restless, yet always open for a moment of stillness when the sea breeze cools the air and the horizon stretches wide.",
       region: 'Southern Tanzania',
-      image: 'https://images.unsplash.com/photo-1568643586940-5e0231b8e043?w=1200&auto=format&fit=crop',
+      image: '/dar.jpg',
       coordinates: '6.7924° S, 39.2083° E',
       mapUrl: 'https://www.google.com/maps/place/Dar+es+Salaam,+Tanzania/@-6.7924,39.2083,11z'
     },
@@ -335,10 +335,7 @@ export default function RoadMapPage() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="absolute -top-6 -right-6 bg-brand-primary text-white px-8 py-4 shadow-xl">
-                      <p className="text-sm font-bold uppercase tracking-wider">{text.duration}</p>
-                      <p className="text-2xl font-black">{experience.duration}</p>
-                    </div>
+                  
                   </div>
 
                   {/* Content */}
@@ -410,7 +407,7 @@ export default function RoadMapPage() {
                       alt={dest.name}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-heading to-transparent" />
+          
                   </div>
 
                   <div className="p-8 lg:p-12">
