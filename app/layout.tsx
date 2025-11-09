@@ -66,10 +66,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${comfortaa.variable} ${poppins.variable} font-comfortaa`}>
+      <body className={`${comfortaa.variable} ${poppins.variable} font-comfortaa bg-brand-bg-light`}>
         <LanguageProvider>
           <Navigation />
-          <div className="pt-16" /> 
+          <div className="pt-20" /> 
           {children}
           <WhatsAppButton />
           <Toaster />

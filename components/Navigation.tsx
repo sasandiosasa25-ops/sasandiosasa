@@ -71,6 +71,7 @@ export default function Navigation(): JSX.Element {
         },
       ]
     },
+    
     { 
       label: language === 'de' ? 'Erfahrung' : 'Experience',
       hasDropdown: true,
@@ -112,7 +113,7 @@ export default function Navigation(): JSX.Element {
       hasDropdown: false,
     },
     { 
-      label: language === 'de' ? 'Reisekompass' : 'Travel Compass',
+      label: language === 'de' ? 'Kompass' : 'Compass',
       hasDropdown: true,
       sections: [
         {
