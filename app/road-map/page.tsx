@@ -222,7 +222,7 @@ export default function RoadMapPage() {
   const text = content[language];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen pt-12">
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-brand-heading">
