@@ -249,7 +249,7 @@ export default function Navigation() {
                                 >
                                   <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/item:scale-y-100 transition-transform duration-300 origin-top" />
                                   <span className="relative z-10 block transform transition-transform duration-300 group-hover/item:translate-x-2">
-                                    <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {subItem.label}
+                                    <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {subItem.label}
                                   </span>
                                 </Link>
                               ))}
