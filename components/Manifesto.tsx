@@ -8,7 +8,8 @@ export default function Manifesto() {
   const content = {
     en: {
       tagline: "Now is your time.",
-      subtitle: "Wherever you are, whatever season you're in. Your moment is now.",
+      subtitle1: "Wherever you are, whatever season you're in.",
+      subtitle2: "Your moment is now.",
       quote: "Maybe the answer is not in adding more. But in listening again to what was always there.",
       return: "is a return.",
       rhythm: "To rhythm.",
@@ -21,7 +22,8 @@ export default function Manifesto() {
     },
     de: {
       tagline: "Jetzt ist deine Zeit.",
-      subtitle: "Wo immer du bist, in welcher Jahreszeit du dich befindest. Dein Moment ist jetzt.",
+      subtitle1: "Wo immer du bist, in welcher Jahreszeit du dich befindest.",
+      subtitle2: "Dein Moment ist jetzt.",
       quote: "Vielleicht liegt die Antwort nicht darin, mehr hinzuzufügen. Sondern darin, wieder auf das zu hören, was immer da war.",
       return: "ist eine Rückkehr.",
       rhythm: "Zum Rhythmus.",
@@ -64,9 +66,10 @@ export default function Manifesto() {
           </p>
 
           {/* Subtitle */}
-          <p className="text-brand-border text-lg sm:text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed">
-            {text.subtitle}
-          </p>
+          <div className="text-brand-border text-lg sm:text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed">
+            <p>{text.subtitle1}</p>
+            <p className="mt-2">{text.subtitle2}</p>
+          </div>
 
           {/* Quote - Highlighted */}
           <div className="py-8 sm:py-10 lg:py-12 px-6 sm:px-8 lg:px-12 border-l-4 border-brand-primary bg-white/5 backdrop-blur-sm">
