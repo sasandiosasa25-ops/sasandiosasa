@@ -10,19 +10,17 @@ export default function CTASection() {
 
   const content = {
     en: {
-      tagline: "Start Your Journey",
-      heading: "Begin Here",
-      description: "Every journey begins with a conversation. Let us craft an experience that resonates with your soul.",
-      buttonText: "Book Your Discovery Call",
+      tagline: "Start your journey",
+      heading: "Karibu",
+           buttonText: "Book your discovery call",
       rating: "Rating",
       awardWinning: "Award-Winning Service",
       travelers: "Happy Travelers",
     },
     de: {
       tagline: "Beginnen Sie Ihre Reise",
-      heading: "Beginnen Sie Hier",
-      description: "Jede Reise beginnt mit einem Gespräch. Lassen Sie uns ein Erlebnis gestalten, das mit Ihrer Seele in Resonanz steht.",
-      buttonText: "Buchen Sie Ihr Entdeckungsgespräch",
+      heading: "Karibu",
+           buttonText: "Buchen Sie Ihr Entdeckungsgespräch",
       rating: "Bewertung",
       awardWinning: "Preisgekrönter Service",
       travelers: "Glückliche Reisende",
@@ -58,14 +56,11 @@ export default function CTASection() {
             {text.heading}
           </h2>
           
-          {/* Description */}
-          <p className="text-lg sm:text-xl md:text-2xl text-brand-heading/70 max-w-3xl mx-auto leading-relaxed font-light mb-12">
-            {text.description}
-          </p>
+       
         </div>
         
         {/* CTA Button - Bold and Animated */}
-        <div className="mb-12 sm:mb-16">
+        <div className="mb-6 sm:mb-8">
           <Button 
             asChild 
             size="lg" 
