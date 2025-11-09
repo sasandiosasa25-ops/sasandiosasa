@@ -125,7 +125,7 @@ const ExperiencePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf8f5]">
+    <div className="min-h-screen ">
       {/* Hero Section */}
       <div className="relative h-[55vh] md:h-[65vh] bg-gradient-to-br from-brand-heading via-brand-secondary to-brand-primary flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-50">
