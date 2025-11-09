@@ -12,6 +12,16 @@ const TravelCompassPage = () => {
     setTimeout(() => setIsVisible(true), 100);
   }, []);
 
+  const airlineLogos = {
+  'Lufthansa': '/luft.jpeg',
+  'Discover Airlines': '/discover.jpeg',
+  'KLM Royal Dutch Airlines': '/klm.jpeg',
+  'Ethiopian Airlines': '/ethio.jpeg',
+  'Turkish Airlines': '/turk.jpeg',
+  'Qatar Airways': '/qatar.jpeg',
+  'Emirates': '/emir.jpeg'
+};
+
   const translations = {
     en: {
       title: 'Travel Compass',
@@ -457,42 +467,80 @@ const TravelCompassPage = () => {
         </section>
 
         {/* Airline Recommendations Section */}
-        <section id="airline-recommendations" className="space-y-8">
-          <div className="relative">
-            <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-amber-500 to-amber-900 rounded-full"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4">
-              <Plane className="w-12 h-12 text-amber-600" />
-              {t.airlineRecommendations.title}
-            </h2>
-          </div>
+      {/* Airline Recommendations Section */}
+{/* Airline Recommendations Section */}
+{/* Airline Recommendations Section */}
+<section id="airline-recommendations" className="space-y-8">
+  <div className="relative">
+    <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-amber-500 to-amber-900 rounded-full"></div>
+    <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4">
+      <Plane className="w-12 h-12 text-amber-600" />
+      {t.airlineRecommendations.title}
+    </h2>
+  </div>
 
-          <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-            <img 
-              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80" 
-              alt="Airplane" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-amber-900/70 to-amber-900/70 flex items-center justify-center">
-              <p className="text-white text-xl px-8 text-center leading-relaxed max-w-4xl">{t.airlineRecommendations.intro}</p>
+  <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+    <img 
+      src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80" 
+      alt="Airplane" 
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-amber-900/70 to-amber-900/70 flex items-center justify-center">
+      <p className="text-white text-xl px-8 text-center leading-relaxed max-w-4xl">{t.airlineRecommendations.intro}</p>
+    </div>
+  </div>
+
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {t.airlineRecommendations.airlines.map((airline, index) => (
+      <div 
+        key={index} 
+        className="group relative bg-gradient-to-br from-amber-50/60 to-stone-100/80 p-6 rounded-2xl border border-amber-200/60 hover:border-amber-500/80 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
+      >
+        {/* Subtle corner accent */}
+        <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-amber-200/30 to-transparent rounded-bl-full group-hover:from-amber-300/40 transition-all"></div>
+        
+        {/* Content */}
+        <div className="relative z-10">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-stone-50 to-amber-50/50 rounded-xl shadow-sm group-hover:shadow-md transition-shadow p-2 border border-amber-100/50">
+              <img 
+                src={airlineLogos[airline.name]} 
+                alt={`${airline.name} logo`}
+                className="max-w-full max-h-full object-contain"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  const fallback = e.currentTarget.nextElementSibling;
+                  if (fallback) fallback.style.display = 'block';
+                }}
+              />
+              <Plane className="w-8 h-8 text-amber-600 hidden" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-gray-800 group-hover:text-amber-900 transition-colors leading-tight">
+                {airline.name}
+              </h3>
             </div>
           </div>
+          
+          <div className="h-px bg-gradient-to-r from-amber-300/60 via-amber-400/50 to-transparent mb-4"></div>
+          
+          <p className="text-gray-700 leading-relaxed text-sm">
+            {airline.description}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {t.airlineRecommendations.airlines.map((airline, index) => (
-              <div key={index} className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl border border-blue-100 hover:border-blue-400 transition-all duration-300 hover:shadow-xl">
-                <div className="flex items-center gap-3 mb-3">
-                  <Plane className="w-6 h-6 text-amber-600" />
-                  <h3 className="text-xl font-bold text-gray-800">{airline.name}</h3>
-                </div>
-                <p className="text-gray-600 leading-relaxed">{airline.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-gradient-to-r from-emerald-50 to-blue-50 p-8 rounded-2xl border-l-4 border-emerald-500">
-            <p className="text-gray-700 italic text-lg">{t.airlineRecommendations.note}</p>
-          </div>
-        </section>
+  <div className="relative bg-gradient-to-r from-emerald-100/70 to-amber-50/70 p-8 rounded-2xl border-l-4 border-emerald-600 overflow-hidden">
+    {/* Subtle background pattern */}
+    <div className="absolute right-0 top-0 w-24 h-24 bg-gradient-to-br from-emerald-200/15 to-transparent rounded-bl-full"></div>
+    
+    <p className="relative z-10 text-gray-800 italic text-lg leading-relaxed">
+      {t.airlineRecommendations.note}
+    </p>
+  </div>
+</section>
 
         {/* Travel Permit Section */}
         <section id="travel-permit" className="space-y-8">
