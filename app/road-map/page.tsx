@@ -185,7 +185,7 @@ export default function RoadMapPage() {
       duration: '5-7 days',
       destinations: ['arusha-np', 'tarangire'],
       description: 'A gentle introduction to Tanzania\'s northern circuit. Perfect for those seeking depth without rushing.',
-      image: 'https://images.unsplash.com/photo-1609198092357-520a8d915a89?w=1200&auto=format&fit=crop'
+      image: '/still.jpeg'
     },
     {
       id: 'little-tracks',
@@ -262,11 +262,7 @@ export default function RoadMapPage() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    {/* Floating Badge */}
-                    <div className="absolute -top-6 -right-6 bg-brand-primary text-white px-8 py-4 shadow-xl">
-                      <p className="text-sm font-bold uppercase tracking-wider">{text.duration}</p>
-                      <p className="text-2xl font-black">{experience.duration}</p>
-                    </div>
+                  
                   </div>
 
                   {/* Content */}
