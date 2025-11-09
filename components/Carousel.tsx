@@ -13,12 +13,12 @@ const ImageCarousel = () => {
 
   const translations = {
     en: {
-      title: 'Our Commitment to SDGs',
+      title: 'Commitment',
       subtitle: 'How SasaNdioSasa contributes to Sustainable Development Goals',
       imagePrefix: 'SDG',
     },
     de: {
-      title: 'Unser Engagement für die SDGs',
+      title: 'Engagement',
       subtitle: 'Wie SasaNdioSasa zu nachhaltigen Entwicklungszielen beiträgt',
       imagePrefix: 'SDG',
     }

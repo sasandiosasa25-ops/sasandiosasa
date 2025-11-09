@@ -10,14 +10,14 @@ export default function SpecialEvents() {
   const content = {
     en: {
       title: "Beyond The Map",
-      subtitle: "Extraordinary experiences that transcend the ordinary journey",
+      
       viewDetails: "Learn More",
       notifyText: "Want to know when new experiences are available?",
       notifyButton: "Notify Me",
     },
     de: {
       title: "Jenseits der Karte",
-      subtitle: "Außergewöhnliche Erlebnisse, die über die gewöhnliche Reise hinausgehen",
+   
       viewDetails: "Mehr erfahren",
       notifyText: "Möchten Sie wissen, wann neue Erlebnisse verfügbar sind?",
       notifyButton: "Benachrichtigen Sie mich",
@@ -61,9 +61,7 @@ export default function SpecialEvents() {
           <div className="flex justify-center">
             <div className="h-1 w-24 sm:w-32 bg-brand-primary" />
           </div>
-          <p className="text-lg sm:text-xl md:text-2xl text-brand-heading/70 max-w-3xl mx-auto font-light leading-relaxed">
-            {text.subtitle}
-          </p>
+       
         </div>
 
            {/* Events Grid - Flyers Only - Two columns layout */}

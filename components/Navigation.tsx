@@ -204,7 +204,9 @@ export default function Navigation() {
                       className="flex items-center px-5 xl:px-6 py-3 text-brand-heading hover:text-brand-primary transition-all duration-300 font-semibold text-base xl:text-lg tracking-wide uppercase relative overflow-hidden group"
                     >
                       <span className="relative z-10">
-                        <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {item.label}
+                        {/* <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {item.label}
+            */}
+                        <span className="font-comfortaa normal-case">SasaNdioSasa</span> {item.label}
                         <ChevronDown 
                           className={`inline-block ml-1.5 h-4 w-4 xl:h-5 xl:w-5 transition-transform duration-300 ${
                             openDropdown === item.label ? 'rotate-180' : ''
@@ -219,7 +221,7 @@ export default function Navigation() {
                       className="flex items-center px-5 xl:px-6 py-3 text-brand-heading hover:text-brand-primary transition-all duration-300 font-semibold text-base xl:text-lg tracking-wide uppercase relative overflow-hidden group"
                     >
                       <span className="relative z-10">
-                        <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {item.label}
+                        <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {item.label}
                       </span>
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-primary transition-all duration-300 group-hover:w-full" />
                     </Link>
@@ -235,7 +237,7 @@ export default function Navigation() {
                               {section.title && (
                                 <div className="px-8 py-3">
                                   <h3 className="text-brand-heading font-bold text-sm uppercase tracking-wider">
-                                    <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> {section.title}
+                                    <span className="font-comfortaa normal-case ">SasaNdioSasa</span> {section.title}
                                   </h3>
                                 </div>
                               )}
