@@ -204,7 +204,12 @@ export default function Navigation(): JSX.Element {
                       className="flex items-center px-5 xl:px-6 py-3 text-brand-heading hover:text-brand-primary transition-all duration-300 font-semibold text-base xl:text-lg tracking-wide uppercase relative overflow-hidden group"
                     >
                       <span className="relative z-10">
-                        <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{item.label}</span>
+                        {item.label !== "Ndoto Zetu" && item.label !== "CAC" && (
+                          <span className="font-comfortaa italic normal-case text-brand-primary">
+                            SasaNdioSasa
+                          </span>
+                        )}{" "}
+                        <span className="font-normal">{item.label}</span>
                         <ChevronDown 
                           className={`inline-block ml-1.5 h-4 w-4 xl:h-5 xl:w-5 transition-transform duration-300 ${
                             openDropdown === item.label ? 'rotate-180' : ''
@@ -269,7 +274,7 @@ export default function Navigation(): JSX.Element {
                                             >
                                               <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/item:scale-y-100 transition-transform duration-300 origin-top" />
                                               <span className="relative z-10 block transform transition-transform duration-300 group-hover/item:translate-x-2">
-                                                {subItem.noPrefix ? (
+                                                {subItem.noPrefix || subItem.label === "Ndoto Zetu" || subItem.label === "CAC" ? (
                                                   <span className="font-normal">{subItem.label}</span>
                                                 ) : (
                                                   <>
@@ -299,7 +304,7 @@ export default function Navigation(): JSX.Element {
                                 >
                                   <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/item:scale-y-100 transition-transform duration-300 origin-top" />
                                   <span className="relative z-10 block transform transition-transform duration-300 group-hover/item:translate-x-2">
-                                    {subItem.noPrefix ? (
+                                    {subItem.noPrefix || subItem.label === "Ndoto Zetu" || subItem.label === "CAC" ? (
                                       <span className="font-normal">{subItem.label}</span>
                                     ) : (
                                       <>
@@ -402,7 +407,7 @@ export default function Navigation(): JSX.Element {
                                             className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-white/60 transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-normal"
                                             onClick={() => setIsOpen(false)}
                                           >
-                                            {subItem.noPrefix ? (
+                                            {subItem.noPrefix || subItem.label === "Ndoto Zetu" || subItem.label === "CAC" ? (
                                               <span className="font-normal">{subItem.label}</span>
                                             ) : (
                                               <>
@@ -430,7 +435,7 @@ export default function Navigation(): JSX.Element {
                                 className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-white/60 transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-normal"
                                 onClick={() => setIsOpen(false)}
                               >
-                                {subItem.noPrefix ? (
+                                {subItem.noPrefix || subItem.label === "Ndoto Zetu" || subItem.label === "CAC" ? (
                                   <span className="font-normal">{subItem.label}</span>
                                 ) : (
                                   <>
