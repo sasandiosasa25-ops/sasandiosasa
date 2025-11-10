@@ -194,7 +194,7 @@ export default function RoadMapPage() {
       duration: '6-8 days',
       destinations: ['arusha-np', 'tarangire', 'ngorongoro'],
       description: 'Designed for families. Where children discover wonder and parents rediscover joy in nature\'s rhythm.',
-      image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=1200&auto=format&fit=crop'
+      image: '/elephant.jpeg'
     },
   ];
 
