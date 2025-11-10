@@ -187,15 +187,15 @@ export default function RoadMapPage() {
       description: 'A gentle introduction to Tanzania\'s northern circuit. Perfect for those seeking depth without rushing.',
       image: '/still.jpeg'
     },
-    {
-      id: 'little-tracks',
-      name: 'Little Tracks',
-      tagline: 'Family Safari',
-      duration: '6-8 days',
-      destinations: ['arusha-np', 'tarangire', 'ngorongoro'],
-      description: 'Designed for families. Where children discover wonder and parents rediscover joy in nature\'s rhythm.',
-      image: '/elephant.jpeg'
-    },
+ {
+  id: 'little-tracks',
+  name: 'Little Tracks',
+  tagline: 'Family journeys. Walking together, learning together.',
+  duration: '6-8 days',
+  destinations: ['arusha-np', 'tarangire', 'ngorongoro'],
+  description: 'Every traveler sees the world in their own way - children most of all. Their pace is different, their needs unique, and their sense of wonder, endless.\n\nLittle Tracks was created with this in mind: an adventure package designed especially for children aged 7-14. For families traveling with younger ones, we include age-appropriate surprises and moments to make everyone feel part of the journey.\n\nWe begin by listening. To you and to your children, so we can understand what truly matters to your family. From there, we bring in our experience in guiding young travelers, blending playfulness, curiosity, and the natural warmth of life in this part of the world.\n\nIt is a journey made to be shared, one that leaves room for big discoveries and small footsteps which leave marks.',
+  image: '/elephant.jpeg'
+}
   ];
 
   const beachExperiences: BeachExperience[] = [
