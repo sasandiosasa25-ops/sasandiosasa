@@ -75,7 +75,7 @@ export default function SpecialEvents() {
             >
               <Link
                 href={event.link}
-                className="group relative overflow-hidden bg-white border-2 border-brand-border hover:border-brand-primary transition-all duration-500 shadow-lg hover:shadow-2xl transform hover:-translate-y-3"
+                className="group relative overflow-hidden bg-white border-2 border-brand-border hover:border-brand-primary transition-all duration-500 shadow-lg hover:shadow-2xl block"
               >
                 {/* Flyer Image - Full Display */}
                 <div className="relative overflow-hidden">
@@ -88,7 +88,7 @@ export default function SpecialEvents() {
                   <div className="absolute inset-0 bg-brand-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
-                {/* Hover Action Indicator */}
+                {/* Learn More Button - Slides up on hover */}
                 <div className="absolute bottom-0 left-0 right-0 bg-brand-primary text-white text-center py-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                   <span className="font-bold text-sm sm:text-base uppercase tracking-wider flex items-center justify-center">
                     {text.viewDetails}
