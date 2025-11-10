@@ -94,7 +94,7 @@ export default function RoadMapPage() {
       name: 'Mikumi National Park',
       description: "Mikumi is often described as a window into the wild. Just a few hours from Dar es Salaam, the landscape opens into wide plains where giraffes move calmly, zebras graze in patterns, and the silhouettes of baobab trees stand like quiet guardians.\n\nThe park feels approachable, yet full of surprises. The horizon stretches far, and with every turn the scene changes. A herd of buffalo, a bird in flight, the calm presence of elephants. It is a place where nature shows its rhythm without hurry, inviting you to slow down and simply observe.\n\nMikumi holds a balance of accessibility and depth. It offers the chance to experience wilderness in its simplicity. Raw, close, and grounding.",
       region: 'Southern Tanzania',
-      image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=1200&auto=format&fit=crop',
+      image: '/elephant.jpeg',
       coordinates: '7.3833° S, 37.0000° E',
       mapUrl: 'https://www.google.com/maps/place/Mikumi+National+Park/@-7.3833,37.0000,10z'
     },
