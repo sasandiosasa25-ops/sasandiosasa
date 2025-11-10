@@ -124,17 +124,17 @@ export default function NdotoZetuPage() {
             </p>
           </div>
 
-          {/* Image Grid */}
+         {/* Image Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-12">
             {images.map((image, index) => (
               <div
                 key={index}
-                className="relative overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 aspect-[4/3]"
+                className="relative shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-white"
               >
                 <img
                   src={image.url}
                   alt={image.alt}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-heading/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
               </div>

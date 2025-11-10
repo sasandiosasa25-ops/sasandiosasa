@@ -632,7 +632,7 @@ const TravelCompassPage = () => {
           <div className="space-y-8">
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1535338454770-a320e0bcaaeb?w=1600&q=80" 
+                src="/bag.png" 
                 alt="Safari Vehicle" 
                 className="w-full h-full object-cover"
               />
