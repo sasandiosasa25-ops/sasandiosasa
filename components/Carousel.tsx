@@ -134,10 +134,7 @@ const ImageCarousel = () => {
                   {/* Gradient Overlay for better badge visibility */}
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 pointer-events-none" />
                 
-                  {/* Badge - Responsive sizing */}
-                  <div className="absolute top-3 right-3 sm:top-4 sm:right-4 lg:top-5 lg:right-5 bg-brand-primary text-white px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3 rounded-full text-xs sm:text-sm lg:text-base font-black font-poppins shadow-2xl transform transition-all duration-300 hover:bg-brand-secondary hover:scale-110 border-2 border-white">
-                    {t.imagePrefix} #{index + 1}
-                  </div>
+                
 
                   {/* Bottom Info Bar - Optional enhancement */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-heading/90 to-transparent p-4 sm:p-5 lg:p-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500">
