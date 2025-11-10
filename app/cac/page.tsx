@@ -129,23 +129,7 @@ export default function CACPage() {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div className="bg-gradient-to-br from-brand-primary to-brand-secondary text-white p-12 md:p-16 lg:p-20 shadow-2xl">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 font-comfortaa">
-              {t.cta}
-            </h2>
-            <a
-              href="/packages"
-              className="inline-flex items-center space-x-3 bg-white text-brand-primary hover:bg-brand-menu-hover px-10 md:px-14 py-5 md:py-6 text-base md:text-lg font-bold uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              <span>{t.button}</span>
-              <ArrowRight className="w-6 h-6" />
-            </a>
-          </div>
-        </div>
-      </div>
+
 
       {/* Bottom Spacing */}
       <div className="h-16 md:h-24" />
