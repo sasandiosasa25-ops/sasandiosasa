@@ -103,7 +103,7 @@ export default function RoadMapPage() {
       name: 'Arusha National Park',
       description: "Arusha National Park carries a quiet intensity. Its landscapes shift quickly from open grasslands where giraffes browse, to volcanic craters filled with shimmering lakes, to forests alive with colobus monkeys. At its heart rises Mount Meru, a presence that shapes both horizon and atmosphere.\n\nWalking safaris make this park special. On foot, every sound feels closer, every movement more alive. You sense the weight of being a guest in nature's rhythm, where the ground itself seems to hold memory.\n\nOne of the park's most moving stories is of the Trapp elephant family. When the matriarch died, the herd returned to her resting place and stood together around it. A gesture of loyalty and remembrance that shows how deeply connection runs through the wild.\n\nArusha National Park is not just a gateway, it is a reminder that presence, memory, and unity are part of the journey.",
       region: 'Northern Circuit',
-      image: 'https://images.unsplash.com/photo-1609198092357-520a8d915a89?w=1200&auto=format&fit=crop',
+      image: '/arusha.jpeg',
       coordinates: '3.2333° S, 36.8833° E',
       mapUrl: 'https://www.google.com/maps/place/Arusha+National+Park/@-3.2333,36.8833,11z'
     },
@@ -215,7 +215,7 @@ export default function RoadMapPage() {
       duration: '3-5 days',
       destinations: ['pangani', 'maziwe'],
       description: 'Experience Tanzania\'s coast away from the crowds. Where history whispers, tides reveal hidden islands, and life moves at its own pace.',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&auto=format&fit=crop'
+      image: '/maziwe.jpeg'
     },
   ];
 

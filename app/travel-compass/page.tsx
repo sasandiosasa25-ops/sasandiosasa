@@ -559,7 +559,7 @@ const TravelCompassPage = () => {
               alt="Passport and Travel" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-red-900/80 to-orange-900/80 flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-r from-red-900 to-orange-900 flex items-center justify-center">
               <p className="text-white text-xl px-8 text-center leading-relaxed max-w-3xl">{t.travelPermit.intro}</p>
             </div>
           </div>
@@ -680,7 +680,7 @@ const TravelCompassPage = () => {
           <div className="space-y-8 border-t-4 border-gray-200 pt-12">
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1589553416260-f586c8f1514f?w=1600&q=80" 
+                src="/kili.jpeg" 
                 alt="Mount Kilimanjaro" 
                 className="w-full h-full object-cover"
               />
