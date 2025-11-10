@@ -33,6 +33,14 @@ export default function Navigation(): JSX.Element {
   const [mobileSubDropdown, setMobileSubDropdown] = useState<string | null>(null);
   const { language, setLanguage } = useLanguage();
 
+  const toggleDesktopDropdown = (label: string): void => {
+    setOpenDropdown(openDropdown === label ? null : label);
+  };
+
+  const toggleDesktopSubDropdown = (title: string): void => {
+    setOpenSubDropdown(openSubDropdown === title ? null : title);
+  };
+
   const navItems: NavItem[] = [
     { 
       href: '/', 
@@ -127,9 +135,9 @@ export default function Navigation(): JSX.Element {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-xl z-50 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 bg-white z-50 shadow-lg">
       {/* Top Bar */}
-      <div className="bg-white/30 backdrop-blur-xl border-b border-white/30">
+      <div className="bg-white border-b border-brand-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hidden lg:flex justify-end items-center h-12 space-x-6">
             {/* Quick Links */}
@@ -146,14 +154,14 @@ export default function Navigation(): JSX.Element {
               <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{language === 'de' ? 'Team' : 'Team'}</span>
             </Link>
             {/* Language Switcher in Top Bar */}
-            <div className="flex items-center space-x-2 border-l border-white/30 pl-6">
+            <div className="flex items-center space-x-2 border-l border-brand-border pl-6">
               <Globe className="h-4 w-4 text-brand-heading/60" />
               <button
                 onClick={() => setLanguage('en')}
                 className={`h-8 px-3 text-xs font-bold tracking-wider transition-all duration-300 ${
                   language === 'en' 
                     ? 'bg-brand-primary text-white' 
-                    : 'text-brand-heading hover:text-brand-primary hover:bg-white/40'
+                    : 'text-brand-heading hover:text-brand-primary hover:bg-brand-menu-hover'
                 }`}
               >
                 EN
@@ -163,7 +171,7 @@ export default function Navigation(): JSX.Element {
                 className={`h-8 px-3 text-xs font-bold tracking-wider transition-all duration-300 ${
                   language === 'de' 
                     ? 'bg-brand-primary text-white' 
-                    : 'text-brand-heading hover:text-brand-primary hover:bg-white/40'
+                    : 'text-brand-heading hover:text-brand-primary hover:bg-brand-menu-hover'
                 }`}
               >
                 DE
@@ -174,7 +182,7 @@ export default function Navigation(): JSX.Element {
       </div>
 
       {/* Main Navigation */}
-      <div className="bg-white/30 backdrop-blur-xl border-b border-white/30 py-6">
+      <div className="bg-white border-b border-brand-border py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20 md:h-24 lg:h-28">
             {/* Logo - Maximum impact and presence */}
@@ -196,11 +204,10 @@ export default function Navigation(): JSX.Element {
                 <div
                   key={item.label}
                   className="relative group"
-                  onMouseEnter={() => item.hasDropdown && setOpenDropdown(item.label)}
-                  onMouseLeave={() => setOpenDropdown(null)}
                 >
                   {item.hasDropdown ? (
                     <button
+                      onClick={() => toggleDesktopDropdown(item.label)}
                       className="flex items-center px-5 xl:px-6 py-3 text-brand-heading hover:text-brand-primary transition-all duration-300 font-semibold text-base xl:text-lg tracking-wide uppercase relative overflow-hidden group"
                     >
                       <span className="relative z-10">
@@ -233,18 +240,17 @@ export default function Navigation(): JSX.Element {
                   {/* Dropdown Menu - Elegant sections with scrolling */}
                   {item.hasDropdown && openDropdown === item.label && (
                     <div className="absolute top-10 left-0 pt-3 mt-3 w-[420px]">
-                      <div className="bg-brand-bg-light/90 backdrop-blur-xl border-2 border-white/40 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-300 overflow-hidden max-h-[calc(100vh-200px)] overflow-y-auto">
+                      <div className="bg-white border-2 border-brand-primary shadow-2xl animate-in fade-in slide-in-from-top-3 duration-300 overflow-hidden max-h-[calc(100vh-200px)] overflow-y-auto">
                         <div className="py-2">
                           {item.sections?.map((section, sectionIndex) => (
-                            <div key={sectionIndex} className={sectionIndex > 0 ? 'border-t-2 border-white/30 pt-2 mt-2' : ''}>
+                            <div key={sectionIndex} className={sectionIndex > 0 ? 'border-t-2 border-brand-border pt-2 mt-2' : ''}>
                               {section.title && (
                                 <>
                                   {section.hasDropdown ? (
                                     <div className="relative group/section">
                                       <button
-                                        onMouseEnter={() => setOpenSubDropdown(section.title!)}
-                                        onMouseLeave={() => setOpenSubDropdown(null)}
-                                        className="w-full px-8 py-3 text-left group/sectionbtn relative block hover:bg-white/50 hover:text-brand-primary transition-all duration-300 overflow-hidden"
+                                        onClick={() => toggleDesktopSubDropdown(section.title!)}
+                                        className="w-full px-8 py-3 text-left group/sectionbtn relative block hover:bg-brand-menu-hover hover:text-brand-primary transition-all duration-300 overflow-hidden"
                                       >
                                         <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/sectionbtn:scale-y-100 transition-transform duration-300 origin-top" />
                                         <h3 className="text-brand-heading font-normal text-sm uppercase tracking-wider relative z-10 flex items-center justify-between">
@@ -262,15 +268,13 @@ export default function Navigation(): JSX.Element {
                                       {/* Sub-dropdown */}
                                       {openSubDropdown === section.title && (
                                         <div 
-                                          onMouseEnter={() => setOpenSubDropdown(section.title!)}
-                                          onMouseLeave={() => setOpenSubDropdown(null)}
-                                          className="bg-brand-bg-light/95 backdrop-blur-xl border-l-4 border-brand-primary animate-in fade-in slide-in-from-left-3 duration-300"
+                                          className="bg-white border-l-4 border-brand-primary animate-in fade-in slide-in-from-left-3 duration-300 max-h-[calc(100vh-400px)] overflow-y-auto"
                                         >
                                           {section.items.map((subItem) => (
                                             <Link
                                               key={subItem.href}
                                               href={subItem.href}
-                                              className="group/item relative block px-10 py-3.5 text-brand-heading hover:bg-white/90 hover:text-brand-primary transition-all duration-300 text-sm font-normal overflow-hidden"
+                                              className="group/item relative block px-10 py-3.5 text-brand-heading hover:bg-brand-menu-hover hover:text-brand-primary transition-all duration-300 text-sm font-normal overflow-hidden"
                                             >
                                               <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/item:scale-y-100 transition-transform duration-300 origin-top" />
                                               <span className="relative z-10 block transform transition-transform duration-300 group-hover/item:translate-x-2">
@@ -300,7 +304,7 @@ export default function Navigation(): JSX.Element {
                                 <Link
                                   key={subItem.href}
                                   href={subItem.href}
-                                  className="group/item relative block px-8 py-3.5 text-brand-heading hover:bg-white/50 hover:text-brand-primary transition-all duration-300 text-sm font-normal overflow-hidden"
+                                  className="group/item relative block px-8 py-3.5 text-brand-heading hover:bg-brand-menu-hover hover:text-brand-primary transition-all duration-300 text-sm font-normal overflow-hidden"
                                 >
                                   <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/item:scale-y-100 transition-transform duration-300 origin-top" />
                                   <span className="relative z-10 block transform transition-transform duration-300 group-hover/item:translate-x-2">
@@ -328,13 +332,13 @@ export default function Navigation(): JSX.Element {
             <div className="lg:hidden flex items-center space-x-3">
               <button
                 onClick={() => setLanguage(language === 'en' ? 'de' : 'en')}
-                className="h-10 px-4 text-sm font-bold tracking-wider border-2 border-white/40 text-brand-heading hover:bg-white/50 hover:text-brand-primary transition-all duration-300"
+                className="h-10 px-4 text-sm font-bold tracking-wider border-2 border-brand-primary text-brand-heading hover:bg-brand-menu-hover hover:text-brand-primary transition-all duration-300"
               >
                 {language.toUpperCase()}
               </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-brand-heading hover:text-brand-primary p-3 hover:bg-white/50 transition-all duration-300 border-2 border-white/40 hover:border-brand-primary"
+                className="text-brand-heading hover:text-brand-primary p-3 hover:bg-brand-menu-hover transition-all duration-300 border-2 border-brand-primary hover:border-brand-primary"
               >
                 {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -343,22 +347,22 @@ export default function Navigation(): JSX.Element {
 
           {/* Mobile Navigation - Spacious and elegant */}
           {isOpen && (
-            <div className="lg:hidden border-t-2 border-white/30 animate-in slide-in-from-top duration-300 mt-6">
-              <div className="px-3 pt-6 pb-6 space-y-2 bg-white/30 backdrop-blur-xl max-h-[calc(100vh-96px)] overflow-y-auto">
+            <div className="lg:hidden border-t-2 border-brand-border animate-in slide-in-from-top duration-300 mt-6">
+              <div className="px-3 pt-6 pb-6 space-y-2 bg-white max-h-[calc(100vh-96px)] overflow-y-auto">
                 {navItems.map((item) => (
-                  <div key={item.label} className="border-b border-white/20 last:border-b-0">
+                  <div key={item.label} className="border-b border-brand-border last:border-b-0">
                     <div className="flex items-center justify-between">
                       {item.hasDropdown ? (
                         <button
                           onClick={() => toggleMobileDropdown(item.label)}
-                          className="flex-1 text-left px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-white/40 transition-all duration-300 font-normal text-base sm:text-lg uppercase tracking-wide"
+                          className="flex-1 text-left px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-brand-menu-hover transition-all duration-300 font-normal text-base sm:text-lg uppercase tracking-wide"
                         >
                           <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{item.label}</span>
                         </button>
                       ) : (
                         <Link
                           href={item.href!}
-                          className="flex-1 px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-white/40 transition-all duration-300 font-normal text-base sm:text-lg uppercase tracking-wide"
+                          className="flex-1 px-5 py-4 text-brand-heading hover:text-brand-primary hover:bg-brand-menu-hover transition-all duration-300 font-normal text-base sm:text-lg uppercase tracking-wide"
                           onClick={() => setIsOpen(false)}
                         >
                           <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{item.label}</span>
@@ -378,7 +382,7 @@ export default function Navigation(): JSX.Element {
                       )}
                     </div>
                     {item.hasDropdown && mobileDropdown === item.label && (
-                      <div className="pl-6 pr-4 py-3 space-y-1 bg-white/40 backdrop-blur-xl animate-in slide-in-from-top duration-300">
+                      <div className="pl-6 pr-4 py-3 space-y-1 bg-brand-menu-hover animate-in slide-in-from-top duration-300">
                         {item.sections?.map((section, sectionIndex) => (
                           <div key={sectionIndex}>
                             {section.title && (
@@ -387,7 +391,7 @@ export default function Navigation(): JSX.Element {
                                   <div>
                                     <button
                                       onClick={() => section.title && setMobileSubDropdown(mobileSubDropdown === section.title ? null : section.title)}
-                                      className="w-full flex items-center justify-between px-6 py-3 text-brand-heading hover:text-brand-primary hover:bg-white/60 transition-all duration-300"
+                                      className="w-full flex items-center justify-between px-6 py-3 text-brand-heading hover:text-brand-primary hover:bg-white transition-all duration-300"
                                     >
                                       <h3 className="text-brand-heading font-normal text-xs uppercase tracking-wider">
                                         <span className="font-comfortaa italic normal-case text-brand-primary">SasaNdioSasa</span> <span className="font-normal">{section.title}</span>
@@ -399,12 +403,12 @@ export default function Navigation(): JSX.Element {
                                       />
                                     </button>
                                     {mobileSubDropdown === section.title && (
-                                      <div className="pl-4 bg-white/50 animate-in slide-in-from-top duration-300">
+                                      <div className="pl-4 bg-white animate-in slide-in-from-top duration-300">
                                         {section.items.map((subItem) => (
                                           <Link
                                             key={subItem.href}
                                             href={subItem.href}
-                                            className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-white/60 transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-normal"
+                                            className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-brand-menu-hover transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-normal"
                                             onClick={() => setIsOpen(false)}
                                           >
                                             {subItem.noPrefix || subItem.label === "Ndoto Zetu" || subItem.label === "CAC" ? (
@@ -432,7 +436,7 @@ export default function Navigation(): JSX.Element {
                               <Link
                                 key={subItem.href}
                                 href={subItem.href}
-                                className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-white/60 transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-normal"
+                                className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-white transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-normal"
                                 onClick={() => setIsOpen(false)}
                               >
                                 {subItem.noPrefix || subItem.label === "Ndoto Zetu" || subItem.label === "CAC" ? (
