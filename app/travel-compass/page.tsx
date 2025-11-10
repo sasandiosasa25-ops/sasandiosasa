@@ -678,7 +678,7 @@ const TravelCompassPage = () => {
 
           {/* Peaks Packing */}
           <div className="space-y-8 border-t-4 border-gray-200 pt-12">
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+           <div className="relative h-[700px] rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src="/kili.jpeg" 
                 alt="Mount Kilimanjaro" 
