@@ -226,7 +226,7 @@ export default function Navigation(): JSX.Element {
                   {/* Dropdown Menu - Elegant sections with scrolling */}
                   {item.hasDropdown && openDropdown === item.label && (
                     <div className="absolute top-10 left-0 pt-3 mt-3 w-[420px]">
-                      <div className="bg-white/90 backdrop-blur-xl border-2 border-white/40 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-300 overflow-hidden max-h-[calc(100vh-200px)] overflow-y-auto">
+                      <div className="bg-brand-bg-light/90 backdrop-blur-xl border-2 border-white/40 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-300 overflow-hidden max-h-[calc(100vh-200px)] overflow-y-auto">
                         <div className="py-2">
                           {item.sections?.map((section, sectionIndex) => (
                             <div key={sectionIndex} className={sectionIndex > 0 ? 'border-t-2 border-white/30 pt-2 mt-2' : ''}>
@@ -257,13 +257,13 @@ export default function Navigation(): JSX.Element {
                                         <div 
                                           onMouseEnter={() => setOpenSubDropdown(section.title!)}
                                           onMouseLeave={() => setOpenSubDropdown(null)}
-                                          className="bg-white/95 backdrop-blur-xl border-l-4 border-brand-primary animate-in fade-in slide-in-from-left-3 duration-300"
+                                          className="bg-brand-bg-light/95 backdrop-blur-xl border-l-4 border-brand-primary animate-in fade-in slide-in-from-left-3 duration-300"
                                         >
                                           {section.items.map((subItem) => (
                                             <Link
                                               key={subItem.href}
                                               href={subItem.href}
-                                              className="group/item relative block px-10 py-3.5 text-brand-heading hover:bg-white/70 hover:text-brand-primary transition-all duration-300 text-sm font-normal overflow-hidden"
+                                              className="group/item relative block px-10 py-3.5 text-brand-heading hover:bg-white/90 hover:text-brand-primary transition-all duration-300 text-sm font-normal overflow-hidden"
                                             >
                                               <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/item:scale-y-100 transition-transform duration-300 origin-top" />
                                               <span className="relative z-10 block transform transition-transform duration-300 group-hover/item:translate-x-2">
