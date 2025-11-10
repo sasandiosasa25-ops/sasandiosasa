@@ -125,7 +125,7 @@ export default function Navigation(): JSX.Element {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/40 backdrop-blur-xl z-50 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-xl z-50 shadow-lg">
       {/* Top Bar */}
       <div className="bg-white/30 backdrop-blur-xl border-b border-white/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
