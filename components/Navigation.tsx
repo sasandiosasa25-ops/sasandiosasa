@@ -92,6 +92,8 @@ export default function Navigation(): JSX.Element {
           items: [
             { href: '/impact', label: language === 'de' ? 'Wirkung Übersicht' : 'Impact Overview' },
             { href: '/impact', label: language === 'de' ? 'UN-Nachhaltigkeitsziele' : 'UN Sustainability Goals' },
+            { href: '/ndotozetu', label: language === 'de' ? 'Ndoto Zetu' : 'Ndoto Zetu' },
+            { href: '/cac', label: language === 'de' ? 'CAC' : 'CAC' },
           ]
         }
       ]
