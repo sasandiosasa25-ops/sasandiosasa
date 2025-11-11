@@ -66,56 +66,88 @@ const FAQs = () => {
   const t = translations[language];
 
   return (
-    <section id="faqs" className="space-y-8">
+    <section id="faqs" className="space-y-12 lg:space-y-16">
+      {/* Header */}
       <div className="relative">
-        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-yellow-500 to-red-500 rounded-full"></div>
-        <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4">
-          <AlertCircle className="w-12 h-12 text-yellow-600" />
-          {t.title}
-        </h2>
+        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-brand-primary via-brand-secondary to-brand-heading rounded-full opacity-80"></div>
+        <div className="space-y-2">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-heading flex items-center gap-4">
+            <AlertCircle className="w-10 h-10 md:w-12 md:h-12 text-brand-primary flex-shrink-0" />
+            {t.title}
+          </h2>
+        </div>
       </div>
 
-      <div className="relative h-64 rounded-2xl overflow-hidden shadow-2xl mb-8">
+      {/* Hero Image */}
+      <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl mb-8 group">
         <img 
           src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1600&q=80" 
           alt="Travel Safety" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-900/80 to-red-900/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-heading/80 via-brand-secondary/60 to-brand-primary/40"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center space-y-4 p-8">
+            <div className="w-20 h-1 bg-white/80 mx-auto rounded-full"></div>
+            <p className="text-white text-xl sm:text-2xl lg:text-3xl font-light tracking-wide">
+              Travel Smart, Travel Safe
+            </p>
+            <div className="w-20 h-1 bg-white/80 mx-auto rounded-full"></div>
+          </div>
+        </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-10">
-        {/* Do's */}
+      {/* Do's and Don'ts Grid */}
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        {/* Do's Section */}
         <div className="space-y-6">
-          <div className="bg-amber-600 p-6 rounded-2xl shadow-lg">
-            <h3 className="text-3xl font-bold text-white flex items-center gap-3">
-              <Check className="w-10 h-10" />
-              {t.dosTitle}
-            </h3>
+          {/* Do's Header */}
+          <div className="relative bg-gradient-to-r from-brand-primary to-brand-secondary p-6 lg:p-8 rounded-3xl shadow-lg overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+            <div className="relative z-10">
+              <h3 className="text-3xl lg:text-4xl font-bold text-white flex items-center gap-3">
+                <Check className="w-10 h-10 lg:w-12 lg:h-12" />
+                {t.dosTitle}
+              </h3>
+            </div>
           </div>
+          
+          {/* Do's List */}
           <div className="space-y-4">
             {t.dos.map((item, index) => (
-              <div key={index} className="flex items-start gap-4 bg-emerald-50 p-6 rounded-xl border-l-4 border-emerald-500 hover:shadow-lg transition-shadow">
-                <Check className="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" />
-                <span className="text-gray-700 leading-relaxed">{item}</span>
+              <div 
+                key={index} 
+                className="group/item flex items-start gap-4 bg-white p-5 lg:p-6 rounded-2xl border-l-4 border-brand-primary hover:shadow-lg hover:border-brand-secondary transition-all duration-300"
+              >
+                <Check className="w-6 h-6 text-brand-primary mt-1 flex-shrink-0 transition-transform duration-300 group-hover/item:scale-110" />
+                <span className="text-gray-700 leading-relaxed text-base lg:text-lg">{item}</span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Don'ts */}
+        {/* Don'ts Section */}
         <div className="space-y-6">
-          <div className="bg-red-600 p-6 rounded-2xl shadow-lg">
-            <h3 className="text-3xl font-bold text-white flex items-center gap-3">
-              <X className="w-10 h-10" />
-              {t.dontsTitle}
-            </h3>
+          {/* Don'ts Header */}
+          <div className="relative bg-gradient-to-r from-brand-secondary to-brand-heading p-6 lg:p-8 rounded-3xl shadow-lg overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+            <div className="relative z-10">
+              <h3 className="text-3xl lg:text-4xl font-bold text-white flex items-center gap-3">
+                <X className="w-10 h-10 lg:w-12 lg:h-12" />
+                {t.dontsTitle}
+              </h3>
+            </div>
           </div>
+          
+          {/* Don'ts List */}
           <div className="space-y-4">
             {t.donts.map((item, index) => (
-              <div key={index} className="flex items-start gap-4 bg-red-50 p-6 rounded-xl border-l-4 border-red-500 hover:shadow-lg transition-shadow">
-                <X className="w-6 h-6 text-red-600 mt-1 flex-shrink-0" />
-                <span className="text-gray-700 leading-relaxed">{item}</span>
+              <div 
+                key={index} 
+                className="group/item flex items-start gap-4 bg-white p-5 lg:p-6 rounded-2xl border-l-4 border-brand-secondary hover:shadow-lg hover:border-brand-heading transition-all duration-300"
+              >
+                <X className="w-6 h-6 text-brand-secondary mt-1 flex-shrink-0 transition-transform duration-300 group-hover/item:scale-110" />
+                <span className="text-gray-700 leading-relaxed text-base lg:text-lg">{item}</span>
               </div>
             ))}
           </div>

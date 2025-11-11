@@ -90,41 +90,59 @@ const AirlineRecommendations = () => {
   const t = translations[language];
 
   return (
-    <section id="airline-recommendations" className="space-y-8">
+    <section id="airline-recommendations" className="space-y-12 lg:space-y-16">
+      {/* Header */}
       <div className="relative">
-        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-amber-500 to-amber-900 rounded-full"></div>
-        <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4">
-          <Plane className="w-12 h-12 text-amber-600" />
-          {t.title}
-        </h2>
-      </div>
-
-      <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-        <img 
-          src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80" 
-          alt="Airplane" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-900/70 to-amber-900/70 flex items-center justify-center">
-          <p className="text-white text-xl px-8 text-center leading-relaxed max-w-4xl">
-            {t.intro}
-          </p>
+        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-brand-primary via-brand-secondary to-brand-heading rounded-full opacity-80"></div>
+        <div className="space-y-2">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-heading flex items-center gap-4">
+            <Plane className="w-10 h-10 md:w-12 md:h-12 text-brand-primary flex-shrink-0" />
+            {t.title}
+          </h2>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Hero Split Layout */}
+      <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
+        <div className="flex flex-col lg:flex-row lg:min-h-[600px]">
+          <div className="relative h-[450px] lg:h-auto lg:w-1/2 overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80" 
+              alt="Airplane" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-brand-heading/70 via-brand-heading/40 to-transparent"></div>
+          </div>
+          
+          <div className="relative lg:w-1/2 flex items-center justify-center p-8 sm:p-10 lg:p-12 xl:p-16 bg-gradient-to-br from-brand-heading via-brand-secondary to-brand-heading overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-brand-primary/5 rounded-full blur-2xl"></div>
+            
+            <div className="relative z-10">
+              <div className="w-16 h-1 bg-brand-primary mb-6 rounded-full"></div>
+              <p className="text-white/95 text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed font-light tracking-wide">
+                {t.intro}
+              </p>
+              <div className="w-16 h-1 bg-brand-primary mt-6 rounded-full ml-auto"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Airlines Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {t.airlines.map((airline, index) => (
           <div 
             key={index} 
-            className="group relative bg-gradient-to-br from-amber-50/60 to-stone-100/80 p-6 rounded-2xl border border-amber-200/60 hover:border-amber-500/80 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
+            className="group relative bg-white p-6 lg:p-8 rounded-3xl border-l-4 border-brand-primary hover:border-brand-secondary transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 overflow-hidden"
           >
-            {/* Subtle corner accent */}
-            <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-amber-200/30 to-transparent rounded-bl-full group-hover:from-amber-300/40 transition-all"></div>
+            {/* Decorative corner element */}
+            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-brand-primary/5 to-transparent rounded-bl-full transition-all duration-500 group-hover:w-28 group-hover:h-28"></div>
             
             {/* Content */}
-            <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-stone-50 to-amber-50/50 rounded-xl shadow-sm group-hover:shadow-md transition-shadow p-2 border border-amber-100/50">
+            <div className="relative z-10 space-y-4">
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center bg-gradient-to-br from-brand-bg-light to-white rounded-2xl shadow-sm group-hover:shadow-md transition-all duration-300 p-3 border border-brand-border">
                   <img 
                     src={airlineLogos[airline.name]} 
                     alt={`${airline.name} logo`}
@@ -135,18 +153,18 @@ const AirlineRecommendations = () => {
                       if (fallback && fallback instanceof HTMLElement) fallback.style.display = 'block';
                     }}
                   />
-                  <Plane className="w-8 h-8 text-amber-600 hidden" />
+                  <Plane className="w-8 h-8 text-brand-primary hidden" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-800 group-hover:text-amber-900 transition-colors leading-tight">
+                  <h3 className="text-xl lg:text-2xl font-bold text-brand-heading group-hover:text-brand-primary transition-colors leading-tight">
                     {airline.name}
                   </h3>
                 </div>
               </div>
               
-              <div className="h-px bg-gradient-to-r from-amber-300/60 via-amber-400/50 to-transparent mb-4"></div>
+              <div className="w-12 h-0.5 bg-gradient-to-r from-brand-primary to-transparent transition-all duration-500 group-hover:w-20"></div>
               
-              <p className="text-gray-700 leading-relaxed text-sm">
+              <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
                 {airline.description}
               </p>
             </div>
@@ -154,13 +172,16 @@ const AirlineRecommendations = () => {
         ))}
       </div>
 
-      <div className="relative bg-gradient-to-r from-emerald-100/70 to-amber-50/70 p-8 rounded-2xl border-l-4 border-emerald-600 overflow-hidden">
-        {/* Subtle background pattern */}
-        <div className="absolute right-0 top-0 w-24 h-24 bg-gradient-to-br from-emerald-200/15 to-transparent rounded-bl-full"></div>
+      {/* Note Section */}
+      <div className="relative bg-gradient-to-br from-brand-bg-light to-white p-8 lg:p-10 rounded-3xl border-l-4 border-brand-primary shadow-lg overflow-hidden group">
+        <div className="absolute top-0 right-0 w-24 h-24 bg-brand-primary/5 rounded-bl-full transition-all duration-500 group-hover:w-32 group-hover:h-32"></div>
         
-        <p className="relative z-10 text-gray-800 italic text-lg leading-relaxed">
-          {t.note}
-        </p>
+        <div className="relative z-10 flex items-start gap-4">
+          <Plane className="w-8 h-8 text-brand-primary mt-1 flex-shrink-0" />
+          <p className="text-gray-800 text-lg lg:text-xl leading-relaxed">
+            {t.note}
+          </p>
+        </div>
       </div>
     </section>
   );

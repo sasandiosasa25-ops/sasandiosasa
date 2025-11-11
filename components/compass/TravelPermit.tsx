@@ -52,79 +52,133 @@ const TravelPermit = () => {
   const t = translations[language];
 
   return (
-    <section id="travel-permit" className="space-y-8">
+    <section id="travel-permit" className="space-y-12 lg:space-y-16">
+      {/* Header */}
       <div className="relative">
-        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-red-500 to-orange-500 rounded-full"></div>
-        <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4 mb-4">
-          <FileText className="w-12 h-12 text-red-600" />
-          {t.title}
-        </h2>
-        <p className="text-2xl text-gray-600 italic font-light">{t.subtitle}</p>
-      </div>
-
-      <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-        <img 
-          src="https://images.unsplash.com/photo-1569098644584-210bcd375b59?w=1600&q=80" 
-          alt="Passport and Travel" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-red-900 to-orange-900 flex items-center justify-center">
-          <p className="text-white text-xl px-8 text-center leading-relaxed max-w-3xl">{t.intro}</p>
+        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-brand-primary via-brand-secondary to-brand-heading rounded-full opacity-80"></div>
+        <div className="space-y-2">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-heading flex items-center gap-4">
+            <FileText className="w-10 h-10 md:w-12 md:h-12 text-brand-primary flex-shrink-0" />
+            {t.title}
+          </h2>
+          <p className="text-xl md:text-2xl lg:text-3xl text-brand-primary/80 italic font-light pl-14 md:pl-16">
+            {t.subtitle}
+          </p>
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-amber-600 to-amber-700 p-10 rounded-2xl shadow-2xl text-white">
-        <h3 className="text-lg font-bold mb-4">{t.websiteTitle}</h3>
-        <a 
-          href={`https://${t.website}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xl font-bold flex items-center gap-4 hover:text-amber-200 transition-colors group"
-        >
-          {t.website}
-          <ExternalLink className="w-10 h-10 group-hover:translate-x-2 transition-transform" />
-        </a>
-      </div>
-
-      <div className="bg-white p-8 rounded-2xl shadow-lg space-y-6">
-        <h3 className="text-3xl font-bold text-amber-800 flex items-center gap-3">
-          <Check className="w-8 h-8" />
-          {t.prepareTitle}
-        </h3>
-        <p className="text-gray-700 text-lg">{t.prepareText}</p>
-        <div className="grid md:grid-cols-2 gap-4">
-          {t.requirements.map((req, index) => (
-            <div key={index} className="flex items-start gap-4 bg-emerald-50 p-5 rounded-xl border-l-4 border-emerald-500 hover:shadow-md transition-shadow">
-              <div className="text-amber-600 mt-1">
-                <FileText className="w-5 h-5" />
-              </div>
-              <span className="text-amber-700">{req}</span>
+      {/* Hero Split Layout */}
+      <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
+        <div className="flex flex-col lg:flex-row lg:min-h-[600px]">
+          <div className="relative h-[450px] lg:h-auto lg:w-1/2 overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1569098644584-210bcd375b59?w=1600&q=80" 
+              alt="Passport and Travel" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-brand-heading/70 via-brand-heading/40 to-transparent"></div>
+          </div>
+          
+          <div className="relative lg:w-1/2 flex items-center justify-center p-8 sm:p-10 lg:p-12 xl:p-16 bg-gradient-to-br from-brand-heading via-brand-secondary to-brand-heading overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-brand-primary/5 rounded-full blur-2xl"></div>
+            
+            <div className="relative z-10">
+              <div className="w-16 h-1 bg-brand-primary mb-6 rounded-full"></div>
+              <p className="text-white/95 text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed font-light tracking-wide">
+                {t.intro}
+              </p>
+              <div className="w-16 h-1 bg-brand-primary mt-6 rounded-full ml-auto"></div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
 
-      <div className="bg-amber-50 p-8 rounded-2xl border-l-4 border-amber-500 space-y-4">
-        <p className="text-gray-700 text-lg">{t.guidelinesText}</p>
-        <a 
-          href="https://immigration.go.tz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-emerald-700 font-semibold text-sm hover:text-emerald-900 flex items-center gap-3 group"
-        >
-          immigration.go.tz
-          <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-        </a>
+      {/* Official Website Link Card */}
+      <div className="relative bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-heading p-10 lg:p-12 rounded-3xl shadow-2xl text-white overflow-hidden group">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-2xl"></div>
+        
+        <div className="relative z-10">
+          <h3 className="text-lg lg:text-xl font-bold mb-4 opacity-90">{t.websiteTitle}</h3>
+          <a 
+            href={`https://${t.website}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl lg:text-3xl xl:text-4xl font-bold flex items-center gap-4 hover:text-white/80 transition-colors group"
+          >
+            {t.website}
+            <ExternalLink className="w-8 h-8 lg:w-10 lg:h-10 group-hover:translate-x-2 group-hover:-translate-y-1 transition-transform duration-300" />
+          </a>
+        </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-blue-50 p-8 rounded-2xl border-l-4 border-blue-500">
-          <h3 className="text-2xl font-bold text-amber-800 mb-4">{t.processingTitle}</h3>
-          <p className="text-amber-700 leading-relaxed">{t.processingText}</p>
+      {/* Requirements Section */}
+      <div className="group relative bg-white p-8 lg:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border-l-4 border-brand-primary overflow-hidden">
+        <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-brand-primary/5 to-transparent rounded-bl-full transition-all duration-500 group-hover:w-32 group-hover:h-32"></div>
+        
+        <div className="relative z-10 space-y-6">
+          <div className="flex items-center gap-4">
+            <Check className="w-8 h-8 lg:w-10 lg:h-10 text-brand-primary" />
+            <h3 className="text-3xl lg:text-4xl font-bold text-brand-heading">{t.prepareTitle}</h3>
+          </div>
+          <div className="w-16 h-0.5 bg-gradient-to-r from-brand-primary to-transparent transition-all duration-500 group-hover:w-24"></div>
+          <p className="text-gray-700 text-lg lg:text-xl">{t.prepareText}</p>
+          
+          <div className="grid md:grid-cols-2 gap-4 lg:gap-6">
+            {t.requirements.map((req, index) => (
+              <div 
+                key={index} 
+                className="group/item flex items-start gap-4 bg-brand-bg-light p-5 lg:p-6 rounded-2xl border border-brand-border hover:shadow-md hover:border-brand-primary/30 transition-all duration-300"
+              >
+                <div className="text-brand-primary mt-1 transition-transform duration-300 group-hover/item:scale-110">
+                  <FileText className="w-5 h-5 lg:w-6 lg:h-6" />
+                </div>
+                <span className="text-gray-700 text-base lg:text-lg">{req}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="bg-green-50 p-8 rounded-2xl border-l-4 border-green-500">
-          <h3 className="text-2xl font-bold text-amber-800 mb-4">{t.arrivalTitle}</h3>
-          <p className="text-amber-700 leading-relaxed">{t.arrivalText}</p>
+      </div>
+
+      {/* Guidelines Card */}
+      <div className="group relative bg-gradient-to-br from-brand-bg-light to-white p-8 lg:p-10 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 border-l-4 border-brand-secondary overflow-hidden">
+        <div className="absolute top-0 right-0 w-24 h-24 bg-brand-secondary/5 rounded-bl-full transition-all duration-500 group-hover:w-32 group-hover:h-32"></div>
+        
+        <div className="relative z-10 space-y-4">
+          <p className="text-gray-700 text-lg lg:text-xl">{t.guidelinesText}</p>
+          <a 
+            href="https://immigration.go.tz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-brand-primary font-semibold text-lg lg:text-xl hover:text-brand-secondary flex items-center gap-3 group/link w-fit"
+          >
+            immigration.go.tz
+            <ExternalLink className="w-5 h-5 lg:w-6 lg:h-6 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform duration-300" />
+          </a>
+        </div>
+      </div>
+
+      {/* Processing Time & Arrival Option */}
+      <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
+        <div className="group relative bg-white p-8 lg:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border-l-4 border-brand-primary overflow-hidden">
+          <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-brand-primary/5 to-transparent rounded-bl-full transition-all duration-500 group-hover:w-32 group-hover:h-32"></div>
+          
+          <div className="relative z-10">
+            <h3 className="text-2xl lg:text-3xl font-bold text-brand-heading mb-4">{t.processingTitle}</h3>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-brand-primary to-transparent mb-4 transition-all duration-500 group-hover:w-20"></div>
+            <p className="text-gray-700 leading-relaxed text-base lg:text-lg">{t.processingText}</p>
+          </div>
+        </div>
+        
+        <div className="group relative bg-white p-8 lg:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border-l-4 border-brand-secondary overflow-hidden">
+          <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-brand-secondary/5 to-transparent rounded-bl-full transition-all duration-500 group-hover:w-32 group-hover:h-32"></div>
+          
+          <div className="relative z-10">
+            <h3 className="text-2xl lg:text-3xl font-bold text-brand-heading mb-4">{t.arrivalTitle}</h3>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-brand-secondary to-transparent mb-4 transition-all duration-500 group-hover:w-20"></div>
+            <p className="text-gray-700 leading-relaxed text-base lg:text-lg">{t.arrivalText}</p>
+          </div>
         </div>
       </div>
     </section>
