@@ -123,7 +123,7 @@ export default function Navigation(): JSX.Element {
             { href: '/travel-compass/#travel-permit', label: language === 'de' ? 'Reisegenehmigung' : 'Travel Permit', noPrefix: true },
             { href: '/travel-compass/#packing-lists', label: language === 'de' ? 'Packlisten' : 'Packing Lists', noPrefix: true },
             { href: '/travel-compass/#faqs', label: language === 'de' ? 'Dos und Don\'ts (FAQs)' : 'Dos and Don\'ts (FAQs)', noPrefix: true },
-            { href: '/road-map', label: language === 'de' ? 'Routenplan' : 'Road Map', noPrefix: true },
+            { href: '/compass/road-map', label: language === 'de' ? 'Routenplan' : 'Road Map', noPrefix: true },
           ]
         }
       ]
