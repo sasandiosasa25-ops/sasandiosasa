@@ -565,12 +565,12 @@ const TravelCompassPage = () => {
           </div>
 
           <div className="bg-gradient-to-r from-amber-600 to-amber-700 p-10 rounded-2xl shadow-2xl text-white">
-            <h3 className="text-3xl font-bold mb-4">{t.travelPermit.websiteTitle}</h3>
+            <h3 className="text-lg font-bold mb-4">{t.travelPermit.websiteTitle}</h3>
             <a 
               href={`https://${t.travelPermit.website}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-4xl font-bold flex items-center gap-4 hover:text-amber-200 transition-colors group"
+              className="text-xl font-bold flex items-center gap-4 hover:text-amber-200 transition-colors group"
             >
               {t.travelPermit.website}
               <ExternalLink className="w-10 h-10 group-hover:translate-x-2 transition-transform" />
@@ -599,7 +599,7 @@ const TravelCompassPage = () => {
               href="https://immigration.go.tz"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-emerald-700 font-semibold text-lg hover:text-emerald-900 flex items-center gap-3 group"
+              className="text-emerald-700 font-semibold text-sm hover:text-emerald-900 flex items-center gap-3 group"
             >
               immigration.go.tz
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

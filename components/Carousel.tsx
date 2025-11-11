@@ -45,14 +45,10 @@ const ImageCarousel = () => {
     },
     {
       id: 4,
-      url: '/a4.jpeg',
+      url: '/a.jpeg',
       alt: language === 'en' ? 'Ocean waves' : 'Meereswellen',
     },
-    {
-      id: 5,
-      url: '/a5.jpeg',
-      alt: language === 'en' ? 'City skyline' : 'Stadtskyline',
-    },
+   
     {
       id: 6,
       url: '/a6.jpeg',
