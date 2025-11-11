@@ -105,7 +105,7 @@ export default function NdotoZetuPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-brand-bg-light">
+    <div className="min-h-screen ">
       {/* Language Switcher */}
     
 

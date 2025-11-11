@@ -66,7 +66,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${comfortaa.variable} ${poppins.variable} font-comfortaa bg-brand-bg-light`}>
+      <body className={`${comfortaa.variable} ${poppins.variable} font-comfortaa  from-brand-primary/10 to-brand-secondary/10`}>
         <LanguageProvider>
           <Navigation />
        

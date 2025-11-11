@@ -102,7 +102,7 @@ const TravelCompassPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-brand-bg-light via-white to-brand-bg-light">
+    <div className="min-h-screen ">
       {/* Hero Section */}
       <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
         <img 

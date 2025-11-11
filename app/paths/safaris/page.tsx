@@ -61,9 +61,9 @@ const SafariPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-stone-50">
+    <div className="min-h-screen ">
       {/* Hero Section */}
-      <div className="relative h-[60vh] bg-gradient-to-br from-amber-100 via-orange-50 to-stone-100 flex items-center justify-center overflow-hidden">
+      <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-64 h-64 bg-brand-primary rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-brand-secondary rounded-full blur-3xl"></div>

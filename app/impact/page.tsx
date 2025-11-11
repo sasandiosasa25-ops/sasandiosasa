@@ -1,44 +1,26 @@
 'use client';
 
 import { useState } from 'react';
-import { Heart, BookOpen, Briefcase, Leaf, Trees, Users } from 'lucide-react';
-import type { ForwardRefExoticComponent, RefAttributes } from 'react';
-import type { LucideProps } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { Heart, BookOpen, Briefcase, Leaf, Trees, Users, ExternalLink } from 'lucide-react';
 
-type Language = 'en' | 'de';
-type IconComponent = ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>;
-
-interface Section {
+type GoalSection = {
   title: string;
   content: string;
-}
-
-interface Goal {
-  id: string;
-  icon: IconComponent;
-  title: string;
-  tagline: string;
-  sections: Section[];
-}
-
-interface Content {
-  title: string;
-  subtitle: string;
-  intro: string;
-  goals: Goal[];
-}
-
-type ContentMap = Record<Language, Content>;
+};
 
 export default function ImpactPage() {
-  const {language}=useLanguage()
+  const [language, setLanguage] = useState('en');
 
-  const content: ContentMap = {
+  const content = {
     en: {
       title: "Our Impact Towards the UN Sustainability Goals",
       subtitle: "Our Responsibility",
       intro: "Our Corporate Sustainability Approach (CSA) is how we align our work with the UN Sustainable Development Goals.",
+      ndotoSection: {
+        title: "Every journey leaves a trace",
+        content: "Through Ndoto Zetu and our partnerships, we ensure that trace is positive—for the land, the people, and the future. We use locally sourced ingredients, avoid single-use plastics, and create fair work opportunities. Our travelers become part of lasting impact through respectful exchange with local communities.",
+        cta: "Learn more about Ndoto Zetu"
+      },
       goals: [
         {
           id: "good-health",
@@ -160,12 +142,20 @@ export default function ImpactPage() {
             }
           ]
         }
-      ]
+      ],
+      ctaTitle: "Join Us in Making an Impact",
+      ctaText: "Every journey with SasaNdioSasa contributes to sustainable development and positive change in local communities.",
+      ctaButton: "Get in Touch"
     },
     de: {
       title: "Unsere Wirkung auf die UN-Nachhaltigkeitsziele",
       subtitle: "Unsere Verantwortung",
       intro: "Unser Corporate Sustainability Approach (CSA) ist die Art und Weise, wie wir unsere Arbeit an den UN-Zielen für nachhaltige Entwicklung ausrichten.",
+      ndotoSection: {
+        title: "Jede Reise hinterlässt eine Spur",
+        content: "Durch Ndoto Zetu und unsere Partnerschaften stellen wir sicher, dass diese Spur positiv ist – für das Land, die Menschen und die Zukunft. Wir verwenden lokale Zutaten, vermeiden Einwegplastik und schaffen faire Arbeitsmöglichkeiten. Unsere Reisenden werden durch respektvollen Austausch mit lokalen Gemeinschaften Teil einer nachhaltigen Wirkung.",
+        cta: "Mehr über Ndoto Zetu erfahren"
+      },
       goals: [
         {
           id: "good-health",
@@ -287,16 +277,20 @@ export default function ImpactPage() {
             }
           ]
         }
-      ]
+      ],
+      ctaTitle: "Machen Sie mit uns einen Unterschied",
+      ctaText: "Jede Reise mit SasaNdioSasa trägt zu nachhaltiger Entwicklung und positiven Veränderungen in lokalen Gemeinschaften bei.",
+      ctaButton: "Kontakt aufnehmen"
     }
   };
 
-  const t = content[language];
+  const t = content[language as keyof typeof content];
 
+  
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen ">
       {/* Language Switcher */}
-   
+    
 
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-brand-primary/5 via-white to-brand-secondary/5 pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8">
@@ -312,6 +306,29 @@ export default function ImpactPage() {
           <p className="text-base sm:text-lg md:text-xl text-brand-heading/80 max-w-4xl mx-auto leading-relaxed font-poppins">
             {t.intro}
           </p>
+        </div>
+      </div>
+
+      {/* Ndoto Zetu Summary Section */}
+      <div className="bg-gradient-to-br from-brand-primary/10 to-brand-secondary/10 py-12 md:py-16 px-4 sm:px-6 lg:px-8 border-y-4 border-brand-primary/20">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-heading mb-6 font-comfortaa italic">
+            {t.ndotoSection.title}
+          </p>
+          <p className="text-base sm:text-lg md:text-xl text-brand-heading/80 leading-relaxed mb-8 font-poppins">
+            {t.ndotoSection.content}
+          </p>
+          <a
+            href="https://ndotozetu.or.tz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center space-x-2 text-brand-primary hover:text-brand-secondary font-bold text-lg transition-colors duration-300 font-poppins group"
+          >
+            <span className="border-b-2 border-brand-primary group-hover:border-brand-secondary">
+              {t.ndotoSection.cta}
+            </span>
+            <ExternalLink className="w-5 h-5" />
+          </a>
         </div>
       </div>
 
@@ -379,19 +396,19 @@ export default function ImpactPage() {
 
               {/* Goal Sections */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
-                {goal.sections.map((section, sectionIndex) => (
+                {goal.sections.map((section: GoalSection, sectionIndex: number) => (
                   <div
-                    key={sectionIndex}
-                    className="bg-white p-6 md:p-8 border-2 border-brand-border/20 hover:border-brand-primary transition-all duration-300 hover:shadow-lg group"
+                  key={sectionIndex}
+                  className="bg-white p-6 md:p-8 border-2 border-brand-border/20 hover:border-brand-primary transition-all duration-300 hover:shadow-lg group"
                   >
-                    <div className="mb-4 pb-4 border-b-2 border-brand-primary/20 group-hover:border-brand-primary transition-colors duration-300">
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-brand-heading font-poppins">
-                        {section.title}
-                      </h3>
-                    </div>
-                    <p className="text-sm sm:text-base md:text-lg text-brand-heading/80 leading-relaxed font-poppins">
-                      {section.content}
-                    </p>
+                  <div className="mb-4 pb-4 border-b-2 border-brand-primary/20 group-hover:border-brand-primary transition-colors duration-300">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-brand-heading font-poppins">
+                    {section.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm sm:text-base md:text-lg text-brand-heading/80 leading-relaxed font-poppins">
+                    {section.content}
+                  </p>
                   </div>
                 ))}
               </div>
@@ -404,19 +421,16 @@ export default function ImpactPage() {
       <div className="bg-gradient-to-br from-brand-primary to-brand-secondary text-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 font-comfortaa">
-            {language === 'en' ? 'Join Us in Making an Impact' : 'Machen Sie mit uns einen Unterschied'}
+            {t.ctaTitle}
           </h2>
           <p className="text-base sm:text-lg md:text-xl mb-8 opacity-90 font-poppins">
-            {language === 'en' 
-              ? 'Every journey with SasaNdioSasa contributes to sustainable development and positive change in local communities.'
-              : 'Jede Reise mit SasaNdioSasa trägt zu nachhaltiger Entwicklung und positiven Veränderungen in lokalen Gemeinschaften bei.'
-            }
+            {t.ctaText}
           </p>
           <a
             href="/contact"
             className="inline-block bg-white text-brand-primary hover:bg-brand-menu-hover px-8 md:px-12 py-4 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
-            {language === 'en' ? 'Get in Touch' : 'Kontakt aufnehmen'}
+            {t.ctaButton}
           </a>
         </div>
       </div>

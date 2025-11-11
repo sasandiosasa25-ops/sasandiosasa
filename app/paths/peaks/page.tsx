@@ -91,7 +91,7 @@ const PeaksPage = () => {
   const t = translations[language];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-stone-50 via-slate-50 to-stone-100">
+    <div className="min-h-screen ">
       {/* Hero Section */}
       <div className="relative h-screen bg-brand-heading flex items-center justify-center overflow-hidden">
         {/* Background image with overlay */}
