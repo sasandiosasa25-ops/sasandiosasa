@@ -54,7 +54,7 @@ export default function CACPage() {
   const t = content[language];
 
   return (
-    <div className="min-h-screen bg-brand-bg-light">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
