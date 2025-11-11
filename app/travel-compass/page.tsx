@@ -129,18 +129,18 @@ const TravelCompassPage = () => {
       </button>
 
       {/* Main Content Layout */}
-      <div className="max-w-7xl mx-auto px-0 py-4 md:py-6">
+      <div className="max-w-7xl mx-auto px-0 py-8 md:py-12">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar Navigation */}
           <aside className={`lg:sticky lg:top-24 lg:self-start lg:w-80 transition-all duration-300 ${
-            isMobileMenuOpen ? 'fixed inset-0 z-40 p-6 overflow-y-auto' : 'hidden lg:block'
+            isMobileMenuOpen ? 'fixed inset-0 z-40 bg-white p-6 overflow-y-auto' : 'hidden lg:block'
           }`}>
-            <div className=" rounded-3xl shadow-xl border border-brand-border overflow-hidden">
+            <div className="bg-white rounded-3xl shadow-xl border border-brand-border overflow-hidden">
               {/* Sidebar Header */}
               <div className="bg-gradient-to-r from-brand-primary to-brand-secondary p-6">
                 <h2 className="text-white text-2xl font-bold flex items-center gap-3">
                   <Compass className="w-7 h-7" />
-                  Compass
+                  Chapters
                 </h2>
               </div>
 

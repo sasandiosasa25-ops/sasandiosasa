@@ -135,7 +135,7 @@ export default function Navigation(): JSX.Element {
   };
 
   return (
-    <nav className=" bg-white z-50 shadow-lg">
+    <nav className="relative bg-white z-50 shadow-lg">
       {/* Top Bar */}
       <div className="bg-white border-b border-brand-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
