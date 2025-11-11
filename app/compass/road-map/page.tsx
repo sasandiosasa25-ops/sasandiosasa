@@ -140,10 +140,6 @@ export default function RoadMapPage() {
     <div className="min-h-screen ">
       {/* Hero Section */}
     
-
-
-   
-
       {/* Destinations Details Section */}
       <section className="py-20 bg-brand-heading text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
