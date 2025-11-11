@@ -69,7 +69,7 @@ export default function RootLayout({
       <body className={`${comfortaa.variable} ${poppins.variable} font-comfortaa bg-brand-bg-light`}>
         <LanguageProvider>
           <Navigation />
-          <div className="pt-20" /> 
+       
           {children}
       
           <Toaster />

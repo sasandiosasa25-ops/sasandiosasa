@@ -98,7 +98,7 @@ export default function Hero() {
   const t = translations[language];
 
   return (
-    <div className="w-screen overflow-x-hidden mt-12" style={{ maxWidth: '100vw' }}>
+    <div className="w-screen overflow-x-hidden " style={{ maxWidth: '100vw' }}>
       {/* Video Section - Full video visible, especially on small screens */}
       <section 
         ref={sectionRef} 
