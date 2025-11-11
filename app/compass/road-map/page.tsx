@@ -137,50 +137,12 @@ export default function RoadMapPage() {
   const text = content[language];
 
   return (
-    <div className="min-h-screen pt-12">
+    <div className="min-h-screen ">
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-brand-heading">
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-heading/90 to-brand-heading/70" />
-        </div>
-        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight">
-            {text.pageTitle}
-          </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-brand-border font-light">
-            {text.pageSubtitle}
-          </p>
-        </div>
-      </section>
+    
 
-      {/* Safari Experiences Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-brand-menu-hover">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Trees className="h-12 w-12 text-brand-primary mx-auto mb-4" />
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-4">
-              {text.safariSection}
-            </h2>
-            <div className="h-1 w-24 bg-brand-primary mx-auto" />
-          </div>
 
-        </div>
-      </section>
-
-      {/* Beach Experiences Section */}
-      <section className="py-20 bg-gradient-to-b from-brand-menu-hover to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Waves className="h-12 w-12 text-brand-primary mx-auto mb-4" />
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-4">
-              {text.beachSection}
-            </h2>
-            <div className="h-1 w-24 bg-brand-primary mx-auto" />
-          </div>
-
-      
-        </div>
-      </section>
+   
 
       {/* Destinations Details Section */}
       <section className="py-20 bg-brand-heading text-white">
