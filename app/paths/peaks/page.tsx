@@ -129,10 +129,7 @@ const PeaksPage = () => {
                         <Compass className="w-4 h-4 sm:w-5 sm:h-5 text-brand-primary" />
                         <span className="font-semibold">{peak.elevation}</span>
                       </div>
-                      <div className="flex items-center gap-1 sm:gap-2">
-                        <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-brand-primary" />
-                        <span className="font-semibold">{peak.duration}</span>
-                      </div>
+                     
                     </div>
                   </div>
                 </div>
@@ -207,10 +204,7 @@ const PeaksPage = () => {
                     <p className="font-comfortaa text-xl sm:text-2xl text-brand-primary font-bold">{peak.elevation}</p>
                   </div>
                   <div className="h-10 sm:h-12 w-px bg-brand-border" />
-                  <div className="space-y-1">
-                    <p className="font-poppins text-xs sm:text-sm text-stone-500 uppercase tracking-wide">Duration</p>
-                    <p className="font-comfortaa text-xl sm:text-2xl text-brand-primary font-bold">{peak.duration}</p>
-                  </div>
+                  
                 </div>
 
               
