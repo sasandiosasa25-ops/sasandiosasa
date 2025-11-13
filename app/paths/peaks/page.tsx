@@ -44,7 +44,7 @@ const PeaksPage = () => {
         {
           title: 'The Quiet Peak',
           subtitle: 'Mount Meru',
-          image: '/hema1.jpeg',
+          image: '/Meru.jpeg',
           description: 'Tanzania\'s second-highest mountain. A climb that is shorter, less crowded, yet equally rewarding.',
           details: 'Over four days, the trail takes you from lush forest through alpine meadows to a sharp volcanic ridge. It\'s a journey for those who want challenge and beauty without the rush.',
           elevation: '4,566m',
