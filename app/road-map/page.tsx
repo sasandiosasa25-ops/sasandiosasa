@@ -224,7 +224,7 @@ export default function RoadMapPage() {
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-brand-heading">
           <div className="absolute inset-0 bg-gradient-to-b from-brand-heading/90 to-brand-heading/70" />
         </div>
