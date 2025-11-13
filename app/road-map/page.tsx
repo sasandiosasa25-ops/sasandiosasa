@@ -239,7 +239,7 @@ export default function RoadMapPage() {
       </section>
 
       {/* Safari Experiences Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-brand-menu-hover">
+      <section className="py-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Trees className="h-12 w-12 text-brand-primary mx-auto mb-4" />
@@ -312,7 +312,7 @@ export default function RoadMapPage() {
       </section>
 
       {/* Beach Experiences Section */}
-      <section className="py-20 bg-gradient-to-b from-brand-menu-hover to-white">
+      <section className="py-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Waves className="h-12 w-12 text-brand-primary mx-auto mb-4" />
@@ -386,7 +386,7 @@ export default function RoadMapPage() {
       </section>
 
       {/* Destinations Details Section */}
-      <section className="py-20 bg-brand-heading text-white">
+      <section className="py-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Mountain className="h-12 w-12 text-brand-primary mx-auto mb-4" />
