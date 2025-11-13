@@ -224,7 +224,7 @@ const PeaksPage = () => {
             Every mountain has a story. Let's discover yours together.
           </p>
           <button className="inline-flex items-center gap-2 px-6 sm:px-10 py-3 sm:py-5 bg-white text-brand-primary font-poppins font-bold rounded-full hover:shadow-2xl transition-all duration-300 text-base sm:text-lg group">
-            <span>Book your discovery call</span>
+            <span>Shape Your Journey</span>
             <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
