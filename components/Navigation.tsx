@@ -74,7 +74,7 @@ export default function Navigation(): JSX.Element {
           title: language === 'de' ? 'Gipfel' : 'Peaks',
           hasDropdown: true,
           items: [
-            { href: '/paths/peaks', label: language === 'de' ? 'Gipfel erkunden' : 'Explore Peaks' },
+            { href: '/paths/peaks', label: language === 'de' ? 'Gipfel erkunden' : 'Explore Peaks - Mt Kilimanjaro • Mt Meru • Usambara' },
           ]
         },
       ]
