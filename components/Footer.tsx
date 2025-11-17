@@ -60,7 +60,7 @@ export default function Footer() {
       links: [
         { href: '/impact', label: language === 'de' ? 'Wirkung' : 'Impact' },
         { href: '/team', label: language === 'de' ? 'Team' : 'Team' },
-        
+        { href: '/privacy', label: language === 'de' ? 'Datenschutz' : 'Privacy' },
       ]
     }
   };
