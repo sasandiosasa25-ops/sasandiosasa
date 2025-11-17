@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
           {/* Title */}
           <div className="mb-8">
             <h2 className="text-2xl font-comfortaa font-semibold text-brand-heading mb-2">
-              SasaNDIO Sasa
+              SasaNdioSasa
             </h2>
           </div>
 
