@@ -137,10 +137,10 @@ export default function DestinationsGrid() {
                 
                 {/* Destination Info */}
                 <div className="absolute bottom-0 left-0 right-0 p-8 z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <h3 className="text-4xl font-black text-white mb-3 leading-tight tracking-tight group-hover:text-brand-menu-hover transition-colors duration-300">
+                  <h3 className="text-4xl font-black text-black mb-3 leading-tight tracking-tight group-hover:text-brand-menu-hover transition-colors duration-300">
                     {destination.name}
                   </h3>
-                  <p className="text-white/90 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                  <p className="text-black/90 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                     {destination.description}
                   </p>
                   
