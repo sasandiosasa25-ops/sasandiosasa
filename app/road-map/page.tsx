@@ -216,7 +216,7 @@ Mkomazi is less about spectacle, more about depth. A reminder that some treasure
 
   const safariExperiences: SafariExperience[] = [
     {
-      id: 'Hidden path',
+      id: 'hidden-path',
       name: 'The Hidden Path',
       tagline: 'More then a journey through Tanzania’s Living Cultures',
       duration: '7-10 days',
