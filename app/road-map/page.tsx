@@ -210,6 +210,7 @@ Mikumi holds a balance of accessibility and depth. It offers the chance to exper
     image: '/mikumi.jpeg',
     coordinates: '7.3833° S, 37.0000° E',
     mapUrl: 'https://www.google.com/maps/place/Mikumi+National+Park/@-7.3833,37.0000,10z'
+  }
   };
 
   const safariExperiences: SafariExperience[] = [
@@ -331,7 +332,7 @@ It is a place to be close to the water, close to the land, and close to yourself
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
-      <Selection className="relative h-[40vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-brand-heading">
           <div className="absolute inset-0 bg-gradient-to-b from-brand-heading/90 to-brand-heading/70" />
         </div>
