@@ -197,7 +197,7 @@ Markets spill with color and voices, a meeting place for stories and trade. Beyo
     description: `Where the land meets the largest lake in Africa, Lake Victoria feels both endless and alive. Fishing boats glide across the water at sunrise, nets heavy with the morning’s catch. Children run along the shore, their laughter carried over the waves.
 This is a place of rhythm. The daily work of the fishermen, the hum of lakeside towns, and the easy pace of life that comes with living by the water. Stay a while, and you begin to move with it.`,
     region: 'Northern Circuit',
-    image: '/Lake-victoria.jpg',
+    image: '/Lake-Victoria.jpg',
     coordinates: '1.0000° S, 33.0000° E',
     mapUrl: 'https://www.google.com/maps/place/Lake+Victoria/@-1.0000,33.0000,8z'
   },
