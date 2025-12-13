@@ -100,71 +100,55 @@ const SafariPage = () => {
       <div className="max-w-6xl mx-auto px-6 pb-20">
         <div className="space-y-8">
           {journeys.map((journey) => (
-            <div
-              key={journey.id}
-              className="bg-white rounded-lg shadow-sm border border-brand-border overflow-hidden hover:shadow-md transition-shadow duration-300"
-            >
-              <div className="p-8">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-4 mb-2">
-                      <span className="text-4xl">{journey.image}</span>
+            <div key={journey.id} className="bg-white rounded-lg shadow-sm border border-brand-border overflow-hidden hover:shadow-md transition-shadow duration-300">
+              <div className="flex flex-col lg:flex-row">
+                <div className="p-6 lg:p-8 lg:w-1/3 flex items-center justify-center">
+                  <div className="text-6xl">{journey.image}</div>
+                </div>
+
+                <div className="p-6 lg:p-8 lg:w-2/3 flex items-center">
+                  <div className="w-full">
+                    <div className="flex items-center justify-between mb-4">
                       <div>
-                        <h3 className="font-comfortaa text-3xl text-black">
-                          {journey.title}
-                        </h3>
-                        <div className="flex items-center gap-2 text-brand-primary mt-1">
-                        <div className="flex items-center gap-2 text-stone-700 mt-1">
+                        <h3 className="font-comfortaa text-3xl text-black mb-2">{journey.title}</h3>
+                        <div className="flex items-center gap-2 text-stone-700">
                           <Calendar className="w-4 h-4" />
                           <span className="font-poppins text-sm">{journey.duration}</span>
                         </div>
                       </div>
+                      <button
+                        onClick={() => setExpandedJourney(expandedJourney === journey.id ? null : journey.id)}
+                        className="ml-4 p-2 hover:bg-brand-menu-hover rounded-full transition-colors"
+                      >
+                        {expandedJourney === journey.id ? (
+                          <ChevronDown className="w-6 h-6 text-brand-primary" />
+                        ) : (
+                          <ChevronRight className="w-6 h-6 text-brand-primary" />
+                        )}
+                      </button>
                     </div>
-                    <p className="font-poppins text-lg text-stone-600 italic mb-4">
-                      {journey.subtitle}
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => setExpandedJourney(expandedJourney === journey.id ? null : journey.id)}
-                    className="ml-4 p-2 hover:bg-brand-menu-hover rounded-full transition-colors"
-                  >
-                    {expandedJourney === journey.id ? (
-                      <ChevronDown className="w-6 h-6 text-brand-primary" />
-                    ) : (
-                      <ChevronRight className="w-6 h-6 text-brand-primary" />
+
+                    <p className="font-poppins text-lg text-stone-600 italic mb-4">{journey.subtitle}</p>
+
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {journey.locations.map((location, idx) => (
+                        <span key={idx} className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full">
+                          <MapPin className="w-3 h-3 text-black" />
+                          {location}
+                        </span>
+                      ))}
+                    </div>
+
+                    <p className="font-poppins text-stone-600 leading-relaxed">{journey.description}</p>
+
+                    {expandedJourney === journey.id && (
+                      <div className="mt-6 pt-6 border-t border-brand-border">
+                        <p className="font-poppins text-stone-700 leading-relaxed mb-6">{journey.fullText}</p>
+                        <button className="px-6 py-3 bg-brand-primary hover:bg-brand-secondary text-white font-poppins rounded-full transition-colors duration-300">Connect With Us</button>
+                      </div>
                     )}
-                  </button>
-                </div>
-
-                {/* Locations */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {journey.locations.map((location, idx) => (
-                    <span
-                      key={idx}
-                      className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full"
-                    >
-                      <MapPin className="w-3 h-3 text-black" />
-                      {location}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Description */}
-                <p className="font-poppins text-stone-600 leading-relaxed">
-                  {journey.description}
-                </p>
-
-                {/* Expanded Content */}
-                {expandedJourney === journey.id && (
-                  <div className="mt-6 pt-6 border-t border-brand-border">
-                    <p className="font-poppins text-stone-700 leading-relaxed mb-6">
-                      {journey.fullText}
-                    </p>
-                    <button className="px-6 py-3 bg-brand-primary hover:bg-brand-secondary text-white font-poppins rounded-full transition-colors duration-300">
-                      Connect With Us
-                    </button>
                   </div>
-                )}
+                </div>
               </div>
             </div>
           ))}
