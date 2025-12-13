@@ -169,7 +169,7 @@ Arusha does not rush. It expands, adapts, and keeps its balance, holding both th
     description: `Lake Natron lies in a vast, open silence, watched over by the towering presence of Ol Doinyo Lengai, the Mountain of God. Its waters shimmer in shifting shades of pink and red, where thousands of flamingos gather like moving petals across the lake.
 This is a place shaped by extremes. Heat, salt, and the deep rhythm of the earth. The air carries the scent of minerals, the ground crunches underfoot, and the horizon feels endless. Here, nature writes in bold lines, and every view is a reminder of how powerful and fragile beauty can be.`,
     region: 'Northern Circuit',
-    image: '/lakenatron.jpeg',
+    image: '/Lake-natron1.jpeg',
     coordinates: '2.5000° S, 36.0833° E',
     mapUrl: 'https://www.google.com/maps/place/Lake+Natron/@-2.5000,36.0833,11z'
   },
@@ -179,7 +179,7 @@ This is a place shaped by extremes. Heat, salt, and the deep rhythm of the earth
 palms and the soft calls of water birds. The air is warm and still, carrying the scent of wood smoke from nearby villages.
 Here, life moves to a slower rhythm. Fishermen glide across the shallow waters, and in the evening, the lake mirrors the fading sky in silver and gold. It is a place of gentle encounters, with landscapes that feel timeless and people whose stories are woven into the land.`,
     region: 'Northern Circuit',
-    image: '/lakeeyasi.jpeg',
+    image: '/lake-eyasi.jpeg',
     coordinates: '3.2500° S, 35.5833° E',
     mapUrl: 'https://www.google.com/maps/place/Lake+Eyasi/@-3.2500,35.5833,11z'
   },
@@ -188,7 +188,7 @@ Here, life moves to a slower rhythm. Fishermen glide across the shallow waters, 
     description: `In the heart of Tanzania, Singida stretches across wide, open plains where massive granite boulders rise like silent guardians of the land. The air feels different here, drier, touched by the scent of sun-warmed grass and distant cooking fires.
 Markets spill with color and voices, a meeting place for stories and trade. Beyond the bustle, the land opens into quiet spaces, where the wind carries songs and the sense that life here has always known its own pace.`,
     region: 'Northern Circuit',
-    image: '/Singida.jpeg',
+    image: '/singida1.jpeg',
     coordinates: '4.8167° S, 34.7500° E',
     mapUrl: 'https://www.google.com/maps/place/Singida,+Tanzania/@-4.8167,34.7500,11z'
   },
