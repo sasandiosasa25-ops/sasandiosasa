@@ -162,7 +162,7 @@ Arusha does not rush. It expands, adapts, and keeps its balance, holding both th
       region: 'Northern Circuit',
       image: '/Arusha-city.jpeg',
       coordinates: '3.3667° S, 36.6833° E',
-      mapUrl: 'https://www.google.com/maps/place/Arusha,+Tanzania/@-3.3667,36.6833,12z'
+      mapUrl: "url from '/arusha-city1.mp4'" 
     },
     'lake-natron': {
     name: 'Lake Natron',
