@@ -203,9 +203,10 @@ This is a place of rhythm. The daily work of the fishermen, the hum of lakeside 
   },
     'Mikumasi' : {
     name: 'Mikumasi',
-    description: `Mikumi is often described as a window into the wild. Just a few hours from Dar es Salaam, the landscape opens into wide plains where giraffes move calmly, zebras graze in patterns, and the silhouettes of baobab trees stand like quiet guardians.
-It is a place where nature shows its rhythm without hurry, inviting you to slow down and simply observe.
-Mikumi holds a balance of accessibility and depth. It offers the chance to experience wilderness in its simplicity. Raw, close, and grounding.`,
+    description: `Mikumasi offers a different kind of safari. Here, the wilderness feels quieter, the animals more reserved, as if the land still belongs mostly to them. Encounters are not measured in numbers, but in moments – a shy antelope disappearing into the bush, a giraffe pausing to watch before moving on.
+It is a place for slower experiences. Rather than rushing from sight to sight, you move with the rhythm of the park itself – taking time, noticing details, and feeling the presence of nature without hurry.
+A special experience awaits in the Rhino Sanctuary, where conservation efforts protect one of Africa’s most iconic animals. To see a rhino here is not just to witness wildlife, but to sense the value of care, patience, and protection.
+Mikumasi is less about spectacle, more about depth. A reminder that some treasures reveal themselves only when approached with respect and time.`,
     region: 'Southern Tanzania',
     image: '/mikumi.jpeg',
     coordinates: '7.3833° S, 37.0000° E',
