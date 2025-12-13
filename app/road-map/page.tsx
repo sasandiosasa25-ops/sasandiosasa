@@ -188,7 +188,7 @@ Here, life moves to a slower rhythm. Fishermen glide across the shallow waters, 
     description: `In the heart of Tanzania, Singida stretches across wide, open plains where massive granite boulders rise like silent guardians of the land. The air feels different here, drier, touched by the scent of sun-warmed grass and distant cooking fires.
 Markets spill with color and voices, a meeting place for stories and trade. Beyond the bustle, the land opens into quiet spaces, where the wind carries songs and the sense that life here has always known its own pace.`,
     region: 'Northern Circuit',
-    image: '/singida.jpeg',
+    image: '/Singida.jpeg',
     coordinates: '4.8167° S, 34.7500° E',
     mapUrl: 'https://www.google.com/maps/place/Singida,+Tanzania/@-4.8167,34.7500,11z'
   },
