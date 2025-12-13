@@ -55,7 +55,7 @@ export default function Navigation(): JSX.Element {
           title: language === 'de' ? 'Safaris' : 'Safaris',
           hasDropdown: true,
           items: [
-            { href: '/road-map/#flow', label: 'The Flow - Dar es Salaam • Selous • Mikumi NP' },
+            { href: '/road-map/#flow', label: 'The Flow - Lake Victoria • Selous • Mikumi NP' },
             { href: '/road-map/#shift', label: 'The Shift - Tarangire NP • Serengeti • Ngorongoro Crater' },
             { href: '/road-map/#unfolding', label: 'The Unfolding - Arusha NP • Maasai Experience • Tarangire NP • Serengeti • Ngorongoro Crater' },
             { href: '/road-map/#pause', label: 'Pause - Arusha NP • Maasai Lodge • Tarangire NP' },

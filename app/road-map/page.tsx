@@ -223,7 +223,7 @@ From the first steps out of Arusha, each day carries you deeper into Tanzania’
       name: 'The Flow',
       tagline: 'A journey through rhythm and wilderness',
       duration: '7-10 days',
-      destinations: ['dar-es-salaam', 'selous', 'mikumi'],
+      destinations: ['lake-victoria', 'selous', 'mikumi'],
       description: `This is a journey that invites you to move with the land’s own rhythm. not rushing, but letting each moment unfold in its own time.
 For seven days, you follow the curve of rivers, the rise of mountains, and the slow drift of clouds across wide skies. From the vast waterways of Nyerere to the golden plains of Mikumi, the forested slopes of Udzungwa, and the wild, open heart of Ruaha, every step is part of a current that carries you deeper.
 You move through landscapes alive with contrasts, the stillness before dawn and the call of a fish eagle over the river; the hush of the forest and the thundering fall of water at Sanje; the quiet watch of giraffes in the grasslands and the sudden shimmer of a herd crossing in the distance.
@@ -538,9 +538,9 @@ It is a place to be close to the water, close to the land, and close to yourself
                       </a>
                     </div>
                     
-                    <div className="prose prose-lg prose-invert max-w-none">
+                    <div className="prose prose-lg max-w-none">
                       {dest.description.split('\n\n').map((paragraph, index) => (
-                        <p key={index} className="text-brand-border/90 leading-relaxed mb-4 last:mb-0">
+                        <p key={index} className="text-black leading-relaxed mb-4 last:mb-0">
                           {paragraph}
                         </p>
                       ))}

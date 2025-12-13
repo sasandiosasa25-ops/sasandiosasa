@@ -23,7 +23,7 @@ const SafariPage = () => {
       title: 'The Flow',
       duration: '7 days – 8 nights',
       subtitle: 'Following the land\'s own rhythm',
-      locations: ['Dar es Salaam', 'Nyerere (Selous)', 'Mikumi National Park', 'Udzungwa', 'Ruaha'],
+      locations: ['Lake Victoria', 'Nyerere (Selous)', 'Mikumi National Park', 'Udzungwa', 'Ruaha'],
       description: 'This is a journey that invites you to move with the land\'s own rhythm, not rushing, but letting each moment unfold in its own time.',
       fullText: 'From the vast waterways of Nyerere to the golden plains of Mikumi, the forested slopes of Udzungwa, and the wild, open heart of Ruaha, every step is part of a current that carries you deeper. Here, the wild is not something you simply look at – it surrounds you, shapes you, and slows you into its pace.',
       image: '🌊'
@@ -141,9 +141,9 @@ const SafariPage = () => {
                   {journey.locations.map((location, idx) => (
                     <span
                       key={idx}
-                      className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-stone-800 text-sm font-poppins rounded-full"
+                      className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full"
                     >
-                      <MapPin className="w-3 h-3" />
+                      <MapPin className="w-3 h-3 text-black" />
                       {location}
                     </span>
                   ))}
