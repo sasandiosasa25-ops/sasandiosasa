@@ -48,8 +48,8 @@ export default function Manifesto() {
             backgroundImage: "url('/front-page.jpeg')",
           }}
         />
-        {/* Elegant gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-heading/80 via-brand-heading/70 to-brand-heading/85" />
+        {/* Elegant gradient overlay (lightened for a brighter, mindful feel) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white/10 to-transparent" />
       </div>
 
       {/* Content */}
@@ -121,7 +121,7 @@ export default function Manifesto() {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/8 to-transparent pointer-events-none" />
     </section>
   );
 }
