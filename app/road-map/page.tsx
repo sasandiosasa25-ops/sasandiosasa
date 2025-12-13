@@ -19,7 +19,7 @@ type DestinationKey =
   | 'lake-eyasi'
   | 'singida'
   | 'lake-victoria'
-  |  'Mikumasi';
+  |  'Mkomazi';
 
 type Destination = {
   name: string;
@@ -201,16 +201,16 @@ This is a place of rhythm. The daily work of the fishermen, the hum of lakeside 
     coordinates: '1.0000° S, 33.0000° E',
     mapUrl: 'https://www.google.com/maps/place/Lake+Victoria/@-1.0000,33.0000,8z'
   },
-    'Mikumasi' : {
-    name: 'Mikumasi',
-    description: `Mikumasi offers a different kind of safari. Here, the wilderness feels quieter, the animals more reserved, as if the land still belongs mostly to them. Encounters are not measured in numbers, but in moments – a shy antelope disappearing into the bush, a giraffe pausing to watch before moving on.
+    'Mkomazi' : {
+    name: 'Mkomazi',
+    description: `Mkomazi offers a different kind of safari. Here, the wilderness feels quieter, the animals more reserved, as if the land still belongs mostly to them. Encounters are not measured in numbers, but in moments – a shy antelope disappearing into the bush, a giraffe pausing to watch before moving on.
 It is a place for slower experiences. Rather than rushing from sight to sight, you move with the rhythm of the park itself – taking time, noticing details, and feeling the presence of nature without hurry.
 A special experience awaits in the Rhino Sanctuary, where conservation efforts protect one of Africa’s most iconic animals. To see a rhino here is not just to witness wildlife, but to sense the value of care, patience, and protection.
-Mikumasi is less about spectacle, more about depth. A reminder that some treasures reveal themselves only when approached with respect and time.`,
+Mkomazi is less about spectacle, more about depth. A reminder that some treasures reveal themselves only when approached with respect and time.`,
     region: 'Southern Tanzania',
     image: '/mikumi.jpeg',
     coordinates: '7.3833° S, 37.0000° E',
-    mapUrl: 'https://www.google.com/maps/place/Mikumi+National+Park/@-7.3833,37.0000,10z'
+    mapUrl: 'https://www.google.com/maps/dir//2QHP%2B9F+Mkomazi+National+Park,+Bumbuli/@-3.3714547,35.4477137,8z/data=!4m12!1m2!2m1!1smikumazi+tanzania!4m8!1m0!1m5!1m1!1s0x183877006b0acab9:0x565fc45e67f46465!2m2!1d37.7862164!2d-3.9715401!3e2?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D'
   }
   };
 
