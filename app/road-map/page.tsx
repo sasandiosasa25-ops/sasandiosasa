@@ -364,7 +364,7 @@ It is a place to be close to the water, close to the land, and close to yourself
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   {/* Image */}
                   <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <div className="relative h-[600px] sm:h-[640px] lg:h-auto overflow-hidden border-4 border-brand-primary shadow-2xl">
+                    <div className="relative h-96 lg:h-auto overflow-hidden border-4 border-brand-primary shadow-2xl">
                       <img 
                         src={experience.image} 
                         alt={experience.name}
@@ -437,7 +437,7 @@ It is a place to be close to the water, close to the land, and close to yourself
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}>
                   {/* Image */}
                   <div className={`relative ${index % 2 === 0 ? 'lg:order-2' : ''}`}>
-                    <div className="relative h-[600px] sm:h-[640px] lg:h-auto overflow-hidden border-4 border-brand-primary shadow-2xl">
+                    <div className="relative h-96 lg:h-[500px] overflow-hidden border-4 border-brand-primary shadow-2xl">
                       <img 
                         src={experience.image} 
                         alt={experience.name}
