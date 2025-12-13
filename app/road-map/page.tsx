@@ -525,7 +525,7 @@ It is a place to be close to the water, close to the land, and close to yourself
                         <div className="inline-block bg-brand-primary/20 text-brand-primary px-4 py-2 mb-4 text-xs uppercase tracking-widest font-bold">
                           {dest.region}
                         </div>
-                        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-2">
+                        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black mb-2">
                           {dest.name}
                         </h3>
                       </div>

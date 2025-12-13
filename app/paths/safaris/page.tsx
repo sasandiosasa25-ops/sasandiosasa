@@ -110,7 +110,7 @@ const SafariPage = () => {
                     <div className="flex items-center gap-4 mb-2">
                       <span className="text-4xl">{journey.image}</span>
                       <div>
-                        <h3 className="font-comfortaa text-3xl text-brand-heading">
+                        <h3 className="font-comfortaa text-3xl text-black">
                           {journey.title}
                         </h3>
                         <div className="flex items-center gap-2 text-brand-primary mt-1">
@@ -120,7 +120,7 @@ const SafariPage = () => {
                         </div>
                       </div>
                     </div>
-                    <p className="font-poppins text-lg text-stone-700 italic mb-4">
+                    <p className="font-poppins text-lg text-stone-600 italic mb-4">
                       {journey.subtitle}
                     </p>
                   </div>
@@ -150,7 +150,7 @@ const SafariPage = () => {
                 </div>
 
                 {/* Description */}
-                <p className="font-poppins text-stone-800 leading-relaxed">
+                <p className="font-poppins text-stone-600 leading-relaxed">
                   {journey.description}
                 </p>
 
