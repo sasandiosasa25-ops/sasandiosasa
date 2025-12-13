@@ -254,7 +254,7 @@ The Serengeti stretches far beyond the horizon, inviting you to travel at the pa
 The days here are wide. The nights, deep and still.
 Your journey closes in a place unlike any other, a natural amphitheater where life gathers in rare abundance. It feels like both an ending and a beginning.
 The Shift is for those who know that travel can change more than your view.`,
-      image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&auto=format&fit=crop'
+      image: '/the-shift.jpeg'
     },
     {
       id: 'unfolding',
