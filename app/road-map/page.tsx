@@ -364,7 +364,7 @@ It is a place to be close to the water, close to the land, and close to yourself
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   {/* Image */}
                   <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <div className="relative h-96 lg:h-auto overflow-hidden border-4 border-brand-primary shadow-2xl">
+                    <div className="relative h-[600px] sm:h-[640px] lg:h-auto overflow-hidden border-4 border-brand-primary shadow-2xl">
                       <img 
                         src={experience.image} 
                         alt={experience.name}
@@ -437,7 +437,7 @@ It is a place to be close to the water, close to the land, and close to yourself
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}>
                   {/* Image */}
                   <div className={`relative ${index % 2 === 0 ? 'lg:order-2' : ''}`}>
-                    <div className="relative h-96 lg:h-[500px] overflow-hidden border-4 border-brand-primary shadow-2xl">
+                    <div className="relative h-[600px] sm:h-[640px] lg:h-auto overflow-hidden border-4 border-brand-primary shadow-2xl">
                       <img 
                         src={experience.image} 
                         alt={experience.name}
@@ -510,7 +510,7 @@ It is a place to be close to the water, close to the land, and close to yourself
               <div key={id} id={id} className="scroll-mt-32">
                 <div className="bg-white/5 backdrop-blur-sm border-2 border-brand-primary/30 overflow-hidden">
                   {/* Destination Image */}
-                  <div className="relative h-64 sm:h-80 lg:h-96 bg-brand-menu-hover overflow-hidden">
+                  <div className="relative h-[520px] sm:h-[560px] lg:h-auto bg-brand-menu-hover overflow-hidden">
                     <img 
                       src={dest.image} 
                       alt={dest.name}
@@ -519,7 +519,7 @@ It is a place to be close to the water, close to the land, and close to yourself
           
                   </div>
 
-                  <div className="p-8 lg:p-12">
+                  <div className="p-10 lg:p-14">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6 gap-4">
                       <div className="flex-1">
                         <div className="inline-block bg-brand-primary/20 text-brand-primary px-4 py-2 mb-4 text-xs uppercase tracking-widest font-bold">

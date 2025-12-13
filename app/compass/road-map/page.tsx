@@ -156,7 +156,7 @@ export default function RoadMapPage() {
               <div key={id} id={id} className="scroll-mt-32">
                 <div className="bg-white/5 backdrop-blur-sm border-2 border-brand-primary/30 overflow-hidden">
                   <div className="flex flex-col lg:flex-row lg:items-stretch">
-                    <div className="relative lg:w-1/2 h-64 sm:h-80 lg:h-auto bg-brand-menu-hover overflow-hidden">
+                    <div className="relative lg:w-1/2 h-[520px] sm:h-[560px] lg:h-auto bg-brand-menu-hover overflow-hidden">
                       <img
                         src={dest.image}
                         alt={dest.name}
@@ -164,7 +164,7 @@ export default function RoadMapPage() {
                       />
                     </div>
 
-                    <div className="p-8 lg:p-12 lg:w-1/2 flex items-center">
+                    <div className="p-10 lg:p-14 lg:w-1/2 flex items-center">
                       <div className="w-full">
                         <div className="inline-block bg-brand-primary/20 text-brand-primary px-4 py-2 mb-4 text-xs uppercase tracking-widest font-bold">
                           {dest.region}
