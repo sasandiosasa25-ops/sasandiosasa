@@ -45,7 +45,7 @@ export default function Manifesto() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/hema1.jpeg')",
+            backgroundImage: "url('/front-page.jpeg')",
           }}
         />
         {/* Elegant gradient overlay */}
