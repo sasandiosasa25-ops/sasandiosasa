@@ -18,7 +18,8 @@ type DestinationKey =
   | 'lake-natron'
   | 'lake-eyasi'
   | 'singida'
-  | 'lake-victoria';
+  | 'lake-victoria'
+  |  'Mikumasi';
 
 type Destination = {
   name: string;
@@ -165,9 +166,8 @@ Arusha does not rush. It expands, adapts, and keeps its balance, holding both th
     },
     'lake-natron': {
     name: 'Lake Natron',
-    description: `Lake Natron is otherworldly. Its alkaline waters stretch wide, reflecting the sky in hues of red and orange, where flamingos gather in vast numbers, their pink forms contrasting sharply against the stark landscape. The air carries a unique stillness, broken only by the distant calls of birds and the occasional ripple of water.
-Here, life thrives in extremes. The lake's harsh conditions create a habitat for specialized species, each adapted to survive where few others can. It is a place that challenges perceptions of beauty and resilience, inviting you to see the extraordinary in the seemingly inhospitable.
-Lake Natron is a reminder that nature's wonders often lie beyond the familiar, waiting to be discovered by those willing to venture into the unknown.`,
+    description: `Lake Natron lies in a vast, open silence, watched over by the towering presence of Ol Doinyo Lengai, the Mountain of God. Its waters shimmer in shifting shades of pink and red, where thousands of flamingos gather like moving petals across the lake.
+This is a place shaped by extremes. Heat, salt, and the deep rhythm of the earth. The air carries the scent of minerals, the ground crunches underfoot, and the horizon feels endless. Here, nature writes in bold lines, and every view is a reminder of how powerful and fragile beauty can be.`,
     region: 'Northern Circuit',
     image: '/lakenatron.jpeg',
     coordinates: '2.5000° S, 36.0833° E',
@@ -175,9 +175,9 @@ Lake Natron is a reminder that nature's wonders often lie beyond the familiar, w
   },
     'lake-eyasi': { 
     name: 'Lake Eyasi',
-    description: `Lake Eyasi is a quiet expanse of water nestled in the Great Rift Valley, surrounded by rolling hills and open plains. It is a place where time seems to slow down, allowing for deep reflection and connection with nature. The lake's shores are home to the Hadza people, one of the last remaining hunter-gatherer communities in Africa, whose way of life offers a glimpse into humanity's ancient past.
-The landscape around Lake Eyasi is diverse, with acacia woodlands, grassy plains, and rocky outcrops providing habitats for a variety of wildlife. Birdlife is abundant, with species such as flamingos, pelicans, and storks often seen along the water's edge.
-Lake Eyasi invites visitors to experience a different pace of life, one that emphasizes simplicity, presence, and respect for the land and its inhabitants.`,
+    description: `Lake Eyasi rests quietly at the edge of the Rift Valley, its shores lined with tall
+palms and the soft calls of water birds. The air is warm and still, carrying the scent of wood smoke from nearby villages.
+Here, life moves to a slower rhythm. Fishermen glide across the shallow waters, and in the evening, the lake mirrors the fading sky in silver and gold. It is a place of gentle encounters, with landscapes that feel timeless and people whose stories are woven into the land.`,
     region: 'Northern Circuit',
     image: '/lakeeyasi.jpeg',
     coordinates: '3.2500° S, 35.5833° E',
@@ -185,9 +185,8 @@ Lake Eyasi invites visitors to experience a different pace of life, one that emp
   },
     'singida': {
     name: 'Singida',
-    description: `Singida is a region of Tanzania that offers a blend of cultural richness and natural beauty. Known for its rolling hills, expansive plains, and traditional villages, Singida provides a glimpse into the heart of rural Tanzanian life. The area is characterized by its agricultural landscape, where farmers cultivate crops such as millet, sorghum, and sunflowers, creating a patchwork of colors across the land.
-    Singida is also home to several cultural sites, including traditional Maasai villages where visitors can learn about the customs and traditions of this iconic community. The region's markets are vibrant hubs of activity, filled with local crafts, produce, and the lively exchange of stories and goods.
-    Visitors to Singida can explore its natural attractions, such as the nearby Lake Singida, which provides opportunities for birdwatching and fishing. The region's warm hospitality and authentic experiences make it a rewarding destination for those looking to connect with Tanzania's cultural and natural heritage.`,
+    description: `In the heart of Tanzania, Singida stretches across wide, open plains where massive granite boulders rise like silent guardians of the land. The air feels different here, drier, touched by the scent of sun-warmed grass and distant cooking fires.
+Markets spill with color and voices, a meeting place for stories and trade. Beyond the bustle, the land opens into quiet spaces, where the wind carries songs and the sense that life here has always known its own pace.`,
     region: 'Northern Circuit',
     image: '/singida.jpeg',
     coordinates: '4.8167° S, 34.7500° E',
@@ -195,13 +194,22 @@ Lake Eyasi invites visitors to experience a different pace of life, one that emp
   },
  'lake-victoria': {
     name: 'Lake Victoria',
-    description: `Lake Victoria is Africa's largest lake and the world's second-largest freshwater lake by surface area. It is a vast expanse of water that spans across three countries: Tanzania, Uganda, and Kenya. The lake is a vital resource for millions of people who depend on it for fishing, transportation, and agriculture. Its shores are dotted with bustling fishing villages, where the daily catch is brought in and traded at lively markets. The lake's rich biodiversity includes numerous fish species, making it a crucial habitat for both local communities and wildlife.
-    Lake Victoria's scenic beauty is complemented by its surrounding landscapes, which include rolling hills, wetlands, and islands. The lake also plays a significant role in the region's climate, influencing weather patterns and providing a source of water for irrigation and domestic use. Visitors to Lake Victoria can enjoy activities such as boat tours, birdwatching, and exploring the cultural heritage of the communities that call its shores home.`,
+    description: `Where the land meets the largest lake in Africa, Lake Victoria feels both endless and alive. Fishing boats glide across the water at sunrise, nets heavy with the morning’s catch. Children run along the shore, their laughter carried over the waves.
+This is a place of rhythm. The daily work of the fishermen, the hum of lakeside towns, and the easy pace of life that comes with living by the water. Stay a while, and you begin to move with it.`,
     region: 'Northern Circuit',
     image: '/lakevictoria.jpeg',
     coordinates: '1.0000° S, 33.0000° E',
     mapUrl: 'https://www.google.com/maps/place/Lake+Victoria/@-1.0000,33.0000,8z'
   },
+    'Mikumasi' : {
+    name: 'Mikumasi',
+    description: `Mikumi is often described as a window into the wild. Just a few hours from Dar es Salaam, the landscape opens into wide plains where giraffes move calmly, zebras graze in patterns, and the silhouettes of baobab trees stand like quiet guardians.
+It is a place where nature shows its rhythm without hurry, inviting you to slow down and simply observe.
+Mikumi holds a balance of accessibility and depth. It offers the chance to experience wilderness in its simplicity. Raw, close, and grounding.`,
+    region: 'Southern Tanzania',
+    image: '/mikumi.jpeg',
+    coordinates: '7.3833° S, 37.0000° E',
+    mapUrl: 'https://www.google.com/maps/place/Mikumi+National+Park/@-7.3833,37.0000,10z'
   };
 
   const safariExperiences: SafariExperience[] = [
@@ -323,7 +331,7 @@ It is a place to be close to the water, close to the land, and close to yourself
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
-      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
+      <Selection className="relative h-[40vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-brand-heading">
           <div className="absolute inset-0 bg-gradient-to-b from-brand-heading/90 to-brand-heading/70" />
         </div>
