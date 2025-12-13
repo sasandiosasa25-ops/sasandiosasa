@@ -48,8 +48,8 @@ export default function Manifesto() {
             backgroundImage: "url('/front-page.jpeg')",
           }}
         />
-        {/* Elegant gradient overlay (lightened for a brighter, mindful feel) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white/10 to-transparent" />
+        {/* Elegant gradient overlay — slightly darker for readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/6 to-transparent" />
       </div>
 
       {/* Content */}
