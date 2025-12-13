@@ -114,12 +114,13 @@ const SafariPage = () => {
                           {journey.title}
                         </h3>
                         <div className="flex items-center gap-2 text-brand-primary mt-1">
+                        <div className="flex items-center gap-2 text-stone-700 mt-1">
                           <Calendar className="w-4 h-4" />
                           <span className="font-poppins text-sm">{journey.duration}</span>
                         </div>
                       </div>
                     </div>
-                    <p className="font-poppins text-lg text-stone-600 italic mb-4">
+                    <p className="font-poppins text-lg text-stone-700 italic mb-4">
                       {journey.subtitle}
                     </p>
                   </div>
@@ -140,7 +141,7 @@ const SafariPage = () => {
                   {journey.locations.map((location, idx) => (
                     <span
                       key={idx}
-                      className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-brand-secondary text-sm font-poppins rounded-full"
+                      className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-stone-800 text-sm font-poppins rounded-full"
                     >
                       <MapPin className="w-3 h-3" />
                       {location}
@@ -149,7 +150,7 @@ const SafariPage = () => {
                 </div>
 
                 {/* Description */}
-                <p className="font-poppins text-stone-700 leading-relaxed">
+                <p className="font-poppins text-stone-800 leading-relaxed">
                   {journey.description}
                 </p>
 
