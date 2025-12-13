@@ -180,8 +180,8 @@ export default function RoadMapPage() {
                     {/* Location Info */}
                     <div className="flex flex-col sm:flex-row gap-4 mb-8 pb-6 border-b border-brand-primary/30">
                         <div className="flex items-center space-x-2">
-                          <MapPin className="h-5 w-5 text-black flex-shrink-0" />
-                          <span className="text-sm text-black">{dest.coordinates}</span>
+                          <MapPin className="h-5 w-5 text-stone-600 flex-shrink-0" />
+                          <span className="text-sm text-stone-600">{dest.coordinates}</span>
                         </div>
                       <a
                         href={dest.mapUrl}
@@ -194,9 +194,9 @@ export default function RoadMapPage() {
                       </a>
                     </div>
                     
-                    <div className="prose prose-lg prose-invert max-w-none">
+                    <div className="prose prose-lg max-w-none">
                       {dest.description.split('\n\n').map((paragraph, index) => (
-                        <p key={index} className="text-brand-border/90 leading-relaxed mb-4 last:mb-0">
+                        <p key={index} className="text-stone-600 leading-relaxed mb-4 last:mb-0">
                           {paragraph}
                         </p>
                       ))}

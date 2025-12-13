@@ -523,9 +523,9 @@ It is a place to be close to the water, close to the land, and close to yourself
 
                     {/* Location Info */}
                     <div className="flex flex-col sm:flex-row gap-4 mb-8 pb-6 border-b border-brand-primary/30">
-                      <div className="flex items-center space-x-2 text-brand-border/80">
-                        <MapPin className="h-5 w-5 text-brand-primary flex-shrink-0" />
-                        <span className="text-sm">{dest.coordinates}</span>
+                      <div className="flex items-center space-x-2">
+                        <MapPin className="h-5 w-5 text-stone-600 flex-shrink-0" />
+                        <span className="text-sm text-stone-600">{dest.coordinates}</span>
                       </div>
                       <a
                         href={dest.mapUrl}
