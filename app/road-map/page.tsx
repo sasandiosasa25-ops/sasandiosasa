@@ -160,7 +160,7 @@ export default function RoadMapPage() {
 This is the meeting place of many worlds. The Meru and Maasai call this land home, carrying their traditions into a city that also speaks in the language of markets, music, and modern business. You feel the pulse of tourism in the busy sidewalks, yet you also hear the call to prayer drifting above the noise and see the mountain in the distance watching it all.
 Arusha does not rush. It expands, adapts, and keeps its balance, holding both the future and the familiar.`,
       region: 'Northern Circuit',
-      image: '/arusha-city.jpeg',
+      image: '/Arusha-city.jpeg',
       coordinates: '3.3667° S, 36.6833° E',
       mapUrl: 'https://www.google.com/maps/place/Arusha,+Tanzania/@-3.3667,36.6833,12z'
     },
