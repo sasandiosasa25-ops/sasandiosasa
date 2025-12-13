@@ -510,7 +510,7 @@ It is a place to be close to the water, close to the land, and close to yourself
               <div key={id} id={id} className="scroll-mt-32">
                 <div className="bg-white/5 backdrop-blur-sm border-2 border-brand-primary/30 overflow-hidden">
                   {/* Destination Image */}
-                  <div className="relative h-[520px] sm:h-[560px] lg:h-auto bg-brand-menu-hover overflow-hidden">
+                  <div className="relative h-64 sm:h-80 lg:h-96 bg-brand-menu-hover overflow-hidden">
                     <img 
                       src={dest.image} 
                       alt={dest.name}
@@ -519,7 +519,7 @@ It is a place to be close to the water, close to the land, and close to yourself
           
                   </div>
 
-                  <div className="p-10 lg:p-14">
+                  <div className="p-8 lg:p-12">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6 gap-4">
                       <div className="flex-1">
                         <div className="inline-block bg-brand-primary/20 text-brand-primary px-4 py-2 mb-4 text-xs uppercase tracking-widest font-bold">
