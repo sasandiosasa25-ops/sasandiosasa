@@ -55,6 +55,7 @@ export default function Navigation(): JSX.Element {
           title: language === 'de' ? 'Safaris' : 'Safaris',
           hasDropdown: true,
           items: [
+            { href: '/paths/safaris#hidden-path', label: 'The Hidden Path - Cultural Journey' },
             { href: '/road-map/#flow', label: 'The Flow - Lake Victoria • Selous • Mikumi NP' },
             { href: '/road-map/#shift', label: 'The Shift - Tarangire NP • Serengeti • Ngorongoro Crater' },
             { href: '/road-map/#unfolding', label: 'The Unfolding - Arusha NP • Maasai Experience • Tarangire NP • Serengeti • Ngorongoro Crater' },
