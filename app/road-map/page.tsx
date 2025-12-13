@@ -364,7 +364,7 @@ It is a place to be close to the water, close to the land, and close to yourself
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   {/* Image */}
                   <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <div className="relative h-96 lg:h-[500px] overflow-hidden border-4 border-brand-primary shadow-2xl">
+                    <div className="relative h-96 lg:h-auto overflow-hidden border-4 border-brand-primary shadow-2xl">
                       <img 
                         src={experience.image} 
                         alt={experience.name}
@@ -509,51 +509,51 @@ It is a place to be close to the water, close to the land, and close to yourself
             {Object.entries(destinations).map(([id, dest]) => (
               <div key={id} id={id} className="scroll-mt-32">
                 <div className="bg-white/5 backdrop-blur-sm border-2 border-brand-primary/30 overflow-hidden">
-                  <div className="flex flex-col lg:flex-row">
-                    {/* Image column */}
-                    <div className="relative lg:w-1/2 h-64 sm:h-80 lg:h-96 bg-brand-menu-hover overflow-hidden">
-                      <img
-                        src={dest.image}
-                        alt={dest.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                  {/* Destination Image */}
+                  <div className="relative h-64 sm:h-80 lg:h-96 bg-brand-menu-hover overflow-hidden">
+                    <img 
+                      src={dest.image} 
+                      alt={dest.name}
+                      className="w-full h-full object-cover"
+                    />
+          
+                  </div>
 
-                    {/* Content column - vertically center to match image height */}
-                    <div className="p-8 lg:p-12 lg:w-1/2 flex items-center">
-                      <div className="w-full">
+                  <div className="p-8 lg:p-12">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6 gap-4">
+                      <div className="flex-1">
                         <div className="inline-block bg-brand-primary/20 text-brand-primary px-4 py-2 mb-4 text-xs uppercase tracking-widest font-bold">
                           {dest.region}
                         </div>
                         <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black mb-2">
                           {dest.name}
                         </h3>
-
-                        {/* Location Info */}
-                        <div className="flex flex-col sm:flex-row gap-4 mb-8 pb-6 border-b border-brand-primary/30">
-                          <div className="flex items-center space-x-2">
-                            <MapPin className="h-5 w-5 text-brand-primary flex-shrink-0" />
-                            <span className="text-sm text-brand-primary">{dest.coordinates}</span>
-                          </div>
-                          <a
-                            href={dest.mapUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-2 text-brand-primary hover:text-white transition-colors group"
-                          >
-                            <Navigation className="h-5 w-5 flex-shrink-0 transform group-hover:scale-110 transition-transform" />
-                            <span className="text-sm font-semibold uppercase tracking-wide">{text.viewOnMap}</span>
-                          </a>
-                        </div>
-
-                        <div className="prose prose-lg max-w-none">
-                          {dest.description.split('\n\n').map((paragraph, index) => (
-                            <p key={index} className="text-stone-600 leading-relaxed mb-4 last:mb-0">
-                              {paragraph}
-                            </p>
-                          ))}
-                        </div>
                       </div>
+                    </div>
+
+                    {/* Location Info */}
+                    <div className="flex flex-col sm:flex-row gap-4 mb-8 pb-6 border-b border-brand-primary/30">
+                      <div className="flex items-center space-x-2">
+                        <MapPin className="h-5 w-5 text-brand-primary flex-shrink-0" />
+                        <span className="text-sm text-brand-primary">{dest.coordinates}</span>
+                      </div>
+                      <a
+                        href={dest.mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-brand-primary hover:text-white transition-colors group"
+                      >
+                        <Navigation className="h-5 w-5 flex-shrink-0 transform group-hover:scale-110 transition-transform" />
+                        <span className="text-sm font-semibold uppercase tracking-wide">{text.viewOnMap}</span>
+                      </a>
+                    </div>
+                    
+                    <div className="prose prose-lg max-w-none">
+                      {dest.description.split('\n\n').map((paragraph, index) => (
+                        <p key={index} className="text-stone-600 leading-relaxed mb-4 last:mb-0">
+                          {paragraph}
+                        </p>
+                      ))}
                     </div>
                   </div>
                 </div>

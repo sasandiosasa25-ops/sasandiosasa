@@ -101,8 +101,8 @@ const SafariPage = () => {
         <div className="space-y-8">
           {journeys.map((journey) => (
             <div key={journey.id} className="bg-white rounded-lg shadow-sm border border-brand-border overflow-hidden hover:shadow-md transition-shadow duration-300">
-              <div className="flex flex-col lg:flex-row">
-                <div className="p-6 lg:p-8 lg:w-1/3 flex items-center justify-center">
+              <div className="flex flex-col lg:flex-row lg:items-stretch">
+                <div className="p-6 lg:p-8 lg:w-1/3 flex items-center justify-center lg:h-auto">
                   <div className="text-6xl">{journey.image}</div>
                 </div>
 
