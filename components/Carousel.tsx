@@ -14,7 +14,7 @@ const ImageCarousel = () => {
   const translations = {
     en: {
       title: 'Commitment',
-      subtitle: 'How we contribute to Sustainable Development Goals',
+      subtitle: 'How we contribute to the UN Sustainability Goals',
       imagePrefix: 'SDG',
     },
     de: {
