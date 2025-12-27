@@ -60,7 +60,7 @@ export default function RoadMapPage() {
       name: 'Lake Victoria',
       description: "Lake Victoria is Africa's largest lake and a vital resource for millions of people who depend on it for fishing, transport, and livelihoods. Its shores are dotted with vibrant lakeside communities and rich birdlife, and the water connects cultures across borders. The lake's vastness holds a different rhythm than a coastal city; it is expansive, watery, and deeply tied to the lives of those who live along its shores.",
       region: 'Northern Circuit',
-      image: '/lakevictoria.jpeg',
+      image: '/lake-victoria1.jpeg',
       coordinates: '1.0000° S, 33.0000° E',
       mapUrl: 'https://www.google.com/maps/place/Lake+Victoria/@-1.0000,33.0000,8z'
     },
