@@ -219,7 +219,7 @@ Mkomazi is less about spectacle, more about depth. A reminder that some treasure
       id: 'hidden-path',
       name: 'The Hidden Path',
       tagline: 'More then a journey through Tanzania’s Living Cultures',
-      duration: '7-10 days',
+      duration: '5 days|6 nights',
       destinations: ['arusha-city', 'lake-natron', 'lake-eyasi', 'singida', 'lake-victoria'],
       description: `This is a journey that asks you to listen, not just with your ears, but with your whole being. For five days, you travel beyond the routes most visitors will ever see, into lands where traditions are not preserved for display, but lived in the rhythm of daily life.
 You move through landscapes shaped by wind, fire, and water, high plains that open to salt lakes where flamingos move like brushstrokes across the horizon, and villages where the warmth of welcome is felt before a single word is spoken.
@@ -232,7 +232,7 @@ From the first steps out of Arusha, each day carries you deeper into Tanzania’
       id: 'flow',
       name: 'The Flow',
       tagline: 'A journey through rhythm and wilderness',
-      duration: '7-10 days',
+      duration: '7 days|8 nights',
       destinations: ['lake-victoria', 'selous', 'mikumi'],
       description: `This is a journey that invites you to move with the land’s own rhythm. not rushing, but letting each moment unfold in its own time.
 For seven days, you follow the curve of rivers, the rise of mountains, and the slow drift of clouds across wide skies. From the vast waterways of Nyerere to the golden plains of Mikumi, the forested slopes of Udzungwa, and the wild, open heart of Ruaha, every step is part of a current that carries you deeper.
@@ -245,7 +245,7 @@ By the time you leave Ruaha’s ancient valleys, you may find that The Flow has 
       id: 'shift',
       name: 'The Shift',
       tagline: 'Transform through Tanzania\'s iconic landscapes',
-      duration: '8-12 days',
+      duration: '5 days|6 nights',
       destinations: ['tarangire', 'serengeti', 'ngorongoro'],
       description: `Move through the land of giants, witness the great migration, and stand in awe at the crater that holds a world within itself. Change doesn’t always arrive with a big announcement.
 Sometimes it begins quietly, with the slow walk of elephants between ancient baobabs, and the golden light that closes the day.
@@ -260,7 +260,7 @@ The Shift is for those who know that travel can change more than your view.`,
       id: 'unfolding',
       name: 'The Unfolding',
       tagline: 'A complete immersion into Tanzania\'s soul',
-      duration: '12-15 days',
+      duration: '8 days|9 nights',
       destinations: ['arusha-np', 'tarangire', 'serengeti', 'ngorongoro'],
       description: `The ultimate journey. Walk with the Maasai, witness moving herds, and discover how presence and connection unfold across Tanzania\'s most iconic landscapes. Some journeys move quickly. Others open like a slow sunrise, showing more with every step.
 The Unfolding begins close, on foot, where every sound and shadow feels near.
@@ -274,7 +274,7 @@ Your journey closes in Ngorongoro Crater, a rare gathering place where life unfo
       id: 'pause',
       name: 'Pause',
       tagline: 'Stillness in the wild',
-      duration: '5-7 days',
+      duration: '3 days|4 nights',
       destinations: ['arusha-np', 'tarangire'],
       description: `A gentle introduction to Tanzania\'s northern circuit. Perfect for those seeking depth without rushing.
       Sometimes, all it takes is a pause.
@@ -306,7 +306,7 @@ The Pause. Small in days. Deep in presence.`,
       id: 'exhale',
       name: 'The Exhale',
       tagline: 'Zanzibar\'s Timeless Embrace',
-      duration: '4-7 days',
+      duration: '5 days|6 nights',
       destinations: [],
       description: `After the safari, let the ocean restore you. Zanzibar offers white sands, turquoise waters, and a rhythm that invites you to simply breathe. Every journey needs its resting ground. A moment to let the weight fall from your shoulders, to feel the salt on your skin, and to move only when you want to.
 The Exhale is shaped around you. It can be as still or as full as you need it to be. There is the ocean, wide and constant, and the winding streets of Stone Town, a place carrying many stories, some heavy, some bright, all worth listening to.
@@ -318,7 +318,7 @@ Contact us for your personalized Exhale experience.`,
       id: 'return',
       name: 'The Return',
       tagline: 'Coastal Authenticity',
-      duration: '3-5 days',
+      duration: '3 days|4 nights',
       destinations: ['pangani', 'maziwe'],
       description: `Experience Tanzania\'s coast away from the crowds. Where history whispers, tides reveal hidden islands, and life moves at its own pace. Some places don’t ask for attention.
 They wait, until you arrive quietly enough to notice.
