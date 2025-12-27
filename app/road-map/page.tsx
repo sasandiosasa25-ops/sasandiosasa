@@ -382,6 +382,22 @@ It is a place to be close to the water, close to the land, and close to yourself
                     <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-heading mb-4">
                       {experience.name}
                     </h3>
+                    <div className="mb-3">
+                      <span
+                        className="text-brand-heading font-medium"
+                        style={{ fontSize: 'var(--experience-duration-size,0.875rem)' }}
+                      >
+                        {experience.duration}
+                      </span>
+                    </div>
+                    <div className="mb-3">
+                      <span
+                        className="text-brand-heading font-medium"
+                        style={{ fontSize: 'var(--experience-duration-size,0.875rem)' }}
+                      >
+                        {experience.duration}
+                      </span>
+                    </div>
                     <p className="text-xl text-brand-primary font-semibold italic mb-6">
                       {experience.tagline}
                     </p>
