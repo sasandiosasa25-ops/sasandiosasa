@@ -39,7 +39,7 @@ export default function DestinationsGrid() {
     },
     {
       name: 'Lake Victoria',
-      image: '/victoria.jpg',
+      image: '/lake-victoria1.jpeg',
       description: language === 'en'
         ? 'Africa\'s largest lake alive with rhythm and life'
         : 'Afrikas größter See voller Rhythmus und Leben',
