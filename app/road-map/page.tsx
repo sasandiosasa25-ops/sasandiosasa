@@ -390,14 +390,6 @@ It is a place to be close to the water, close to the land, and close to yourself
                         {experience.duration}
                       </span>
                     </div>
-                    <div className="mb-3">
-                      <span
-                        className="text-brand-heading font-medium"
-                        style={{ fontSize: 'var(--experience-duration-size,0.875rem)' }}
-                      >
-                        {experience.duration}
-                      </span>
-                    </div>
                     <p className="text-xl text-brand-primary font-semibold italic mb-6">
                       {experience.tagline}
                     </p>
