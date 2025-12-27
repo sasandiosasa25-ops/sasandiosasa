@@ -19,6 +19,7 @@ const ExperiencePage = () => {
       innerSafari: {
         id: 'inner-safari',
         title: 'Inner Safari',
+        duration: '6 months',
         welcome: 'Welcome to SasaNdioSasa. An Inner Safari rooted in Tanzania and guided by the call to live now.',
         intro: 'SasaNdioSasa is an online experience space for people ready to reconnect with their inner strength through community, storytelling, music, visual language, and grounding.',
         guide: 'We will guide you like Safari Guides, not into the distance, but home to yourself.',
@@ -49,11 +50,13 @@ const ExperiencePage = () => {
           }
         ],
         closing: 'The Inner Safari is a space. You are welcome to arrive, guided by the wish to connect with yourself and the curiosity to feel the ground beneath your feet when you truly pause.',
-        moreInfo: 'More information loading soon'
+        moreInfo: 'More information loading soon',
+        durationDesc: 'A six-month guided journey across six modules, paced for steady, lasting growth.'
       },
       retreat: {
         id: 'retreat',
         title: 'Retreat',
+        duration: 'Several days (biannual)',
         intro: 'Twice per year, we open the space for a retreat that goes deeper than any single journey. It is an invitation for those who have travelled with us before, joined a SasaNdioSasa program – and for those who are ready to truly meet Tanzania with all its diversity and wisdom.',
         description: 'These days weave together connection, reflection, and shared experiences with local partners and landscapes. It is a meeting point between nature, culture, and personal growth – with time to explore, to create, and to simply be.',
         focus: 'Each retreat has its own focus, shaped in collaboration with experienced facilitators from within Tanzania and beyond.'
@@ -65,6 +68,7 @@ const ExperiencePage = () => {
       innerSafari: {
         id: 'inner-safari',
         title: 'Innere Safari',
+        duration: '6 Monate',
         welcome: 'Willkommen bei SasaNdioSasa. Eine Innere Safari, verwurzelt in Tansania und geleitet vom Ruf, jetzt zu leben.',
         intro: 'SasaNdioSasa ist ein Online-Erfahrungsraum für Menschen, die bereit sind, sich durch Gemeinschaft, Geschichtenerzählen, Musik, visuelle Sprache und Erdung wieder mit ihrer inneren Stärke zu verbinden.',
         guide: 'Wir werden Sie wie Safari-Guides führen, nicht in die Ferne, sondern nach Hause zu sich selbst.',
@@ -95,11 +99,13 @@ const ExperiencePage = () => {
           }
         ],
         closing: 'Die Innere Safari ist ein Raum. Sie sind willkommen anzukommen, geleitet vom Wunsch, sich mit sich selbst zu verbinden und der Neugier, den Boden unter Ihren Füßen zu spüren, wenn Sie wirklich innehalten.',
-        moreInfo: 'Weitere Informationen werden bald geladen'
+        moreInfo: 'Weitere Informationen werden bald geladen',
+        durationDesc: 'Eine sechsmonatige Reise mit sechs Modulen, gestaltet für stetiges Wachstum.'
       },
       retreat: {
         id: 'retreat',
         title: 'Rückzug',
+        duration: 'Mehrere Tage, zweimal jährlich',
         intro: 'Zweimal pro Jahr öffnen wir den Raum für einen Rückzug, der tiefer geht als jede einzelne Reise. Es ist eine Einladung für diejenigen, die bereits mit uns gereist sind, an einem SasaNdioSasa-Programm teilgenommen haben – und für diejenigen, die bereit sind, Tansania mit all seiner Vielfalt und Weisheit wirklich zu begegnen.',
         description: 'Diese Tage verweben Verbindung, Reflexion und gemeinsame Erfahrungen mit lokalen Partnern und Landschaften. Es ist ein Treffpunkt zwischen Natur, Kultur und persönlichem Wachstum – mit Zeit zum Erkunden, Erschaffen und einfach Sein.',
         focus: 'Jeder Rückzug hat seinen eigenen Fokus, gestaltet in Zusammenarbeit mit erfahrenen Moderatoren aus Tansania und darüber hinaus.'
@@ -158,6 +164,14 @@ const ExperiencePage = () => {
               <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-bold">
                 <span className="italic text-brand-primary">SasaNdioSasa</span> {t.innerSafari.title}
               </h2>
+              <div className="mt-4 flex flex-col md:flex-row md:items-center gap-4">
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold">
+                  {t.innerSafari.duration}
+                </span>
+                <p className="font-poppins text-base text-stone-700 leading-relaxed max-w-3xl">
+                  {t.innerSafari.durationDesc}
+                </p>
+              </div>
             </div>
 
             <div className="space-y-6">
@@ -245,6 +259,14 @@ const ExperiencePage = () => {
               <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-bold">
                 <span className="italic text-brand-primary">SasaNdioSasa</span> {t.retreat.title}
               </h2>
+              <div className="mt-4 flex flex-col md:flex-row md:items-center gap-4">
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold">
+                  {t.retreat.duration}
+                </span>
+                <p className="font-poppins text-base text-stone-700 leading-relaxed max-w-3xl">
+                  {t.retreat.durationDesc}
+                </p>
+              </div>
             </div>
           </div>
 
