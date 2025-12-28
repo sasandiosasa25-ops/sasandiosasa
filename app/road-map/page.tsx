@@ -214,6 +214,7 @@ Mkomazi is less about spectacle, more about depth. A reminder that some treasure
   }
   };
 
+  const safariExperiences: SafariExperience[] = [
     {
       id: 'flow',
       name: 'The Flow',
