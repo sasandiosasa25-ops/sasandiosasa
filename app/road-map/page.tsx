@@ -558,7 +558,7 @@ It is a place to be close to the water, close to the land, and close to yourself
                     
                     <div className="prose prose-lg max-w-none">
                       {dest.description.split('\n\n').map((paragraph, index) => (
-                        <p key={index} className="text-white leading-relaxed mb-4 last:mb-0">
+                        <p key={index} className="text-black leading-relaxed mb-4 last:mb-0">
                           {paragraph}
                         </p>
                       ))}
