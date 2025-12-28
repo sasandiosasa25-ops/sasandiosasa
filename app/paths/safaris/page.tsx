@@ -1,6 +1,7 @@
 
 'use client';
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { ChevronDown, ChevronRight, MapPin, Calendar, Users, Mountain, Waves, Compass } from 'lucide-react';
 
 // Safari Journeys Page
@@ -121,12 +122,38 @@ const SafariPage = () => {
                     <p className="font-poppins text-lg text-stone-600 italic mb-4">{journey.subtitle}</p>
 
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {journey.locations.map((location, idx) => (
-                        <span key={idx} className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full">
-                          <MapPin className="w-3 h-3 text-black" />
-                          {location}
-                        </span>
-                      ))}
+                      {journey.locations.map((location, idx) => {
+                        // Map location names to destination keys in /road-map
+                        const locationToKey: Record<string, string> = {
+                          'Lake Victoria': 'lake-victoria',
+                          'Nyerere (Selous)': 'selous',
+                          'Mikumi National Park': 'mikumi',
+                          'Udzungwa': 'mikumi', // No udzungwa in road-map, closest is mikumi
+                          'Ruaha': '', // Not present in road-map, leave as plain text
+                          'Arusha National Park': 'arusha-np',
+                          'Maasai Lodge': 'arusha-city', // Closest match
+                          'Tarangire National Park': 'tarangire',
+                          'Tarangire': 'tarangire',
+                          'Serengeti': 'serengeti',
+                          'Ngorongoro Crater': 'ngorongoro',
+                          'Maasai Experience': 'arusha-city', // Closest match
+                        };
+                        const destKey = locationToKey[location] || '';
+                        const linkHref = destKey ? `/road-map#${destKey}` : null;
+                        return linkHref ? (
+                          <Link key={idx} href={linkHref} scroll={false} legacyBehavior>
+                            <a className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full hover:bg-brand-primary/20 transition-colors">
+                              <MapPin className="w-3 h-3 text-black" />
+                              {location}
+                            </a>
+                          </Link>
+                        ) : (
+                          <span key={idx} className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full">
+                            <MapPin className="w-3 h-3 text-black" />
+                            {location}
+                          </span>
+                        );
+                      })}
                     </div>
 
                     <p className="font-poppins text-stone-600 leading-relaxed">{journey.description}</p>
