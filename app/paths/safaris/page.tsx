@@ -9,16 +9,6 @@ const SafariPage = () => {
 
   const journeys = [
     {
-      id: 'hidden-path',
-      title: 'The Hidden Path',
-      duration: '5 days – 6 nights',
-      subtitle: 'More than a journey through Tanzania\'s Living Cultures',
-      locations: ['Arusha City', 'Lake Natron', 'Lake Eyasi', 'Singida', 'Lake Victoria'],
-      description: 'This is a journey that asks you to listen, not just with your ears, but with your whole being. For five days, you travel beyond the routes most visitors will ever see, into lands where traditions are not preserved for display, but lived in the rhythm of daily life.',
-      fullText: 'You move through landscapes shaped by wind, fire, and water, high plains that open to salt lakes where flamingos move like brushstrokes across the horizon, and villages where the warmth of welcome is felt before a single word is spoken. Here, heritage is not a story from the past. It is the hands guiding you in a craft, the songs that rise with the evening fire, the quiet moment when someone points to the stars and tells you where their ancestors still walk.',
-      image: '🏔️'
-    },
-    {
       id: 'the-flow',
       title: 'The Flow',
       duration: '7 days – 8 nights',

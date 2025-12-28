@@ -214,20 +214,6 @@ Mkomazi is less about spectacle, more about depth. A reminder that some treasure
   }
   };
 
-  const safariExperiences: SafariExperience[] = [
-    {
-      id: 'hidden-path',
-      name: 'The Hidden Path',
-      tagline: 'More then a journey through Tanzania’s Living Cultures',
-      duration: '5 days|6 nights',
-      destinations: ['arusha-city', 'lake-natron', 'lake-eyasi', 'singida', 'lake-victoria'],
-      description: `This is a journey that asks you to listen, not just with your ears, but with your whole being. For five days, you travel beyond the routes most visitors will ever see, into lands where traditions are not preserved for display, but lived in the rhythm of daily life.
-You move through landscapes shaped by wind, fire, and water, high plains that open to salt lakes where flamingos move like brushstrokes across the horizon, and villages where the warmth of welcome is felt before a single word is spoken.
-Here, heritage is not a story from the past. It is the hands guiding you in a craft, the songs that rise with the evening fire, the quiet moment when someone points to the stars and tells you where their ancestors still walk.
-You may find yourself asking different questions than when you arrived. About where you come from. About what endures. About how many ways there are to belong. By the time you reach the waters of Lake Victoria, the journey will have given you more than memories. It will have left you with a sense of connection, to land, to people, and perhaps, to parts of yourself that had been waiting to be found.
-From the first steps out of Arusha, each day carries you deeper into Tanzania’s cultural heartbeat. You’ll meet communities whose lives are intertwined with the landscapes they call home, from remote lakeshores where time moves slowly to highland towns alive with market colors and conversation. The path winds through places few outsiders reach, each turn revealing another layer of story, craft, and tradition. It’s a route that blends the movement of travel with the stillness of truly arriving.`,
-      image: '/sunsethiddenpath.jpeg'
-    },
     {
       id: 'flow',
       name: 'The Flow',

@@ -55,7 +55,6 @@ export default function Navigation(): JSX.Element {
           title: language === 'de' ? 'Safaris' : 'Safaris',
           hasDropdown: true,
           items: [
-            { href: '/road-map/#hidden-path', label: 'The Hidden Path - Arusha City • Lake Natron • Lake Eyasi • Singida • Lake Victoria' },
             { href: '/road-map/#flow', label: 'The Flow - Lake Victoria • Selous • Mikumi NP' },
             { href: '/road-map/#shift', label: 'The Shift - Tarangire NP • Serengeti • Ngorongoro Crater' },
             { href: '/road-map/#unfolding', label: 'The Unfolding - Arusha NP • Maasai Experience • Tarangire NP • Serengeti • Ngorongoro Crater' },
