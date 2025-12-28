@@ -527,21 +527,13 @@ It is a place to be close to the water, close to the land, and close to yourself
           
                   </div>
 
-                  <div
-                    className="p-8 lg:p-12"
-                    style={{
-                      backgroundImage: "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/map2.jpeg')",
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat'
-                    }}
-                  >
+                  <div className="p-8 lg:p-12">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6 gap-4">
                       <div className="flex-1">
                         <div className="inline-block bg-brand-primary/20 text-brand-primary px-4 py-2 mb-4 text-xs uppercase tracking-widest font-bold">
                           {dest.region}
                         </div>
-                        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-2">
+                        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black mb-2">
                           {dest.name}
                         </h3>
                       </div>
