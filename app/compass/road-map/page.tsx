@@ -57,12 +57,12 @@ export default function RoadMapPage() {
   const destinations: Record<DestinationKey, Destination> = {
     // Southern Tanzania
     'dar-es-salaam': {
-      name: 'Lake Victoria',
-      description: "Lake Victoria is Africa's largest lake and a vital resource for millions of people who depend on it for fishing, transport, and livelihoods. Its shores are dotted with vibrant lakeside communities and rich birdlife, and the water connects cultures across borders. The lake's vastness holds a different rhythm than a coastal city; it is expansive, watery, and deeply tied to the lives of those who live along its shores.",
-      region: 'Northern Circuit',
-      image: '/lake-victoria1.jpeg',
-      coordinates: '1.0000° S, 33.0000° E',
-      mapUrl: 'https://www.google.com/maps/place/Lake+Victoria/@-1.0000,33.0000,8z'
+      name: 'Dar es Salaam',
+      description: "Dar es Salaam is more than just a city. It is a living mosaic of cultures, stories, and contrasts. Between the wide Indian Ocean and the vibrant streets unfolds an energy that is contagious. Here, tradition and modern life meet, spices linger in the markets, and conversations carry the sound of many languages.\n\nThe city moves to its own rhythm. The call of the ocean, the beat of music drifting through the night, the pulse of people gathering in cafés and along the shore. Dar is vibrant and restless, yet always open for a moment of stillness when the sea breeze cools the air and the horizon stretches wide.",
+      region: 'Southern Tanzania',
+      image: '/dar.jpg',
+      coordinates: '6.7924° S, 39.2083° E',
+      mapUrl: 'https://www.google.com/maps/place/Dar+es+Salaam,+Tanzania/@-6.7924,39.2083,11z'
     },
     'selous': {
       name: 'Selous Game Reserve',

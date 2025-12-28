@@ -80,14 +80,16 @@ export default function RoadMapPage() {
 
   const destinations: Record<DestinationKey, Destination> = {
     // Southern Tanzania
-    'dar-es-salaam': {
-      name: 'Dar es Salaam',
-      description: "Dar es Salaam is more than just a city. It is a living mosaic of cultures, stories, and contrasts. Between the wide Indian Ocean and the vibrant streets unfolds an energy that is contagious. Here, tradition and modern life meet, spices linger in the markets, and conversations carry the sound of many languages.\n\nThe city moves to its own rhythm. The call of the ocean, the beat of music drifting through the night, the pulse of people gathering in cafés and along the shore. Dar is vibrant and restless, yet always open for a moment of stillness when the sea breeze cools the air and the horizon stretches wide.",
-      region: 'Southern Tanzania',
-      image: '/dar.jpg',
-      coordinates: '6.7924° S, 39.2083° E',
-      mapUrl: 'https://www.google.com/maps/place/Dar+es+Salaam,+Tanzania/@-6.7924,39.2083,11z'
-    },
+      'dar-es-salaam': {
+        name: 'Dar es Salaam',
+        description: "Dar es Salaam is more than just a city. It is a living mosaic of cultures, stories, and contrasts. Between the wide Indian Ocean and the vibrant streets unfolds an energy that is contagious. Here, tradition and modern life meet, spices linger in the markets, and conversations carry the sound of many languages.\n\nThe city moves to its own rhythm. The call of the ocean, the beat of music drifting through the night, the pulse of people gathering in cafés and along the shore. Dar is vibrant and restless, yet always open for a moment of stillness when the sea breeze cools the air and the horizon stretches wide.",
+        region: 'Southern Tanzania',
+        image: '/dar.jpg',
+        coordinates: '6.7924° S, 39.2083° E',
+        mapUrl: 'https://www.google.com/maps/place/Dar+es+Salaam,+Tanzania/@-6.7924,39.2083,11z',
+        // Added for linking in destinations section
+        selfLink: true
+      },
     'selous': {
       name: 'Selous Game Reserve',
       description: "Selous is wilderness at its most powerful. Vast landscapes stretch beyond the horizon, alive with the raw beauty of rivers, wetlands, and endless savannah. It is a place where elephants cross silently, where hippos surface with a deep breath, and where the air itself carries the rhythm of untamed life.\n\nHere, nature sets the pace. Days flow with the meandering Rufiji River, nights open to skies scattered with countless stars. The silence is never empty, it holds the sound of lions in the distance, the whisper of wind in the grass, the movement of life all around.\n\nSelous is not just a reserve. It is an immersion into something greater than us, an experience of vastness, humility, and connection. A reminder that in the wild, clarity often comes not through words, but through presence.",
@@ -220,7 +222,7 @@ Mkomazi is less about spectacle, more about depth. A reminder that some treasure
       name: 'The Flow',
       tagline: 'A journey through rhythm and wilderness',
       duration: '7 days|8 nights',
-      destinations: ['lake-victoria', 'selous', 'mikumi'],
+        destinations: ['dar-es-salaam', 'lake-victoria', 'selous', 'mikumi'], // Added Dar es Salaam
       description: `This is a journey that invites you to move with the land’s own rhythm. not rushing, but letting each moment unfold in its own time.
 For seven days, you follow the curve of rivers, the rise of mountains, and the slow drift of clouds across wide skies. From the vast waterways of Nyerere to the golden plains of Mikumi, the forested slopes of Udzungwa, and the wild, open heart of Ruaha, every step is part of a current that carries you deeper.
 You move through landscapes alive with contrasts, the stillness before dawn and the call of a fish eagle over the river; the hush of the forest and the thundering fall of water at Sanje; the quiet watch of giraffes in the grasslands and the sudden shimmer of a herd crossing in the distance.
