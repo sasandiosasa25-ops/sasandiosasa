@@ -191,7 +191,7 @@ export default function RoadMapPage() {
 
                         <div className="prose prose-lg max-w-none">
                           {dest.description.split('\n\n').map((paragraph, index) => (
-                            <p key={index} className="text-stone-600 leading-relaxed mb-4 last:mb-0">
+                            <p key={index} className="text-white leading-relaxed mb-4 last:mb-0">
                               {paragraph}
                             </p>
                           ))}
