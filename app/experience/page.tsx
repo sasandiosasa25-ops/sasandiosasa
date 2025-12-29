@@ -57,6 +57,7 @@ const ExperiencePage = () => {
         id: 'retreat',
         title: 'Retreat',
         duration: 'Several days (biannual)',
+        durationDesc: 'A multi-day immersive experience, offered twice a year for deeper connection and growth.',
         intro: 'Twice per year, we open the space for a retreat that goes deeper than any single journey. It is an invitation for those who have travelled with us before, joined a SasaNdioSasa program – and for those who are ready to truly meet Tanzania with all its diversity and wisdom.',
         description: 'These days weave together connection, reflection, and shared experiences with local partners and landscapes. It is a meeting point between nature, culture, and personal growth – with time to explore, to create, and to simply be.',
         focus: 'Each retreat has its own focus, shaped in collaboration with experienced facilitators from within Tanzania and beyond.'
@@ -106,6 +107,7 @@ const ExperiencePage = () => {
         id: 'retreat',
         title: 'Rückzug',
         duration: 'Mehrere Tage, zweimal jährlich',
+        durationDesc: 'Ein mehrtägiges, zweimal jährlich stattfindendes Erlebnis für tiefere Verbindung und Wachstum.',
         intro: 'Zweimal pro Jahr öffnen wir den Raum für einen Rückzug, der tiefer geht als jede einzelne Reise. Es ist eine Einladung für diejenigen, die bereits mit uns gereist sind, an einem SasaNdioSasa-Programm teilgenommen haben – und für diejenigen, die bereit sind, Tansania mit all seiner Vielfalt und Weisheit wirklich zu begegnen.',
         description: 'Diese Tage verweben Verbindung, Reflexion und gemeinsame Erfahrungen mit lokalen Partnern und Landschaften. Es ist ein Treffpunkt zwischen Natur, Kultur und persönlichem Wachstum – mit Zeit zum Erkunden, Erschaffen und einfach Sein.',
         focus: 'Jeder Rückzug hat seinen eigenen Fokus, gestaltet in Zusammenarbeit mit erfahrenen Moderatoren aus Tansania und darüber hinaus.'

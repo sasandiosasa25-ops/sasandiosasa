@@ -12,7 +12,7 @@ export default function CTASection() {
     en: {
       tagline: "Start your journey",
       heading: "Karibu",
-           buttonText: "Book your discovery call",
+           buttonText: "Explore If this Journey is for You",
       rating: "Rating",
       awardWinning: "Award-Winning Service",
       travelers: "Happy Travelers",
