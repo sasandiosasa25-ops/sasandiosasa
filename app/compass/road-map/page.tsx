@@ -135,26 +135,20 @@ export default function RoadMapPage() {
   return (
     <div className="min-h-screen ">
       {/* Hero Section: Title and subtitle moved from Safari Journeys */}
-      <section className="py-20 relative text-white">
-        {/* Background image for title only */}
-        <div className="absolute inset-0 w-full h-full z-0">
-          <img 
-            src="/map2.jpeg" 
-            alt="Map background" 
-            className="w-full h-full object-cover opacity-60" 
-            style={{objectPosition: 'center'}}
-          />
-          <div className="absolute inset-0 bg-brand-heading/80" />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
+      <section className="py-20 bg-brand-heading text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 flex flex-col items-center justify-center">
             <Mountain className="h-12 w-12 text-brand-primary mx-auto mb-4" />
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4">
-              Road Map
-            </h2>
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-medium mb-4">
-              Journey through Tanzania's transformative landscapes
-            </h3>
+            {/* Title box with background image */}
+            <div className="inline-block rounded-xl shadow-lg overflow-hidden mb-4" style={{background: 'rgba(0,0,0,0.5)'}}>
+              <div className="relative flex flex-col items-center justify-center px-10 py-6">
+                <img src="/map2.jpeg" alt="Map background" className="absolute inset-0 w-full h-full object-cover opacity-60 z-0" style={{objectPosition: 'center'}} />
+                <span className="relative z-10">
+                  <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-2">Road Map</h2>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-medium mb-2">Journey through Tanzania's transformative landscapes</h3>
+                </span>
+              </div>
+            </div>
             <div className="h-1 w-24 bg-brand-primary mx-auto" />
           </div>
 
