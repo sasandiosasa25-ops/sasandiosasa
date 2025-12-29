@@ -133,9 +133,20 @@ export default function RoadMapPage() {
   };
   const text = content[language];
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen relative">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/map2.jpeg"
+          alt="Map background"
+          fill
+          className="object-cover opacity-20"
+          priority={true}
+        />
+        <div className="absolute inset-0 bg-[#382410]/60 mix-blend-multiply" />
+      </div>
       {/* Hero Section: Title and subtitle moved from Safari Journeys */}
-      <section className="py-20 bg-brand-heading text-white">
+      <section className="py-20 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Mountain className="h-12 w-12 text-brand-primary mx-auto mb-4" />
