@@ -155,7 +155,7 @@ export default function RoadMapPage() {
           <div className="space-y-24">
             {Object.entries(destinations).map(([id, dest]) => (
               <div key={id} id={id} className="scroll-mt-32">
-                <div className="bg-white/5 backdrop-blur-sm border-2 border-brand-primary/30 overflow-hidden">
+                <div className="bg-white/5 backdrop-blur-sm border-2 border-brand-primary/30 overflow-hidden rounded-none">
                   <div className="flex flex-col lg:flex-row lg:items-stretch">
                     <div className="relative lg:w-1/2 h-[320px] sm:h-[400px] md:h-[520px] lg:h-auto bg-brand-menu-hover overflow-hidden">
                       <div className="w-full h-full overflow-hidden">
