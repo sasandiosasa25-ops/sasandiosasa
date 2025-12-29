@@ -43,20 +43,11 @@ export default function CTASection() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Header Section */}
-        <div className="mb-12 sm:mb-16">
-          {/* Tagline Badge */}
-          <div className="inline-block border-2 border-brand-border px-6 py-2 mb-8 bg-white/50 backdrop-blur-sm">
-            <span className="text-brand-heading font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase">
-              {text.tagline}
-            </span>
-          </div>
-          
+        <div className="mb-6 sm:mb-8">
           {/* Main Heading */}
-          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-brand-heading mb-8 leading-[0.9] tracking-tighter">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-brand-heading mb-4 leading-[0.9] tracking-tighter">
             {text.heading}
           </h2>
-          
-       
         </div>
         
         {/* CTA Button - Bold and Animated */}
