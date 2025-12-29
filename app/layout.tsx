@@ -20,6 +20,7 @@ const comfortaa = Comfortaa({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://sasandiosasa.com'),
   title: 'SasaNdioSasa - Transformative Travel Experiences in Tanzania',
   description: 'Experience Tanzania through safaris, inner journeys, and retreats. SasaNdioSasa offers transformative travel experiences that connect cultures, restore balance, and create sustainable impact. Explore Serengeti, Tarangire, Lake Victoria, and more. Contact: +255 755 688 091',
   keywords: 'Tanzania safaris, inner safari, retreats Tanzania, Serengeti tours, Tarangire National Park, sustainable travel Tanzania, transformative travel, leadership retreats, cultural immersion Tanzania, Lake Victoria, Arusha, Dar es Salaam, wellness retreats Africa',

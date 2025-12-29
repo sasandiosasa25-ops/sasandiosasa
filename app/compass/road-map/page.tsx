@@ -175,7 +175,6 @@ export default function RoadMapPage() {
                             color: #fff !important;
                           }
                         `}</style>
-                        </h3>
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-8 pb-6 border-b border-brand-primary/30">
                           <div className="flex items-center space-x-2">

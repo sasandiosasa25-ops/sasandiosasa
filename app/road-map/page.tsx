@@ -86,9 +86,7 @@ export default function RoadMapPage() {
         region: 'Southern Tanzania',
         image: '/dar.jpg',
         coordinates: '6.7924° S, 39.2083° E',
-        mapUrl: 'https://www.google.com/maps/place/Dar+es+Salaam,+Tanzania/@-6.7924,39.2083,11z',
-        // Added for linking in destinations section
-        selfLink: true
+        mapUrl: 'https://www.google.com/maps/place/Dar+es+Salaam,+Tanzania/@-6.7924,39.2083,11z'
       },
     'selous': {
       name: 'Selous Game Reserve',
