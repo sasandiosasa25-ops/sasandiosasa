@@ -57,7 +57,7 @@ export default function CTASection() {
             size="lg" 
             className="group relative bg-brand-primary hover:bg-brand-secondary text-white px-6 sm:px-12 md:px-16 py-4 sm:py-6 md:py-8 text-base sm:text-lg md:text-xl font-bold uppercase tracking-wide sm:tracking-wider transform hover:scale-105 transition-all duration-500 shadow-2xl hover:shadow-brand-primary/50 overflow-hidden w-full sm:w-auto"
           >
-            <Link href="#" className="w-full sm:w-auto">
+            <Link href="https://tally.so/r/3xe74G" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               {/* Animated background shimmer */}
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
               
