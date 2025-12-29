@@ -158,12 +158,12 @@ export default function RoadMapPage() {
                 <div className="bg-white/5 backdrop-blur-sm border-2 border-brand-primary/30 overflow-hidden">
                   <div className="flex flex-col lg:flex-row lg:items-stretch">
                     <div className="relative lg:w-1/2 h-[320px] sm:h-[400px] md:h-[520px] lg:h-auto bg-brand-menu-hover overflow-hidden">
-                      <div className="w-full h-full rounded-xl md:rounded-none overflow-hidden">
+                      <div className="w-full h-full overflow-hidden">
                         <img
                           src={dest.image}
                           alt={dest.name}
                           className="w-full h-full object-cover object-center"
-                          style={{ aspectRatio: '1 / 1', objectFit: 'cover' }}
+                          style={{ aspectRatio: '1 / 1', objectFit: 'cover', borderRadius: '1rem', borderRadius: '0' }}
                         />
                       </div>
                     </div>
