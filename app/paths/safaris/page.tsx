@@ -74,53 +74,45 @@ const SafariPage = () => {
       <div className="max-w-6xl mx-auto px-6 pb-20">
         <div className="space-y-8">
           {journeys.map((journey) => (
-            <div key={journey.id} className="bg-white rounded-lg shadow-sm border border-brand-border overflow-hidden hover:shadow-md transition-shadow duration-300">
-              <div className="flex flex-col md:flex-row md:items-stretch">
-                {/* Main Content */}
-                <div className="flex-1 p-6 md:p-8 flex flex-col justify-between">
-                  <div>
-                    <h3 className="font-comfortaa text-3xl text-black mb-2">{journey.title}</h3>
-                    <p className="font-poppins text-lg text-stone-600 italic mb-2">{journey.subtitle}</p>
-                    <p className="font-poppins text-stone-600 leading-relaxed mb-4">{journey.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {journey.locations.map((location, idx) => (
-                        <Link key={idx} href="/compass/road-map" scroll={false} legacyBehavior>
-                          <a className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full hover:bg-brand-primary/20 transition-colors">
-                            <MapPin className="w-3 h-3 text-black" />
-                            {location}
-                          </a>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between mt-2">
-                    <div className="flex items-center gap-2 text-stone-700">
-                      <Calendar className="w-4 h-4" />
-                      <span className="font-poppins text-sm">{journey.duration}</span>
-                    </div>
-                    <button
-                      onClick={() => setExpandedJourney(expandedJourney === journey.id ? null : journey.id)}
-                      className="ml-4 p-2 hover:bg-brand-menu-hover rounded-full transition-colors"
-                    >
-                      {expandedJourney === journey.id ? (
-                        <ChevronDown className="w-6 h-6 text-brand-primary" />
-                      ) : (
-                        <ChevronRight className="w-6 h-6 text-brand-primary" />
-                      )}
-                    </button>
-                  </div>
-                  {expandedJourney === journey.id && (
-                    <div className="mt-6 pt-6 border-t border-brand-border">
-                      <p className="font-poppins text-stone-700 leading-relaxed mb-6">{journey.fullText}</p>
-                      <button className="px-6 py-3 bg-brand-primary hover:bg-brand-secondary text-white font-poppins rounded-full transition-colors duration-300">Connect With Us</button>
-                    </div>
-                  )}
-                </div>
-                {/* Image */}
-                <div className="md:w-56 flex items-center justify-center bg-stone-50 border-l border-brand-border p-8 md:p-0">
-                  <div className="text-7xl leading-none">{journey.image}</div>
-                </div>
+            <div key={journey.id} className="bg-white p-8 rounded-lg shadow-sm border border-brand-border flex flex-col items-start text-left max-w-3xl mx-auto">
+              <h3 className="font-comfortaa text-3xl text-black mb-3">{journey.title}</h3>
+              <p className="font-poppins text-lg text-stone-600 italic mb-2">{journey.subtitle}</p>
+              <p className="font-poppins text-stone-600 leading-relaxed mb-4">{journey.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {journey.locations.map((location, idx) => (
+                  <Link key={idx} href="/compass/road-map" scroll={false} legacyBehavior>
+                    <a className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full hover:bg-brand-primary/20 transition-colors">
+                      <MapPin className="w-3 h-3 text-black" />
+                      {location}
+                    </a>
+                  </Link>
+                ))}
               </div>
+              <div className="w-full flex justify-between items-center mb-4">
+                <div className="flex items-center gap-2 text-stone-700">
+                  <Calendar className="w-4 h-4" />
+                  <span className="font-poppins text-sm">{journey.duration}</span>
+                </div>
+                <button
+                  onClick={() => setExpandedJourney(expandedJourney === journey.id ? null : journey.id)}
+                  className="ml-4 p-2 hover:bg-brand-menu-hover rounded-full transition-colors"
+                >
+                  {expandedJourney === journey.id ? (
+                    <ChevronDown className="w-6 h-6 text-brand-primary" />
+                  ) : (
+                    <ChevronRight className="w-6 h-6 text-brand-primary" />
+                  )}
+                </button>
+              </div>
+              <div className="flex w-full justify-center mb-2">
+                <div className="text-7xl leading-none">{journey.image}</div>
+              </div>
+              {expandedJourney === journey.id && (
+                <div className="mt-6 pt-6 border-t border-brand-border w-full">
+                  <p className="font-poppins text-stone-700 leading-relaxed mb-6">{journey.fullText}</p>
+                  <button className="px-6 py-3 bg-brand-primary hover:bg-brand-secondary text-white font-poppins rounded-full transition-colors duration-300">Connect With Us</button>
+                </div>
+              )}
             </div>
           ))}
         </div>
