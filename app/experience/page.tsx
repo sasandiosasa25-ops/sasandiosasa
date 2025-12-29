@@ -4,117 +4,88 @@ import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Heart, Compass, Users, Calendar, Headphones, MessageCircle, Mountain, Sparkles } from 'lucide-react';
 
+// Add the translations object here
+const translations: Record<string, any> = {
+  en: {
+    title: 'Experience',
+    subtitle: 'A journey of growth, connection, and discovery.',
+    innerSafari: {
+      id: 'inner-safari',
+      title: 'Inner Safari',
+      duration: '6 months, 6 modules',
+      durationDesc: 'A six-month journey with six modules, designed for steady growth.',
+      welcome: 'Welcome to the Inner Safari, a space to arrive, guided by the desire to connect with yourself and the curiosity to feel the ground beneath your feet when you truly pause.',
+      intro: 'This is a journey for those who are ready to explore their inner landscapes, to grow, and to connect with others on a similar path.',
+      guide: 'You will be guided by experienced facilitators and supported by a community of fellow travelers.',
+      expectTitle: 'What to Expect',
+      expectDesc: 'Engaging sessions, reflective practices, and opportunities for deep connection.',
+      rhythmTitle: 'Your Rhythm',
+      rhythmIntro: 'Each module brings a new focus, blending learning, practice, and community.',
+      rhythmItems: [
+        { icon: 'video', title: 'Live Sessions', description: 'Interactive group sessions led by facilitators.' },
+        { icon: 'sunrise', title: 'Morning Practices', description: 'Start your day with intention and clarity.' },
+        { icon: 'message', title: 'Reflection', description: 'Journaling and sharing insights.' },
+        { icon: 'community', title: 'Community', description: 'Connect with others and build lasting relationships.' },
+      ],
+      closing: 'The Inner Safari is a space. You are welcome to arrive, guided by the desire to connect with yourself and the curiosity to feel the ground beneath your feet when you truly pause.',
+      moreInfo: 'More information coming soon'
+    },
+    retreat: {
+      id: 'retreat',
+      title: 'Retreat',
+      duration: 'Several days, twice a year',
+      durationDesc: 'A multi-day, twice-yearly experience for deeper connection and growth.',
+      intro: 'Twice a year, we open the space for a retreat that goes deeper than any single journey. It is an invitation for those who have already traveled with us, participated in a SasaNdioSasa program – and for those ready to truly encounter Tanzania in all its diversity and wisdom.',
+      description: 'These days weave together connection, reflection, and shared experiences with local partners and landscapes. It is a meeting point between nature, culture, and personal growth – with time to explore, create, and simply be.',
+      focus: 'Each retreat has its own focus, designed in collaboration with experienced facilitators from Tanzania and beyond.'
+    }
+  },
+  de: {
+    title: 'Erfahrung',
+    subtitle: 'Eine Reise des Wachstums, der Verbindung und der Entdeckung.',
+    innerSafari: {
+      id: 'innere-safari',
+      title: 'Innere Safari',
+      duration: '6 Monate, 6 Module',
+      durationDesc: 'Eine sechsmonatige Reise mit sechs Modulen, gestaltet für stetiges Wachstum.',
+      welcome: 'Willkommen zur Inneren Safari, einem Raum zum Ankommen, geleitet vom Wunsch, sich mit sich selbst zu verbinden und der Neugier, den Boden unter den Füßen zu spüren, wenn man wirklich innehält.',
+      intro: 'Dies ist eine Reise für diejenigen, die bereit sind, ihre inneren Landschaften zu erkunden, zu wachsen und sich mit anderen auf einem ähnlichen Weg zu verbinden.',
+      guide: 'Du wirst von erfahrenen Moderator:innen begleitet und von einer Gemeinschaft von Mitreisenden unterstützt.',
+      expectTitle: 'Was dich erwartet',
+      expectDesc: 'Inspirierende Sitzungen, reflektierende Praktiken und Möglichkeiten für tiefe Verbindung.',
+      rhythmTitle: 'Dein Rhythmus',
+      rhythmIntro: 'Jedes Modul bringt einen neuen Fokus, der Lernen, Praxis und Gemeinschaft verbindet.',
+      rhythmItems: [
+        { icon: 'video', title: 'Live-Sitzungen', description: 'Interaktive Gruppensitzungen mit Moderator:innen.' },
+        { icon: 'sunrise', title: 'Morgenpraxis', description: 'Starte deinen Tag mit Intention und Klarheit.' },
+        { icon: 'message', title: 'Reflexion', description: 'Journaling und Teilen von Erkenntnissen.' },
+        { icon: 'community', title: 'Gemeinschaft', description: 'Vernetze dich mit anderen und baue dauerhafte Beziehungen auf.' },
+      ],
+      closing: 'Die Innere Safari ist ein Raum. Sie sind willkommen anzukommen, geleitet vom Wunsch, sich mit sich selbst zu verbinden und der Neugier, den Boden unter Ihren Füßen zu spüren, wenn Sie wirklich innehalten.',
+      moreInfo: 'Weitere Informationen werden bald geladen'
+    },
+    retreat: {
+      id: 'retreat',
+      title: 'Rückzug',
+      duration: 'Mehrere Tage, zweimal jährlich',
+      durationDesc: 'Ein mehrtägiges, zweimal jährlich stattfindendes Erlebnis für tiefere Verbindung und Wachstum.',
+      intro: 'Zweimal pro Jahr öffnen wir den Raum für einen Rückzug, der tiefer geht als jede einzelne Reise. Es ist eine Einladung für diejenigen, die bereits mit uns gereist sind, an einem SasaNdioSasa-Programm teilgenommen haben – und für diejenigen, die bereit sind, Tansania mit all seiner Vielfalt und Weisheit wirklich zu begegnen.',
+      description: 'Diese Tage verweben Verbindung, Reflexion und gemeinsame Erfahrungen mit lokalen Partnern und Landschaften. Es ist ein Treffpunkt zwischen Natur, Kultur und persönlichem Wachstum – mit Zeit zum Erkunden, Erschaffen und einfach Sein.',
+      focus: 'Jeder Rückzug hat seinen eigenen Fokus, gestaltet in Zusammenarbeit mit erfahrenen Moderatoren aus Tansania und darüber hinaus.'
+    }
+  }
+};
+
+// Define the ExperiencePage component
 const ExperiencePage = () => {
-  const { language } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setIsVisible(true), 100);
+    const timeout = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timeout);
   }, []);
 
-  const translations = {
-    en: {
-      title: 'Experience',
-      subtitle: 'Journey Within, Guided by Tanzania',
-      innerSafari: {
-        id: 'inner-safari',
-        title: 'Inner Safari',
-        duration: '6 months',
-        welcome: 'Welcome to SasaNdioSasa. An Inner Safari rooted in Tanzania and guided by the call to live now.',
-        intro: 'SasaNdioSasa is an online experience space for people ready to reconnect with their inner strength through community, storytelling, music, visual language, and grounding.',
-        guide: 'We will guide you like Safari Guides, not into the distance, but home to yourself.',
-        expectTitle: 'What to expect',
-        expectDesc: 'SasaNdioSasa is a 6-month journey, shaped by time, depth, and a rhythm that allows growth. Across six modules, we gently explore different inner qualities, inspired by elements, landscapes, and memories.',
-        rhythmTitle: 'Your rhythm along the way',
-        rhythmIntro: 'To give you spaciousness while staying connected, SasaNdioSasa follows a clear rhythm:',
-        rhythmItems: [
-          {
-            icon: 'video',
-            title: 'Every two weeks',
-            description: 'Live Guiding Session via Zoom (approx. 75 minutes) – A space to feel, connect, and experience together'
-          },
-          {
-            icon: 'sunrise',
-            title: 'Every week',
-            description: 'Morning Impulse (audio or video), a thought, a sound, an image, or a question to walk with'
-          },
-          {
-            icon: 'message',
-            title: 'In between',
-            description: 'Mini reminders or voice notes, light and simple, like a breath during the day'
-          },
-          {
-            icon: 'community',
-            title: 'Community Space',
-            description: 'Connection and reflection in a protected group (e.g., private Facebook group), join as much or as little as you like.'
-          }
-        ],
-        closing: 'The Inner Safari is a space. You are welcome to arrive, guided by the wish to connect with yourself and the curiosity to feel the ground beneath your feet when you truly pause.',
-        moreInfo: 'More information loading soon',
-        durationDesc: 'A six-month guided journey across six modules, paced for steady, lasting growth.'
-      },
-      retreat: {
-        id: 'retreat',
-        title: 'Retreat',
-        duration: 'Several days (biannual)',
-        durationDesc: 'A multi-day immersive experience, offered twice a year for deeper connection and growth.',
-        intro: 'Twice per year, we open the space for a retreat that goes deeper than any single journey. It is an invitation for those who have travelled with us before, joined a SasaNdioSasa program – and for those who are ready to truly meet Tanzania with all its diversity and wisdom.',
-        description: 'These days weave together connection, reflection, and shared experiences with local partners and landscapes. It is a meeting point between nature, culture, and personal growth – with time to explore, to create, and to simply be.',
-        focus: 'Each retreat has its own focus, shaped in collaboration with experienced facilitators from within Tanzania and beyond.'
-      }
-    },
-    de: {
-      title: 'Erfahrung',
-      subtitle: 'Reise nach Innen, Geleitet von Tansania',
-      innerSafari: {
-        id: 'inner-safari',
-        title: 'Innere Safari',
-        duration: '6 Monate',
-        welcome: 'Willkommen bei SasaNdioSasa. Eine Innere Safari, verwurzelt in Tansania und geleitet vom Ruf, jetzt zu leben.',
-        intro: 'SasaNdioSasa ist ein Online-Erfahrungsraum für Menschen, die bereit sind, sich durch Gemeinschaft, Geschichtenerzählen, Musik, visuelle Sprache und Erdung wieder mit ihrer inneren Stärke zu verbinden.',
-        guide: 'Wir werden Sie wie Safari-Guides führen, nicht in die Ferne, sondern nach Hause zu sich selbst.',
-        expectTitle: 'Was Sie erwartet',
-        expectDesc: 'SasaNdioSasa ist eine 6-monatige Reise, geprägt von Zeit, Tiefe und einem Rhythmus, der Wachstum ermöglicht. Über sechs Module erforschen wir sanft verschiedene innere Qualitäten, inspiriert von Elementen, Landschaften und Erinnerungen.',
-        rhythmTitle: 'Ihr Rhythmus auf dem Weg',
-        rhythmIntro: 'Um Ihnen Raum zu geben und gleichzeitig verbunden zu bleiben, folgt SasaNdioSasa einem klaren Rhythmus:',
-        rhythmItems: [
-          {
-            icon: 'video',
-            title: 'Alle zwei Wochen',
-            description: 'Live Guiding Session über Zoom (ca. 75 Minuten) – Ein Raum zum Fühlen, Verbinden und gemeinsamen Erleben'
-          },
-          {
-            icon: 'sunrise',
-            title: 'Jede Woche',
-            description: 'Morgen-Impuls (Audio oder Video), ein Gedanke, ein Klang, ein Bild oder eine Frage zum Mitnehmen'
-          },
-          {
-            icon: 'message',
-            title: 'Zwischendurch',
-            description: 'Mini-Erinnerungen oder Sprachnachrichten, leicht und einfach, wie ein Atemzug während des Tages'
-          },
-          {
-            icon: 'community',
-            title: 'Gemeinschaftsraum',
-            description: 'Verbindung und Reflexion in einer geschützten Gruppe (z.B. private Facebook-Gruppe), schließen Sie sich so viel oder so wenig an, wie Sie möchten.'
-          }
-        ],
-        closing: 'Die Innere Safari ist ein Raum. Sie sind willkommen anzukommen, geleitet vom Wunsch, sich mit sich selbst zu verbinden und der Neugier, den Boden unter Ihren Füßen zu spüren, wenn Sie wirklich innehalten.',
-        moreInfo: 'Weitere Informationen werden bald geladen',
-        durationDesc: 'Eine sechsmonatige Reise mit sechs Modulen, gestaltet für stetiges Wachstum.'
-      },
-      retreat: {
-        id: 'retreat',
-        title: 'Rückzug',
-        duration: 'Mehrere Tage, zweimal jährlich',
-        durationDesc: 'Ein mehrtägiges, zweimal jährlich stattfindendes Erlebnis für tiefere Verbindung und Wachstum.',
-        intro: 'Zweimal pro Jahr öffnen wir den Raum für einen Rückzug, der tiefer geht als jede einzelne Reise. Es ist eine Einladung für diejenigen, die bereits mit uns gereist sind, an einem SasaNdioSasa-Programm teilgenommen haben – und für diejenigen, die bereit sind, Tansania mit all seiner Vielfalt und Weisheit wirklich zu begegnen.',
-        description: 'Diese Tage verweben Verbindung, Reflexion und gemeinsame Erfahrungen mit lokalen Partnern und Landschaften. Es ist ein Treffpunkt zwischen Natur, Kultur und persönlichem Wachstum – mit Zeit zum Erkunden, Erschaffen und einfach Sein.',
-        focus: 'Jeder Rückzug hat seinen eigenen Fokus, gestaltet in Zusammenarbeit mit erfahrenen Moderatoren aus Tansania und darüber hinaus.'
-      }
-    }
-  };
-
+  const { language } = useLanguage();
   const t = translations[language];
 
   const getIcon = (iconName: string) => {
@@ -216,7 +187,11 @@ const ExperiencePage = () => {
               {t.innerSafari.rhythmIntro}
             </p>
             <div className="flex flex-col gap-4">
-              {t.innerSafari.rhythmItems.map((item, idx) => (
+              {t.innerSafari.rhythmItems.map(
+                (
+                  item: { icon: string; title: string; description: string },
+                  idx: number
+                ) => (
                 <div
                   key={idx}
                   className="flex gap-3 items-start bg-brand-primary/5 rounded-lg p-4"
