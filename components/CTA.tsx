@@ -47,7 +47,7 @@ export default function CTASection() {
           {/* Main Heading */}
           <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-brand-heading mb-4 leading-[0.9] tracking-tighter">
             {text.heading}
-          </h2>
+          </h2> 
         </div>
         
         {/* CTA Button - Bold and Animated */}
