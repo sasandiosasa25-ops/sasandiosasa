@@ -117,7 +117,7 @@ export default function RoadMapPage() {
       name: 'Tarangire National Park',
       description: "Tarangire is often called the land of giants. Baobab trees rise from the earth like ancient guardians, their massive trunks holding centuries of stories. Beneath them, elephants wander in steady rhythm, finding shade and strength in the same places where generations before have passed.\n\nThe park carries a sense of time. Herds move with the seasons, birds gather in great flocks, and the river cuts its path through open plains and woodlands. Everywhere, the presence of the baobabs gives Tarangire a character unlike any other place. Grounding, enduring, and full of quiet dignity.\n\nHere, you feel how nature weaves strength and resilience together. In the stillness of a baobab's shadow or in the slow movement of elephants across the landscape, Tarangire reminds you that patience and presence are their own kind of power.",
       region: 'Northern Circuit',
-      image: '/Tarangire1.jpeg',
+      image: '/tarangire1.jpeg',
       coordinates: '3.8333° S, 36.0000° E',
       mapUrl: 'https://www.google.com/maps/place/Tarangire+National+Park/@-3.8333,36.0000,10z'
     },
