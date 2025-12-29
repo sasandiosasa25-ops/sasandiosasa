@@ -161,14 +161,14 @@ const ExperiencePage = () => {
       <div id={t.innerSafari.id} className="scroll-mt-20">
         <div className="max-w-2xl mx-auto px-3 py-10 flex flex-col gap-6">
           {/* Title and Duration */}
-          <div className="flex flex-col gap-2 items-start">
+          <div className="flex flex-col gap-1 items-start">
             <h2 className="font-comfortaa text-3xl sm:text-4xl text-brand-heading font-bold">
               <span className="italic text-brand-primary">SasaNdioSasa</span> {t.innerSafari.title}
             </h2>
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold">
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold mb-1">
               {t.innerSafari.duration}
             </span>
-            <p className="font-poppins text-base text-stone-700 leading-relaxed">
+            <p className="font-poppins text-xs sm:text-base text-stone-700 leading-relaxed mt-1">
               {t.innerSafari.durationDesc}
             </p>
           </div>
@@ -255,19 +255,17 @@ const ExperiencePage = () => {
       <div id={t.retreat.id} className="scroll-mt-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 py-20">
           <div className="mb-12">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-1 bg-brand-primary rounded-full" />
-              <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-bold">
+            <div className="flex flex-col gap-1 items-start mb-8">
+              <div className="w-12 h-1 bg-brand-primary rounded-full mb-2" />
+              <h2 className="font-comfortaa text-3xl sm:text-4xl md:text-5xl text-brand-heading font-bold">
                 <span className="italic text-brand-primary">SasaNdioSasa</span> {t.retreat.title}
               </h2>
-              <div className="mt-4 flex flex-col md:flex-row md:items-center gap-4">
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold">
-                  {t.retreat.duration}
-                </span>
-                <p className="font-poppins text-base text-stone-700 leading-relaxed max-w-3xl">
-                  {t.retreat.durationDesc}
-                </p>
-              </div>
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold mb-1">
+                {t.retreat.duration}
+              </span>
+              <p className="font-poppins text-xs sm:text-base text-stone-700 leading-relaxed mt-1">
+                {t.retreat.durationDesc}
+              </p>
             </div>
           </div>
 
