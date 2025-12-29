@@ -163,7 +163,7 @@ export default function RoadMapPage() {
                           src={dest.image}
                           alt={dest.name}
                           className="w-full h-full object-cover object-center"
-                          style={{ aspectRatio: '1 / 1', objectFit: 'cover', borderRadius: '1rem', borderRadius: '0' }}
+                          style={{ aspectRatio: '1 / 1', objectFit: 'cover', borderRadius: '0' }}
                         />
                       </div>
                     </div>
