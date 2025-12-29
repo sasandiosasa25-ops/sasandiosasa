@@ -79,14 +79,35 @@ const SafariPage = () => {
               <p className="font-poppins text-lg text-stone-600 italic mb-2">{journey.subtitle}</p>
               <p className="font-poppins text-stone-600 leading-relaxed mb-4">{journey.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {journey.locations.map((location, idx) => (
-                  <Link key={idx} href="/compass/road-map" scroll={false} legacyBehavior>
-                    <a className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full hover:bg-brand-primary/20 transition-colors">
-                      <MapPin className="w-3 h-3 text-black" />
-                      {location}
-                    </a>
-                  </Link>
-                ))}
+                {journey.locations.map((location, idx) => {
+                  // Map location names to anchor IDs on the road map page
+                  const locationToAnchor: Record<string, string> = {
+                    'Dar es Salaam': 'dar-es-salaam',
+                    'Nyerere (Selous)': 'selous',
+                    'Mikumi National Park': 'mikumi',
+                    'Udzungwa': 'udzungwa',
+                    'Ruaha': 'ruaha',
+                    'Arusha National Park': 'arusha-np',
+                    'Maasai Lodge': 'maasai-lodge',
+                    'Tarangire National Park': 'tarangire',
+                    'Serengeti': 'serengeti',
+                    'Ngorongoro Crater': 'ngorongoro',
+                    'Maasai Experience': 'maasai-experience',
+                    'Zanzibar': 'zanzibar',
+                    'Pangani': 'pangani',
+                    'Maziwe Island': 'maziwe',
+                  };
+                  const anchor = locationToAnchor[location] || '';
+                  const href = anchor ? `/compass/road-map#${anchor}` : '/compass/road-map';
+                  return (
+                    <Link key={idx} href={href} scroll={false} legacyBehavior>
+                      <a className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full hover:bg-brand-primary/20 transition-colors">
+                        <MapPin className="w-3 h-3 text-black" />
+                        {location}
+                      </a>
+                    </Link>
+                  );
+                })}
               </div>
               <div className="w-full flex justify-between items-center mb-4">
                 <div className="flex items-center gap-2 text-stone-700">
