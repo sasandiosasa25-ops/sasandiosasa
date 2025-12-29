@@ -172,10 +172,10 @@ export default function RoadMapPage() {
                         </div>
                         <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black mb-2">
                           {dest.name}
-                        {/* Changed text color to white */}
                         </h3>
+                        {/* Changed text color to white */}
                         <style jsx>{`
-                          h3.text-3xl, h3.text-4xl, h3.text-5xl {
+                          .text-3xl, .text-4xl, .text-5xl {
                             color: #fff !important;
                           }
                         `}</style>
