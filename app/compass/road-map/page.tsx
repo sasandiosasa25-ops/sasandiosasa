@@ -135,8 +135,18 @@ export default function RoadMapPage() {
   return (
     <div className="min-h-screen ">
       {/* Hero Section: Title and subtitle moved from Safari Journeys */}
-      <section className="py-20 bg-brand-heading text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 relative text-white">
+        {/* Background image for title only */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <img 
+            src="/map2.jpeg" 
+            alt="Map background" 
+            className="w-full h-full object-cover opacity-60" 
+            style={{objectPosition: 'center'}}
+          />
+          <div className="absolute inset-0 bg-brand-heading/80" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <Mountain className="h-12 w-12 text-brand-primary mx-auto mb-4" />
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4">
