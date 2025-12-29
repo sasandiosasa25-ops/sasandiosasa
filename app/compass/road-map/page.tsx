@@ -141,7 +141,7 @@ export default function RoadMapPage() {
             <Mountain className="h-12 w-12 text-brand-primary mx-auto mb-4" />
             {/* Full-width title box with background image */}
             <div className="w-full rounded-xl shadow-lg overflow-hidden mb-4" style={{background: 'rgba(0,0,0,0.5)'}}>
-              <div className="relative flex flex-col items-center justify-center px-4 sm:px-10 py-6 min-h-[120px]">
+              <div className="relative flex flex-col items-center justify-center px-4 sm:px-10 py-10 min-h-[180px]">
                 <img src="/map2.jpeg" alt="Map background" className="absolute inset-0 w-full h-full object-cover opacity-60 z-0" style={{objectPosition: 'center'}} />
                 <span className="relative z-10 w-full flex flex-col items-center">
                   <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-2">Road Map</h2>
