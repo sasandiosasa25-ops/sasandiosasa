@@ -131,11 +131,7 @@ export default function RoadMapPage() {
       mapUrl: 'https://www.google.com/maps/place/Maziwe+Island/@-5.2833,39.0500,13z'
     },
   };
-
-
-
   const text = content[language];
-
   return (
     <div className="min-h-screen ">
       {/* Hero Section: Title and subtitle moved from Safari Journeys */}
