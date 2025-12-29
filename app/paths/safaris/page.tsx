@@ -14,7 +14,7 @@ const SafariPage = () => {
       title: 'The Flow',
       duration: '7 days – 8 nights',
       subtitle: 'Following the land\'s own rhythm',
-      locations: ['Lake Victoria', 'Nyerere (Selous)', 'Mikumi National Park', 'Udzungwa', 'Ruaha'],
+      locations: ['Nyerere (Selous)', 'Mikumi National Park', 'Udzungwa', 'Ruaha'],
       description: 'This is a journey that invites you to move with the land\'s own rhythm, not rushing, but letting each moment unfold in its own time.',
       fullText: 'From the vast waterways of Nyerere to the golden plains of Mikumi, the forested slopes of Udzungwa, and the wild, open heart of Ruaha, every step is part of a current that carries you deeper. Here, the wild is not something you simply look at – it surrounds you, shapes you, and slows you into its pace.',
       image: '🌊'
@@ -53,24 +53,7 @@ const SafariPage = () => {
 
   return (
     <div className="min-h-screen ">
-      {/* Hero Section */}
-      <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-64 h-64 bg-brand-primary rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-brand-secondary rounded-full blur-3xl"></div>
-        </div>
-        <div className="relative z-10 text-center max-w-3xl px-6">
-          <h1 className="font-comfortaa text-5xl md:text-6xl text-brand-heading mb-6">
-            SasaNdioSasa Safari
-          </h1>
-          <p className="font-poppins text-xl text-stone-700 leading-relaxed mb-4">
-            Conscious travel through Tanzania
-          </p>
-          <p className="font-poppins text-lg text-stone-600 leading-relaxed max-w-2xl mx-auto">
-            Personal, present & eco-aware. A slow-travel invitation that is mindful of your story, your rhythm and your surroundings.
-          </p>
-        </div>
-      </div>
+      {/* Hero Section Removed: Title and subtitle moved to Road Map */}
 
       {/* Introduction */}
       <div className="max-w-4xl mx-auto px-6 py-16">

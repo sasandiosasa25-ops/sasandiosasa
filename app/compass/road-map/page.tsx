@@ -138,16 +138,17 @@ export default function RoadMapPage() {
 
   return (
     <div className="min-h-screen ">
-      {/* Hero Section */}
-    
-      {/* Destinations Details Section */}
+      {/* Hero Section: Title and subtitle moved from Safari Journeys */}
       <section className="py-20 bg-brand-heading text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Mountain className="h-12 w-12 text-brand-primary mx-auto mb-4" />
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4">
-              Destinations
+              Road Map
             </h2>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-medium mb-4">
+              Journey through Tanzania's transformative landscapes
+            </h3>
             <div className="h-1 w-24 bg-brand-primary mx-auto" />
           </div>
 
