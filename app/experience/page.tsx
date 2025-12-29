@@ -159,93 +159,92 @@ const ExperiencePage = () => {
 
       {/* Inner Safari Section */}
       <div id={t.innerSafari.id} className="scroll-mt-20">
-        <div className="max-w-6xl mx-auto px-6 py-20">
-          <div className="mb-12">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-1 bg-brand-primary rounded-full" />
-              <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-bold">
-                <span className="italic text-brand-primary">SasaNdioSasa</span> {t.innerSafari.title}
-              </h2>
-              <div className="mt-4 flex flex-col md:flex-row md:items-center gap-4">
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold">
-                  {t.innerSafari.duration}
-                </span>
-                <p className="font-poppins text-base text-stone-700 leading-relaxed max-w-3xl">
-                  {t.innerSafari.durationDesc}
-                </p>
-              </div>
-            </div>
+        <div className="max-w-2xl mx-auto px-3 py-10 flex flex-col gap-6">
+          {/* Title and Duration */}
+          <div className="flex flex-col gap-2 items-start">
+            <h2 className="font-comfortaa text-3xl sm:text-4xl text-brand-heading font-bold">
+              <span className="italic text-brand-primary">SasaNdioSasa</span> {t.innerSafari.title}
+            </h2>
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold">
+              {t.innerSafari.duration}
+            </span>
+            <p className="font-poppins text-base text-stone-700 leading-relaxed">
+              {t.innerSafari.durationDesc}
+            </p>
+          </div>
 
-            <div className="space-y-6">
-              <p className="font-poppins text-xl text-brand-heading leading-relaxed font-semibold">
-                {t.innerSafari.welcome}
-              </p>
-              
-              <p className="font-poppins text-lg text-stone-700 leading-relaxed">
-                {t.innerSafari.intro}
-              </p>
+          {/* Welcome */}
+          <div className="bg-white rounded-xl p-5 border border-brand-border shadow-sm">
+            <p className="font-poppins text-lg text-brand-heading leading-relaxed font-semibold">
+              {t.innerSafari.welcome}
+            </p>
+          </div>
 
-              <p className="font-poppins text-lg text-stone-700 leading-relaxed italic">
-                {t.innerSafari.guide}
-              </p>
-            </div>
+          {/* Intro */}
+          <div className="bg-white rounded-xl p-5 border border-brand-border shadow-sm">
+            <p className="font-poppins text-base text-stone-700 leading-relaxed">
+              {t.innerSafari.intro}
+            </p>
+          </div>
+
+          {/* Guide (italic) */}
+          <div className="bg-white rounded-xl p-5 border border-brand-border shadow-sm">
+            <p className="font-poppins text-base text-stone-700 leading-relaxed italic mb-0">
+              {t.innerSafari.guide}
+            </p>
           </div>
 
           {/* What to Expect */}
-          <div className="bg-white rounded-2xl p-8 md:p-12 border border-brand-border shadow-sm mb-12">
-            <div className="flex items-center gap-3 mb-6">
-              <Compass className="w-6 h-6 text-brand-primary" />
-              <h3 className="font-comfortaa text-3xl text-brand-heading font-bold">
+          <div className="bg-white rounded-xl p-5 border border-brand-border shadow-sm">
+            <div className="flex items-center gap-2 mb-2">
+              <Compass className="w-5 h-5 text-brand-primary" />
+              <h3 className="font-comfortaa text-2xl text-brand-heading font-bold">
                 {t.innerSafari.expectTitle}
               </h3>
             </div>
-            <p className="font-poppins text-lg text-stone-700 leading-relaxed">
+            <p className="font-poppins text-base text-stone-700 leading-relaxed">
               {t.innerSafari.expectDesc}
             </p>
           </div>
 
           {/* Your Rhythm */}
-          <div className="mb-12">
-            <div className="mb-8">
-              <h3 className="font-comfortaa text-3xl text-brand-heading font-bold mb-4">
-                {t.innerSafari.rhythmTitle}
-              </h3>
-              <p className="font-poppins text-lg text-stone-700 leading-relaxed">
-                {t.innerSafari.rhythmIntro}
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white rounded-xl p-5 border border-brand-border shadow-sm">
+            <h3 className="font-comfortaa text-2xl text-brand-heading font-bold mb-2">
+              {t.innerSafari.rhythmTitle}
+            </h3>
+            <p className="font-poppins text-base text-stone-700 leading-relaxed mb-4">
+              {t.innerSafari.rhythmIntro}
+            </p>
+            <div className="flex flex-col gap-4">
               {t.innerSafari.rhythmItems.map((item, idx) => (
                 <div
                   key={idx}
-                  className={`group bg-white rounded-xl p-8 border border-brand-border hover:border-brand-primary transition-all duration-500 hover:shadow-lg transform hover:-translate-y-1 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                  }`}
-                  style={{ transitionDelay: `${idx * 100}ms` }}
+                  className="flex gap-3 items-start bg-brand-primary/5 rounded-lg p-4"
                 >
-                  <div className="w-16 h-16 bg-brand-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-primary/20 transition-colors duration-300">
+                  <div className="w-12 h-12 bg-brand-primary/10 rounded-full flex items-center justify-center mt-1">
                     <div className="text-brand-primary">
                       {getIcon(item.icon)}
                     </div>
                   </div>
-                  <h4 className="font-comfortaa text-xl text-brand-heading font-bold mb-3">
-                    {item.title}
-                  </h4>
-                  <p className="font-poppins text-stone-700 leading-relaxed">
-                    {item.description}
-                  </p>
+                  <div>
+                    <h4 className="font-comfortaa text-lg text-brand-heading font-bold mb-1">
+                      {item.title}
+                    </h4>
+                    <p className="font-poppins text-stone-700 leading-relaxed text-sm">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Closing Message */}
-          <div className="bg-gradient-to-r from-brand-menu-hover to-white rounded-2xl p-8 md:p-12 border border-brand-border mb-8">
-            <p className="font-poppins text-lg text-stone-700 leading-relaxed mb-6">
+          <div className="bg-gradient-to-r from-brand-menu-hover to-white rounded-xl p-5 border border-brand-border">
+            <p className="font-poppins text-base text-stone-700 leading-relaxed mb-3">
               {t.innerSafari.closing}
             </p>
-            <p className="font-poppins text-sm text-brand-primary font-semibold uppercase tracking-wider">
+            <p className="font-poppins text-xs text-brand-primary font-semibold uppercase tracking-wider">
               {t.innerSafari.moreInfo}
             </p>
           </div>
