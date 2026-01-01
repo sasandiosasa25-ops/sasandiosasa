@@ -272,7 +272,8 @@ const TeamPage: FC = () => {
       {/* Intro Section */}
       <div className="max-w-5xl mx-auto px-6 py-20">
         <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black mb-12 text-center">
-          {t.introTitle}
+          {t.introTitle.split('–')[0].trim()}<br />
+          <span className="block">{t.introTitle.split('–')[1]?.trim()}</span>
         </h2>
 
         <div className="space-y-6 font-poppins text-lg text-stone-700 leading-relaxed">
