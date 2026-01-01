@@ -68,7 +68,7 @@ const PeaksPage = () => {
   return (
     <div className="min-h-screen bg-brand-bg-light">
       {/* Bold Carousel Section */}
-      <div className="relative h-screen overflow-hidden" style={{ backgroundImage: 'url(/hema1.jpg)', backgroundSize: 'cover', backgroundPosition: 'center 76%' }}>
+      <div className="relative h-screen overflow-hidden" style={{ backgroundImage: 'url(/hema1.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center 76%' }}>
         {/* Overlay to reduce brightness, less transparent for more image visibility */}
         <div className="absolute inset-0 bg-black/10 z-0 pointer-events-none" />
         <Swiper
