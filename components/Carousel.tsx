@@ -126,12 +126,12 @@ const ImageCarousel = () => {
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}>
-                <div className="relative w-full h-44 xs:h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 2xl:h-[22rem] mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
+                <div className="relative w-full h-44 xs:h-56 sm:h-64 md:h-72 lg:h-[22rem] xl:h-[26rem] 2xl:h-[28rem] mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
                   {/* Image */}
                   <img
                     src={image.url}
                     alt={image.alt}
-                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover/card:scale-110"
+                    className="w-full h-full object-contain object-center transition-transform duration-700 group-hover/card:scale-110"
                     style={{maxHeight: '100%', minHeight: '100%', maxWidth: '100%'}}
                   />
                   {/* Gradient Overlay for better badge visibility */}
