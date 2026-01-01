@@ -119,22 +119,19 @@ const ImageCarousel = () => {
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}>
-                <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
+                <div className="relative w-full h-48 xs:h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 2xl:h-[28rem] max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
                   {/* Image */}
                   <img
                     src={image.url}
                     alt={image.alt}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
+                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover/card:scale-110"
+                    style={{maxHeight: '100%', minHeight: '100%'}}
                   />
-                  
                   {/* Gradient Overlay for better badge visibility */}
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 pointer-events-none" />
-                
-                
-
                   {/* Bottom Info Bar - Optional enhancement */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-heading/90 to-transparent p-4 sm:p-5 lg:p-6 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500">
-                    <p className="text-white font-bold text-sm sm:text-base lg:text-lg font-poppins">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-heading/90 to-transparent p-3 sm:p-4 lg:p-5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500">
+                    <p className="text-white font-bold text-xs xs:text-sm sm:text-base lg:text-lg font-poppins truncate">
                       {image.alt}
                     </p>
                   </div>
