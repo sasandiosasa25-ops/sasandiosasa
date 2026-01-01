@@ -406,10 +406,10 @@ export default function ImpactPage() {
                     {section.title}
                     </h3>
                   </div>
-                  <p className="text-sm sm:text-base md:text-lg text-brand-heading/80 leading-relaxed font-poppins">
-                    {section.content}
-                  </p>
-                  </div>
+              <p className="text-sm sm:text-base md:text-lg text-brand-heading/80 leading-relaxed font-poppins">
+                {section.content}
+              </p>
+              </div>
                 ))}
               </div>
             </div>
