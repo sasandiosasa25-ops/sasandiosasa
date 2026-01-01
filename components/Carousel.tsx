@@ -31,28 +31,28 @@ const ImageCarousel = () => {
     {
       id: 1,
       url: '/a.jpeg',
-      alt: language === 'en' ? 'Mountain landscape' : 'Berglandschaft',
+      alt: language === 'en' ? 'Partnerships for The Goals' : 'Partnerschaften für die Ziele',
     },
     {
       id: 2,
       url: '/a2.jpeg',
-      alt: language === 'en' ? 'Forest path' : 'Waldpfad',
+      alt: language === 'en' ? 'Good Health and WellBeing' : 'Gute Gesundheit und Wohlbefinden',
     },
     {
       id: 3,
       url: '/a3.jpeg',
-      alt: language === 'en' ? 'Desert sunset' : 'Wüstensonnenuntergang',
+      alt: language === 'en' ? 'Quality Education' : 'Qualitätsbildung',
     },
     {
       id: 4,
       url: '/a.jpeg',
-      alt: language === 'en' ? 'Ocean waves' : 'Meereswellen',
+      alt: language === 'en' ? 'Partnerships for The Goals' : 'Partnerschaften für die Ziele',
     },
    
     {
       id: 6,
       url: '/a6.jpeg',
-      alt: language === 'en' ? 'Nature vista' : 'Naturpanorama',
+      alt: language === 'en' ? 'Life on Land' : 'Leben an Land',
     }
   ];
 
@@ -131,7 +131,12 @@ const ImageCarousel = () => {
                   />
                   {/* Gradient Overlay for better badge visibility */}
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 pointer-events-none" />
-                  {/* Removed alt text overlay for cleaner look */}
+                  {/* Bottom Info Bar - Restored for alt text */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-heading/90 to-transparent p-2 sm:p-3 lg:p-4 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500">
+                    <p className="text-white font-bold text-xs xs:text-sm sm:text-base lg:text-lg font-poppins truncate">
+                      {image.alt}
+                    </p>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
