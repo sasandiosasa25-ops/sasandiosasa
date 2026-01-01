@@ -18,7 +18,7 @@ export default function ImpactPage() {
       intro: "Our Corporate Sustainability Approach (CSA) is how we align our work with the UN Sustainable Development Goals.",
       ndotoSection: {
         title: "Every journey leaves a trace",
-        content: "Through Ndoto Zetu and our partnerships, we ensure that trace is positive—for the land, the people, and the future. We use locally sourced ingredients, avoid single-use plastics, and create fair work opportunities. Our travelers become part of lasting impact through respectful exchange with local communities.",
+        content: "Through Ndoto Zetu and our partnerships, we ensure that trace is positive for the land, the people, and the future. We use locally sourced ingredients, avoid single-use plastics, and create fair work opportunities. Our travelers become part of lasting impact through respectful exchange with local communities.",
         cta: "Learn more about Ndoto Zetu"
       },
       goals: [
