@@ -56,7 +56,7 @@ const ImageCarousel = () => {
     },
     {
       id: 6,
-      url: '/lifeonland.jpeg',
+      url: '/lifeland.jpeg',
       alt: language === 'en' ? 'Life on Land' : 'Leben an Land',
     }
   ];
@@ -126,7 +126,7 @@ const ImageCarousel = () => {
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}>
-                <div className="relative w-full h-44 xs:h-56 sm:h-64 md:h-72 lg:h-80 xl:h-[22rem] 2xl:h-[26rem] max-w-md xs:max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
+                <div className="relative w-full h-44 xs:h-56 sm:h-64 md:h-80 lg:h-[28rem] xl:h-[34rem] 2xl:h-[38rem] max-w-md xs:max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
                   {/* Image */}
                   <img
                     src={image.url}
