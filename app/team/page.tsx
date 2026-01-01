@@ -7,7 +7,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 type Language = 'en' | 'de';
 
 interface TeamMember {
-  section: 'guides' | 'office' | 'coaches';
+  section: 'guides' | 'office' | 'coaches' | 'partners';
+  partners?: TeamMember[];
   name: string;
   role: string;
   image: string;
@@ -42,6 +43,7 @@ interface TeamBySection {
   guides: TeamMember[];
   office: TeamMember[];
   coaches: TeamMember[];
+  partners: TeamMember[];
 }
 
 const BrandName: FC = () => (
@@ -71,6 +73,14 @@ const TeamPage: FC = () => {
       coaches: 'Coaches',
       partner: 'Our Trusted Partner',
       team: [
+                {
+                  section: 'partners',
+                  name: 'Culture Arts Center (CAC)',
+                  role: 'The living pulse of Tanzanian Culture',
+                  image: '/cacmakumira.jpeg',
+                  bio: 'Our collaboration with CAC is a celebration of Tanzanian heritage and creativity. The Culture Arts Center (CAC) at Makumira is a vibrant hub where tradition meets innovation, and where local artists, musicians, and performers share their talents with the world. Through workshops, performances, and community projects, CAC fosters cultural exchange and empowers the next generation to carry forward the rich legacy of Tanzanian arts. Together, we create opportunities for learning, connection, and inspiration—ensuring that the living pulse of Tanzanian culture continues to thrive.',
+                  imagePosition: 'left'
+                },
         {
           section: 'guides',
           name: 'Kilidove / Mawe Lodges',
@@ -183,7 +193,8 @@ const TeamPage: FC = () => {
   const teamBySection: TeamBySection = {
     guides: t.team.filter(m => m.section === 'guides'),
     office: t.team.filter(m => m.section === 'office'),
-    coaches: t.team.filter(m => m.section === 'coaches')
+    coaches: t.team.filter(m => m.section === 'coaches'),
+    partners: t.team.filter(m => m.section === 'partners')
   };
 
   const renderTeamMember = (member: TeamMember, idx: number): ReactNode => {
@@ -240,6 +251,21 @@ const TeamPage: FC = () => {
             </div>
           )}
         </div>
+        {/* Partners Section */}
+        {teamBySection.partners.length > 0 && (
+          <div className="max-w-6xl mx-auto px-6 py-20 border-t-4 border-brand-primary">
+            <div className="mb-16">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-16 h-1 bg-brand-primary rounded-full" />
+                <h2 className="font-comfortaa text-5xl text-brand-heading font-black">
+                  {t.partner || 'Partners'}
+                </h2>
+              </div>
+            </div>
+            {teamBySection.partners.map((member, idx) => renderTeamMember(member, idx))}
+          </div>
+        )}
+  
       </div>
     );
   };

@@ -21,17 +21,6 @@ export default function ImpactPage() {
         content: "Through Ndoto Zetu and our partnerships, we ensure that trace is positive for the land, the people, and the future. We use locally sourced ingredients, avoid single-use plastics, and create fair work opportunities. Our travelers become part of lasting impact through respectful exchange with local communities.",
         cta: "Learn more about Ndoto Zetu"
       },
-      cultureArtsCentre: {
-        title: "Culture Arts Centre",
-        subtitle: "Celebrating Heritage and Creativity",
-        description: "The Culture Arts Centre is dedicated to preserving and promoting local arts, music, and traditions. Through workshops, performances, and exhibitions, we create a vibrant space for cultural exchange and creative expression.",
-        values: [
-          "Empowering local artists and artisans",
-          "Fostering intergenerational knowledge sharing",
-          "Showcasing traditional and contemporary art forms",
-          "Building bridges between communities through culture"
-        ]
-      },
       goals: [
         {
           id: "good-health",
@@ -441,33 +430,6 @@ export default function ImpactPage() {
           );
         })}
 
-        {/* Culture Arts Centre Section (after Partnerships) */}
-        <div id="culture-arts-centre" className="mb-20 md:mb-32 scroll-mt-24 bg-gradient-to-br from-brand-secondary/5 to-white p-6 md:p-12 lg:p-16 border-l-8 border-brand-secondary shadow-xl">
-          <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6 mb-8 md:mb-12 pb-6 md:pb-8 border-b-4 border-brand-border/30">
-            <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-brand-secondary flex items-center justify-center shadow-lg">
-              {/* You can use an icon here if desired */}
-              <span className="text-3xl md:text-4xl lg:text-5xl text-white font-bold font-comfortaa">🎨</span>
-            </div>
-            <div className="flex-1">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-heading mb-3 font-comfortaa">
-                {t.cultureArtsCentre.title}
-              </h2>
-              <p className="text-base sm:text-lg md:text-xl text-brand-secondary font-semibold italic font-poppins">
-                {t.cultureArtsCentre.subtitle}
-              </p>
-            </div>
-          </div>
-          <div className="max-w-3xl mx-auto text-center mb-8">
-            <p className="text-base sm:text-lg md:text-xl text-brand-heading/80 leading-relaxed mb-6 font-poppins">
-              {t.cultureArtsCentre.description}
-            </p>
-            <ul className="list-disc list-inside text-left mx-auto max-w-xl text-brand-heading/90 font-poppins text-base sm:text-lg md:text-xl">
-              {t.cultureArtsCentre.values.map((value, idx) => (
-                <li key={idx} className="mb-2">{value}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
       </div>
 
       {/* Footer CTA */}
