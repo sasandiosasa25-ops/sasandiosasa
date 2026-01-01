@@ -156,17 +156,6 @@ export default function ImpactPage() {
         content: "Durch Ndoto Zetu und unsere Partnerschaften stellen wir sicher, dass diese Spur positiv ist – für das Land, die Menschen und die Zukunft. Wir verwenden lokale Zutaten, vermeiden Einwegplastik und schaffen faire Arbeitsmöglichkeiten. Unsere Reisenden werden durch respektvollen Austausch mit lokalen Gemeinschaften Teil einer nachhaltigen Wirkung.",
         cta: "Mehr über Ndoto Zetu erfahren"
       },
-      cultureArtsCentre: {
-        title: "Kultur- und Kunstzentrum",
-        subtitle: "Erbe und Kreativität feiern",
-        description: "Das Kultur- und Kunstzentrum widmet sich der Bewahrung und Förderung lokaler Kunst, Musik und Traditionen. Durch Workshops, Aufführungen und Ausstellungen schaffen wir einen lebendigen Raum für kulturellen Austausch und kreative Entfaltung.",
-        values: [
-          "Stärkung lokaler Künstler und Kunsthandwerker",
-          "Förderung des generationenübergreifenden Wissensaustauschs",
-          "Präsentation traditioneller und zeitgenössischer Kunstformen",
-          "Brücken zwischen Gemeinschaften durch Kultur bauen"
-        ]
-      },
       goals: [
         {
           id: "good-health",
@@ -183,28 +172,6 @@ export default function ImpactPage() {
               content: "Sie verlassen jede Erfahrung mit erneuter Energie und Klarheit und mit dem Bewusstsein, dass Wohlbefinden etwas ist, das Sie jeden Tag gestalten können. Jede Erfahrung lädt Sie ein, Verantwortung für Ihr Gleichgewicht, Ihre Entscheidungen und Ihre Beziehungen zu übernehmen."
             },
             {
-              title: "Was wir gemeinsam erreichen",
-              content: "Wenn wir Wohlbefinden auf diese Weise praktizieren, beeinflussen wir mehr als uns selbst. Familien, Teams und Gemeinschaften werden von dem Gleichgewicht berührt, das wir nach Hause bringen."
-            }
-          ]
-        },
-        {
-          id: "quality-education",
-          icon: BookOpen,
-          title: "Hochwertige Bildung",
-          tagline: "Lernen durch Reflexion und Austausch, während wir Bildung in lokalen Gemeinschaften unterstützen.",
-          sections: [
-            {
-              title: "Unsere Verantwortung",
-              content: "Wir gestalten Erfahrungen, bei denen das Lernen in jeden Schritt eingewoben ist. In Ndoto Zetu-Familiensitzungen und Life-Skill-Coaching, in Gruppen-Coaching-Kreisen während Retreats oder in Reflexionen während gemeinsamer Safaris. Bildung ist für uns nicht vom Leben getrennt. Sie geschieht durch echte Momente, geteilte Geschichten und praktische Einsichten."
-            },
-            {
-              title: "Was Sie mitnehmen",
-              content: "Sie gehen mit konkreten Fähigkeiten und Perspektiven. Wie man reflektiert, wie man zuhört, wie man in der Art wächst, wie man sich selbst und andere führt. Bildung wird wieder Teil Ihrer täglichen Entscheidungen und unterstützt Ihr Wachstum."
-            },
-            {
-              title: "Was wir gemeinsam erreichen",
-              content: "Wenn Gemeinschaften und Reisende Seite an Seite lernen, wird Bildung zu gemeinsamem Wachstum. Gemeinsam schaffen wir Verständnis über Kulturen hinweg, stärken Familien und inspirieren eine Art des Lernens, die weit über die Reise hinaus weitergeht."
             }
           ]
         },
@@ -410,21 +377,26 @@ export default function ImpactPage() {
 
               {/* Goal Sections */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
-                {goal.sections.map((section: GoalSection, sectionIndex: number) => (
-                  <div
-                  key={sectionIndex}
-                  className="bg-white p-6 md:p-8 border-2 border-brand-border/20 hover:border-brand-primary transition-all duration-300 hover:shadow-lg group"
-                  >
-                  <div className="mb-4 pb-4 border-b-2 border-brand-primary/20 group-hover:border-brand-primary transition-colors duration-300">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-brand-heading font-poppins">
-                    {section.title}
-                    </h3>
-                  </div>
-                  <p className="text-sm sm:text-base md:text-lg text-brand-heading/80 leading-relaxed font-poppins">
-                    {section.content}
-                  </p>
-                  </div>
-                ))}
+                {goal.sections
+                  .filter(
+                    (section): section is GoalSection =>
+                      typeof section.title === 'string' && typeof section.content === 'string'
+                  )
+                  .map((section, sectionIndex) => (
+                    <div
+                      key={sectionIndex}
+                      className="bg-white p-6 md:p-8 border-2 border-brand-border/20 hover:border-brand-primary transition-all duration-300 hover:shadow-lg group"
+                    >
+                      <div className="mb-4 pb-4 border-b-2 border-brand-primary/20 group-hover:border-brand-primary transition-colors duration-300">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-brand-heading font-poppins">
+                          {section.title}
+                        </h3>
+                      </div>
+                      <p className="text-sm sm:text-base md:text-lg text-brand-heading/80 leading-relaxed font-poppins">
+                        {section.content}
+                      </p>
+                    </div>
+                  ))}
               </div>
             </div>
           );
