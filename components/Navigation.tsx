@@ -100,8 +100,6 @@ export default function Navigation(): JSX.Element {
           items: [
             { href: '/impact', label: language === 'de' ? 'Wirkung Übersicht' : 'Impact Overview' },
             { href: '/impact', label: language === 'de' ? 'UN-Nachhaltigkeitsziele' : 'UN Sustainability Goals' },
-            { href: '/ndotozetu', label: language === 'de' ? 'Ndoto Zetu' : 'Ndoto Zetu' },
-            { href: '/cac', label: language === 'de' ? 'CAC' : 'CAC' },
           ]
         }
       ]
@@ -211,7 +209,7 @@ export default function Navigation(): JSX.Element {
                       className="flex items-center px-5 xl:px-6 py-3 text-brand-heading hover:text-brand-primary transition-all duration-300 font-semibold text-base xl:text-lg tracking-wide uppercase relative overflow-hidden group"
                     >
                       <span className="relative z-10">
-                        {item.label !== "Ndoto Zetu" && item.label !== "CAC" && (
+                        {item.label !== "Ndoto Zetu" && (
                           <span className="font-comfortaa italic normal-case text-brand-primary">
                             SasaNdioSasa
                           </span>
@@ -278,7 +276,7 @@ export default function Navigation(): JSX.Element {
                                             >
                                               <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/item:scale-y-100 transition-transform duration-300 origin-top" />
                                               <span className="relative z-10 block transform transition-transform duration-300 group-hover/item:translate-x-2">
-                                                {subItem.noPrefix || subItem.label === "Ndoto Zetu" || subItem.label === "CAC" ? (
+                                                {subItem.noPrefix || subItem.label === "Ndoto Zetu" ? (
                                                   <span className="font-normal">{subItem.label}</span>
                                                 ) : (
                                                   <>
@@ -308,7 +306,7 @@ export default function Navigation(): JSX.Element {
                                 >
                                   <span className="absolute left-0 top-0 h-full w-1 bg-brand-primary transform scale-y-0 group-hover/item:scale-y-100 transition-transform duration-300 origin-top" />
                                   <span className="relative z-10 block transform transition-transform duration-300 group-hover/item:translate-x-2">
-                                    {subItem.noPrefix || subItem.label === "Ndoto Zetu" || subItem.label === "CAC" ? (
+                                    {subItem.noPrefix || subItem.label === "Ndoto Zetu" ? (
                                       <span className="font-normal">{subItem.label}</span>
                                     ) : (
                                       <>
@@ -411,7 +409,7 @@ export default function Navigation(): JSX.Element {
                                             className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-brand-menu-hover transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-normal"
                                             onClick={() => setIsOpen(false)}
                                           >
-                                            {subItem.noPrefix || subItem.label === "Ndoto Zetu" || subItem.label === "CAC" ? (
+                                            {subItem.noPrefix || subItem.label === "Ndoto Zetu" ? (
                                               <span className="font-normal">{subItem.label}</span>
                                             ) : (
                                               <>
@@ -439,7 +437,7 @@ export default function Navigation(): JSX.Element {
                                 className="block px-6 py-3 text-sm sm:text-base text-brand-heading/80 hover:text-brand-primary hover:bg-white transition-all duration-300 border-l-4 border-transparent hover:border-brand-primary font-normal"
                                 onClick={() => setIsOpen(false)}
                               >
-                                {subItem.noPrefix || subItem.label === "Ndoto Zetu" || subItem.label === "CAC" ? (
+                                {subItem.noPrefix || subItem.label === "Ndoto Zetu" ? (
                                   <span className="font-normal">{subItem.label}</span>
                                 ) : (
                                   <>
