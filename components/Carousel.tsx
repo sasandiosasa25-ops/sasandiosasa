@@ -14,12 +14,12 @@ const ImageCarousel = () => {
   const translations = {
     en: {
       title: 'Commitment',
-      subtitle: 'How we contribute to the UN Sustainability Goals',
+      subtitle: 'How we contribute to\nUN Sustainability Goals',
       imagePrefix: 'SDG',
     },
     de: {
       title: 'Engagement',
-      subtitle: 'Wie SasaNdioSasa zu nachhaltigen Entwicklungszielen beiträgt',
+      subtitle: 'Wie SasaNdioSasa beiträgt\nzu nachhaltigen Entwicklungszielen',
       imagePrefix: 'SDG',
     }
   };
@@ -57,23 +57,25 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-brand-bg-light via-white to-brand-menu-hover flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <div className="w-full min-h-screen bg-gradient-to-br from-brand-bg-light via-white to-brand-menu-hover flex items-center justify-center py-6 sm:py-8 md:py-10 lg:py-12 px-2 sm:px-4 lg:px-8">
       <div className="w-full max-w-7xl">
         {/* Header Section - Enhanced and responsive */}
-        <div className="text-center mb-10 sm:mb-14 lg:mb-16 space-y-4 sm:space-y-6 animate-in fade-in duration-1000">
+        <div className="text-center mb-4 sm:mb-6 lg:mb-8 space-y-3 sm:space-y-4 animate-in fade-in duration-1000">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-brand-heading font-comfortaa tracking-tight leading-tight">
             <span className="font-comfortaa italic text-brand-primary">SasaNdioSasa</span> {t.title}
           </h1>
-          <div className="flex justify-center mb-4">
-            <div className="h-1.5 w-24 sm:w-32 lg:w-40 bg-brand-primary rounded-full" />
+          <div className="flex justify-center mb-2">
+            <div className="h-1 w-20 sm:w-28 lg:w-36 bg-brand-primary rounded-full" />
           </div>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-brand-heading/70 font-poppins max-w-4xl mx-auto leading-relaxed px-4">
-            {t.subtitle}
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-brand-heading/70 font-poppins max-w-4xl mx-auto leading-relaxed px-2">
+            {t.subtitle.split('\n').map((line, idx) => (
+              <span key={idx} className={idx === 1 ? 'block font-bold' : ''}>{line}</span>
+            ))}
           </p>
         </div>
-        
+
         {/* Carousel Section - Improved responsiveness */}
-        <div className="relative group">
+        <div className="relative group mb-4 sm:mb-6 lg:mb-8">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={16}
