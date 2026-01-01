@@ -68,7 +68,9 @@ const PeaksPage = () => {
   return (
     <div className="min-h-screen bg-brand-bg-light">
       {/* Bold Carousel Section */}
-      <div className="relative h-screen bg-white/80 overflow-hidden">
+      <div className="relative h-screen overflow-hidden" style={{ backgroundImage: 'url(/hema1.jpg)', backgroundSize: 'cover', backgroundPosition: 'center 76%' }}>
+        {/* Overlay to reduce brightness */}
+        <div className="absolute inset-0 bg-black/30 z-0 pointer-events-none" />
         <Swiper
           effect={'coverflow'}
           grabCursor={true}
@@ -96,17 +98,15 @@ const PeaksPage = () => {
           {t.peaks.map((peak, idx) => (
             <SwiperSlide key={idx} className="!w-[95%] sm:!w-[85%] md:!w-[70%]" style={{ maxWidth: '900px' }}>
               <div className="relative h-full flex items-center justify-center p-2 sm:p-4 md:p-8">
-                <div className="relative w-full h-60 sm:h-80 md:h-5/6 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
+                <div className="relative w-full h-60 sm:h-80 md:h-5/6 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl bg-white/90">
                   {/* Image */}
                   <img 
                     src={peak.image} 
                     alt={peak.title}
                     className="w-full h-full object-cover"
                   />
-                  
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                  
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-4 md:p-12 text-white">
                     <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-4">
