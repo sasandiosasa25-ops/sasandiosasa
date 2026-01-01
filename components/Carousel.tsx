@@ -62,7 +62,7 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-brand-bg-light via-white to-brand-menu-hover flex items-center justify-center py-1 sm:py-4 md:py-8 lg:py-12 px-1 sm:px-4 lg:px-8 mb-1 sm:mb-0">
+    <div className="w-full md:min-h-screen bg-gradient-to-br from-brand-bg-light via-white to-brand-menu-hover flex items-center justify-center py-1 sm:py-4 md:py-8 lg:py-12 px-1 sm:px-4 lg:px-8 mb-1 sm:mb-0">
       <div className="w-full max-w-[98vw] sm:max-w-[95vw] md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-0 sm:px-1 md:px-0">
         <div className="bg-white/95 rounded-2xl shadow-xl border border-brand-primary/10 backdrop-blur-md px-2 xs:px-4 sm:px-6 md:px-10 py-4 sm:py-8 md:py-10 lg:py-12 mx-auto max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
           {/* Header Section - Enhanced and responsive */}
