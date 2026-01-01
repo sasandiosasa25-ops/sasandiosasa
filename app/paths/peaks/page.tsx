@@ -96,7 +96,7 @@ const PeaksPage = () => {
           {t.peaks.map((peak, idx) => (
             <SwiperSlide key={idx} className="!w-[95%] sm:!w-[85%] md:!w-[70%]" style={{ maxWidth: '900px' }}>
               <div className="relative h-full flex items-center justify-center p-2 sm:p-4 md:p-8">
-                <div className="relative w-full h-5/6 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
+                <div className="relative w-full h-60 sm:h-80 md:h-5/6 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                   {/* Image */}
                   <img 
                     src={peak.image} 
@@ -108,7 +108,7 @@ const PeaksPage = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                   
                   {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-12 text-white">
+                  <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-4 md:p-12 text-white">
                     <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-4">
                       <Mountain className="w-4 h-4 sm:w-6 sm:h-6 text-brand-primary" />
                       <span className="font-poppins text-brand-primary font-semibold text-sm sm:text-base md:text-lg tracking-wide">
@@ -160,7 +160,7 @@ const PeaksPage = () => {
           {t.peaks.map((peak, idx) => (
             <div
               key={idx}
-              className={`flex flex-col ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-6 sm:gap-12 items-center transition-all duration-1000 ${
+              className={`flex flex-col ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-3 sm:gap-8 md:gap-12 items-center transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${idx % 2 === 1 ? 'translate-x-8' : '-translate-x-8'}`
               }`}
               style={{ transitionDelay: `${(idx + 1) * 200}ms` }}
@@ -171,7 +171,7 @@ const PeaksPage = () => {
                   <img 
                     src={peak.image} 
                     alt={peak.title}
-                    className="w-full h-64 sm:h-80 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-40 sm:h-64 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
