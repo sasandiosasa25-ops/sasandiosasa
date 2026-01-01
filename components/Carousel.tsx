@@ -14,7 +14,7 @@ const ImageCarousel = () => {
   const translations = {
     en: {
       title: 'Commitment',
-      subtitle: 'How we contribute to\nUN Sustainability Goals',
+      subtitle: 'How we contribute to the\nUN Sustainability Goals',
       imagePrefix: 'SDG',
     },
     de: {
@@ -57,17 +57,17 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-brand-bg-light via-white to-brand-menu-hover flex items-center justify-center py-6 sm:py-8 md:py-10 lg:py-12 px-2 sm:px-4 lg:px-8">
-      <div className="w-full max-w-7xl">
+    <div className="w-full min-h-screen bg-gradient-to-br from-brand-bg-light via-white to-brand-menu-hover flex items-center justify-center py-2 sm:py-4 md:py-8 lg:py-12 px-1 sm:px-4 lg:px-8">
+      <div className="w-full max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
         {/* Header Section - Enhanced and responsive */}
-        <div className="text-center mb-4 sm:mb-6 lg:mb-8 space-y-3 sm:space-y-4 animate-in fade-in duration-1000">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-brand-heading font-comfortaa tracking-tight leading-tight">
+        <div className="text-center mb-2 sm:mb-4 lg:mb-8 space-y-2 sm:space-y-3 animate-in fade-in duration-1000">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-brand-heading font-comfortaa tracking-tight leading-tight">
             <span className="font-comfortaa italic text-brand-primary">SasaNdioSasa</span> {t.title}
           </h1>
-          <div className="flex justify-center mb-2">
-            <div className="h-1 w-20 sm:w-28 lg:w-36 bg-brand-primary rounded-full" />
+          <div className="flex justify-center mb-1">
+            <div className="h-1 w-16 sm:w-20 lg:w-28 bg-brand-primary rounded-full" />
           </div>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-brand-heading/70 font-poppins max-w-4xl mx-auto leading-relaxed px-2">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-brand-heading/70 font-poppins max-w-2xl md:max-w-3xl mx-auto leading-relaxed px-2">
             {t.subtitle.split('\n').map((line, idx) => (
               <span key={idx} className={idx === 1 ? 'block font-bold' : ''}>{line}</span>
             ))}
@@ -75,7 +75,7 @@ const ImageCarousel = () => {
         </div>
 
         {/* Carousel Section - Improved responsiveness */}
-        <div className="relative group mb-4 sm:mb-6 lg:mb-8">
+        <div className="relative group mb-2 sm:mb-4 lg:mb-8 max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={16}
@@ -162,8 +162,8 @@ const ImageCarousel = () => {
         </div>
 
         {/* Optional: Bottom CTA or Info */}
-        <div className="text-center mt-10 sm:mt-12 lg:mt-16">
-          <p className="text-brand-heading/60 text-sm sm:text-base lg:text-lg font-poppins italic max-w-2xl mx-auto px-4">
+        <div className="text-center mt-4 sm:mt-6 lg:mt-10">
+          <p className="text-brand-heading/60 text-xs sm:text-sm md:text-base lg:text-lg font-poppins italic max-w-lg md:max-w-xl mx-auto px-2">
             {language === 'en' 
               ? 'Each journey with us contributes to sustainable development and positive community impact.' 
               : 'Jede Reise mit uns trägt zur nachhaltigen Entwicklung und positiven Gemeinschaftswirkung bei.'}
