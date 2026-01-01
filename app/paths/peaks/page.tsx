@@ -35,7 +35,7 @@ const PeaksPage = () => {
         {
           title: 'The Ascent',
           subtitle: 'Kilimanjaro',
-          image: '/kili2.png',
+          image: '/kili.jpeg',
           description: 'Some challenges are not about proving anything. They are about finding out who you are when the air thins and each step asks for all of you.',
           details: 'The Ascent is not one single path. There are many ways to climb, each with its own pace, its own landscapes, its own rhythm. Together, we choose the route that fits you best.',
           elevation: '5,895m',
