@@ -30,28 +30,33 @@ const ImageCarousel = () => {
   const images = [
     {
       id: 1,
-      url: '/a.jpeg',
+      url: '/partner.jpeg',
       alt: language === 'en' ? 'Partnerships for The Goals' : 'Partnerschaften für die Ziele',
     },
     {
       id: 2,
-      url: '/a2.jpeg',
+      url: '/health.jpeg',
       alt: language === 'en' ? 'Good Health and WellBeing' : 'Gute Gesundheit und Wohlbefinden',
     },
     {
       id: 3,
-      url: '/a3.jpeg',
+      url: '/education.jpeg',
+
       alt: language === 'en' ? 'Quality Education' : 'Qualitätsbildung',
     },
     {
       id: 4,
-      url: '/a.jpeg',
-      alt: language === 'en' ? 'Partnerships for The Goals' : 'Partnerschaften für die Ziele',
+      url: '/decent.jpeg',
+      alt: language === 'en' ? 'Decent work and Economic Growth' : 'Anständige Arbeit und Wirtschaftswachstum',
     },
-   
+    {
+      id: 5,
+      url: '/consumption.jpeg',
+      alt: language === 'en' ? 'Responsible Consumption and Production' : 'Verantwortungsvoller Konsum und Produktion',
+    },
     {
       id: 6,
-      url: '/a6.jpeg',
+      url: '/lifeonland.jpeg',
       alt: language === 'en' ? 'Life on Land' : 'Leben an Land',
     }
   ];
