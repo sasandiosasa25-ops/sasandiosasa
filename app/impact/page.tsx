@@ -309,28 +309,7 @@ export default function ImpactPage() {
         </div>
       </div>
 
-      {/* Ndoto Zetu Summary Section */}
-      <div className="bg-gradient-to-br from-brand-primary/10 to-brand-secondary/10 py-12 md:py-16 px-4 sm:px-6 lg:px-8 border-y-4 border-brand-primary/20">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-heading mb-6 font-comfortaa italic">
-            {t.ndotoSection.title}
-          </p>
-          <p className="text-base sm:text-lg md:text-xl text-brand-heading/80 leading-relaxed mb-8 font-poppins">
-            {t.ndotoSection.content}
-          </p>
-          <a
-            href="https://ndotozetu.or.tz"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 text-brand-primary hover:text-brand-secondary font-bold text-lg transition-colors duration-300 font-poppins group"
-          >
-            <span className="border-b-2 border-brand-primary group-hover:border-brand-secondary">
-              {t.ndotoSection.cta}
-            </span>
-            <ExternalLink className="w-5 h-5" />
-          </a>
-        </div>
-      </div>
+      {/* Ndoto Zetu section will now be rendered inside the Quality Education goal below */}
 
       {/* Goals Grid Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -370,7 +349,7 @@ export default function ImpactPage() {
         {t.goals.map((goal, index) => {
           const Icon = goal.icon;
           const isEven = index % 2 === 0;
-          
+          const showNdoto = goal.id === "quality-education";
           return (
             <div
               key={goal.id}
@@ -391,6 +370,30 @@ export default function ImpactPage() {
                   <p className="text-base sm:text-lg md:text-xl text-brand-primary font-semibold italic font-poppins">
                     {goal.tagline}
                   </p>
+                  {/* Ndoto Zetu Section for Quality Education */}
+                  {showNdoto && t.ndotoSection && (
+                    <div className="bg-gradient-to-br from-brand-primary/10 to-brand-secondary/10 py-8 md:py-10 px-4 sm:px-6 lg:px-8 border-y-4 border-brand-primary/20 my-6 rounded-xl">
+                      <div className="max-w-3xl mx-auto text-center">
+                        <p className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-heading mb-4 font-comfortaa italic">
+                          {t.ndotoSection.title}
+                        </p>
+                        <p className="text-base sm:text-lg md:text-xl text-brand-heading/80 leading-relaxed mb-6 font-poppins">
+                          {t.ndotoSection.content}
+                        </p>
+                        <a
+                          href="https://ndotozetu.or.tz"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center space-x-2 text-brand-primary hover:text-brand-secondary font-bold text-lg transition-colors duration-300 font-poppins group"
+                        >
+                          <span className="border-b-2 border-brand-primary group-hover:border-brand-secondary">
+                            {t.ndotoSection.cta}
+                          </span>
+                          <ExternalLink className="w-5 h-5" />
+                        </a>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -406,10 +409,10 @@ export default function ImpactPage() {
                     {section.title}
                     </h3>
                   </div>
-              <p className="text-sm sm:text-base md:text-lg text-brand-heading/80 leading-relaxed font-poppins">
-                {section.content}
-              </p>
-              </div>
+                  <p className="text-sm sm:text-base md:text-lg text-brand-heading/80 leading-relaxed font-poppins">
+                    {section.content}
+                  </p>
+                  </div>
                 ))}
               </div>
             </div>
