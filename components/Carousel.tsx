@@ -57,7 +57,7 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-brand-bg-light via-white to-brand-menu-hover flex items-center justify-center py-2 sm:py-4 md:py-8 lg:py-12 px-1 sm:px-4 lg:px-8">
+    <div className="w-full min-h-screen bg-gradient-to-br from-brand-bg-light via-white to-brand-menu-hover flex items-center justify-center py-2 sm:py-4 md:py-8 lg:py-12 px-1 sm:px-4 lg:px-8 mb-2 sm:mb-0">
       <div className="w-full max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
         {/* Header Section - Enhanced and responsive */}
         <div className="text-center mb-2 sm:mb-4 lg:mb-8 space-y-2 sm:space-y-3 animate-in fade-in duration-1000">
@@ -121,18 +121,18 @@ const ImageCarousel = () => {
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}>
-                <div className="relative w-full h-48 xs:h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 2xl:h-[28rem] max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
+                <div className="relative w-full h-40 xs:h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 2xl:h-96 max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
                   {/* Image */}
                   <img
                     src={image.url}
                     alt={image.alt}
                     className="w-full h-full object-cover object-center transition-transform duration-700 group-hover/card:scale-110"
-                    style={{maxHeight: '100%', minHeight: '100%'}}
+                    style={{maxHeight: '100%', minHeight: '100%', maxWidth: '100%'}}
                   />
                   {/* Gradient Overlay for better badge visibility */}
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 pointer-events-none" />
                   {/* Bottom Info Bar - Optional enhancement */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-heading/90 to-transparent p-3 sm:p-4 lg:p-5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-heading/90 to-transparent p-2 sm:p-3 lg:p-4 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500">
                     <p className="text-white font-bold text-xs xs:text-sm sm:text-base lg:text-lg font-poppins truncate">
                       {image.alt}
                     </p>
@@ -162,7 +162,7 @@ const ImageCarousel = () => {
         </div>
 
         {/* Optional: Bottom CTA or Info */}
-        <div className="text-center mt-4 sm:mt-6 lg:mt-10">
+        <div className="text-center mt-2 sm:mt-6 lg:mt-10">
           <p className="text-brand-heading/60 text-xs sm:text-sm md:text-base lg:text-lg font-poppins italic max-w-lg md:max-w-xl mx-auto px-2">
             {language === 'en' 
               ? 'Each journey with us contributes to sustainable development and positive community impact.' 
