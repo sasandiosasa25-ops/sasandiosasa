@@ -29,7 +29,7 @@ const PeaksPage = () => {
       tagline: 'Some journeys are measured in miles. Others in meters climbed.',
       intro: {
         heading: 'Three Mountains. Three Stories. One Journey.',
-        text: 'From the long, steady rise of Kilimanjaro to the quiet, forested slopes of Mount Meru, to the rolling green hills of the Usambara Mountains—each peak has its own rhythm, its own reward, and its own way of showing you the horizon.'
+        text: 'From the long, steady rise of Kilimanjaro to the quiet, forested slopes of Mount Meru, to the rolling green hills of the Usambara Mountains - each peak has its own rhythm, its own reward, and its own way of showing you the horizon.'
       },
       peaks: [
         {
