@@ -69,8 +69,8 @@ const PeaksPage = () => {
     <div className="min-h-screen bg-brand-bg-light">
       {/* Bold Carousel Section */}
       <div className="relative h-screen overflow-hidden" style={{ backgroundImage: 'url(/hema1.jpg)', backgroundSize: 'cover', backgroundPosition: 'center 76%' }}>
-        {/* Overlay to reduce brightness */}
-        <div className="absolute inset-0 bg-black/30 z-0 pointer-events-none" />
+        {/* Overlay to reduce brightness, less transparent for more image visibility */}
+        <div className="absolute inset-0 bg-black/10 z-0 pointer-events-none" />
         <Swiper
           effect={'coverflow'}
           grabCursor={true}
@@ -98,7 +98,7 @@ const PeaksPage = () => {
           {t.peaks.map((peak, idx) => (
             <SwiperSlide key={idx} className="!w-[95%] sm:!w-[85%] md:!w-[70%]" style={{ maxWidth: '900px' }}>
               <div className="relative h-full flex items-center justify-center p-2 sm:p-4 md:p-8">
-                <div className="relative w-full h-60 sm:h-80 md:h-5/6 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl bg-white/90">
+                <div className="relative w-full h-44 sm:h-60 md:h-96 lg:h-[420px] rounded-xl md:rounded-2xl overflow-hidden shadow-2xl bg-white/80">
                   {/* Image */}
                   <img 
                     src={peak.image} 
@@ -108,28 +108,24 @@ const PeaksPage = () => {
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                   {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-4 md:p-12 text-white">
-                    <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-4">
-                      <Mountain className="w-4 h-4 sm:w-6 sm:h-6 text-brand-primary" />
-                      <span className="font-poppins text-brand-primary font-semibold text-sm sm:text-base md:text-lg tracking-wide">
+                  <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 md:p-6 text-white">
+                    <div className="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-2">
+                      <Mountain className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-brand-primary" />
+                      <span className="font-poppins text-brand-primary font-semibold text-xs sm:text-sm md:text-base tracking-wide">
                         {peak.subtitle}
                       </span>
                     </div>
-                    
-                    <h2 className="font-comfortaa text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-4">
+                    <h2 className="font-comfortaa text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2">
                       {peak.title}
                     </h2>
-                    
-                    <p className="hidden sm:block font-poppins text-base sm:text-lg md:text-xl text-white/95 mb-4 sm:mb-6 max-w-2xl leading-relaxed">
+                    <p className="hidden sm:block font-poppins text-xs sm:text-sm md:text-base text-white/95 mb-2 sm:mb-3 max-w-xl leading-relaxed">
                       {peak.description}
                     </p>
-                    
-                    <div className="flex items-center gap-4 sm:gap-8 text-xs sm:text-sm font-poppins">
-                      <div className="flex items-center gap-1 sm:gap-2">
-                        <Compass className="w-4 h-4 sm:w-5 sm:h-5 text-brand-primary" />
+                    <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm font-poppins">
+                      <div className="flex items-center gap-1">
+                        <Compass className="w-3 h-3 sm:w-4 sm:h-4 text-brand-primary" />
                         <span className="font-semibold">{peak.elevation}</span>
                       </div>
-                     
                     </div>
                   </div>
                 </div>
