@@ -78,7 +78,7 @@ const TeamPage: FC = () => {
                   name: 'Culture Arts Center (CAC)',
                   role: 'The living pulse of Tanzanian Culture',
                   image: '/cacmakumira.jpeg',
-                  bio: 'Our collaboration with CAC is a celebration of Tanzanian heritage and creativity. The Culture Arts Center (CAC) at Makumira is a vibrant hub where tradition meets innovation, and where local artists, musicians, and performers share their talents with the world. Through workshops, performances, and community projects, CAC fosters cultural exchange and empowers the next generation to carry forward the rich legacy of Tanzanian arts. Together, we create opportunities for learning, connection, and inspiration—ensuring that the living pulse of Tanzanian culture continues to thrive.',
+                  bio: 'Our collaboration with CAC is a celebration of Tanzanian heritage and creativity. The Culture Arts Center (CAC) at Makumira is a vibrant hub where tradition meets innovation, and where local artists, musicians, and performers share their talents with the world. Through workshops, performances, and community projects, CAC fosters cultural exchange and empowers the next generation to carry forward the rich legacy of Tanzanian arts. Together, we create opportunities for learning, connection, and inspiration ensuring that the living pulse of Tanzanian culture continues to thrive.',
                   imagePosition: 'left'
                 },
         {
@@ -200,26 +200,26 @@ const TeamPage: FC = () => {
   const renderTeamMember = (member: TeamMember, idx: number): ReactNode => {
     const isImageLeft = member.imagePosition === 'left';
     return (
-      <div key={idx} className={`flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-12 items-center mb-20`}>
+      <div key={idx} className={`flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 lg:gap-10 items-center mb-12 lg:mb-16`}>
         {/* Image */}
-        <div className={`flex-shrink-0 w-full md:w-5/12 ${isImageLeft ? '' : ''}`}>
+        <div className={`flex-shrink-0 w-full md:w-1/3 lg:w-1/4`}>
           <div className="relative overflow-hidden rounded-2xl shadow-lg">
             <img 
               src={member.image} 
               alt={member.name}
-              className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500 max-h-[320px] lg:max-h-[260px]"
             />
           </div>
         </div>
         {/* Content */}
-        <div className="flex-1 w-full md:w-7/12">
-          <p className="font-poppins text-lg text-brand-primary font-bold mb-2">
+        <div className="flex-1 w-full md:w-2/3 lg:w-3/4">
+          <p className="font-poppins text-base lg:text-lg text-brand-primary font-bold mb-2">
             {member.role}
           </p>
-          <h3 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black mb-6">
+          <h3 className="font-comfortaa text-3xl md:text-4xl lg:text-4xl text-brand-heading font-black mb-4 lg:mb-6">
             {member.name}
           </h3>
-          <p className="font-poppins text-lg text-stone-700 leading-relaxed mb-6">
+          <p className="font-poppins text-base lg:text-lg text-stone-700 leading-relaxed mb-4 lg:mb-6">
             {member.bio}
           </p>
           {/* Contact Links */}
@@ -295,11 +295,11 @@ const TeamPage: FC = () => {
 
       {/* Partners Section */}
       {teamBySection.partners.length > 0 && (
-        <div className="max-w-6xl mx-auto px-6 py-20 border-t-4 border-brand-primary">
-          <div className="mb-16">
-            <div className="flex items-center gap-3 mb-8">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20 border-t-4 border-brand-primary">
+          <div className="mb-10 lg:mb-12">
+            <div className="flex items-center gap-3 mb-6 lg:mb-8">
               <div className="w-16 h-1 bg-brand-primary rounded-full" />
-              <h2 className="font-comfortaa text-5xl text-brand-heading font-black">
+              <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black">
                 {t.partner || 'Partners'}
               </h2>
             </div>
@@ -309,11 +309,11 @@ const TeamPage: FC = () => {
       )}
 
       {/* Guides Section */}
-      <div className="max-w-6xl mx-auto px-6 py-20 border-t-4 border-brand-primary">
-        <div className="mb-16">
-          <div className="flex items-center gap-3 mb-8">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20 border-t-4 border-brand-primary">
+        <div className="mb-10 lg:mb-12">
+          <div className="flex items-center gap-3 mb-6 lg:mb-8">
             <div className="w-16 h-1 bg-brand-primary rounded-full" />
-            <h2 className="font-comfortaa text-5xl text-brand-heading font-black">
+            <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black">
               {t.guides}
             </h2>
           </div>
@@ -322,11 +322,11 @@ const TeamPage: FC = () => {
       </div>
 
       {/* Coaches Section */}
-      <div className="max-w-6xl mx-auto px-6 py-20 border-t-4 border-brand-primary">
-        <div className="mb-16">
-          <div className="flex items-center gap-3 mb-8">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20 border-t-4 border-brand-primary">
+        <div className="mb-10 lg:mb-12">
+          <div className="flex items-center gap-3 mb-6 lg:mb-8">
             <div className="w-16 h-1 bg-brand-primary rounded-full" />
-            <h2 className="font-comfortaa text-5xl text-brand-heading font-black">
+            <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black">
               {t.coaches}
             </h2>
           </div>
@@ -335,11 +335,11 @@ const TeamPage: FC = () => {
       </div>
 
       {/* Office Section */}
-      <div className="max-w-6xl mx-auto px-6 py-20 border-t-4 border-brand-primary">
-        <div className="mb-16">
-          <div className="flex items-center gap-3 mb-8">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20 border-t-4 border-brand-primary">
+        <div className="mb-10 lg:mb-12">
+          <div className="flex items-center gap-3 mb-6 lg:mb-8">
             <div className="w-16 h-1 bg-brand-primary rounded-full" />
-            <h2 className="font-comfortaa text-5xl text-brand-heading font-black">
+            <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black">
               {t.office}
             </h2>
           </div>
