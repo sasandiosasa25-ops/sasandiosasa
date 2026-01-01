@@ -64,23 +64,24 @@ const ImageCarousel = () => {
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-brand-bg-light via-white to-brand-menu-hover flex items-center justify-center py-1 sm:py-4 md:py-8 lg:py-12 px-1 sm:px-4 lg:px-8 mb-1 sm:mb-0">
       <div className="w-full max-w-[98vw] sm:max-w-[95vw] md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-0 sm:px-1 md:px-0">
-        {/* Header Section - Enhanced and responsive */}
-        <div className="text-center mb-1 sm:mb-4 lg:mb-8 space-y-1 sm:space-y-3 animate-in fade-in duration-1000">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-brand-heading font-comfortaa tracking-tight leading-tight">
-            <span className="font-comfortaa italic text-brand-primary">SasaNdioSasa</span> {t.title}
-          </h1>
-          <div className="flex justify-center mb-1">
-            <div className="h-1 w-16 sm:w-20 lg:w-28 bg-brand-primary rounded-full" />
+        <div className="bg-white/95 rounded-2xl shadow-xl border border-brand-primary/10 backdrop-blur-md px-2 xs:px-4 sm:px-6 md:px-10 py-4 sm:py-8 md:py-10 lg:py-12 mx-auto max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
+          {/* Header Section - Enhanced and responsive */}
+          <div className="text-center mb-1 sm:mb-4 lg:mb-8 space-y-1 sm:space-y-3 animate-in fade-in duration-1000">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-brand-heading font-comfortaa tracking-tight leading-tight">
+              <span className="font-comfortaa italic text-brand-primary">SasaNdioSasa</span> {t.title}
+            </h1>
+            <div className="flex justify-center mb-1">
+              <div className="h-1 w-16 sm:w-20 lg:w-28 bg-brand-primary rounded-full" />
+            </div>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-brand-heading/70 font-poppins max-w-2xl md:max-w-3xl mx-auto leading-relaxed px-2">
+              {t.subtitle.split('\n').map((line, idx) => (
+                <span key={idx} className={idx === 1 ? 'block font-bold' : ''}>{line}</span>
+              ))}
+            </p>
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-brand-heading/70 font-poppins max-w-2xl md:max-w-3xl mx-auto leading-relaxed px-2">
-            {t.subtitle.split('\n').map((line, idx) => (
-              <span key={idx} className={idx === 1 ? 'block font-bold' : ''}>{line}</span>
-            ))}
-          </p>
-        </div>
 
-        {/* Carousel Section - Improved responsiveness */}
-        <div className="relative group mb-1 sm:mb-4 lg:mb-8 max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto">
+          {/* Carousel Section - Improved responsiveness */}
+          <div className="relative group mb-1 sm:mb-4 lg:mb-8 max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={16}
