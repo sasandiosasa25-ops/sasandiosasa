@@ -143,8 +143,9 @@ const PeaksPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-24">
         {/* Introduction */}
         <div className={`text-center mb-12 sm:mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h1 className="font-comfortaa text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-heading font-bold mb-4 sm:mb-6 px-4">
-            {t.intro.heading}
+          <h1 className="font-comfortaa text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-heading font-bold mb-4 sm:mb-6 px-4">
+            <span className="hidden sm:inline">Three Mountains. Three Stories. One Journey.</span>
+            <span className="sm:hidden">Three mountains, three stories, one journey.</span>
           </h1>
           <p className="hidden sm:block font-poppins text-lg sm:text-xl text-stone-700 leading-relaxed max-w-4xl mx-auto px-4">
             {t.intro.text}
