@@ -199,7 +199,6 @@ const TeamPage: FC = () => {
 
   const renderTeamMember = (member: TeamMember, idx: number): ReactNode => {
     const isImageLeft = member.imagePosition === 'left';
-
     return (
       <div key={idx} className={`flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-12 items-center mb-20`}>
         {/* Image */}
@@ -212,7 +211,6 @@ const TeamPage: FC = () => {
             />
           </div>
         </div>
-
         {/* Content */}
         <div className="flex-1 w-full md:w-7/12">
           <p className="font-poppins text-lg text-brand-primary font-bold mb-2">
@@ -224,7 +222,6 @@ const TeamPage: FC = () => {
           <p className="font-poppins text-lg text-stone-700 leading-relaxed mb-6">
             {member.bio}
           </p>
-
           {/* Contact Links */}
           {(member.website || member.email) && (
             <div className="flex flex-col gap-3">
@@ -251,21 +248,6 @@ const TeamPage: FC = () => {
             </div>
           )}
         </div>
-        {/* Partners Section */}
-        {teamBySection.partners.length > 0 && (
-          <div className="max-w-6xl mx-auto px-6 py-20 border-t-4 border-brand-primary">
-            <div className="mb-16">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-16 h-1 bg-brand-primary rounded-full" />
-                <h2 className="font-comfortaa text-5xl text-brand-heading font-black">
-                  {t.partner || 'Partners'}
-                </h2>
-              </div>
-            </div>
-            {teamBySection.partners.map((member, idx) => renderTeamMember(member, idx))}
-          </div>
-        )}
-  
       </div>
     );
   };
@@ -311,6 +293,21 @@ const TeamPage: FC = () => {
         </div>
       </div>
 
+      {/* Partners Section */}
+      {teamBySection.partners.length > 0 && (
+        <div className="max-w-6xl mx-auto px-6 py-20 border-t-4 border-brand-primary">
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-16 h-1 bg-brand-primary rounded-full" />
+              <h2 className="font-comfortaa text-5xl text-brand-heading font-black">
+                {t.partner || 'Partners'}
+              </h2>
+            </div>
+          </div>
+          {teamBySection.partners.map((member, idx) => renderTeamMember(member, idx))}
+        </div>
+      )}
+
       {/* Guides Section */}
       <div className="max-w-6xl mx-auto px-6 py-20 border-t-4 border-brand-primary">
         <div className="mb-16">
@@ -321,11 +318,10 @@ const TeamPage: FC = () => {
             </h2>
           </div>
         </div>
-
         {teamBySection.guides.map((member, idx) => renderTeamMember(member, idx))}
       </div>
 
-        {/* Coaches Section */}
+      {/* Coaches Section */}
       <div className="max-w-6xl mx-auto px-6 py-20 border-t-4 border-brand-primary">
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
@@ -335,7 +331,6 @@ const TeamPage: FC = () => {
             </h2>
           </div>
         </div>
-
         {teamBySection.coaches.map((member, idx) => renderTeamMember(member, idx))}
       </div>
 
@@ -349,7 +344,6 @@ const TeamPage: FC = () => {
             </h2>
           </div>
         </div>
-
         {teamBySection.office.map((member, idx) => renderTeamMember(member, idx))}
       </div>
 
