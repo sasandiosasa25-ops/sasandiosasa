@@ -430,10 +430,12 @@ export default function ImpactPage() {
             {t.ctaText}
           </p>
           <a
-            href="/contact"
-            className="inline-block bg-white text-brand-primary hover:bg-brand-menu-hover px-8 md:px-12 py-4 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            href="https://tally.so/r/3xe74G"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-brand-primary hover:bg-brand-menu-hover px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 text-base sm:text-lg md:text-xl font-bold uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center break-words whitespace-pre-line leading-snug max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg mx-auto"
           >
-            {t.ctaButton}
+            {`Explore If This\nJourney Is for You`}
           </a>
         </div>
       </div>
