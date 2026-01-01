@@ -121,7 +121,7 @@ const ImageCarousel = () => {
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}>
-                <div className="relative w-full h-44 xs:h-56 sm:h-64 md:h-72 lg:h-80 xl:h-[22rem] 2xl:h-[26rem] max-w-sm xs:max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
+                <div className="relative w-full h-44 xs:h-56 sm:h-64 md:h-72 lg:h-80 xl:h-[22rem] 2xl:h-[26rem] max-w-md xs:max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
                   {/* Image */}
                   <img
                     src={image.url}
@@ -131,12 +131,7 @@ const ImageCarousel = () => {
                   />
                   {/* Gradient Overlay for better badge visibility */}
                   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 pointer-events-none" />
-                  {/* Bottom Info Bar - Optional enhancement */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-heading/90 to-transparent p-2 sm:p-3 lg:p-4 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500">
-                    <p className="text-white font-bold text-xs xs:text-sm sm:text-base lg:text-lg font-poppins truncate">
-                      {image.alt}
-                    </p>
-                  </div>
+                  {/* Removed alt text overlay for cleaner look */}
                 </div>
               </SwiperSlide>
             ))}
