@@ -121,7 +121,7 @@ const ImageCarousel = () => {
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}>
-                <div className="relative w-full h-40 xs:h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 2xl:h-96 max-w-xs xs:max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
+                <div className="relative w-full h-44 xs:h-56 sm:h-64 md:h-72 lg:h-80 xl:h-[22rem] 2xl:h-[26rem] max-w-sm xs:max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
                   {/* Image */}
                   <img
                     src={image.url}
