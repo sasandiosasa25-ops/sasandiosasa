@@ -260,7 +260,7 @@ const TeamPage: FC = () => {
           <img 
             src="/ele.jpeg" 
             alt="Team together" 
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-[center_70%]"
           />
         </div>
 
