@@ -166,14 +166,6 @@ const ImageCarousel = () => {
           </button>
         </div>
 
-        {/* Optional: Bottom CTA or Info */}
-        <div className="text-center mt-2 sm:mt-6 lg:mt-10">
-          <p className="text-brand-heading/60 text-xs sm:text-sm md:text-base lg:text-lg font-poppins italic max-w-lg md:max-w-xl mx-auto px-2">
-            {language === 'en' 
-              ? 'Each journey with us contributes to sustainable development and positive community impact.' 
-              : 'Jede Reise mit uns trägt zur nachhaltigen Entwicklung und positiven Gemeinschaftswirkung bei.'}
-          </p>
-        </div>
       </div>
 
       <style jsx>{`
