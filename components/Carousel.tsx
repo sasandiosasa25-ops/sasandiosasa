@@ -166,7 +166,7 @@ const ImageCarousel = () => {
             </svg>
           </button>
         </div>
-
+        </div>
       </div>
 
       <style jsx>{`
