@@ -68,7 +68,7 @@ const PeaksPage = () => {
   return (
     <div className="min-h-screen bg-brand-bg-light">
       {/* Bold Carousel Section */}
-      <div className="relative h-screen bg-brand-heading overflow-hidden">
+      <div className="relative h-screen bg-white/80 overflow-hidden">
         <Swiper
           effect={'coverflow'}
           grabCursor={true}
