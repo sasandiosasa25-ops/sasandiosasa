@@ -53,7 +53,7 @@ const PeaksPage = () => {
         {
           title: 'The Green Path',
           subtitle: 'Usambara Mountains',
-          image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=800&fit=crop',
+          image: '/mountainhike.jpeg',
           description: 'A journey through winding trails that lead past terraced hills, small villages, and forests alive with bird calls.',
           details: 'Days are spent walking or cycling at a gentle pace, taking time to meet the people who live along the way. Includes 2 days in the protected Mikomazi area.',
           elevation: '2,300m',
@@ -68,7 +68,7 @@ const PeaksPage = () => {
   return (
     <div className="min-h-screen bg-brand-bg-light">
       {/* Bold Carousel Section */}
-      <div className="relative h-screen overflow-hidden" style={{ backgroundImage: 'url(/hema1.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center 76%' }}>
+      <div className="relative h-screen sm:h-screen overflow-hidden" style={{ backgroundImage: 'url(/hema1.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center 76%' }}>
         {/* Overlay to reduce brightness, less transparent for more image visibility */}
         <div className="absolute inset-0 bg-black/10 z-0 pointer-events-none" />
         <Swiper
@@ -93,7 +93,7 @@ const PeaksPage = () => {
           }}
           navigation={true}
           modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-          className="h-full"
+          className="h-[220px] sm:h-full"
         >
           {t.peaks.map((peak, idx) => (
             <SwiperSlide key={idx} className="!w-[95%] sm:!w-[85%] md:!w-[70%]" style={{ maxWidth: '900px' }}>
@@ -277,6 +277,12 @@ const PeaksPage = () => {
           .swiper-button-next,
           .swiper-button-prev {
             display: none;
+          }
+          /* Reduce background image height for mobile */
+          .relative.h-screen.sm\:h-screen.overflow-hidden {
+            height: 260px !important;
+            min-height: 0 !important;
+            max-height: 320px !important;
           }
         }
       `}</style>
