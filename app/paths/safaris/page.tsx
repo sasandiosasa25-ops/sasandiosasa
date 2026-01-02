@@ -78,9 +78,12 @@ const SafariPage = () => {
               <h3 className="font-comfortaa text-3xl text-black mb-3">{journey.title}</h3>
               <p className="font-poppins text-lg text-stone-600 italic mb-2">{journey.subtitle}</p>
               <div className="font-poppins text-stone-600 leading-relaxed mb-4">
-                {journey.description.split(/\n+/).map((para, i) => (
-                  <p key={i} className="mb-2 last:mb-0">{para.trim()}</p>
-                ))}
+                {journey.description
+                  .replace(/([.!?])\s+/g, '$1\n\n')
+                  .split(/\n{2,}/)
+                  .map((para, i) => (
+                    <p key={i} className="mb-4 last:mb-0">{para.trim()}</p>
+                  ))}
               </div>
               <div className="flex flex-wrap gap-2 mb-4">
                 {journey.locations.map((location, idx) => {
