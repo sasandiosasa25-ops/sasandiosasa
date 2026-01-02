@@ -104,18 +104,19 @@ const TravelCompassPage = () => {
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
-      <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+      <div className="relative h-[32vh] sm:h-[40vh] md:h-[60vh] overflow-hidden">
         <img 
-          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600&q=80" 
+          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=900&q=80" 
           alt="Tanzania Landscape" 
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ maxHeight: '320px' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-heading/90 via-brand-secondary/80 to-brand-heading/90" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className={`text-center text-white transition-all duration-1000 px-4 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <Compass className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 animate-pulse drop-shadow-2xl" />
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 drop-shadow-2xl">{t.title}</h1>
-            <p className="text-base md:text-lg lg:text-xl font-light drop-shadow-lg">{t.subtitle}</p>
+          <div className={`text-center text-white transition-all duration-1000 px-2 sm:px-4 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}> 
+            <Compass className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mx-auto mb-2 sm:mb-4 animate-pulse drop-shadow-2xl" />
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 drop-shadow-2xl">{t.title}</h1>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-light drop-shadow-lg">{t.subtitle}</p>
           </div>
         </div>
       </div>
@@ -129,8 +130,8 @@ const TravelCompassPage = () => {
       </button>
 
       {/* Main Content Layout */}
-      <div className="max-w-7xl mx-auto px-0 py-8 md:py-12">
-        <div className="flex flex-col lg:flex-row gap-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 py-6 sm:py-8 md:py-12">
+        <div className="flex flex-col lg:flex-row gap-4 sm:gap-8">
           {/* Sidebar Navigation */}
           <aside className={`lg:sticky lg:top-24 lg:self-start lg:w-80 transition-all duration-300 ${
             isMobileMenuOpen ? 'fixed inset-0 z-40 bg-white p-6 overflow-y-auto' : 'hidden lg:block'
@@ -196,23 +197,28 @@ const TravelCompassPage = () => {
 
           {/* Main Content Area */}
           <main className="flex-1 min-w-0">
-            <div className="bg-white rounded-3xl shadow-xl border border-brand-border overflow-hidden">
+            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-brand-border overflow-hidden">
               {/* Book Spine */}
               <div className="h-2 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-heading"></div>
-              
               {/* Content Sections */}
               <div className="divide-y divide-brand-border">
                 {t.sections.map((section) => (
                   <div
                     key={section.id}
                     ref={(el) => (contentRefs.current[section.id] = el)}
-                    className="p-6 md:p-10 lg:p-12 scroll-mt-24"
+                    className="p-4 sm:p-6 md:p-10 lg:p-12 scroll-mt-24"
                   >
-                    {renderSectionContent(section.id)}
+                    <div className="space-y-3 sm:space-y-4 md:space-y-6">
+                      {/* Section Title for mobile readability */}
+                      <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-brand-heading mb-2 sm:mb-3">{section.title}</h2>
+                      {/* Section Content */}
+                      <div className="prose prose-sm sm:prose-base max-w-none prose-headings:font-semibold prose-p:mb-3 sm:prose-p:mb-4 prose-p:text-[15px] sm:prose-p:text-base prose-img:rounded-xl prose-img:mx-auto prose-img:max-h-[180px] sm:prose-img:max-h-[240px] prose-img:w-full prose-img:object-cover prose-img:object-center">
+                        {renderSectionContent(section.id)}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
-
               {/* Book Bottom */}
               <div className="h-2 bg-gradient-to-r from-brand-heading via-brand-secondary to-brand-primary"></div>
             </div>
