@@ -55,7 +55,7 @@ export default function RoadMapPage() {
 
   const content = {
     en: {
-      pageTitle: "Road Map",
+      pageTitle: "Road Map1",
       pageSubtitle: "Journey through Tanzania's transformative landscapes",
       safariSection: "Safari Experiences",
       beachSection: "Beach Retreats",
