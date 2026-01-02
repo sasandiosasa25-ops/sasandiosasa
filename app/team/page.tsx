@@ -189,12 +189,18 @@ const TeamPage: FC = () => {
 
   const t = translations[language];
 
+  // Find specific members for custom order
+  const kilidove = t.team.find(m => m.name.toLowerCase().includes('kilidove'));
+  const cac = t.team.find(m => m.name.toLowerCase().includes('culture arts center'));
+  const allan = t.team.find(m => m.name.toLowerCase() === 'allan');
+  const coaches = t.team.filter(m => m.section === 'coaches');
+
   // Group team members by section
   const teamBySection: TeamBySection = {
     guides: t.team.filter(m => m.section === 'guides'),
     office: t.team.filter(m => m.section === 'office'),
     coaches: t.team.filter(m => m.section === 'coaches'),
-    partners: t.team.filter(m => m.section === 'partners')
+    partners: t.team.filter(m => m.section === 'partners'),
   };
 
   const renderTeamMember = (member: TeamMember, idx: number): ReactNode => {
@@ -223,133 +229,93 @@ const TeamPage: FC = () => {
             {member.bio}
           </p>
           {/* Contact Links */}
-          {(member.website || member.email) && (
-            <div className="flex flex-col gap-3">
-              {member.website && (
-                <a
-                  href={`https://${member.website}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-poppins text-sm text-brand-primary hover:text-brand-secondary transition-colors flex items-center gap-2 group/link font-semibold"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  {member.website}
-                </a>
-              )}
-              {member.email && (
-                <a
-                  href={`mailto:${member.email}`}
-                  className="font-poppins text-sm text-brand-primary hover:text-brand-secondary transition-colors flex items-center gap-2 font-semibold"
-                >
-                  <Mail className="w-4 h-4" />
-                  {member.email}
-                </a>
-              )}
-            </div>
-          )}
+          <div className="flex gap-4 mt-2">
+            {member.website && (
+              <a
+                href={member.website.startsWith('http') ? member.website : `https://${member.website}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-brand-primary hover:underline"
+              >
+                <ExternalLink size={18} /> Website
+              </a>
+            )}
+            {member.email && (
+              <a
+                href={`mailto:${member.email}`}
+                className="inline-flex items-center gap-1 text-brand-primary hover:underline"
+              >
+                <Mail size={18} /> Email
+              </a>
+            )}
+          </div>
         </div>
       </div>
     );
   };
 
   return (
-    <div className="min-h-screen ">
-      {/* Hero Section */}
-      <div className="relative h-[55vh] md:h-[65vh] bg-gradient-to-br from-brand-heading via-brand-secondary to-brand-primary flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-60">
-          <img 
-            src="/ele.jpeg" 
-            alt="Team together" 
-            className="w-full h-full object-cover object-[center_62%]"
-          />
-        </div>
-
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/25 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-secondary/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
-
-        <div className={`relative z-10 text-center max-w-4xl px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h1 className="font-comfortaa text-6xl md:text-7xl lg:text-8xl text-white mb-6 font-black tracking-tight">
-            {t.title}
-          </h1>
-          <p className="font-poppins text-xl md:text-2xl text-white/95 font-semibold">
-            {t.subtitle}
-          </p>
-        </div>
-      </div>
-
-      {/* Intro Section */}
-      <div className="max-w-5xl mx-auto px-6 py-20">
-        <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black mb-12 text-center">
-          {t.introTitle.split('–')[0].trim()}<br />
-          <span className="block">{t.introTitle.split('–')[1]?.trim()}</span>
+    <div className={`transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="max-w-5xl mx-auto px-4 py-12">
+        <h1 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black mb-2">
+          {t.title}
+        </h1>
+        <h2 className="font-poppins text-xl md:text-2xl text-brand-primary font-semibold mb-8">
+          {t.subtitle}
         </h2>
-
-        <div className="space-y-6 font-poppins text-lg text-stone-700 leading-relaxed">
-          <p>{t.introText1}</p>
-          <p>{t.introText2}</p>
-          <p>{t.introText3}</p>
-          <p>{t.introText4}</p>
-          <p className="text-brand-primary font-semibold text-xl">{t.introText5}</p>
+        <div className="mb-10">
+          <h3 className="font-comfortaa text-2xl md:text-3xl text-brand-heading font-bold mb-4">
+            {t.introTitle}
+          </h3>
+          <p className="font-poppins text-base md:text-lg text-stone-700 mb-2">{t.introText1}</p>
+          <p className="font-poppins text-base md:text-lg text-stone-700 mb-2">{t.introText2}</p>
+          <p className="font-poppins text-base md:text-lg text-stone-700 mb-2">{t.introText3}</p>
+          <p className="font-poppins text-base md:text-lg text-stone-700 mb-2">{t.introText4}</p>
+          <p className="font-poppins text-base md:text-lg text-stone-700">{t.introText5}</p>
         </div>
-      </div>
-
-      {/* Partners Section */}
-      {teamBySection.partners.length > 0 && (
-        <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20 border-t-4 border-brand-primary">
-          <div className="mb-10 lg:mb-12">
-            <div className="flex items-center gap-3 mb-6 lg:mb-8">
-              <div className="w-16 h-1 bg-brand-primary rounded-full" />
-              <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black">
-                {t.partner || 'Partners'}
-              </h2>
-            </div>
+        {/* Partners Section */}
+        {teamBySection.partners.length > 0 && (
+          <div className="mb-12">
+            <h3 className="font-comfortaa text-2xl md:text-3xl text-brand-heading font-bold mb-6 flex items-center gap-2">
+              <Leaf size={28} className="text-brand-primary" />
+              {t.partner}
+            </h3>
+            {teamBySection.partners.map(renderTeamMember)}
           </div>
-          {teamBySection.partners.map((member, idx) => renderTeamMember(member, idx))}
-        </div>
-      )}
-
-      {/* Guides Section */}
-      <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20 border-t-4 border-brand-primary">
-        <div className="mb-10 lg:mb-12">
-          <div className="flex items-center gap-3 mb-6 lg:mb-8">
-            <div className="w-16 h-1 bg-brand-primary rounded-full" />
-            <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black">
+        )}
+        {/* Guides Section */}
+        {teamBySection.guides.length > 0 && (
+          <div className="mb-12">
+            <h3 className="font-comfortaa text-2xl md:text-3xl text-brand-heading font-bold mb-6 flex items-center gap-2">
+              <MapPin size={28} className="text-brand-primary" />
               {t.guides}
-            </h2>
+            </h3>
+            {teamBySection.guides.map(renderTeamMember)}
           </div>
-        </div>
-        {teamBySection.guides.map((member, idx) => renderTeamMember(member, idx))}
-      </div>
-
-      {/* Coaches Section */}
-      <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20 border-t-4 border-brand-primary">
-        <div className="mb-10 lg:mb-12">
-          <div className="flex items-center gap-3 mb-6 lg:mb-8">
-            <div className="w-16 h-1 bg-brand-primary rounded-full" />
-            <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black">
-              {t.coaches}
-            </h2>
-          </div>
-        </div>
-        {teamBySection.coaches.map((member, idx) => renderTeamMember(member, idx))}
-      </div>
-
-      {/* Office Section */}
-      <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20 border-t-4 border-brand-primary">
-        <div className="mb-10 lg:mb-12">
-          <div className="flex items-center gap-3 mb-6 lg:mb-8">
-            <div className="w-16 h-1 bg-brand-primary rounded-full" />
-            <h2 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black">
+        )}
+        {/* Office Section */}
+        {teamBySection.office.length > 0 && (
+          <div className="mb-12">
+            <h3 className="font-comfortaa text-2xl md:text-3xl text-brand-heading font-bold mb-6 flex items-center gap-2">
+              <Users size={28} className="text-brand-primary" />
               {t.office}
-            </h2>
+            </h3>
+            {teamBySection.office.map(renderTeamMember)}
           </div>
-        </div>
-        {teamBySection.office.map((member, idx) => renderTeamMember(member, idx))}
+        )}
+        {/* Coaches Section */}
+        {teamBySection.coaches.length > 0 && (
+          <div className="mb-12">
+            <h3 className="font-comfortaa text-2xl md:text-3xl text-brand-heading font-bold mb-6 flex items-center gap-2">
+              <Heart size={28} className="text-brand-primary" />
+              {t.coaches}
+            </h3>
+            {teamBySection.coaches.map(renderTeamMember)}
+          </div>
+        )}
       </div>
-
-    
     </div>
   );
-};
+}
 
 export default TeamPage;
