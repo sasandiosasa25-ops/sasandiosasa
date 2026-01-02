@@ -354,17 +354,18 @@ It is a place to be close to the water, close to the land, and close to yourself
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   {/* Image */}
                   <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <div className="relative h-96 lg:h-auto overflow-hidden border-4 border-brand-primary shadow-2xl">
+                    <div className="relative h-72 sm:h-96 lg:h-full overflow-hidden border-4 border-brand-primary shadow-2xl flex lg:items-stretch">
                       <img 
                         src={experience.image} 
                         alt={experience.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover lg:object-cover lg:h-full"
+                        style={{ height: '100%', minHeight: '18rem', maxHeight: '700px' }}
                       />
                     </div>
                   </div>
 
                   {/* Content */}
-                  <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                  <div className={index % 2 === 1 ? 'lg:order-1' : ''} style={{ height: '100%' }}>
                     <div className="inline-block bg-brand-primary text-white px-4 py-2 mb-4 text-xs uppercase tracking-widest font-bold">
                       Safari Experience
                     </div>
