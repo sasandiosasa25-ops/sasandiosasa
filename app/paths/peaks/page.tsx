@@ -36,7 +36,9 @@ const PeaksPage = () => {
           title: 'The Ascent',
           subtitle: 'Kilimanjaro',
           image: '/kili.jpeg',
-          description: 'Some challenges are not about proving anything. They are about finding out who you are when the air thins and each step asks for all of you.',
+          description: `Kilimanjaro is a mountain of many paths. Each route offers its own rhythm, its own landscapes, and its own way of challenging and supporting those who walk it. Just as every person carries different strengths and needs, the mountain holds space for different journeys.
+          Reaching the summit is a powerful goal, yet the experience is shaped just as much by the way there. Walking together, moving with awareness, breathing in step with the mountain these moments hold their own reward. Along the trail there is time to notice beauty, to learn, and to share strength in community.
+          The climb is never done alone. It is supported by guides and porters whose knowledge and care make the journey possible, and by the deep presence of the mountain itself. To walk Kilimanjaro is to test limits, but also to honor nature, respect those around you, and recognize that every step carries meaning.`,
           details: 'The Ascent is not one single path. There are many ways to climb, each with its own pace, its own landscapes, its own rhythm. Together, we choose the route that fits you best.',
           elevation: '5,895m',
           duration: '6-9 days'
@@ -45,8 +47,10 @@ const PeaksPage = () => {
           title: 'The Quiet Peak',
           subtitle: 'Mount Meru',
           image: '/Meru.jpeg',
-          description: 'Tanzania\'s second-highest mountain. A climb that is shorter, less crowded, yet equally rewarding.',
-          details: 'Over four days, the trail takes you from lush forest through alpine meadows to a sharp volcanic ridge. It\'s a journey for those who want challenge and beauty without the rush.',
+description: `Mount Meru is often overshadowed by its higher neighbor, yet it is a challenge on its own. Rising above Arusha, the mountain offers steep trails, changing vegetation zones, and a climb that demands focus and endurance.
+Unlike Kilimanjaro, the ascent of Meru moves quickly into altitude. The body adapts faster, and every step feels more immediate. The trail leads through rich forest alive with wildlife, across ridges with breathtaking views, and up to a summit that opens towards Kilimanjaro itself.
+Meru is not preparation. It is experience. To climb it is to test strength, to move through landscapes of striking beauty, and to stand at a peak that carries its own sense of achievement. It is a mountain that sharpens both body and mind, offering clarity in its challenge.`,
+details: 'Over four days, the trail takes you from lush forest through alpine meadows to a sharp volcanic ridge. It\'s a journey for those who want challenge and beauty without the rush.',
           elevation: '4,566m',
           duration: '4 days'
         },
@@ -54,7 +58,9 @@ const PeaksPage = () => {
           title: 'The Green Path',
           subtitle: 'Usambara Mountains',
           image: '/mountainhike.jpeg',
-          description: 'A journey through winding trails that lead past terraced hills, small villages, and forests alive with bird calls.',
+          description: `The Usambara Mountains are calm and green. Gentle hills stretch into the distance, small villages lie between fields, and forest paths invite slow steps.
+                       Walking here is simple and rewarding. The air feels fresh, the views open wide, and along the way you meet people whose lives are closely tied to the land.
+                       Usambara is not about speed or spectacle. It is about taking time, moving gently, and feeling how landscape and community belong together.`,
           details: 'Days are spent walking or cycling at a gentle pace, taking time to meet the people who live along the way. Includes 2 days in the protected Mikomazi area.',
           elevation: '2,300m',
           duration: '3-5 days'
@@ -118,9 +124,11 @@ const PeaksPage = () => {
                     <h2 className="font-comfortaa text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2">
                       {peak.title}
                     </h2>
-                    <p className="hidden sm:block font-poppins text-xs sm:text-sm md:text-base text-white/95 mb-2 sm:mb-3 max-w-xl leading-relaxed">
-                      {peak.description}
-                    </p>
+                    <div className="hidden sm:block font-poppins text-xs sm:text-sm md:text-base text-white/95 mb-2 sm:mb-3 max-w-xl leading-relaxed">
+                      {peak.description.split('\n').map((para, i) => (
+                        <p key={i} className="mb-2 last:mb-0">{para.trim()}</p>
+                      ))}
+                    </div>
                     <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm font-poppins">
                       <div className="flex items-center gap-1">
                         <Compass className="w-3 h-3 sm:w-4 sm:h-4 text-brand-primary" />
@@ -187,9 +195,11 @@ const PeaksPage = () => {
                   {peak.title}
                 </h2>
 
-                <p className="font-poppins text-base sm:text-lg text-stone-700 leading-relaxed">
-                  {peak.description}
-                </p>
+                <div className="font-poppins text-base sm:text-lg text-stone-700 leading-relaxed">
+                  {peak.description.split('\n').map((para, i) => (
+                    <p key={i} className="mb-2 last:mb-0">{para.trim()}</p>
+                  ))}
+                </div>
 
                 <p className="hidden sm:block font-poppins text-sm sm:text-base text-stone-600 leading-relaxed">
                   {peak.details}
