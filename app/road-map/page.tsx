@@ -321,19 +321,21 @@ It is a place to be close to the water, close to the land, and close to yourself
     <div className="min-h-screen ">
       {/* Hero Section */}
       <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
-        {/* Background image */}
-        <div className="absolute inset-0">
-          <img 
-            src="/map2.jpeg" 
+        {/* Background image using next/image for optimization */}
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src="/map2.jpeg"
             alt="Map background"
-            className="w-full h-full object-cover object-center"
-            style={{ opacity: 0.35 }}
+            fill
+            className="object-cover object-center"
+            style={{ opacity: 0.35, zIndex: 0 }}
+            priority
           />
-          <div className="absolute inset-0 bg-brand-heading">
+          <div className="absolute inset-0 bg-brand-heading z-10">
             <div className="absolute inset-0 bg-gradient-to-b from-brand-heading/90 to-brand-heading/70" />
           </div>
         </div>
-        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight">
             {text.pageTitle}
           </h1>
