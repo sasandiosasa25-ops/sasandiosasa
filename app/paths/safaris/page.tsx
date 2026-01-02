@@ -168,32 +168,7 @@ const SafariPage = () => {
         </div>
       </div>
 
-      {/* Coastal Experiences */}
-      <div className="bg-gradient-to-b from-stone-50 to-blue-50 py-20">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-comfortaa text-4xl text-brand-heading text-center mb-12">
-            Coastal Experiences
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-brand-border">
-              <span className="text-4xl mb-4 block">🌊</span>
-              <h3 className="font-comfortaa text-2xl text-brand-heading mb-3">The Exhale</h3>
-              <p className="font-poppins text-sm text-brand-primary mb-2">Zanzibar</p>
-              <p className="font-poppins text-stone-700 leading-relaxed">
-                Every journey needs its resting ground. A moment to let the weight fall from your shoulders, to feel the salt on your skin, and to move only when you want to. The days are not counted. They simply follow your rhythm.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-brand-border">
-              <span className="text-4xl mb-4 block">🏝️</span>
-              <h3 className="font-comfortaa text-2xl text-brand-heading mb-3">The Return</h3>
-              <p className="font-poppins text-sm text-brand-primary mb-2">Pangani • Maziwe Island</p>
-              <p className="font-poppins text-stone-700 leading-relaxed">
-                Some places don't ask for attention. They wait, until you arrive quietly enough to notice. The Quiet Coast is far from the usual routes. Here, the sea is softer, the shore unhurried.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* ...existing code... */}
     </div>
   );
 };
