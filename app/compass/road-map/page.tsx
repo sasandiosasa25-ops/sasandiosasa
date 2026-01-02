@@ -31,8 +31,6 @@ export default function RoadMapPage() {
 
   const content = {
     en: {
-      pageTitle: "Road Map",
-      pageSubtitle: "Journey throughhh Tanzania's transformative landscapes",
       safariSection: "Safari Experiences",
       beachSection: "Beach Retreats",
       duration: "Duration",
@@ -42,8 +40,6 @@ export default function RoadMapPage() {
       viewOnMap: "View on Map",
     },
     de: {
-      pageTitle: "Routenplan",
-      pageSubtitle: "Reise durch Tansanias transformative Landschaften",
       safariSection: "Safari-Erlebnisse",
       beachSection: "Strand-Rückzugsorte",
       duration: "Dauer",
