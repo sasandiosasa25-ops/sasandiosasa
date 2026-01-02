@@ -104,7 +104,7 @@ details: 'Over four days, the trail takes you from lush forest through alpine me
           {t.peaks.map((peak, idx) => (
             <SwiperSlide key={idx} className="!w-[95%] sm:!w-[85%] md:!w-[70%]" style={{ maxWidth: '900px' }}>
               <div className="relative h-full flex items-center justify-center p-2 sm:p-4 md:p-8">
-                <div className="relative w-full h-28 aspect-square sm:h-60 sm:aspect-auto md:h-96 lg:h-[420px] rounded-xl md:rounded-2xl overflow-hidden shadow-2xl bg-white/80 mx-auto" style={{ marginRight: 'auto', marginLeft: 'auto', maxWidth: '95vw' }}>
+                <div className="relative h-40 w-32 sm:h-60 sm:w-full md:h-96 lg:h-[420px] rounded-xl md:rounded-2xl overflow-hidden shadow-2xl bg-white/80 mx-auto flex items-center justify-center" style={{ marginLeft: '0', marginRight: 'auto', maxWidth: '95vw' }}>
                   {/* Image */}
                   <img 
                     src={peak.image} 
