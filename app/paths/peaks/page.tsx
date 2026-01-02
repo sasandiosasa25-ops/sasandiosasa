@@ -124,11 +124,7 @@ details: 'Over four days, the trail takes you from lush forest through alpine me
                     <h2 className="font-comfortaa text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2">
                       {peak.title}
                     </h2>
-                    <div className="hidden sm:block font-poppins text-xs sm:text-sm md:text-base text-white/95 mb-2 sm:mb-3 max-w-xl leading-relaxed">
-                      {peak.description.split('\n').map((para, i) => (
-                        <p key={i} className="mb-2 last:mb-0">{para.trim()}</p>
-                      ))}
-                    </div>
+                    {/* Description removed from carousel for both desktop and mobile */}
                     <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm font-poppins">
                       <div className="flex items-center gap-1">
                         <Compass className="w-3 h-3 sm:w-4 sm:h-4 text-brand-primary" />
