@@ -77,7 +77,11 @@ const SafariPage = () => {
             <div key={journey.id} className="bg-white p-8 rounded-lg shadow-sm border border-brand-border flex flex-col items-start text-left max-w-3xl mx-auto">
               <h3 className="font-comfortaa text-3xl text-black mb-3">{journey.title}</h3>
               <p className="font-poppins text-lg text-stone-600 italic mb-2">{journey.subtitle}</p>
-              <p className="font-poppins text-stone-600 leading-relaxed mb-4">{journey.description}</p>
+              <div className="font-poppins text-stone-600 leading-relaxed mb-4">
+                {journey.description.split(/\n+/).map((para, i) => (
+                  <p key={i} className="mb-2 last:mb-0">{para.trim()}</p>
+                ))}
+              </div>
               <div className="flex flex-wrap gap-2 mb-4">
                 {journey.locations.map((location, idx) => {
                   // Map location names to anchor IDs on the road map page
@@ -130,7 +134,11 @@ const SafariPage = () => {
               </div>
               {expandedJourney === journey.id && (
                 <div className="mt-6 pt-6 border-t border-brand-border w-full">
-                  <p className="font-poppins text-stone-700 leading-relaxed mb-6">{journey.fullText}</p>
+                  <div className="font-poppins text-stone-700 leading-relaxed mb-6">
+                    {journey.fullText.split(/\n+/).map((para, i) => (
+                      <p key={i} className="mb-2 last:mb-0">{para.trim()}</p>
+                    ))}
+                  </div>
                   <button className="px-6 py-3 bg-brand-primary hover:bg-brand-secondary text-white font-poppins rounded-full transition-colors duration-300">Connect With Us</button>
                 </div>
               )}
