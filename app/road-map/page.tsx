@@ -402,12 +402,12 @@ It is a place to be close to the water, close to the land, and close to yourself
                         </div>
                       </div>
                     </div>
-                    <div className="relative h-72 sm:h-96 lg:h-full overflow-hidden border-4 border-brand-primary shadow-2xl flex lg:items-stretch">
+                    <div className={`relative h-72 sm:h-96 ${experience.id === 'little-tracks' ? 'lg:h-[420px]' : 'lg:h-full'} overflow-hidden border-4 border-brand-primary shadow-2xl flex lg:items-stretch`}>
                       <img 
                         src={experience.image} 
                         alt={experience.name}
                         className="w-full h-full object-cover lg:object-cover lg:h-full"
-                        style={{ height: '100%', minHeight: '18rem', maxHeight: '700px' }}
+                        style={experience.id === 'little-tracks' ? { height: '100%', minHeight: '18rem', maxHeight: '420px' } : { height: '100%', minHeight: '18rem', maxHeight: '700px' }}
                       />
                     </div>
                     {/* Destinations below image for mobile */}
@@ -443,23 +443,7 @@ It is a place to be close to the water, close to the land, and close to yourself
         </div>
       </section>
 
-      {/* Safari Section - Custom Design */}
-      <section className="py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-block bg-brand-primary/10 text-brand-primary font-bold text-xs tracking-widest uppercase px-4 py-2 rounded-full mb-4">Explore the Paths</span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-2 font-comfortaa">SasaNdioSasa Safari</h1>
-            <p className="text-lg sm:text-xl text-brand-primary font-medium mb-4">Conscious travel through Tanzania. Personal, present & eco-aware.</p>
-            <p className="text-base sm:text-lg text-brand-heading/80 mb-4">A slow-travel invitation that is mindful of your story, your rhythm and your surroundings.</p>
-          </div>
-          <div className="prose prose-lg max-w-none text-stone-700 font-poppins space-y-4 mb-8">
-            <p>These journeys are not about ticking off destinations. They’re about how you walk, what you notice, and how your presence touches the places you move through.</p>
-            <p>We travel in partnership with Tanzanian hosts, with care for land, rhythm, and community.</p>
-            <p>Every journey strengthens trusted networks, respects natural and human resources and invites you to be part of a wider movement. <a href="#impact" className="text-brand-primary font-semibold underline hover:text-brand-secondary transition-colors">Discover SasaNdioSasa Impact</a>.</p>
-            <p>Enjoy discovering your path. For detailed itineraries, timing, and tailored travel advice, we invite you to <a href="#contact" className="text-brand-primary font-semibold underline hover:text-brand-secondary transition-colors">connect with us for a personal conversation</a>.</p>
-          </div>
-        </div>
-      </section>
+      {/* Removed duplicated Safari Section - Custom Design below journeys */}
 
       {/* Destinations Details Section */}
       <section className="py-20 ">
