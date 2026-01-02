@@ -251,7 +251,7 @@ details: 'Over four days, the trail takes you from lush forest through alpine me
             height: 12px;
           }
         }
-        .swiper-pagination-bullet-active {
+                                      <span className="font-poppins text-brand-primary font-semibold text-xs sm:text-sm md:text-base tracking-wide">
           opacity: 1;
           background: #c3512f;
         }
