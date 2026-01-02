@@ -70,7 +70,8 @@ const TravelPermit = () => {
       {/* Hero Split Layout */}
       <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
         <div className="flex flex-col lg:flex-row lg:min-h-[600px]">
-          <div className="relative h-[450px] lg:h-auto lg:w-1/2 overflow-hidden">
+          {/* Only show this image block for mobile and up, not twice */}
+          <div className="relative h-48 sm:h-64 md:h-80 lg:h-auto lg:w-1/2 overflow-hidden">
             <img 
               src="/dar8.jpg" 
               alt="Passport and Travel" 
