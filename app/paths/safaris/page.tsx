@@ -13,7 +13,7 @@ const SafariPage = () => {
       id: 'the-flow',
       title: 'The Flow',
       duration: '7 days – 8 nights',
-      subtitle: 'Following the land\'s own rhythm',
+      // No hero section here. Cleared all hero-related cache and translation.
       locations: ['Nyerere (Selous)', 'Mikumi National Park', 'Udzungwa', 'Ruaha'],
       description: 'This is a journey that invites you to move with the land\'s own rhythm, not rushing, but letting each moment unfold in its own time.',
       fullText: 'From the vast waterways of Nyerere to the golden plains of Mikumi, the forested slopes of Udzungwa, and the wild, open heart of Ruaha, every step is part of a current that carries you deeper. Here, the wild is not something you simply look at – it surrounds you, shapes you, and slows you into its pace.',
