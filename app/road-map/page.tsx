@@ -319,20 +319,100 @@ It is a place to be close to the water, close to the land, and close to yourself
     <div className="min-h-screen ">
       {/* Hero Section removed as requested */}
 
-      {/* Safari Section - Custom Design */}
+      {/* Safari Section - Custom Design (Intro) */}
       <section className="py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-8">
-          <div className="text-center mb-12">
+        <div className="w-full px-4 sm:px-8">
+          <div className="text-center mb-12 max-w-5xl mx-auto">
             <span className="inline-block bg-brand-primary/10 text-brand-primary font-bold text-xs tracking-widest uppercase px-4 py-2 rounded-full mb-4">Explore the Paths</span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-2 font-comfortaa">SasaNdioSasa Safari</h1>
             <p className="text-lg sm:text-xl text-brand-primary font-medium mb-4">Conscious travel through Tanzania. Personal, present & eco-aware.</p>
             <p className="text-base sm:text-lg text-brand-heading/80 mb-4">A slow-travel invitation that is mindful of your story, your rhythm and your surroundings.</p>
           </div>
-          <div className="prose prose-lg max-w-none text-stone-700 font-poppins space-y-4 mb-8">
+          <div className="prose prose-lg max-w-5xl mx-auto text-stone-700 font-poppins space-y-4 mb-8">
             <p>These journeys are not about ticking off destinations. They’re about how you walk, what you notice, and how your presence touches the places you move through.</p>
             <p>We travel in partnership with Tanzanian hosts, with care for land, rhythm, and community.</p>
             <p>Every journey strengthens trusted networks, respects natural and human resources and invites you to be part of a wider movement. <a href="#impact" className="text-brand-primary font-semibold underline hover:text-brand-secondary transition-colors">Discover SasaNdioSasa Impact</a>.</p>
             <p>Enjoy discovering your path. For detailed itineraries, timing, and tailored travel advice, we invite you to <a href="#contact" className="text-brand-primary font-semibold underline hover:text-brand-secondary transition-colors">connect with us for a personal conversation</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Safari Experiences Section (Journeys) */}
+      <section className="py-20 ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <Trees className="h-12 w-12 text-brand-primary mx-auto mb-4" />
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-4">
+              {text.safariSection}
+            </h2>
+            <div className="h-1 w-24 bg-brand-primary mx-auto" />
+          </div>
+
+          <div className="space-y-32">
+            {safariExperiences.map((experience, index) => (
+              <div key={experience.id} id={experience.id} className="scroll-mt-32">
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                  {/* Image */}
+                  <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                    <div className="relative h-96 lg:h-auto overflow-hidden border-4 border-brand-primary shadow-2xl">
+                      <img 
+                        src={experience.image} 
+                        alt={experience.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                    <div className="inline-block bg-brand-primary text-white px-4 py-2 mb-4 text-xs uppercase tracking-widest font-bold">
+                      Safari Experience
+                    </div>
+                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-heading mb-4">
+                      {experience.name}
+                    </h3>
+                    <div className="mb-3">
+                      <span
+                        className="text-brand-heading font-medium"
+                        style={{ fontSize: 'var(--experience-duration-size,0.875rem)' }}
+                      >
+                        {experience.duration}
+                      </span>
+                    </div>
+                    <p className="text-xl text-brand-primary font-semibold italic mb-6">
+                      {experience.tagline}
+                    </p>
+                    <p className="text-lg text-brand-heading/70 leading-relaxed mb-8">
+                      {experience.description}
+                    </p>
+
+                    {/* Destinations */}
+                    <div className="border-t-2 border-brand-border pt-6">
+                      <h4 className="text-sm font-bold uppercase tracking-wider text-brand-heading mb-4 flex items-center">
+                        <MapPin className="h-4 w-4 mr-2 text-brand-primary" />
+                        {text.destinations}
+                      </h4>
+                      <div className="space-y-3">
+                        {experience.destinations.map((destId) => (
+                          <a
+                            key={destId}
+                            href={`#${destId}`}
+                            className="block group"
+                          >
+                            <div className="flex items-center space-x-3 p-4 bg-white border-l-4 border-brand-border hover:border-brand-primary transition-all duration-300 hover:shadow-lg">
+                              <div className="h-2 w-2 bg-brand-primary rounded-full" />
+                              <span className="text-brand-heading group-hover:text-brand-primary font-medium transition-colors">
+                                {destinations[destId].name}
+                              </span>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
