@@ -352,18 +352,6 @@ It is a place to be close to the water, close to the land, and close to yourself
             {safariExperiences.map((experience, index) => (
               <div key={experience.id} id={experience.id} className="scroll-mt-32">
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-                  {/* Image */}
-                  <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <div className="relative h-72 sm:h-96 lg:h-full overflow-hidden border-4 border-brand-primary shadow-2xl flex lg:items-stretch">
-                      <img 
-                        src={experience.image} 
-                        alt={experience.name}
-                        className="w-full h-full object-cover lg:object-cover lg:h-full"
-                        style={{ height: '100%', minHeight: '18rem', maxHeight: '700px' }}
-                      />
-                    </div>
-                  </div>
-
                   {/* Content */}
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''} style={{ height: '100%' }}>
                     <div className="inline-block bg-brand-primary text-white px-4 py-2 mb-4 text-xs uppercase tracking-widest font-bold">
@@ -386,28 +374,65 @@ It is a place to be close to the water, close to the land, and close to yourself
                     <p className="text-lg text-brand-heading/70 leading-relaxed mb-8">
                       {experience.description}
                     </p>
+                  </div>
 
-                    {/* Destinations */}
-                    <div className="border-t-2 border-brand-border pt-6">
-                      <h4 className="text-sm font-bold uppercase tracking-wider text-brand-heading mb-4 flex items-center">
-                        <MapPin className="h-4 w-4 mr-2 text-brand-primary" />
-                        {text.destinations}
-                      </h4>
-                      <div className="space-y-3">
-                        {experience.destinations.map((destId) => (
-                          <a
-                            key={destId}
-                            href={`#${destId}`}
-                            className="block group"
-                          >
-                            <div className="flex items-center space-x-3 p-4 bg-white border-l-4 border-brand-border hover:border-brand-primary transition-all duration-300 hover:shadow-lg">
-                              <div className="h-2 w-2 bg-brand-primary rounded-full" />
-                              <span className="text-brand-heading group-hover:text-brand-primary font-medium transition-colors">
-                                {destinations[destId].name}
-                              </span>
-                            </div>
-                          </a>
-                        ))}
+                  {/* Destinations above image on desktop */}
+                  <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''} w-full`}>
+                    <div className="hidden lg:block mb-6">
+                      <div className="border-b-2 border-brand-border pb-4 mb-4">
+                        <h4 className="text-sm font-bold uppercase tracking-wider text-brand-heading mb-2 flex items-center">
+                          <MapPin className="h-4 w-4 mr-2 text-brand-primary" />
+                          {text.destinations}
+                        </h4>
+                        <div className="flex flex-wrap gap-3">
+                          {experience.destinations.map((destId) => (
+                            <a
+                              key={destId}
+                              href={`#${destId}`}
+                              className="group"
+                            >
+                              <div className="flex items-center space-x-2 px-3 py-2 bg-white border-l-4 border-brand-border hover:border-brand-primary transition-all duration-300 hover:shadow-lg rounded">
+                                <div className="h-2 w-2 bg-brand-primary rounded-full" />
+                                <span className="text-brand-heading group-hover:text-brand-primary font-medium transition-colors">
+                                  {destinations[destId].name}
+                                </span>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="relative h-72 sm:h-96 lg:h-full overflow-hidden border-4 border-brand-primary shadow-2xl flex lg:items-stretch">
+                      <img 
+                        src={experience.image} 
+                        alt={experience.name}
+                        className="w-full h-full object-cover lg:object-cover lg:h-full"
+                        style={{ height: '100%', minHeight: '18rem', maxHeight: '700px' }}
+                      />
+                    </div>
+                    {/* Destinations below image for mobile */}
+                    <div className="block lg:hidden mt-4">
+                      <div className="border-t-2 border-brand-border pt-4">
+                        <h4 className="text-sm font-bold uppercase tracking-wider text-brand-heading mb-2 flex items-center">
+                          <MapPin className="h-4 w-4 mr-2 text-brand-primary" />
+                          {text.destinations}
+                        </h4>
+                        <div className="space-y-2">
+                          {experience.destinations.map((destId) => (
+                            <a
+                              key={destId}
+                              href={`#${destId}`}
+                              className="block group"
+                            >
+                              <div className="flex items-center space-x-2 px-3 py-2 bg-white border-l-4 border-brand-border hover:border-brand-primary transition-all duration-300 hover:shadow-lg rounded">
+                                <div className="h-2 w-2 bg-brand-primary rounded-full" />
+                                <span className="text-brand-heading group-hover:text-brand-primary font-medium transition-colors">
+                                  {destinations[destId].name}
+                                </span>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
