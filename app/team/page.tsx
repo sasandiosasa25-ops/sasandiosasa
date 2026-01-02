@@ -194,6 +194,7 @@ const TeamPage: FC = () => {
   const cac = t.team.find(m => m.name.toLowerCase().includes('culture arts center'));
   const allan = t.team.find(m => m.name.toLowerCase() === 'allan');
   const coaches = t.team.filter(m => m.section === 'coaches');
+  const edna = t.team.find(m => m.name.toLowerCase() === 'edna');
 
   // Group team members by section
   const teamBySection: TeamBySection = {
@@ -255,7 +256,7 @@ const TeamPage: FC = () => {
   };
 
   return (
-    <div className={`transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}> 
       <div className="max-w-5xl mx-auto px-4 py-12">
         <h1 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black mb-2">
           {t.title}
@@ -273,44 +274,51 @@ const TeamPage: FC = () => {
           <p className="font-poppins text-base md:text-lg text-stone-700 mb-2">{t.introText4}</p>
           <p className="font-poppins text-base md:text-lg text-stone-700">{t.introText5}</p>
         </div>
-        {/* Partners Section */}
-        {teamBySection.partners.length > 0 && (
+
+        {/* 1. Our Trusted Partner: Kilidove */}
+        {kilidove && (
           <div className="mb-12">
             <h3 className="font-comfortaa text-2xl md:text-3xl text-brand-heading font-bold mb-6 flex items-center gap-2">
               <Leaf size={28} className="text-brand-primary" />
               {t.partner}
             </h3>
-            {teamBySection.partners.map(renderTeamMember)}
+            {renderTeamMember({ ...kilidove, role: 'Guide' }, 0)}
           </div>
         )}
-        {/* Guides Section */}
-        {teamBySection.guides.length > 0 && (
+
+        {/* 2. Cultural Arts Center (no section title) */}
+        {cac && (
           <div className="mb-12">
-            <h3 className="font-comfortaa text-2xl md:text-3xl text-brand-heading font-bold mb-6 flex items-center gap-2">
-              <MapPin size={28} className="text-brand-primary" />
-              {t.guides}
-            </h3>
-            {teamBySection.guides.map(renderTeamMember)}
+            {renderTeamMember(cac, 0)}
           </div>
         )}
-        {/* Office Section */}
-        {teamBySection.office.length > 0 && (
+
+        {/* 3. Allan (no section title, role 'Your SasaNdioSasa Guide') */}
+        {allan && (
           <div className="mb-12">
-            <h3 className="font-comfortaa text-2xl md:text-3xl text-brand-heading font-bold mb-6 flex items-center gap-2">
-              <Users size={28} className="text-brand-primary" />
-              {t.office}
-            </h3>
-            {teamBySection.office.map(renderTeamMember)}
+            {renderTeamMember({ ...allan, role: 'Your SasaNdioSasa Guide' }, 0)}
           </div>
         )}
-        {/* Coaches Section */}
-        {teamBySection.coaches.length > 0 && (
+
+        {/* 4. Coaches Section */}
+        {coaches.length > 0 && (
           <div className="mb-12">
             <h3 className="font-comfortaa text-2xl md:text-3xl text-brand-heading font-bold mb-6 flex items-center gap-2">
               <Heart size={28} className="text-brand-primary" />
               {t.coaches}
             </h3>
-            {teamBySection.coaches.map(renderTeamMember)}
+            {coaches.map(renderTeamMember)}
+          </div>
+        )}
+
+        {/* 5. Edna (office, last, with section title) */}
+        {edna && (
+          <div className="mb-12">
+            <h3 className="font-comfortaa text-2xl md:text-3xl text-brand-heading font-bold mb-6 flex items-center gap-2">
+              <Users size={28} className="text-brand-primary" />
+              {t.office}
+            </h3>
+            {renderTeamMember(edna, 0)}
           </div>
         )}
       </div>
