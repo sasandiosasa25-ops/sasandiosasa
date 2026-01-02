@@ -323,7 +323,7 @@ It is a place to be close to the water, close to the land, and close to yourself
       <section className="py-20 bg-white">
         <div className="w-full px-4 sm:px-8">
           <div className="text-center mb-12 max-w-5xl mx-auto">
-            <span className="inline-block bg-brand-primary/10 text-brand-primary font-bold text-xs tracking-widest uppercase px-4 py-2 rounded-full mb-4">Explore the Paths</span>
+            {/* Removed duplicate 'Explore the Paths' label */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-2 font-comfortaa">SasaNdioSasa Safari</h1>
             <p className="text-lg sm:text-xl text-brand-primary font-medium mb-4">Conscious travel through Tanzania. Personal, present & eco-aware.</p>
             <p className="text-base sm:text-lg text-brand-heading/80 mb-4">A slow-travel invitation that is mindful of your story, your rhythm and your surroundings.</p>
@@ -331,8 +331,8 @@ It is a place to be close to the water, close to the land, and close to yourself
           <div className="prose prose-lg max-w-5xl mx-auto text-stone-700 font-poppins space-y-4 mb-8">
             <p>These journeys are not about ticking off destinations. They’re about how you walk, what you notice, and how your presence touches the places you move through.</p>
             <p>We travel in partnership with Tanzanian hosts, with care for land, rhythm, and community.</p>
-            <p>Every journey strengthens trusted networks, respects natural and human resources and invites you to be part of a wider movement. <a href="#impact" className="text-brand-primary font-semibold underline hover:text-brand-secondary transition-colors">Discover SasaNdioSasa Impact</a>.</p>
-            <p>Enjoy discovering your path. For detailed itineraries, timing, and tailored travel advice, we invite you to <a href="#contact" className="text-brand-primary font-semibold underline hover:text-brand-secondary transition-colors">connect with us for a personal conversation</a>.</p>
+            <p>Every journey strengthens trusted networks, respects natural and human resources and invites you to be part of a wider movement. <a href="/impact" className="text-brand-primary font-semibold underline hover:text-brand-secondary transition-colors">Discover SasaNdioSasa Impact</a>.</p>
+            <p>Enjoy discovering your path. For detailed itineraries, timing, and tailored travel advice, we invite you to <a href="https://tally.so/r/3xe74G" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-semibold underline hover:text-brand-secondary transition-colors">connect with us for a personal conversation</a>.</p>
           </div>
         </div>
       </section>
@@ -343,7 +343,7 @@ It is a place to be close to the water, close to the land, and close to yourself
           <div className="text-center mb-16">
             <Trees className="h-12 w-12 text-brand-primary mx-auto mb-4" />
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-4">
-              {text.safariSection}
+              Explore The Paths
             </h2>
             <div className="h-1 w-24 bg-brand-primary mx-auto" />
           </div>
