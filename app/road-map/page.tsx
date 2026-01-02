@@ -332,7 +332,7 @@ It is a place to be close to the water, close to the land, and close to yourself
             <p>These journeys are not about ticking off destinations. They’re about how you walk, what you notice, and how your presence touches the places you move through.</p>
             <p>We travel in partnership with Tanzanian hosts, with care for land, rhythm, and community.</p>
             <p>Every journey strengthens trusted networks, respects natural and human resources and invites you to be part of a wider movement. <a href="/impact" className="text-brand-primary font-semibold underline hover:text-brand-secondary transition-colors">Discover SasaNdioSasa Impact</a>.</p>
-            <p>Enjoy discovering your path. For detailed itineraries, timing, and tailored travel advice, we invite you to <a href="https://tally.so/r/3xe74G" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-semibold underline hover:text-brand-secondary transition-colors">connect with us for a personal conversation</a>.</p>
+            <p>Enjoy discovering your path. For detailed itineraries, timing, and tailored travel advice, we invite you to <a href="https://tally.so/r/3xe74G" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-semibold underline hover:text-brand-secondary transition-colors">connect</a> with us for a personal conversation.</p>
           </div>
         </div>
       </section>
