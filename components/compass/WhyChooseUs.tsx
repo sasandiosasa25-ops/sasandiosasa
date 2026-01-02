@@ -46,12 +46,12 @@ const WhyChooseUs = () => {
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 items-center">
-        <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+        <div className="space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed">
           {t.intro.map((paragraph, index) => (
-            <p key={index} className="italic text-gray-600">{paragraph}</p>
+            <p key={index} className="italic text-gray-600 text-sm sm:text-base">{paragraph}</p>
           ))}
         </div>
-        <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+        <div className="relative h-48 sm:h-96 rounded-2xl overflow-hidden shadow-2xl">
           <img 
             src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&q=80" 
             alt="African Landscape" 

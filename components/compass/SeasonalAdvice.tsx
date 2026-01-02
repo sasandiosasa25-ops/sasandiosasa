@@ -74,7 +74,7 @@ const SeasonalAdvice = () => {
       <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-8 group">
         <div className="flex flex-col lg:flex-row lg:min-h-[650px]">
           {/* Image section with parallax effect */}
-          <div className="relative h-[450px] lg:h-auto lg:w-1/2 overflow-hidden">
+          <div className="relative h-40 sm:h-[450px] lg:h-auto lg:w-1/2 overflow-hidden">
             <img 
               src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&q=80" 
               alt="Tanzania Wildlife" 

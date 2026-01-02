@@ -1,4 +1,4 @@
-import { Backpack, Check, Compass } from 'lucide-react';
+import { Backpack, Check, Compass, Shirt, Sun, Umbrella, Glasses, Shoe, Book, Headphones, Bag } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const PackingLists = () => {
@@ -158,12 +158,21 @@ const PackingLists = () => {
             <h4 className="text-3xl lg:text-4xl font-bold text-brand-heading">{t.safari.essentialsTitle}</h4>
           </div>
           <div className="grid gap-4">
-            {t.safari.essentials.map((item, index) => (
-              <div key={index} className="group flex items-start gap-4 bg-brand-bg-light p-5 lg:p-6 rounded-2xl hover:shadow-md transition-all duration-300 border border-brand-border">
-                <Check className="w-6 h-6 text-brand-primary mt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
-                <span className="text-gray-700 leading-relaxed text-base lg:text-lg">{item}</span>
-              </div>
-            ))}
+            {t.safari.essentials.map((item, index) => {
+              // Assign a Lucide icon based on the item index (order matches EN/DE arrays)
+              let IconComponent = Check;
+              if (index === 0) IconComponent = Shirt; // Clothing
+              if (index === 1) IconComponent = Umbrella; // Warm layer/scarf
+              if (index === 2) IconComponent = Shoe; // Shoes/sandals
+              if (index === 3) IconComponent = Sun; // Hat/cap/sunglasses
+              if (index === 4) IconComponent = Bag; // Daypack
+              return (
+                <div key={index} className="group flex items-start gap-3 bg-brand-bg-light p-3 sm:p-4 lg:p-6 rounded-2xl hover:shadow-md transition-all duration-300 border border-brand-border">
+                  <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-brand-primary mt-0.5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
+                  <span className="text-gray-700 leading-relaxed text-sm sm:text-base lg:text-lg">{item}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
 
