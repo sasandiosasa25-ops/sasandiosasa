@@ -32,7 +32,7 @@ export default function RoadMapPage() {
   const content = {
     en: {
       pageTitle: "Road Map",
-      pageSubtitle: "Journey through Tanzania's transformative landscapes",
+      pageSubtitle: "Journey throughhh Tanzania's transformative landscapes",
       safariSection: "Safari Experiences",
       beachSection: "Beach Retreats",
       duration: "Duration",
