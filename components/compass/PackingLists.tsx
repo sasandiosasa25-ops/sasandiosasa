@@ -1,7 +1,31 @@
 import { Backpack, Check, Compass, Shirt, Sun, Umbrella, Glasses, Shoe, Book, Headphones, Bag } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const PackingLists = () => {
+import { Backpack, Check, Compass } from 'lucide-react';
+
+// Dynamically import Lucide icons, fallback to Check if not found
+const iconMap = {
+  0: (props: any) => {
+    const Icon = require('lucide-react').Shirt || Check;
+    return <Icon {...props} />;
+  },
+  1: (props: any) => {
+    const Icon = require('lucide-react').Umbrella || Check;
+    return <Icon {...props} />;
+  },
+  2: (props: any) => {
+    const Icon = require('lucide-react').Shoe || Check;
+    return <Icon {...props} />;
+  },
+  3: (props: any) => {
+    const Icon = require('lucide-react').Sun || Check;
+    return <Icon {...props} />;
+  },
+  4: (props: any) => {
+    const Icon = require('lucide-react').Bag || Check;
+    return <Icon {...props} />;
+  }
+};
   const { language } = useLanguage();
 
   const translations = {
@@ -160,12 +184,7 @@ const PackingLists = () => {
           <div className="grid gap-4">
             {t.safari.essentials.map((item, index) => {
               // Assign a Lucide icon based on the item index (order matches EN/DE arrays)
-              let IconComponent = Check;
-              if (index === 0) IconComponent = Shirt; // Clothing
-              if (index === 1) IconComponent = Umbrella; // Warm layer/scarf
-              if (index === 2) IconComponent = Shoe; // Shoes/sandals
-              if (index === 3) IconComponent = Sun; // Hat/cap/sunglasses
-              if (index === 4) IconComponent = Bag; // Daypack
+              const IconComponent = iconMap[index] || ((props: any) => <Check {...props} />);
               return (
                 <div key={index} className="group flex items-start gap-3 bg-brand-bg-light p-3 sm:p-4 lg:p-6 rounded-2xl hover:shadow-md transition-all duration-300 border border-brand-border">
                   <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-brand-primary mt-0.5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
