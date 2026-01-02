@@ -1,7 +1,5 @@
-import { Backpack, Check, Compass, Shirt, Sun, Umbrella, Glasses, Shoe, Book, Headphones, Bag } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
-
 import { Backpack, Check, Compass } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 // Dynamically import Lucide icons, fallback to Check if not found
 const iconMap = {
@@ -26,8 +24,8 @@ const iconMap = {
     return <Icon {...props} />;
   }
 };
+const PackingLists = () => {
   const { language } = useLanguage();
-
   const translations = {
     en: {
       title: 'Packing Lists',
@@ -153,7 +151,7 @@ const iconMap = {
         {/* Safari Hero Image with Split Layout */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
           <div className="flex flex-col lg:flex-row lg:min-h-[600px]">
-            <div className="relative h-[450px] lg:h-auto lg:w-1/2 overflow-hidden">
+            <div className="relative h-48 sm:h-64 md:h-80 lg:h-auto lg:w-1/2 overflow-hidden">
               <img 
                 src="/bag.png" 
                 alt="Safari Vehicle" 
@@ -182,16 +180,11 @@ const iconMap = {
             <h4 className="text-3xl lg:text-4xl font-bold text-brand-heading">{t.safari.essentialsTitle}</h4>
           </div>
           <div className="grid gap-4">
-            {t.safari.essentials.map((item, index) => {
-              // Assign a Lucide icon based on the item index (order matches EN/DE arrays)
-              const IconComponent = iconMap[index] || ((props: any) => <Check {...props} />);
-              return (
-                <div key={index} className="group flex items-start gap-3 bg-brand-bg-light p-3 sm:p-4 lg:p-6 rounded-2xl hover:shadow-md transition-all duration-300 border border-brand-border">
-                  <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-brand-primary mt-0.5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
-                  <span className="text-gray-700 leading-relaxed text-sm sm:text-base lg:text-lg">{item}</span>
-                </div>
-              );
-            })}
+            {t.safari.essentials.map((item, index) => (
+              <div key={index} className="group flex items-start gap-3 bg-brand-bg-light p-3 sm:p-4 lg:p-6 rounded-2xl hover:shadow-md transition-all duration-300 border border-brand-border">
+                <span className="text-gray-700 leading-relaxed text-sm sm:text-base lg:text-lg">{item}</span>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -234,7 +227,7 @@ const iconMap = {
         {/* Peaks Hero Image with Split Layout */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
           <div className="flex flex-col lg:flex-row lg:min-h-[700px]">
-            <div className="relative h-[500px] lg:h-auto lg:w-3/5 overflow-hidden">
+            <div className="relative h-48 sm:h-64 md:h-80 lg:h-auto lg:w-3/5 overflow-hidden">
               <img 
                 src="/kili.jpeg" 
                 alt="Mount Kilimanjaro" 
