@@ -320,15 +320,15 @@ It is a place to be close to the water, close to the land, and close to yourself
       {/* Hero Section removed as requested */}
 
       {/* Safari Section - Custom Design (Intro) */}
-      <section className="py-20 bg-white">
-        <div className="w-full px-4 sm:px-8">
-          <div className="text-center mb-12 max-w-5xl mx-auto">
+      <section className="py-10 md:py-12 bg-white">
+        <div className="w-full px-2 sm:px-4 md:px-6">
+          <div className="text-center mb-8 md:mb-10 max-w-4xl mx-auto">
             {/* Removed duplicate 'Explore the Paths' label */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-2 font-comfortaa">SasaNdioSasa Safari</h1>
             <p className="text-lg sm:text-xl text-brand-primary font-medium mb-4">Conscious travel through Tanzania. Personal, present & eco-aware.</p>
             <p className="text-base sm:text-lg text-brand-heading/80 mb-4">A slow-travel invitation that is mindful of your story, your rhythm and your surroundings.</p>
           </div>
-          <div className="prose prose-lg max-w-5xl mx-auto text-stone-700 font-poppins space-y-4 mb-8">
+          <div className="prose prose-lg max-w-4xl mx-auto text-stone-700 font-poppins space-y-4 mb-6 md:mb-8">
             <p>These journeys are not about ticking off destinations. They’re about how you walk, what you notice, and how your presence touches the places you move through.</p>
             <p>We travel in partnership with Tanzanian hosts, with care for land, rhythm, and community.</p>
             <p>Every journey strengthens trusted networks, respects natural and human resources and invites you to be part of a wider movement. <a href="/impact" className="text-brand-primary font-semibold underline hover:text-brand-secondary transition-colors">Discover SasaNdioSasa Impact</a>.</p>
@@ -338,9 +338,9 @@ It is a place to be close to the water, close to the land, and close to yourself
       </section>
 
       {/* Safari Experiences Section (Journeys) */}
-      <section className="py-20 ">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <section className="py-10 md:py-14 ">
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 md:px-6">
+          <div className="text-center mb-10 md:mb-14">
             <Trees className="h-12 w-12 text-brand-primary mx-auto mb-4" />
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-heading mb-4">
               Explore The Paths
@@ -348,7 +348,7 @@ It is a place to be close to the water, close to the land, and close to yourself
             <div className="h-1 w-24 bg-brand-primary mx-auto" />
           </div>
 
-          <div className="space-y-32">
+          <div className="space-y-20 md:space-y-28">
             {safariExperiences.map((experience, index) => (
               <div key={experience.id} id={experience.id} className="scroll-mt-32">
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
