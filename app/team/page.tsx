@@ -214,7 +214,7 @@ const TeamPage: FC = () => {
             <img 
               src={member.image} 
               alt={member.name}
-              className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500 max-h-[320px] lg:max-h-[260px]"
+              className={`w-full h-auto object-cover hover:scale-105 transition-transform duration-500 max-h-[320px] lg:max-h-[260px] ${member.name.toLowerCase() === 'edna' ? 'object-top' : ''}`}
             />
           </div>
         </div>
