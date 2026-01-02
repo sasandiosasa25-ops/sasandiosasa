@@ -54,22 +54,6 @@ export default function DestinationsGrid() {
       highlight: language === 'en' ? 'Wildlife' : 'Tierwelt',
     },
     {
-      name: 'Lake Natron',
-      image: '/natron.jpg',
-      description: language === 'en'
-        ? 'Dramatic waters watched over by the Mountain of God'
-        : 'Dramatische Gewässer, bewacht vom Berg Gottes',
-      highlight: language === 'en' ? 'Volcanic' : 'Vulkanisch',
-    },
-    {
-      name: 'Arusha',
-      image: '/arusha.jpg',
-      description: language === 'en'
-        ? 'City in motion where tradition meets modern life'
-        : 'Stadt in Bewegung, wo Tradition auf modernes Leben trifft',
-      highlight: language === 'en' ? 'Gateway' : 'Tor',
-    },
-    {
       name: 'Selous',
       image: '/selous.jpg',
       description: language === 'en'
