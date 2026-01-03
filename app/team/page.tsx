@@ -261,6 +261,15 @@ const TeamPage: FC = () => {
   return (
     <div className={`transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}> 
       <div className="max-w-5xl mx-auto px-4 py-12">
+        {/* Elephant image restored and styled for all devices */}
+        <div className="flex justify-center items-center mb-6">
+          <img
+            src="/elephant.jpeg"
+            alt="Elephants in Tanzania"
+            className="w-32 h-20 sm:w-40 sm:h-24 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-xl shadow-md border border-brand-primary/20"
+            style={{objectPosition: 'center'}}
+          />
+        </div>
         <h1 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black mb-2">
           {t.title}
         </h1>
