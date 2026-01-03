@@ -265,10 +265,10 @@ const TeamPage: FC = () => {
         {/* Zebra team hero section, styled like experiences, full-width but small height, all zebras visible */}
         <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mb-10" style={{position:'relative', left:'50%', right:'50%', marginLeft:'-50vw', marginRight:'-50vw'}}>
           <img
-            src="/zebrateam.jpeg"
+            src="/zebraa.jpeg"
             alt="Zebra Team"
             className="w-screen h-28 sm:h-36 md:h-40 lg:h-48 xl:h-56 object-cover"
-            style={{objectPosition: 'center bottom', opacity: 0.9}}
+            style={{objectPosition: 'center bottom', opacity: 0.8}}
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
             <h1 className="font-comfortaa text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white drop-shadow-lg mb-1 sm:mb-2">
