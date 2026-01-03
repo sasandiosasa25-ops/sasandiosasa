@@ -206,15 +206,18 @@ const TeamPage: FC = () => {
 
   const renderTeamMember = (member: TeamMember, idx: number): ReactNode => {
     const isImageLeft = member.imagePosition === 'left';
+    // Special handling for Allan's image to ensure full visibility on all mobile sizes
+    const isAllan = member.name.toLowerCase() === 'allan';
     return (
       <div key={idx} className={`flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 lg:gap-10 items-center mb-12 lg:mb-16`}>
         {/* Image */}
         <div className={`flex-shrink-0 w-full md:w-1/3 lg:w-1/4`}>
-          <div className="relative overflow-hidden rounded-2xl shadow-lg">
+          <div className="relative overflow-hidden rounded-2xl shadow-lg bg-white">
             <img 
               src={member.image} 
               alt={member.name}
-              className={`w-full h-auto object-cover hover:scale-105 transition-transform duration-500 max-h-[320px] lg:max-h-[260px] ${member.name.toLowerCase() === 'edna' ? 'object-top' : ''}`}
+              className={`w-full h-[320px] sm:h-[340px] md:h-[260px] object-cover hover:scale-105 transition-transform duration-500 ${isAllan ? 'object-top md:object-center' : member.name.toLowerCase() === 'edna' ? 'object-top' : ''}`}
+              style={isAllan ? {objectPosition: 'top center'} : {}}
             />
           </div>
         </div>
