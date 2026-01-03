@@ -142,6 +142,23 @@ const ExperiencePage = () => {
           </p>
         </div>
       </div>
+      <div className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: '160px', height: 'min-content', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+        <img 
+          src="/experience1.jpeg" 
+          alt="Experience background" 
+          className="absolute inset-0 w-full h-full object-cover object-center z-0" 
+          style={{ minHeight: '160px', maxHeight: '320px', height: '100%', filter: 'none' }}
+        />
+        <div className={`relative z-10 text-center w-full max-w-4xl px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          style={{paddingTop: '1.5rem', paddingBottom: '1.5rem'}}>
+          <h1 className="font-comfortaa text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 font-black tracking-tight">
+            <span className="italic text-white">{t.title}</span>
+          </h1>
+          <p className="font-poppins text-lg sm:text-xl md:text-2xl text-white/95 font-semibold">
+            {t.subtitle}
+          </p>
+        </div>
+      </div>
 
       {/* Inner Safari Section */}
       <div id={t.innerSafari.id} className="scroll-mt-20">
