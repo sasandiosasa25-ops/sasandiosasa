@@ -101,7 +101,7 @@ export default function HeroIntro() {
                 </h2>
                 <div className="w-full max-w-2xl">
                   <p
-                    className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-primary bg-white/95 bg-gradient-to-r from-brand-primary/20 via-brand-secondary/20 to-brand-primary/20 rounded-2xl px-8 py-6 mb-3 shadow-2xl border-l-8 border-brand-primary tracking-wide text-center"
+                    className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-heading/70 bg-white/95 bg-gradient-to-r from-brand-primary/20 via-brand-secondary/20 to-brand-primary/20 rounded-2xl px-8 py-6 mb-3 shadow-2xl border-l-8 border-brand-primary tracking-wide text-center"
                     style={{letterSpacing: '0.02em'}}
                   >
                     {t.brandIntro}
