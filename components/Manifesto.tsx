@@ -60,9 +60,14 @@ export default function Manifesto() {
             SasaNdioSasa
           </h1>
 
+
           {/* Tagline */}
           <p className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide">
             {text.tagline}
+          </p>
+          {/* Brand Intro */}
+          <p className="text-brand-heading/70 text-lg sm:text-xl md:text-2xl font-semibold max-w-3xl mx-auto leading-relaxed">
+            Step into journeys through Tanzania, where safari becomes a space to reconnect.
           </p>
 
           {/* Subtitle */}
