@@ -15,10 +15,10 @@ const translations: Record<string, any> = {
       duration: '6 months, 6 modules',
       durationDesc: 'A six-month journey with six modules, designed for steady growth.',
       welcome: 'Welcome to the Inner Safari, a space to arrive, guided by the desire to connect with yourself and the curiosity to feel the ground beneath your feet when you truly pause.',
-      intro: 'This is a journey for those who are ready to explore their inner landscapes, to grow, and to connect with others on a similar path.',
+      intro: 'This is a journey for those ready to explore their inner landscapes, grow, and connect with others on a similar path.',
       guide: 'You will be guided by experienced facilitators and supported by a community of fellow travelers.',
       expectTitle: 'What to Expect',
-      expectDesc: 'Engaging sessions, reflective practices, and opportunities for deep connection.',
+      expectDesc: 'Inspiring sessions, reflective practices, and opportunities for deep connection.',
       rhythmTitle: 'Your Rhythm',
       rhythmIntro: 'Each module brings a new focus, blending learning, practice, and community.',
       rhythmItems: [
