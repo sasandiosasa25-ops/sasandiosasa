@@ -269,17 +269,46 @@ const TeamPage: FC = () => {
             <img
               src="/zebraa.jpeg"
               alt="Zebra Team"
-              className="w-full h-full object-cover object-center opacity-60"
+              className="w-full h-full object-contain md:object-cover object-center opacity-60 zebra-desktop-img"
               style={{position: 'absolute', top: 0, left: 0, zIndex: 0}}
             />
             <div className="relative z-10 flex flex-col items-center justify-center text-center px-2 py-6 w-full">
               <h1 className="font-comfortaa text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-1 sm:mb-2">
                 {t.title}
               </h1>
-              <h2 className="font-poppins text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-0 text-brand-primary">
+              <h2 className="font-poppins text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-0 text-brand-primary subtitle-mobile-position">
                 {t.subtitle}
               </h2>
             </div>
+            <style>{`
+              @media (max-width: 640px) {
+                .subtitle-mobile-position {
+                  position: absolute;
+                  bottom: 12px;
+                  left: 0;
+                  right: 0;
+                  margin: 0 auto;
+                  width: 100%;
+                  padding-left: 8px;
+                  padding-right: 8px;
+                  background: rgba(255,255,255,0.15);
+                  border-radius: 0.5rem;
+                }
+              }
+              @media (min-width: 641px) {
+                .team-hero-section {
+                  height: 320px !important;
+                  max-height: 420px !important;
+                }
+                .zebra-desktop-img {
+                  object-fit: cover !important;
+                  width: 100vw !important;
+                  height: 100% !important;
+                  left: 50%;
+                  transform: translateX(-50%);
+                }
+              }
+            `}</style>
           </div>
         </div>
         <div className="mb-10">
