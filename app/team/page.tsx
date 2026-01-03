@@ -265,10 +265,10 @@ const TeamPage: FC = () => {
         {/* Zebra team hero section, styled like experiences, full-width but small height, all zebras visible */}
         <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mb-10" style={{position:'relative', left:'50%', right:'50%', marginLeft:'-50vw', marginRight:'-50vw'}}>
           <div
-            className="relative w-screen bg-[#f5f5ef] overflow-hidden mb-10"
+            className="relative w-screen bg-[#f5f5ef] overflow-hidden mb-10 team-hero-section"
             style={{
-              height: '43.2vw', // 20% more than previous mobile height (36vw * 1.2)
-              maxHeight: '340px',
+              height: '49.68vw', // 15% more than previous mobile height (43.2vw * 1.15)
+              maxHeight: '390px',
             }}
           >
             <img
@@ -278,25 +278,25 @@ const TeamPage: FC = () => {
               style={{opacity: 0.55}}
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
-              <h1 className="font-comfortaa text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black mb-1 sm:mb-2">
+              <h1 className="font-comfortaa text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-1 sm:mb-2">
                 {t.title}
               </h1>
-              <h2 className="font-poppins text-base sm:text-lg md:text-xl font-semibold mb-0 text-brand-primary">
+              <h2 className="font-poppins text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-0 text-brand-primary">
                 {t.subtitle}
               </h2>
             </div>
             <style>{`
               @media (min-width: 640px) {
-                /* sm: 20% more than 44vw = 52.8vw */
-                .team-hero-section { height: 52.8vw; max-height: 400px; }
+                /* sm: 15% more than 52.8vw = 60.72vw */
+                .team-hero-section { height: 60.72vw; max-height: 460px; }
               }
               @media (min-width: 1024px) {
-                /* lg: 35% more than 56vw = 75.6vw */
-                .team-hero-section { height: 75.6vw; max-height: 520px; }
+                /* lg: 28% more than 75.6vw = 96.77vw */
+                .team-hero-section { height: 96.77vw; max-height: 665px; }
               }
               @media (min-width: 1280px) {
-                /* xl: 35% more than 72vw = 97.2vw */
-                .team-hero-section { height: 97.2vw; max-height: 650px; }
+                /* xl: 28% more than 97.2vw = 124.42vw */
+                .team-hero-section { height: 124.42vw; max-height: 830px; }
               }
             `}</style>
           </div>
