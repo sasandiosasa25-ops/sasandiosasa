@@ -286,12 +286,12 @@ const TeamPage: FC = () => {
                 .team-hero-section { height: 60.72vw; max-height: 460px; }
               }
               @media (min-width: 1024px) {
-                /* lg: make image smaller and stretch to fit, show all content */
-                .team-hero-section { height: 40vw; max-height: 350px; }
+                /* lg: increase by 30%: 40vw * 1.3 = 52vw, 350px * 1.3 = 455px */
+                .team-hero-section { height: 52vw; max-height: 455px; }
               }
               @media (min-width: 1280px) {
-                /* xl: similar logic, slightly larger for big screens */
-                .team-hero-section { height: 32vw; max-height: 320px; }
+                /* xl: increase by 30%: 32vw * 1.3 = 41.6vw, 320px * 1.3 = 416px */
+                .team-hero-section { height: 41.6vw; max-height: 416px; }
               }
             `}</style>
           </div>
