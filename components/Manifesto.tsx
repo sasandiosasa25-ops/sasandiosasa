@@ -76,9 +76,9 @@ export default function Manifesto() {
           </div>
 
           {/* Subtitle */}
-          <div className="text-brand-border text-lg sm:text-xl md:text-2xl font-light max-w-3xl mx-auto leading-tight mt-1 mb-1">
-            <p className="mb-0">{text.subtitle1}</p>
-            <p className="mt-0">{text.subtitle2}</p>
+          <div className="text-brand-border text-lg sm:text-xl md:text-2xl font-light max-w-3xl mx-auto leading-tight mt-0 mb-0">
+            <p className="mb-0" style={{marginBottom: '2px'}}>{text.subtitle1}</p>
+            <p className="mt-0" style={{marginTop: '2px'}}>{text.subtitle2}</p>
           </div>
 
           {/* Quote - Highlighted */}
