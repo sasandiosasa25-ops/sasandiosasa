@@ -264,7 +264,7 @@ const TeamPage: FC = () => {
         {/* Elephant image full-width with overlay and text */}
         {/* Zebra team hero section, styled like experiences, full-width but small height, all zebras visible */}
         <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mb-10" style={{position:'relative', left:'50%', right:'50%', marginLeft:'-50vw', marginRight:'-50vw'}}>
-          <div className="relative w-screen h-28 sm:h-36 md:h-40 lg:h-48 xl:h-56 bg-[#f5f5ef] overflow-hidden mb-10">
+          <div className="relative w-screen h-36 sm:h-44 md:h-48 lg:h-56 xl:h-72 bg-[#f5f5ef] overflow-hidden mb-10">
             <img
               src="/zebraa.jpeg"
               alt="Zebra Team"
@@ -275,7 +275,7 @@ const TeamPage: FC = () => {
               <h1 className="font-comfortaa text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black mb-1 sm:mb-2">
                 {t.title}
               </h1>
-              <h2 className="font-poppins text-base sm:text-lg md:text-xl font-semibold mb-0" style={{color: '#bfa97a'}}>
+              <h2 className="font-poppins text-base sm:text-lg md:text-xl font-semibold mb-0 text-brand-primary">
                 {t.subtitle}
               </h2>
             </div>
