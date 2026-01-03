@@ -106,42 +106,25 @@ const ExperiencePage = () => {
 
   return (
     <div className="min-h-screen ">
-      {/* Experience Title Background Section */}
-      <div className="relative h-[28vh] sm:h-[36vh] md:h-[44vh] flex items-center justify-center overflow-hidden">
+      {/* Experience Title Background Section (with subtitle, no brown overlay, compact height) */}
+      <div className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: '120px', maxHeight: '220px', height: 'min-content', paddingTop: '1.5rem', paddingBottom: '1.5rem' }}>
         <img
           src="/experience11.jpeg"
           alt="Experience title background"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-70"
-          style={{ zIndex: 1 }}
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+          style={{ zIndex: 1, minHeight: '120px', maxHeight: '220px', height: '100%' }}
         />
-        <div className="relative z-10 text-center w-full">
-          <h1 className="font-comfortaa text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-black tracking-tight drop-shadow-lg">
+        <div className="relative z-10 text-center w-full max-w-4xl px-6">
+          <h1 className="font-comfortaa text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-2 font-black tracking-tight drop-shadow-lg">
             <span className="italic text-white">{t.title}</span>
           </h1>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent z-2" />
-      </div>
-
-      {/* Hero Section */}
-      <div className="relative h-[36vh] sm:h-[48vh] md:h-[65vh] bg-gradient-to-br from-brand-heading via-brand-secondary to-brand-primary flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-50">
-          <img 
-            src="/experience1.jpeg" 
-            alt="Experience background" 
-            className="w-full h-full object-cover object-center"
-            style={{ objectPosition: 'center', height: '100%', width: '100%' }}
-          />
-        </div>
-
-        <div className="absolute top-0 right-0 w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-brand-primary/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-brand-secondary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
-
-        <div className={`relative z-10 text-center max-w-4xl px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}> 
-          <p className="font-poppins text-lg sm:text-xl md:text-2xl text-white/95 font-semibold">
+          <p className="font-poppins text-base sm:text-lg md:text-xl text-white/95 font-semibold">
             {t.subtitle}
           </p>
         </div>
       </div>
+
+      {/* Hero Section (removed, now handled above) */}
       <div className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: '160px', height: 'min-content', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
         <img 
           src="/experience1.jpeg" 
