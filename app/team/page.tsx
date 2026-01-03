@@ -1,23 +1,7 @@
-'use client';
-
-import { Heart, Leaf, Users, ExternalLink, MapPin, Mail } from 'lucide-react';
-import { useState, useEffect, FC, ReactNode } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
-
-type Language = 'en' | 'de';
-
-interface TeamMember {
-  section: 'guides' | 'office' | 'coaches' | 'partners';
-  partners?: TeamMember[];
-  name: string;
-  role: string;
-  image: string;
-  bio: string;
-  imagePosition: 'left' | 'right';
-  website?: string;
-  email?: string;
-}
-
+          "use client";
+          import React, { FC, useEffect, useState, ReactNode } from 'react';
+          // import { useLanguage } from '@/lib/useLanguage';
+          import { ExternalLink, Mail, Leaf, Heart, Users } from 'lucide-react';
 interface Translation {
   title: string;
   subtitle: string;
@@ -39,6 +23,17 @@ interface Translations {
   de: Translation;
 }
 
+interface TeamMember {
+  section: string;
+  name: string;
+  role: string;
+  image: string;
+  bio: string;
+  imagePosition?: 'left' | 'right';
+  website?: string;
+  email?: string;
+}
+
 interface TeamBySection {
   guides: TeamMember[];
   office: TeamMember[];
@@ -51,7 +46,7 @@ const BrandName: FC = () => (
 );
 
 const TeamPage: FC = () => {
-  const { language } = useLanguage() as { language: Language };
+  const language: keyof Translations = 'en'; // Default to English; remove useLanguage
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
