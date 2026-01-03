@@ -100,10 +100,11 @@ export default function HeroIntro() {
                   {t.headline}
                 </h2>
                 <div className="max-w-xl">
-                  <p className="text-base sm:text-lg md:text-xl font-semibold text-brand-primary bg-brand-primary/10 rounded-xl px-4 py-3 mb-2 shadow-sm border-l-4 border-brand-primary/60 tracking-wide"
-                    style={{letterSpacing: '0.01em'}}>
-                    {t.brandIntro}
-                  </p>
+                  <div className="flex justify-start sm:justify-center">
+                    <p className="w-full text-base sm:text-lg md:text-xl font-semibold text-brand-primary bg-gradient-to-r from-brand-primary/10 via-brand-secondary/10 to-brand-primary/10 rounded-2xl px-5 py-4 mb-2 shadow-lg border-l-4 border-brand-primary/70 tracking-wide text-left sm:text-center transition-all duration-300" style={{letterSpacing: '0.01em'}}>
+                      {t.brandIntro}
+                    </p>
+                  </div>
                 </div>
                 <p className="text-lg sm:text-xl text-brand-heading/70 leading-relaxed max-w-xl">
                   {t.subheadline}
