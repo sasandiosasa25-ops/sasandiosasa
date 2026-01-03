@@ -81,7 +81,7 @@ export default function RoadMapPage() {
       name: 'Arusha National Park',
       description: "Arusha National Park carries a quiet intensity. Its landscapes shift quickly from open grasslands where giraffes browse, to volcanic craters filled with shimmering lakes, to forests alive with colobus monkeys. At its heart rises Mount Meru, a presence that shapes both horizon and atmosphere.\n\nWalking safaris make this park special. On foot, every sound feels closer, every movement more alive. You sense the weight of being a guest in nature's rhythm, where the ground itself seems to hold memory.\n\nOne of the park's most moving stories is of the Trapp elephant family. When the matriarch died, the herd returned to her resting place and stood together around it. A gesture of loyalty and remembrance that shows how deeply connection runs through the wild.\n\nArusha National Park is not just a gateway, it is a reminder that presence, memory, and unity are part of the journey.",
       region: 'Northern Circuit',
-      image: '/arusha.jpeg',
+      image: '/arushanp1.jpeg',
       coordinates: '3.2333° S, 36.8833° E',
       mapUrl: 'https://www.google.com/maps/place/Arusha+National+Park/@-3.2333,36.8833,11z'
     },
@@ -114,7 +114,7 @@ export default function RoadMapPage() {
       name: 'Pangani',
       description: "Here, life moves slower. Wooden boats drift along the river, fishermen return with the tide, and the sound of waves mixes with quiet voices on the shore. There is depth in this simplicity, a sense of being held by time rather than chased by it.\n\nPangani is not about spectacle, but about presence. Its streets and riverbanks carry echoes of history. Stories of trade, of encounters, of lives that shaped this place. To spend time here is also to pause with awareness, to take a moment for reflection, and to sense the quiet responsibility that comes when we see ourselves as part of a longer story.",
       region: 'Coast',
-      image: '/still.jpeg',
+      image: '/pangani123.jpeg',
       coordinates: '5.4167° S, 38.9833° E',
       mapUrl: 'https://www.google.com/maps/place/Pangani,+Tanzania/@-5.4167,38.9833,12z'
     },
