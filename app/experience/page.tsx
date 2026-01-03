@@ -110,10 +110,8 @@ const ExperiencePage = () => {
       <div
         className="relative flex items-center justify-center overflow-hidden"
         style={{
-          minHeight: '260px',
-          maxHeight: '420px',
-          height: '45vw',
           width: '100%',
+          aspectRatio: '100/69',
           backgroundImage: 'url(/experience11.jpeg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
