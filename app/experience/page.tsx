@@ -106,15 +106,22 @@ const ExperiencePage = () => {
 
   return (
     <div className="min-h-screen ">
-      {/* Experience Title Background Section (with subtitle, no brown overlay, compact height) */}
-      <div className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: '120px', maxHeight: '220px', height: 'min-content', paddingTop: '1.5rem', paddingBottom: '1.5rem' }}>
-        <img
-          src="/experience11.jpeg"
-          alt="Experience title background"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-80"
-          style={{ zIndex: 1, minHeight: '120px', maxHeight: '220px', height: '100%' }}
-        />
-        <div className="relative z-10 text-center w-full max-w-4xl px-6">
+      {/* Experience Title Full Background Section */}
+      <div
+        className="relative flex items-center justify-center overflow-hidden"
+        style={{
+          minHeight: '180px',
+          maxHeight: '320px',
+          height: '35vw',
+          width: '100%',
+          backgroundImage: 'url(/experience11.jpeg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/30" style={{ zIndex: 1 }} />
+        <div className="relative z-10 text-center w-full max-w-4xl px-6 flex flex-col items-center justify-center">
           <h1 className="font-comfortaa text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-2 font-black tracking-tight drop-shadow-lg">
             <span className="italic text-white">{t.title}</span>
           </h1>
