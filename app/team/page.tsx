@@ -211,7 +211,7 @@ const TeamPage: FC = () => {
             <img 
               src={member.image} 
               alt={member.name}
-              className={`w-full h-[320px] sm:h-[340px] md:h-[260px] object-cover hover:scale-105 transition-transform duration-500 ${isAllan ? 'object-top md:object-center' : member.name.toLowerCase() === 'edna' ? 'object-top' : ''}`}
+              className={`w-full h-[320px] sm:h-[340px] md:h-[260px] object-cover team-img-desktop hover:scale-105 transition-transform duration-500 ${isAllan ? 'object-top md:object-center' : member.name.toLowerCase() === 'edna' ? 'object-top' : ''}`}
               style={isAllan ? {objectPosition: 'top center'} : {}}
             />
           </div>
@@ -301,11 +301,14 @@ const TeamPage: FC = () => {
                   max-height: 420px !important;
                 }
                 .zebra-desktop-img {
-                  object-fit: cover !important;
+                  object-fit: contain !important;
                   width: 100vw !important;
                   height: 100% !important;
                   left: 0 !important;
                   transform: none !important;
+                }
+                .team-img-desktop {
+                  object-fit: contain !important;
                 }
               }
             `}</style>
