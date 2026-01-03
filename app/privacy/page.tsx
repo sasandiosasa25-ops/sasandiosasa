@@ -4,12 +4,27 @@ export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen ">
       {/* Header */}
-      <header className="border-b border-brand-border ">
-        <div className="container mx-auto px-4 py-6">
-          <h1 className="text-3xl font-comfortaa font-bold text-brand-heading">
+      <header className="relative border-b border-brand-border overflow-hidden">
+        {/* Background image for privacy policy header */}
+        <img
+          src="/policy.jpeg"
+          alt="Privacy Policy Background"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-30"
+          style={{ pointerEvents: 'none', userSelect: 'none' }}
+        />
+        <div className="container mx-auto px-4 py-10 md:py-16 relative z-10 flex flex-col items-center justify-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-comfortaa font-bold text-brand-heading drop-shadow-lg text-center">
             Privacy Policy
           </h1>
         </div>
+        <style>{`
+          @media (max-width: 640px) {
+            header img { object-position: center top; height: 100%; }
+          }
+          @media (min-width: 641px) {
+            header img { object-position: center; height: 100%; }
+          }
+        `}</style>
       </header>
 
       {/* Main Content */}
