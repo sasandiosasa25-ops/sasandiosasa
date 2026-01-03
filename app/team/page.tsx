@@ -261,21 +261,26 @@ const TeamPage: FC = () => {
   return (
     <div className={`transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}> 
       <div className="max-w-5xl mx-auto px-4 py-12">
-        {/* Elephant image restored and styled for all devices */}
-        <div className="flex justify-center items-center mb-6">
+        {/* Elephant image full-width with overlay and text */}
+        <div className="relative w-full mb-10">
           <img
-            src="/elephant.jpeg"
+            src="/elephants.jpg"
             alt="Elephants in Tanzania"
-            className="w-32 h-20 sm:w-40 sm:h-24 md:w-48 md:h-28 lg:w-56 lg:h-32 object-cover rounded-xl shadow-md border border-brand-primary/20"
+            className="w-full h-40 sm:h-56 md:h-72 lg:h-80 xl:h-96 object-cover object-center"
             style={{objectPosition: 'center'}}
           />
+          {/* Light brown overlay */}
+          <div className="absolute inset-0 bg-[#bfa97a]/60" />
+          {/* Centered title and subtitle */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
+            <h1 className="font-comfortaa text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white drop-shadow-lg mb-2">
+              {t.title}
+            </h1>
+            <h2 className="font-poppins text-lg sm:text-xl md:text-2xl text-white font-semibold drop-shadow mb-0">
+              {t.subtitle}
+            </h2>
+          </div>
         </div>
-        <h1 className="font-comfortaa text-4xl md:text-5xl text-brand-heading font-black mb-2">
-          {t.title}
-        </h1>
-        <h2 className="font-poppins text-xl md:text-2xl text-brand-primary font-semibold mb-8">
-          {t.subtitle}
-        </h2>
         <div className="mb-10">
           <h3 className="font-comfortaa text-2xl md:text-3xl text-brand-heading font-bold mb-4">
             {t.introTitle}
