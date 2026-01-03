@@ -271,20 +271,41 @@ export default function ImpactPage() {
     
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-brand-primary/5 via-white to-brand-secondary/5 pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-brand-heading mb-6 font-comfortaa">
+      <div className="relative bg-gradient-to-br from-brand-primary/5 via-white to-brand-secondary/5 pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background image for hero section */}
+        <img
+          src="/impact.jpeg"
+          alt="Impact background"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-40"
+          style={{ pointerEvents: 'none', userSelect: 'none' }}
+        />
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-brand-heading mb-6 font-comfortaa drop-shadow-lg">
             <span className="italic text-brand-primary">SasaNdioSasa</span>
             <br />
             {t.title}
           </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-brand-primary font-semibold mb-4 font-poppins">
+          <p className="text-xl sm:text-2xl md:text-3xl text-brand-primary font-semibold mb-4 font-poppins drop-shadow">
             {t.subtitle}
           </p>
-          <p className="text-base sm:text-lg md:text-xl text-brand-heading/80 max-w-4xl mx-auto leading-relaxed font-poppins">
+          <p className="text-base sm:text-lg md:text-xl text-brand-heading/80 max-w-4xl mx-auto leading-relaxed font-poppins bg-white/70 rounded-xl px-2 py-2 inline-block">
             {t.intro}
           </p>
         </div>
+        <style>{`
+          @media (max-width: 640px) {
+            .impact-hero-bg {
+              object-position: center top;
+              height: 100%;
+            }
+          }
+          @media (min-width: 641px) {
+            .impact-hero-bg {
+              object-position: center;
+              height: 100%;
+            }
+          }
+        `}</style>
       </div>
 
       {/* Ndoto Zetu section will now be rendered inside the Quality Education goal below */}
