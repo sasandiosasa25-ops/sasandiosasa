@@ -269,7 +269,7 @@ const TeamPage: FC = () => {
             <img
               src="/zebraa.jpeg"
               alt="Zebra Team"
-              className="absolute inset-0 w-full h-full object-cover md:object-contain md:object-top"
+              className="absolute inset-0 w-full h-full object-contain md:object-cover md:object-center"
               style={{opacity: 0.55}}
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
