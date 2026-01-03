@@ -266,17 +266,15 @@ const TeamPage: FC = () => {
           <img
             src="/elephant.jpeg"
             alt="Elephants in Tanzania"
-            className="w-screen h-40 sm:h-56 md:h-72 lg:h-80 xl:h-96 object-cover object-center"
-            style={{objectPosition: 'center'}}
+            className="w-screen h-40 sm:h-56 md:h-72 lg:h-80 xl:h-96 object-cover"
+            style={{objectPosition: 'center 65%', opacity: 0.9}}
           />
-          {/* Light brown overlay */}
-          <div className="absolute inset-0 bg-[#bfa97a]/60 pointer-events-none" />
-          {/* Centered title and subtitle */}
+          {/* Centered title and subtitle with original text color */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
-            <h1 className="font-comfortaa text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white drop-shadow-lg mb-2">
+            <h1 className="font-comfortaa text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-brand-heading mb-2">
               {t.title}
             </h1>
-            <h2 className="font-poppins text-lg sm:text-xl md:text-2xl text-white font-semibold drop-shadow mb-0">
+            <h2 className="font-poppins text-lg sm:text-xl md:text-2xl text-brand-primary font-semibold mb-0">
               {t.subtitle}
             </h2>
           </div>
