@@ -304,8 +304,8 @@ const TeamPage: FC = () => {
                   object-fit: cover !important;
                   width: 100vw !important;
                   height: 100% !important;
-                  left: 50%;
-                  transform: translateX(-50%);
+                  left: 0 !important;
+                  transform: none !important;
                 }
               }
             `}</style>
