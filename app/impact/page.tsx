@@ -274,7 +274,7 @@ export default function ImpactPage() {
       <div className="relative bg-gradient-to-br from-brand-primary/5 via-white to-brand-secondary/5 pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background image for hero section */}
         <img
-          src="/impact.jpeg"
+          src="/impact11.jpeg"
           alt="Impact background"
           className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-40"
           style={{ pointerEvents: 'none', userSelect: 'none' }}
