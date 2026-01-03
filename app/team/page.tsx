@@ -264,12 +264,18 @@ const TeamPage: FC = () => {
         {/* Elephant image full-width with overlay and text */}
         {/* Zebra team hero section, styled like experiences, full-width but small height, all zebras visible */}
         <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mb-10" style={{position:'relative', left:'50%', right:'50%', marginLeft:'-50vw', marginRight:'-50vw'}}>
-          <div className="relative w-screen h-36 sm:h-44 md:h-48 lg:h-56 xl:h-72 bg-[#f5f5ef] overflow-hidden mb-10">
+          <div
+            className="relative w-screen bg-[#f5f5ef] overflow-hidden mb-10"
+            style={{
+              height: '43.2vw', // 20% more than previous mobile height (36vw * 1.2)
+              maxHeight: '340px',
+            }}
+          >
             <img
               src="/zebraa.jpeg"
               alt="Zebra Team"
               className="absolute inset-0 w-full h-full object-cover"
-              style={{opacity: 0.5}}
+              style={{opacity: 0.55}}
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
               <h1 className="font-comfortaa text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black mb-1 sm:mb-2">
@@ -279,6 +285,20 @@ const TeamPage: FC = () => {
                 {t.subtitle}
               </h2>
             </div>
+            <style>{`
+              @media (min-width: 640px) {
+                /* sm: 20% more than 44vw = 52.8vw */
+                .team-hero-section { height: 52.8vw; max-height: 400px; }
+              }
+              @media (min-width: 1024px) {
+                /* lg: 35% more than 56vw = 75.6vw */
+                .team-hero-section { height: 75.6vw; max-height: 520px; }
+              }
+              @media (min-width: 1280px) {
+                /* xl: 35% more than 72vw = 97.2vw */
+                .team-hero-section { height: 97.2vw; max-height: 650px; }
+              }
+            `}</style>
           </div>
         </div>
         <div className="mb-10">
