@@ -131,7 +131,7 @@ const ExperiencePage = () => {
 
       {/* Inner Safari Section */}
       <div id={t.innerSafari.id} className="scroll-mt-20">
-        <div className="max-w-2xl mx-auto px-3 py-10 flex flex-col gap-6">
+        <div className="w-full px-3 md:px-8 lg:px-16 py-10 flex flex-col gap-6">
           {/* Title and Duration */}
           <div className="flex flex-col gap-1 items-start">
             <h2 className="font-comfortaa text-3xl sm:text-4xl text-brand-heading font-bold">
