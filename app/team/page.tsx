@@ -262,15 +262,15 @@ const TeamPage: FC = () => {
     <div className={`transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}> 
       <div className="max-w-5xl mx-auto px-4 py-12">
         {/* Elephant image full-width with overlay and text */}
-        <div className="relative w-full mb-10">
+        <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mb-10" style={{position:'relative', left:'50%', right:'50%', marginLeft:'-50vw', marginRight:'-50vw'}}>
           <img
-            src="/elephants.jpg"
+            src="/elephant.jpeg"
             alt="Elephants in Tanzania"
-            className="w-full h-40 sm:h-56 md:h-72 lg:h-80 xl:h-96 object-cover object-center"
+            className="w-screen h-40 sm:h-56 md:h-72 lg:h-80 xl:h-96 object-cover object-center"
             style={{objectPosition: 'center'}}
           />
           {/* Light brown overlay */}
-          <div className="absolute inset-0 bg-[#bfa97a]/60" />
+          <div className="absolute inset-0 bg-[#bfa97a]/60 pointer-events-none" />
           {/* Centered title and subtitle */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
             <h1 className="font-comfortaa text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white drop-shadow-lg mb-2">
