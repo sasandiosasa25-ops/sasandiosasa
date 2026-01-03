@@ -65,10 +65,15 @@ export default function Manifesto() {
           <p className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide">
             {text.tagline}
           </p>
-          {/* Brand Intro */}
-          <p className="text-brand-heading/70 text-lg sm:text-xl md:text-2xl font-semibold max-w-3xl mx-auto leading-relaxed">
-            Step into journeys through Tanzania, where safari becomes a space to reconnect.
-          </p>
+          {/* Brand Intro - Call to Action */}
+          <div className="flex justify-center">
+            <div className="bg-gradient-to-r from-brand-primary/90 via-brand-secondary/80 to-brand-primary/90 rounded-2xl shadow-2xl border-4 border-brand-primary/80 px-8 py-6 max-w-2xl mx-auto my-4 animate-fade-in-up">
+              <p className="text-white text-2xl sm:text-3xl md:text-4xl font-extrabold text-center tracking-wide drop-shadow-lg">
+                Step into <span className="text-brand-secondary">journeys through Tanzania</span>,<br className="hidden sm:inline" />
+                <span className="block mt-2">where <span className="text-brand-primary font-black">safari</span> becomes a space to <span className="italic text-brand-secondary">reconnect</span>.</span>
+              </p>
+            </div>
+          </div>
 
           {/* Subtitle */}
           <div className="text-brand-border text-lg sm:text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed">
