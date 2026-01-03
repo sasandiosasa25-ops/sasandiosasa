@@ -108,9 +108,8 @@ const ExperiencePage = () => {
     <div className="min-h-screen ">
       {/* Experience Title Full Background Section (no open space, larger image) */}
       <div
-        className="relative flex items-center justify-center overflow-hidden w-full max-w-3xl mx-auto"
+        className="relative flex items-center justify-center overflow-hidden w-full h-32 sm:h-40 md:h-48 lg:h-56"
         style={{
-          aspectRatio: '100/69',
           backgroundImage: 'url(/experience11.jpeg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center bottom',
