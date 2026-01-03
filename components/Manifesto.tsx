@@ -67,7 +67,7 @@ export default function Manifesto() {
           </p>
           {/* Brand Intro - Call to Action */}
           <div className="flex justify-center">
-            <div className="bg-gradient-to-r from-brand-primary/90 via-brand-secondary/80 to-brand-primary/90 rounded-2xl border-4 border-brand-primary/80 px-6 py-4 max-w-2xl mx-auto my-2 animate-fade-in-up">
+            <div className="bg-gradient-to-r from-brand-primary/90 to-brand-primary/90 rounded-2xl border-4 border-brand-primary/80 px-6 py-4 max-w-2xl mx-auto my-2 animate-fade-in-up">
               <p className="text-white text-2xl sm:text-2xl md:text-3xl font-extrabold text-center tracking-wide drop-shadow-lg">
                 Step into <span className="text-white">journeys through Tanzania</span>,<br className="hidden sm:inline" />
                 <span className="block mt-1">where <span className="text-white font-black">safari</span> becomes a space to <span className="italic text-white">reconnect</span>.</span>
