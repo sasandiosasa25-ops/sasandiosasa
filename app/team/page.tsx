@@ -258,21 +258,21 @@ const TeamPage: FC = () => {
       <div className="max-w-5xl mx-auto px-4 py-12">
         {/* Elephant image full-width with overlay and text */}
         {/* Zebra team hero section, styled like experiences, full-width but small height, all zebras visible */}
-        <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mb-10" style={{position:'relative', left:'50%', right:'50%', marginLeft:'-50vw', marginRight:'-50vw'}}>
-            <div
-              className="relative w-screen bg-[#f5f5ef] overflow-hidden mb-10 team-hero-section"
-              style={{
-                height: '49.68vw', // revert to previous mobile height
-                maxHeight: '390px',
-              }}
-            >
+        <div className="relative w-full flex flex-col items-center justify-center mb-10">
+          <div
+            className="relative w-full bg-[#f5f5ef] overflow-hidden team-hero-section flex flex-col items-center justify-center"
+            style={{
+              height: '220px',
+              maxHeight: '320px',
+            }}
+          >
             <img
               src="/zebraa.jpeg"
               alt="Zebra Team"
-              className="absolute inset-0 w-full h-full object-contain md:object-cover md:object-center"
-              style={{opacity: 0.55}}
+              className="w-full h-full object-cover object-center opacity-60"
+              style={{position: 'absolute', top: 0, left: 0, zIndex: 0}}
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
+            <div className="relative z-10 flex flex-col items-center justify-center text-center px-2 py-6 w-full">
               <h1 className="font-comfortaa text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-1 sm:mb-2">
                 {t.title}
               </h1>
@@ -280,20 +280,6 @@ const TeamPage: FC = () => {
                 {t.subtitle}
               </h2>
             </div>
-            <style>{`
-              @media (min-width: 640px) {
-                /* sm: keep previous height */
-                .team-hero-section { height: 60.72vw; max-height: 460px; }
-              }
-              @media (min-width: 1024px) {
-                /* lg: increase by 30%: 40vw * 1.3 = 52vw, 350px * 1.3 = 455px */
-                .team-hero-section { height: 52vw; max-height: 455px; }
-              }
-              @media (min-width: 1280px) {
-                /* xl: increase by 30%: 32vw * 1.3 = 41.6vw, 320px * 1.3 = 416px */
-                .team-hero-section { height: 41.6vw; max-height: 416px; }
-              }
-            `}</style>
           </div>
         </div>
         <div className="mb-10">
