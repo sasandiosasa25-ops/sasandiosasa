@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -127,23 +128,27 @@ const ImageCarousel = () => {
           >
             {images.map((image, index) => (
               <SwiperSlide key={image.id}>
-                <div className="relative w-full h-44 xs:h-56 sm:h-64 md:h-72 lg:h-[22rem] xl:h-[26rem] 2xl:h-[28rem] mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
-                  {/* Image */}
-                  <img
-                    src={image.url}
-                    alt={image.alt}
-                    className="w-full h-full object-contain object-center transition-transform duration-700 group-hover/card:scale-110"
-                    style={{maxHeight: '100%', minHeight: '100%', maxWidth: '100%'}}
-                  />
-                  {/* Gradient Overlay for better badge visibility */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 pointer-events-none" />
-                  {/* Bottom Info Bar - Restored for alt text */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-heading/90 to-transparent p-2 sm:p-3 lg:p-4 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500">
-                    <p className="text-white font-bold text-xs xs:text-sm sm:text-base lg:text-lg font-poppins truncate">
-                      {image.alt}
-                    </p>
-                  </div>
-                </div>
+                <Link href="/impact" passHref legacyBehavior>
+                  <a tabIndex={0} aria-label={image.alt} className="block focus:outline-none focus:ring-4 focus:ring-brand-primary/50 rounded-2xl">
+                    <div className="relative w-full h-44 xs:h-56 sm:h-64 md:h-72 lg:h-[22rem] xl:h-[26rem] 2xl:h-[28rem] mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
+                      {/* Image */}
+                      <img
+                        src={image.url}
+                        alt={image.alt}
+                        className="w-full h-full object-contain object-center transition-transform duration-700 group-hover/card:scale-110"
+                        style={{maxHeight: '100%', minHeight: '100%', maxWidth: '100%'}}
+                      />
+                      {/* Gradient Overlay for better badge visibility */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 pointer-events-none" />
+                      {/* Bottom Info Bar - Restored for alt text */}
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-heading/90 to-transparent p-2 sm:p-3 lg:p-4 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500">
+                        <p className="text-white font-bold text-xs xs:text-sm sm:text-base lg:text-lg font-poppins truncate">
+                          {image.alt}
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>
