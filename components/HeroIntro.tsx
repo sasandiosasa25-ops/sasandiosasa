@@ -15,6 +15,7 @@ export default function HeroIntro() {
     en: {
       brand: 'SasaNdioSasa',
       headline: 'Now is your time.',
+      brandIntro: 'Step into journeys through Tanzania, where safari becomes a space to reconnect.',
       subheadline: 'Wherever you are, whatever season you\'re in. Your moment is now.',
       quote: 'Maybe the answer is not in adding more. But in listening again to what was always there.',
       returnTitle: 'A Return',
@@ -30,6 +31,7 @@ export default function HeroIntro() {
     de: {
       brand: 'SasaNdioSasa',
       headline: 'Jetzt ist deine Zeit.',
+      brandIntro: 'Tauche ein in Reisen durch Tansania, wo Safari zu einem Raum wird, um sich wieder zu verbinden.',
       subheadline: 'Wo auch immer du bist, in welcher Jahreszeit auch immer. Dein Moment ist jetzt.',
       quote: 'Vielleicht liegt die Antwort nicht darin, mehr hinzuzufügen. Sondern darin, wieder auf das zu hören, was schon immer da war.',
       returnTitle: 'Eine Rückkehr',
@@ -97,6 +99,12 @@ export default function HeroIntro() {
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-heading leading-tight">
                   {t.headline}
                 </h2>
+                <div className="max-w-xl">
+                  <p className="text-base sm:text-lg md:text-xl font-semibold text-brand-primary bg-brand-primary/10 rounded-xl px-4 py-3 mb-2 shadow-sm border-l-4 border-brand-primary/60 tracking-wide"
+                    style={{letterSpacing: '0.01em'}}>
+                    {t.brandIntro}
+                  </p>
+                </div>
                 <p className="text-lg sm:text-xl text-brand-heading/70 leading-relaxed max-w-xl">
                   {t.subheadline}
                 </p>
@@ -179,16 +187,16 @@ export default function HeroIntro() {
         </div>
       </div>
 
-      {/* Message Section - Dynamic Grid Layout */}
-      <div className="relative py-20 sm:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      {/* Message Section - Dynamic Grid Layout, Responsive Height & Proximity */}
+      <div className="relative bg-white flex flex-col justify-center items-center py-14 sm:py-20 md:py-28 min-h-[80vh]">
+        <div className="w-full max-w-7xl px-4 sm:px-8 lg:px-12">
           {/* Return Statement */}
-          <div className="mb-20 text-center">
-            <div className="inline-block mb-6">
-              <div className="text-sm tracking-[0.2em] uppercase text-brand-primary/60 font-semibold mb-2">
+          <div className="mb-10 sm:mb-16 text-center">
+            <div className="inline-block mb-4 sm:mb-6">
+              <div className="text-xs sm:text-sm tracking-[0.2em] uppercase text-brand-primary/60 font-semibold mb-2">
                 {t.returnSubtitle}
               </div>
-              <h3 className="text-5xl sm:text-6xl md:text-7xl font-black">
+              <h3 className="text-4xl sm:text-5xl md:text-6xl font-black">
                 <span className="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent font-comfortaa">
                   {t.returnTitle}
                 </span>
@@ -196,51 +204,51 @@ export default function HeroIntro() {
             </div>
           </div>
 
-          {/* Three Pillars Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {/* Three Pillars Grid - closer on mobile, spaced on desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-16">
             {t.returnLines.map((line, index) => (
               <div 
                 key={index}
-                className="group relative bg-gradient-to-br from-white to-brand-menu-hover p-8 rounded-2xl border-2 border-brand-border hover:border-brand-primary/50 transition-all duration-500 hover:shadow-xl"
+                className="group relative bg-gradient-to-br from-white to-brand-menu-hover p-6 sm:p-8 rounded-2xl border-2 border-brand-border hover:border-brand-primary/50 transition-all duration-500 hover:shadow-xl flex flex-col items-center justify-center min-h-[120px]"
               >
-                <div className="absolute top-4 right-4 text-6xl font-black text-brand-primary/5">
+                <div className="absolute top-3 right-3 text-4xl sm:text-6xl font-black text-brand-primary/5">
                   {(index + 1).toString().padStart(2, '0')}
                 </div>
-                <h4 className="text-3xl sm:text-4xl font-light text-brand-primary italic relative z-10">
+                <h4 className="text-2xl sm:text-3xl font-light text-brand-primary italic relative z-10 text-center">
                   {line}
                 </h4>
               </div>
             ))}
           </div>
 
-          {/* Movement Statements - Staggered Layout */}
-          <div className="space-y-12 mb-20">
-            <div className="max-w-2xl">
-              <p className="text-2xl sm:text-3xl text-brand-heading font-light leading-relaxed">
+          {/* Movement Statements - stacked, closer on mobile */}
+          <div className="flex flex-col gap-8 sm:gap-12 mb-10 sm:mb-16 w-full">
+            <div className="max-w-2xl mx-auto">
+              <p className="text-xl sm:text-2xl md:text-3xl text-brand-heading font-light leading-relaxed text-center sm:text-left">
                 {t.movement}
               </p>
             </div>
-            <div className="max-w-2xl ml-auto text-right">
-              <p className="text-2xl sm:text-3xl text-brand-heading font-light leading-relaxed">
+            <div className="max-w-2xl mx-auto">
+              <p className="text-xl sm:text-2xl md:text-3xl text-brand-heading font-light leading-relaxed text-center sm:text-right">
                 {t.conversation}
               </p>
             </div>
-            <div className="max-w-2xl">
-              <p className="text-2xl sm:text-3xl text-brand-heading font-light leading-relaxed">
+            <div className="max-w-2xl mx-auto">
+              <p className="text-xl sm:text-2xl md:text-3xl text-brand-heading font-light leading-relaxed text-center sm:text-left">
                 {t.breath}
               </p>
             </div>
           </div>
 
           {/* Closing Statement - Feature Box */}
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-3xl mx-auto">
             <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 rounded-3xl blur-2xl" />
-            <div className="relative bg-white border-2 border-brand-primary/30 rounded-3xl p-8 sm:p-12 md:p-16 shadow-xl">
-              <div className="text-center space-y-4">
-                <p className="text-2xl sm:text-3xl md:text-4xl text-brand-heading font-bold leading-tight">
+            <div className="relative bg-white border-2 border-brand-primary/30 rounded-3xl p-6 sm:p-10 md:p-14 shadow-xl">
+              <div className="text-center space-y-3 sm:space-y-4">
+                <p className="text-xl sm:text-2xl md:text-3xl text-brand-heading font-bold leading-tight">
                   {t.closing}
                 </p>
-                <p className="text-xl sm:text-2xl text-brand-heading/70 font-light">
+                <p className="text-lg sm:text-xl text-brand-heading/70 font-light">
                   {t.closingSub}
                 </p>
               </div>
