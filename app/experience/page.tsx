@@ -108,22 +108,21 @@ const ExperiencePage = () => {
     <div className="min-h-screen ">
       {/* Experience Title Full Background Section (no open space, larger image) */}
       <div
-        className="relative flex items-center justify-center overflow-hidden"
+        className="relative flex items-center justify-center overflow-hidden w-full max-w-3xl mx-auto"
         style={{
-          width: '100%',
           aspectRatio: '100/69',
           backgroundImage: 'url(/experience11.jpeg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center bottom',
           backgroundRepeat: 'no-repeat',
         }}
       >
         <div className="absolute inset-0 bg-black/30" style={{ zIndex: 1 }} />
-        <div className="relative z-10 text-center w-full max-w-4xl px-6 flex flex-col items-center justify-center">
-          <h1 className="font-comfortaa text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-2 font-black tracking-tight drop-shadow-lg">
+        <div className="relative z-10 text-center w-full px-2 sm:px-4 flex flex-col items-center justify-center">
+          <h1 className="font-comfortaa text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-2 font-black tracking-tight drop-shadow-lg">
             <span className="italic text-white">{t.title}</span>
           </h1>
-          <p className="font-poppins text-base sm:text-lg md:text-xl text-white/95 font-semibold">
+          <p className="font-poppins text-sm xs:text-base sm:text-lg md:text-xl text-white/95 font-semibold">
             {t.subtitle}
           </p>
         </div>
