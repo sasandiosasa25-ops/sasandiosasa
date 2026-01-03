@@ -106,23 +106,24 @@ const ExperiencePage = () => {
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
-      <div className="relative h-[55vh] md:h-[65vh] bg-gradient-to-br from-brand-heading via-brand-secondary to-brand-primary flex items-center justify-center overflow-hidden">
+      <div className="relative h-[36vh] sm:h-[48vh] md:h-[65vh] bg-gradient-to-br from-brand-heading via-brand-secondary to-brand-primary flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-50">
           <img 
-            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop" 
-            alt="Tanzania landscape" 
-            className="w-full h-full object-cover"
+            src="/experience1.jpeg" 
+            alt="Experience background" 
+            className="w-full h-full object-cover object-center"
+            style={{ objectPosition: 'center', height: '100%', width: '100%' }}
           />
         </div>
 
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-secondary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-0 right-0 w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-brand-primary/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-brand-secondary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
 
         <div className={`relative z-10 text-center max-w-4xl px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h1 className="font-comfortaa text-6xl md:text-7xl lg:text-8xl text-white mb-6 font-black tracking-tight">
+          <h1 className="font-comfortaa text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-white mb-6 font-black tracking-tight">
             <span className="italic text-white">{t.title}</span>
           </h1>
-          <p className="font-poppins text-xl md:text-2xl text-white/95 font-semibold">
+          <p className="font-poppins text-lg sm:text-xl md:text-2xl text-white/95 font-semibold">
             {t.subtitle}
           </p>
         </div>
