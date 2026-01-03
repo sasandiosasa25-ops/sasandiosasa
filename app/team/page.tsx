@@ -259,13 +259,13 @@ const TeamPage: FC = () => {
         {/* Elephant image full-width with overlay and text */}
         {/* Zebra team hero section, styled like experiences, full-width but small height, all zebras visible */}
         <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mb-10" style={{position:'relative', left:'50%', right:'50%', marginLeft:'-50vw', marginRight:'-50vw'}}>
-          <div
-            className="relative w-screen bg-[#f5f5ef] overflow-hidden mb-10 team-hero-section"
-            style={{
-              height: '49.68vw', // 15% more than previous mobile height (43.2vw * 1.15)
-              maxHeight: '390px',
-            }}
-          >
+            <div
+              className="relative w-screen bg-[#f5f5ef] overflow-hidden mb-10 team-hero-section"
+              style={{
+                height: '69.55vw', // 40% more than previous mobile height (49.68vw * 1.4)
+                maxHeight: '546px', // 40% more than previous maxHeight (390px * 1.4)
+              }}
+            >
             <img
               src="/zebraa.jpeg"
               alt="Zebra Team"
@@ -282,16 +282,16 @@ const TeamPage: FC = () => {
             </div>
             <style>{`
               @media (min-width: 640px) {
-                /* sm: 15% more than 52.8vw = 60.72vw */
-                .team-hero-section { height: 60.72vw; max-height: 460px; }
+                /* sm: 40% more than 60.72vw = 85.01vw */
+                .team-hero-section { height: 85.01vw; max-height: 644px; }
               }
               @media (min-width: 1024px) {
-                /* lg: 28% more than 75.6vw = 96.77vw */
-                .team-hero-section { height: 96.77vw; max-height: 665px; }
+                /* lg: 40% more than 96.77vw = 135.48vw */
+                .team-hero-section { height: 135.48vw; max-height: 931px; }
               }
               @media (min-width: 1280px) {
-                /* xl: 28% more than 97.2vw = 124.42vw */
-                .team-hero-section { height: 124.42vw; max-height: 830px; }
+                /* xl: 40% more than 124.42vw = 174.19vw */
+                .team-hero-section { height: 174.19vw; max-height: 1162px; }
               }
             `}</style>
           </div>
