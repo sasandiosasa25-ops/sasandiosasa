@@ -264,21 +264,21 @@ const TeamPage: FC = () => {
         {/* Elephant image full-width with overlay and text */}
         {/* Zebra team hero section, styled like experiences, full-width but small height, all zebras visible */}
         <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mb-10" style={{position:'relative', left:'50%', right:'50%', marginLeft:'-50vw', marginRight:'-50vw'}}>
-          <div className="w-screen h-28 sm:h-36 md:h-40 lg:h-48 xl:h-56 bg-[#f5f5ef] flex items-center justify-center overflow-hidden">
+          <div className="relative w-screen h-28 sm:h-36 md:h-40 lg:h-48 xl:h-56 bg-[#f5f5ef] overflow-hidden mb-10">
             <img
               src="/zebraa.jpeg"
               alt="Zebra Team"
-              className="max-h-full max-w-full object-contain"
-              style={{opacity: 0.8}}
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{opacity: 0.5}}
             />
-          </div>
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
-            <h1 className="font-comfortaa text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white drop-shadow-lg mb-1 sm:mb-2">
-              {t.title}
-            </h1>
-            <h2 className="font-poppins text-base sm:text-lg md:text-xl font-semibold mb-0" style={{color: '#bfa97a', textShadow: '0 1px 4px rgba(0,0,0,0.18)'}}>
-              {t.subtitle}
-            </h2>
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
+              <h1 className="font-comfortaa text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black mb-1 sm:mb-2">
+                {t.title}
+              </h1>
+              <h2 className="font-poppins text-base sm:text-lg md:text-xl font-semibold mb-0" style={{color: '#bfa97a'}}>
+                {t.subtitle}
+              </h2>
+            </div>
           </div>
         </div>
         <div className="mb-10">
