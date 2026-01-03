@@ -67,18 +67,18 @@ export default function Manifesto() {
           </p>
           {/* Brand Intro - Call to Action */}
           <div className="flex justify-center">
-            <div className="bg-gradient-to-r from-brand-primary/90 via-brand-secondary/80 to-brand-primary/90 rounded-2xl shadow-2xl border-4 border-brand-primary/80 px-8 py-6 max-w-2xl mx-auto my-4 animate-fade-in-up">
-              <p className="text-white text-2xl sm:text-3xl md:text-4xl font-extrabold text-center tracking-wide drop-shadow-lg">
-                Step into <span className="text-brand-secondary">journeys through Tanzania</span>,<br className="hidden sm:inline" />
-                <span className="block mt-2">where <span className="text-brand-primary font-black">safari</span> becomes a space to <span className="italic text-brand-secondary">reconnect</span>.</span>
+            <div className="bg-gradient-to-r from-brand-primary/90 via-brand-secondary/80 to-brand-primary/90 rounded-2xl shadow-2xl border-4 border-brand-primary/80 px-6 py-4 max-w-2xl mx-auto my-2 animate-fade-in-up">
+              <p className="text-white text-2xl sm:text-2xl md:text-3xl font-extrabold text-center tracking-wide drop-shadow-lg">
+                Step into <span className="text-white">journeys through Tanzania</span>,<br className="hidden sm:inline" />
+                <span className="block mt-1">where <span className="text-white font-black">safari</span> becomes a space to <span className="italic text-white">reconnect</span>.</span>
               </p>
             </div>
           </div>
 
           {/* Subtitle */}
-          <div className="text-brand-border text-lg sm:text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed">
+          <div className="text-brand-border text-lg sm:text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed mt-2 mb-2">
             <p>{text.subtitle1}</p>
-            <p className="mt-2">{text.subtitle2}</p>
+            <p className="mt-1">{text.subtitle2}</p>
           </div>
 
           {/* Quote - Highlighted */}
