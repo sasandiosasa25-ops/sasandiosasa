@@ -262,19 +262,19 @@ const TeamPage: FC = () => {
     <div className={`transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}> 
       <div className="max-w-5xl mx-auto px-4 py-12">
         {/* Elephant image full-width with overlay and text */}
+        {/* Zebra team hero section, styled like experiences, full-width but small height, all zebras visible */}
         <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mb-10" style={{position:'relative', left:'50%', right:'50%', marginLeft:'-50vw', marginRight:'-50vw'}}>
           <img
-            src="/elephant.jpeg"
-            alt="Elephants in Tanzania"
-            className="w-screen h-40 sm:h-56 md:h-72 lg:h-80 xl:h-96 object-cover"
-            style={{objectPosition: 'center 65%', opacity: 0.9}}
+            src="/zebrateam.jpeg"
+            alt="Zebra Team"
+            className="w-screen h-28 sm:h-36 md:h-40 lg:h-48 xl:h-56 object-cover"
+            style={{objectPosition: 'center bottom', opacity: 0.9}}
           />
-          {/* Centered title and subtitle with original text color */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
-            <h1 className="font-comfortaa text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-brand-heading mb-2">
+            <h1 className="font-comfortaa text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white drop-shadow-lg mb-1 sm:mb-2">
               {t.title}
             </h1>
-            <h2 className="font-poppins text-lg sm:text-xl md:text-2xl text-brand-primary font-semibold mb-0">
+            <h2 className="font-poppins text-base sm:text-lg md:text-xl font-semibold mb-0" style={{color: '#bfa97a', textShadow: '0 1px 4px rgba(0,0,0,0.18)'}}>
               {t.subtitle}
             </h2>
           </div>
