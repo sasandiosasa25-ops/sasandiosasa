@@ -262,14 +262,14 @@ const TeamPage: FC = () => {
             <div
               className="relative w-screen bg-[#f5f5ef] overflow-hidden mb-10 team-hero-section"
               style={{
-                height: '69.55vw', // 40% more than previous mobile height (49.68vw * 1.4)
-                maxHeight: '546px', // 40% more than previous maxHeight (390px * 1.4)
+                height: '49.68vw', // revert to previous mobile height
+                maxHeight: '390px',
               }}
             >
             <img
               src="/zebraa.jpeg"
               alt="Zebra Team"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover md:object-contain md:object-top"
               style={{opacity: 0.55}}
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-2">
@@ -282,16 +282,16 @@ const TeamPage: FC = () => {
             </div>
             <style>{`
               @media (min-width: 640px) {
-                /* sm: 40% more than 60.72vw = 85.01vw */
-                .team-hero-section { height: 85.01vw; max-height: 644px; }
+                /* sm: keep previous height */
+                .team-hero-section { height: 60.72vw; max-height: 460px; }
               }
               @media (min-width: 1024px) {
-                /* lg: 40% more than 96.77vw = 135.48vw */
-                .team-hero-section { height: 135.48vw; max-height: 931px; }
+                /* lg: make image smaller and stretch to fit, show all content */
+                .team-hero-section { height: 40vw; max-height: 350px; }
               }
               @media (min-width: 1280px) {
-                /* xl: 40% more than 124.42vw = 174.19vw */
-                .team-hero-section { height: 174.19vw; max-height: 1162px; }
+                /* xl: similar logic, slightly larger for big screens */
+                .team-hero-section { height: 32vw; max-height: 320px; }
               }
             `}</style>
           </div>
