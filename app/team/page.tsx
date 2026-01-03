@@ -270,7 +270,7 @@ const TeamPage: FC = () => {
               src="/zebraa.jpeg"
               alt="Zebra Team"
               className="w-full h-full object-contain md:object-cover object-center opacity-60 zebra-desktop-img"
-              style={{position: 'absolute', top: 0, left: 0, zIndex: 0}}
+              style={{position: 'absolute', top: 0, left: 0, right: 0, zIndex: 0}}
             />
             <div className="relative z-10 flex flex-col items-center justify-center text-center px-2 py-6 w-full">
               <h1 className="font-comfortaa text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-1 sm:mb-2">
@@ -301,10 +301,11 @@ const TeamPage: FC = () => {
                   max-height: 420px !important;
                 }
                 .zebra-desktop-img {
-                  object-fit: contain !important;
+                  object-fit: cover !important;
                   width: 100vw !important;
                   height: 100% !important;
                   left: 0 !important;
+                  right: 0 !important;
                   transform: none !important;
                 }
                 .team-img-desktop {
