@@ -14,7 +14,7 @@ export default function HeroIntro() {
   const translations = {
     en: {
       brand: 'SasaNdioSasa',
-      headline: 'Now is your time.',
+      headline: 'Your time is now.',
       brandIntro: 'Step into journeys through Tanzania, where safari becomes a space to reconnect.',
       subheadline: 'Wherever you are, whatever season you\'re in. Your moment is now.',
       quote: 'Maybe the answer is not in adding more. But in listening again to what was always there.',
