@@ -27,7 +27,7 @@ export default function SpecialEvents() {
   const events = [
     {
       id: 1,
-      flyer: '/Hiking.png',
+      flyer: '/hiking.png',
       alt: 'Special Event 1',
       link: '#',
     },
