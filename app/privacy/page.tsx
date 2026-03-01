@@ -53,8 +53,25 @@ export default function PrivacyPolicy() {
               </p>
 
               <p>
-                If you would like to access, correct or delete your data, please contact us at.
+                If you would like to access, correct or delete your data, please contact us.
               </p>
+
+              <div className="pt-2">
+                <h3 className="text-xl md:text-2xl font-comfortaa font-semibold text-white mb-3">
+                  Disclaimer
+                </h3>
+                <div className="space-y-4">
+                  <p>
+                    All information provided on this website is given in good faith. While we strive to ensure accuracy, availability, and up-to-date details, changes may occur without prior notice.
+                  </p>
+                  <p>
+                    Flights, transfers, accommodations, and other third-party services are operated by independent providers. We are not responsible for their operational performance, schedule changes, cancellations, or circumstances beyond our reasonable control, including events of force majeure.
+                  </p>
+                  <p>
+                    We carefully select our partners and coordinate with attention and care. However, final responsibility for the execution of third-party services remains with the respective provider.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </main>
