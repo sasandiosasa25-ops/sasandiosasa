@@ -27,13 +27,13 @@ export default function SpecialEvents() {
   const events = [
     {
       id: 1,
-      flyer: '/northern13.jpeg',
+      flyer: '/Hiking.png',
       alt: 'Special Event 1',
       link: '#',
     },
     {
       id: 2,
-      flyer: '/northern12.jpeg',
+      flyer: '/Hiking(1).png',
       alt: 'Special Event 2',
       link: '#',
     },
