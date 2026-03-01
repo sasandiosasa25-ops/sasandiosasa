@@ -42,7 +42,7 @@ export default function SpecialEvents() {
   const text = content[language];
 
   return (
-    <section className="relative py-16 sm:py-20 lg:py-28 overflow-hidden">
+    <section className="relative py-14 sm:py-20 lg:py-28 overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-brand-primary rounded-full blur-3xl" />
@@ -75,21 +75,21 @@ export default function SpecialEvents() {
             >
               <Link
                 href={event.link}
-                className="group relative overflow-hidden bg-white border-2 border-brand-border hover:border-brand-primary transition-all duration-500 shadow-lg hover:shadow-2xl block"
+                className="group relative overflow-hidden bg-white border-2 border-brand-border hover:border-brand-primary transition-all duration-500 shadow-lg hover:shadow-2xl block rounded-lg"
               >
                 {/* Flyer Image - Full Display */}
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden bg-white aspect-[3/4] sm:aspect-[4/5] md:aspect-[3/4]">
                   <img
                     src={event.flyer}
                     alt={event.alt}
-                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                   />
                   {/* Subtle overlay on hover for interactivity */}
                   <div className="absolute inset-0 bg-brand-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
-                {/* Learn More Button - Slides up on hover */}
-                <div className="absolute bottom-0 left-0 right-0 bg-brand-primary text-white text-center py-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                {/* Learn More Button - Always visible on touch devices, hover reveal on md+ */}
+                <div className="relative md:absolute bottom-0 left-0 right-0 bg-brand-primary text-white text-center py-3 sm:py-4 transform md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500">
                   <span className="font-bold text-sm sm:text-base uppercase tracking-wider flex items-center justify-center">
                     {text.viewDetails}
                     <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-2 transition-transform duration-300" />
