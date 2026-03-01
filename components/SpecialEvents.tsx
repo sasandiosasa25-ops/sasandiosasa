@@ -33,7 +33,7 @@ export default function SpecialEvents() {
     },
     {
       id: 2,
-      flyer: '/Hiking(1).png',
+      flyer: '/hiking2.png',
       alt: 'Special Event 2',
       link: '#',
     },
