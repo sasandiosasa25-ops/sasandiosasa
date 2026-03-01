@@ -8,6 +8,34 @@ import { ChevronDown, ChevronRight, MapPin, Calendar, Users, Mountain, Waves, Co
 const SafariPage = () => {
   const [expandedJourney, setExpandedJourney] = useState<string | null>(null);
 
+  const locationToAnchor: Record<string, string> = {
+    'Dar es Salaam': 'dar-es-salaam',
+    'Nyerere (Selous)': 'selous',
+    'Mikumi National Park': 'mikumi',
+    'Udzungwa': 'udzungwa',
+    'Ruaha': 'ruaha',
+    'Arusha National Park': 'arusha-np',
+    'Maasai Lodge': 'maasai-lodge',
+    'Tarangire National Park': 'tarangire',
+    'Serengeti': 'serengeti',
+    'Ngorongoro Crater': 'ngorongoro',
+    'Maasai Experience': 'maasai-experience',
+    'Zanzibar': 'zanzibar',
+    'Pangani': 'pangani',
+    'Maziwe Island': 'maziwe',
+  };
+
+  const getLocationLinks = (journey: {
+    id: string;
+    locations: string[];
+  }) => {
+    if (journey.id === 'the-flow') {
+      return ['Dar es Salaam', ...journey.locations];
+    }
+
+    return journey.locations.filter((location) => location !== 'Dar es Salaam');
+  };
+
   const journeys = [
     {
       id: 'the-flow',
@@ -77,6 +105,21 @@ const SafariPage = () => {
             <div key={journey.id} className="bg-white p-8 rounded-lg shadow-sm border border-brand-border flex flex-col items-start text-left max-w-3xl mx-auto">
               <h3 className="font-comfortaa text-3xl text-black mb-3">{journey.title}</h3>
               <p className="font-poppins text-lg text-stone-600 italic mb-2">{journey.subtitle}</p>
+              <div className="flex flex-wrap gap-2 mb-4 md:hidden">
+                {getLocationLinks(journey).map((location, idx) => {
+                  const anchor = locationToAnchor[location] || '';
+                  const href = anchor ? `/compass/road-map#${anchor}` : '/compass/road-map';
+
+                  return (
+                    <Link key={idx} href={href} scroll={false} legacyBehavior>
+                      <a className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full hover:bg-brand-primary/20 transition-colors">
+                        <MapPin className="w-3 h-3 text-black" />
+                        {location}
+                      </a>
+                    </Link>
+                  );
+                })}
+              </div>
               <div className="font-poppins text-stone-600 leading-relaxed mb-4">
                 {(() => {
                   // Split into sentences
@@ -91,49 +134,21 @@ const SafariPage = () => {
                   ));
                 })()}
               </div>
-              {/* Location links for all journeys except The Flow */}
-              {journey.id !== 'the-flow' ? (
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {journey.locations.map((location, idx) => {
-                    const locationToAnchor: Record<string, string> = {
-                      'Dar es Salaam': 'dar-es-salaam',
-                      'Nyerere (Selous)': 'selous',
-                      'Mikumi National Park': 'mikumi',
-                      'Udzungwa': 'udzungwa',
-                      'Ruaha': 'ruaha',
-                      'Arusha National Park': 'arusha-np',
-                      'Maasai Lodge': 'maasai-lodge',
-                      'Tarangire National Park': 'tarangire',
-                      'Serengeti': 'serengeti',
-                      'Ngorongoro Crater': 'ngorongoro',
-                      'Maasai Experience': 'maasai-experience',
-                      'Zanzibar': 'zanzibar',
-                      'Pangani': 'pangani',
-                      'Maziwe Island': 'maziwe',
-                    };
-                    if (location === 'Dar es Salaam') return null;
-                    const anchor = locationToAnchor[location] || '';
-                    const href = anchor ? `/compass/road-map#${anchor}` : '/compass/road-map';
-                    return (
-                      <Link key={idx} href={href} scroll={false} legacyBehavior>
-                        <a className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full hover:bg-brand-primary/20 transition-colors">
-                          <MapPin className="w-3 h-3 text-black" />
-                          {location}
-                        </a>
-                      </Link>
-                    );
-                  })}
-                </div>
-              ) : (
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Link href="/compass/road-map#dar-es-salaam" legacyBehavior>
-                    <a className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full hover:bg-brand-primary/20 transition-colors">
-                      <MapPin className="w-3 h-3 text-black" />
-                      Dar es Salaam
-                    </a>
-                  </Link>
-                </div>
-              )}
+              <div className="hidden md:flex md:flex-wrap gap-2 mb-4">
+                {getLocationLinks(journey).map((location, idx) => {
+                  const anchor = locationToAnchor[location] || '';
+                  const href = anchor ? `/compass/road-map#${anchor}` : '/compass/road-map';
+
+                  return (
+                    <Link key={idx} href={href} scroll={false} legacyBehavior>
+                      <a className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-black text-sm font-poppins rounded-full hover:bg-brand-primary/20 transition-colors">
+                        <MapPin className="w-3 h-3 text-black" />
+                        {location}
+                      </a>
+                    </Link>
+                  );
+                })}
+              </div>
               <div className="w-full flex justify-between items-center mb-4">
                 <div className="flex items-center gap-2 text-stone-700">
                   <Calendar className="w-4 h-4" />
