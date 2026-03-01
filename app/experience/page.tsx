@@ -44,7 +44,7 @@ const translations: Record<string, any> = {
     title: 'Erfahrung',
     subtitle: 'Eine Reise des Wachstums, der Verbindung und der Entdeckung.',
     innerSafari: {
-      id: 'innere-safari',
+      id: 'inner-safari',
       title: 'Innere Safari',
       duration: '6 Monate, 6 Module',
       durationDesc: 'Eine sechsmonatige Reise mit sechs Modulen, gestaltet für stetiges Wachstum.',
@@ -130,7 +130,7 @@ const ExperiencePage = () => {
       {/* Hero Section removed: no extra open space or broken image */}
 
       {/* Inner Safari Section */}
-      <div id={t.innerSafari.id} className="scroll-mt-20">
+      <div id="inner-safari" className="scroll-mt-20">
         <div className="w-full px-3 md:px-8 lg:px-16 py-10 flex flex-col gap-6">
           {/* Title and Duration */}
           <div className="flex flex-col gap-1 items-start">
@@ -228,7 +228,7 @@ const ExperiencePage = () => {
       </div>
 
       {/* Retreat Section */}
-      <div id={t.retreat.id} className="scroll-mt-20 bg-white">
+      <div id="retreat" className="scroll-mt-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 py-20">
           <div className="mb-12">
             <div className="flex flex-col gap-1 items-start mb-8">

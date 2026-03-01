@@ -39,8 +39,8 @@ export default function Footer() {
     experience: {
       title: language === 'de' ? 'Erfahrung' : 'Experience',
       links: [
-        { href: '/experience/inner-safari', label: language === 'de' ? 'Innere Safari' : 'Inner Safari' },
-        { href: '/experience/retreat', label: language === 'de' ? 'Rückzug' : 'Retreat' },
+        { href: '/experience/#inner-safari', label: language === 'de' ? 'Innere Safari' : 'Inner Safari' },
+        { href: '/experience/#retreat', label: language === 'de' ? 'Rückzug' : 'Retreat' },
              ]
     },
     travelCompass: {
