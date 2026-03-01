@@ -402,17 +402,9 @@ It is a place to be close to the water, close to the land, and close to yourself
                         </div>
                       </div>
                     </div>
-                    <div className={`relative h-72 sm:h-96 ${experience.id === 'little-tracks' ? 'lg:h-[420px]' : 'lg:h-full'} overflow-hidden border-4 border-brand-primary shadow-2xl flex lg:items-stretch`}>
-                      <img 
-                        src={experience.image} 
-                        alt={experience.name}
-                        className="w-full h-full object-cover lg:object-cover lg:h-full"
-                        style={experience.id === 'little-tracks' ? { height: '100%', minHeight: '18rem', maxHeight: '420px' } : { height: '100%', minHeight: '18rem', maxHeight: '700px' }}
-                      />
-                    </div>
-                    {/* Destinations below image for mobile */}
-                    <div className="block lg:hidden mt-4">
-                      <div className="border-t-2 border-brand-border pt-4">
+                    {/* Destinations above image for mobile */}
+                    <div className="block lg:hidden mb-4">
+                      <div className="border-b-2 border-brand-border pb-4">
                         <h4 className="text-sm font-bold uppercase tracking-wider text-brand-heading mb-2 flex items-center">
                           <MapPin className="h-4 w-4 mr-2 text-brand-primary" />
                           {text.destinations}
@@ -434,6 +426,14 @@ It is a place to be close to the water, close to the land, and close to yourself
                           ))}
                         </div>
                       </div>
+                    </div>
+                    <div className={`relative h-72 sm:h-96 ${experience.id === 'little-tracks' ? 'lg:h-[420px]' : 'lg:h-full'} overflow-hidden border-4 border-brand-primary shadow-2xl flex lg:items-stretch`}>
+                      <img 
+                        src={experience.image} 
+                        alt={experience.name}
+                        className="w-full h-full object-cover lg:object-cover lg:h-full"
+                        style={experience.id === 'little-tracks' ? { height: '100%', minHeight: '18rem', maxHeight: '420px' } : { height: '100%', minHeight: '18rem', maxHeight: '700px' }}
+                      />
                     </div>
                   </div>
                 </div>
