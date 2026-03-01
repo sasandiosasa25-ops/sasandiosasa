@@ -7,7 +7,7 @@ export default function Manifesto() {
 
   const content = {
     en: {
-      tagline: "Your time is Now.",
+      tagline: "Your time is now.",
       subtitle1: "Wherever you are, whatever season you're in.",
       subtitle2: "Your moment is now.",
       quote: "Maybe the answer is not in adding more. But in listening again to what was always there.",
