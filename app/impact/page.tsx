@@ -349,14 +349,27 @@ export default function ImpactPage() {
           const Icon = goal.icon;
           const isEven = index % 2 === 0;
           const showNdoto = goal.id === "quality-education";
+          const isGoodHealth = goal.id === "good-health";
           return (
             <div
               key={goal.id}
               id={goal.id}
               className={`mb-20 md:mb-32 scroll-mt-24 ${
                 isEven ? 'bg-gradient-to-br from-brand-primary/5 to-white' : 'bg-gradient-to-br from-white to-brand-secondary/5'
-              } p-6 md:p-12 lg:p-16 border-l-8 border-brand-primary shadow-xl`}
+              } p-6 md:p-12 lg:p-16 border-l-8 border-brand-primary shadow-xl relative overflow-hidden`}
             >
+              {isGoodHealth && (
+                <>
+                  <div
+                    className="absolute inset-0 bg-center bg-cover"
+                    style={{ backgroundImage: "url('/heath.jpg')" }}
+                    aria-hidden="true"
+                  />
+                  <div className="absolute inset-0 bg-white/80 md:bg-white/75" aria-hidden="true" />
+                </>
+              )}
+
+              <div className="relative z-10">
               {/* Goal Header */}
               <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6 mb-8 md:mb-12 pb-6 md:pb-8 border-b-4 border-brand-border/30">
                 <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-brand-primary flex items-center justify-center shadow-lg">
@@ -418,6 +431,7 @@ export default function ImpactPage() {
                       </p>
                     </div>
                   ))}
+              </div>
               </div>
             </div>
           );
