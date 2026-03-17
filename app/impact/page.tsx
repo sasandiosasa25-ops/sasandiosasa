@@ -350,6 +350,24 @@ export default function ImpactPage() {
           const isEven = index % 2 === 0;
           const showNdoto = goal.id === "quality-education";
           const isGoodHealth = goal.id === "good-health";
+          const isQualityEducation = goal.id === "quality-education";
+          const isDecentWork = goal.id === "decent-work";
+          const isLifeOnLand = goal.id === "life-on-land";
+          const isPartnerships = goal.id === "partnerships";
+
+          const goalBackgroundImage = isGoodHealth
+            ? "/heath.jpg"
+            : isQualityEducation
+              ? "/education.jpg"
+              : isDecentWork
+                ? "/partnership.jpg"
+                : isLifeOnLand
+                  ? "/landlife.jpg"
+                  : isPartnerships
+                    ? "/partnershipgoal.jpg"
+                    : null;
+
+          const hasGoalBackground = goalBackgroundImage !== null;
           return (
             <div
               key={goal.id}
@@ -358,11 +376,11 @@ export default function ImpactPage() {
                 isEven ? 'bg-gradient-to-br from-brand-primary/5 to-white' : 'bg-gradient-to-br from-white to-brand-secondary/5'
               } p-6 md:p-12 lg:p-16 border-l-8 border-brand-primary shadow-xl relative overflow-hidden`}
             >
-              {isGoodHealth && (
+              {hasGoalBackground && (
                 <>
                   <div
                     className="absolute inset-0 bg-center bg-cover"
-                    style={{ backgroundImage: "url('/heath.jpg')" }}
+                    style={{ backgroundImage: `url('${goalBackgroundImage}')` }}
                     aria-hidden="true"
                   />
                   <div className="absolute inset-0 bg-white/80 md:bg-white/75" aria-hidden="true" />
