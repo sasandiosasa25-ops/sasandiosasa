@@ -1,7 +1,7 @@
           "use client";
           import React, { FC, useEffect, useState, ReactNode } from 'react';
           // import { useLanguage } from '@/lib/useLanguage';
-          import { ExternalLink, Mail, Leaf, Heart, Users } from 'lucide-react';
+          import { ExternalLink, Mail, Leaf, Heart } from 'lucide-react';
 interface Translation {
   title: string;
   subtitle: string;
@@ -12,7 +12,6 @@ interface Translation {
   introText4: string;
   introText5: string;
   guides: string;
-  office: string;
   coaches: string;
   partner: string;
   team: TeamMember[];
@@ -36,7 +35,6 @@ interface TeamMember {
 
 interface TeamBySection {
   guides: TeamMember[];
-  office: TeamMember[];
   coaches: TeamMember[];
   partners: TeamMember[];
 }
@@ -64,7 +62,6 @@ const TeamPage: FC = () => {
       introText4: 'Each path we design is built on presence, awareness, and trust. Shaped by real relationships and by the rhythm of a place we deeply respect.',
       introText5: 'Click through our profiles and get to know the people behind SasaNdioSasa. A team of many paths, one purpose, and a shared love for this land we call home.',
       guides: 'Guides',
-      office: 'Office',
       coaches: 'Coaches',
       partner: 'Our Trusted Partner',
       team: [
@@ -91,14 +88,6 @@ const TeamPage: FC = () => {
           image: '/Allan.jpeg',
           bio: 'Allan feels most at home barefoot, close to the earth he loves so much. From the peaks of the Usambara Mountains to the quiet coast, he knows Tanzania by heart. His calm, grounded way of guiding brings travelers closer to nature, and to a slower rhythm that many didn\'t know they were missing.',
           imagePosition: 'right'
-        },
-        {
-          section: 'office',
-          name: 'Edna',
-          role: 'Your SasaNdioSasa Allrounder',
-          image: '/Edna.jpeg',
-          bio: 'Edna is the quiet force that keeps everything flowing. A true problem-solver with a strong heart, she holds the threads together when things get busy. Her persistence, clarity, and calm presence remind us that every challenge has a way out.',
-          imagePosition: 'left'
         },
         {
           section: 'coaches',
@@ -131,7 +120,6 @@ const TeamPage: FC = () => {
       introText4: 'Jeder Weg, den wir gestalten, basiert auf Präsenz, Bewusstsein und Vertrauen. Geprägt durch echte Beziehungen und den Rhythmus eines Ortes, den wir zutiefst respektieren.',
       introText5: 'Lesen Sie unsere Profile und lernen Sie die Menschen hinter SasaNdioSasa kennen. Ein Team mit vielen Wegen, einem Zweck und gemeinsamer Liebe zu diesem Land, das wir Heimat nennen.',
       guides: 'Guides',
-      office: 'Büro',
       coaches: 'Coaches',
       partner: 'Unser vertrauensvoller Partner',
       team: [
@@ -150,14 +138,6 @@ const TeamPage: FC = () => {
           image: '/Allan.jpeg',
           bio: 'Allan fühlt sich am wohlsten barfuß, in der Nähe der Erde, die er so sehr liebt. Von den Gipfeln der Usambara-Berge bis zur ruhigen Küste kennt er Tansania von Herzen. Seine ruhige, erdverbundene Art zu führen bringt Reisende der Natur näher und zu einem langsameren Rhythmus, den viele nicht kannten, dass sie ihn vermissten.',
           imagePosition: 'right'
-        },
-        {
-          section: 'office',
-          name: 'Edna',
-          role: 'Dein SasaNdioSasa Allrounder',
-          image: '/Edna.jpeg',
-          bio: 'Edna ist die leise Kraft, die alles in Bewegung hält. Eine echte Problemlöserin mit starkem Herzen hält sie die Fäden zusammen, wenn es hektisch wird. Ihre Ausdauer, Klarheit und ruhige Präsenz erinnern uns daran, dass jede Herausforderung einen Weg hinaus hat.',
-          imagePosition: 'left'
         },
         {
           section: 'coaches',
@@ -189,12 +169,10 @@ const TeamPage: FC = () => {
   const cac = t.team.find(m => m.name.toLowerCase().includes('culture arts center'));
   const allan = t.team.find(m => m.name.toLowerCase() === 'allan');
   const coaches = t.team.filter(m => m.section === 'coaches');
-  const edna = t.team.find(m => m.name.toLowerCase() === 'edna');
 
   // Group team members by section
   const teamBySection: TeamBySection = {
     guides: t.team.filter(m => m.section === 'guides'),
-    office: t.team.filter(m => m.section === 'office'),
     coaches: t.team.filter(m => m.section === 'coaches'),
     partners: t.team.filter(m => m.section === 'partners'),
   };
@@ -359,17 +337,6 @@ const TeamPage: FC = () => {
               {t.coaches}
             </h3>
             {coaches.map(renderTeamMember)}
-          </div>
-        )}
-
-        {/* 5. Edna (office, last, with section title) */}
-        {edna && (
-          <div className="mb-12">
-            <h3 className="font-comfortaa text-2xl md:text-3xl text-brand-heading font-bold mb-6 flex items-center gap-2">
-              <Users size={28} className="text-brand-primary" />
-              {t.office}
-            </h3>
-            {renderTeamMember(edna, 0)}
           </div>
         )}
       </div>
