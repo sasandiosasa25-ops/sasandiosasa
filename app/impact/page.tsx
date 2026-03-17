@@ -383,7 +383,7 @@ export default function ImpactPage() {
                     style={{ backgroundImage: `url('${goalBackgroundImage}')` }}
                     aria-hidden="true"
                   />
-                  <div className="absolute inset-0 bg-white/80 md:bg-white/75" aria-hidden="true" />
+                  <div className="absolute inset-0 bg-white/70 md:bg-white/75" aria-hidden="true" />
                 </>
               )}
 
