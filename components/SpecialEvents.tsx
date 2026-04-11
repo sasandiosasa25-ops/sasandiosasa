@@ -75,6 +75,8 @@ export default function SpecialEvents() {
             >
               <Link
                 href={event.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative overflow-hidden bg-white border-2 border-brand-border hover:border-brand-primary transition-all duration-500 shadow-lg hover:shadow-2xl block rounded-lg"
               >
                 {/* Flyer Image - Full Display */}
