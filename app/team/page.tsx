@@ -14,6 +14,7 @@ interface Translation {
   guides: string;
   coaches: string;
   partner: string;
+  office: string;
   team: TeamMember[];
 }
 
@@ -64,6 +65,7 @@ const TeamPage: FC = () => {
       guides: 'Guides',
       coaches: 'Coaches',
       partner: 'Our Trusted Partner',
+      office: 'Office',
       team: [
                 {
                   section: 'partners',
@@ -101,12 +103,28 @@ const TeamPage: FC = () => {
         },
         {
           section: 'coaches',
+          name: 'Claudia',
+          role: 'Your SasaNdioSasa Breathwork and Mindset Coach',
+          image: '/claudia.jpg',
+          bio: 'Claudia brings a grounded approach to breathwork and mindset, shaped by her connection to nature, the body, and present awareness. She creates space for others to slow down, reconnect, and access their inner strength, especially in more challenging moments.\nWith a balance of intuition and clarity, she supports each journey with empathy and structure. She values preparation as much as the peak, guiding others to arrive steady, aware, and open to what unfolds.',
+          imagePosition: 'left'
+        },
+        {
+          section: 'coaches',
           name: 'Ina',
           role: 'Your SasaNdioSasa Coach & Retreat Creator',
           image: '/Ina.jpeg',
           bio: 'Ina\'s journey is rooted in transformation, in the land, in systems, and within the heart. As a coach and retreat creator, she merges her work with the ROOTED™ methodology to help sustainable change take root, in people and projects alike. Her love for Earth and people is visible in every retreat, every coaching session, and every conversation. Her work invites you to move more gently and more wisely. To make a long lasting impact.',
           website: 'inawalter.com',
           imagePosition: 'left'
+        },
+        {
+          section: 'office',
+          name: 'Edna',
+          role: 'Your SasaNdioSasa Allrounder',
+          image: '/Edna.jpeg',
+          bio: 'Her approach is steady, thoughtful, and grounded - supporting work behind the scenes and helping ideas move into action with care and consistency. With a practical mindset and a growing curiosity for systems and people, she brings structure where needed while staying open to learning along the way.',
+          imagePosition: 'right'
         }
       ]
     },
@@ -122,6 +140,7 @@ const TeamPage: FC = () => {
       guides: 'Guides',
       coaches: 'Coaches',
       partner: 'Unser vertrauensvoller Partner',
+      office: 'Büro',
       team: [
         {
           section: 'guides',
@@ -151,12 +170,28 @@ const TeamPage: FC = () => {
         },
         {
           section: 'coaches',
+          name: 'Claudia',
+          role: 'Deine SasaNdioSasa Atem- und Mindset-Coachin',
+          image: '/claudia.jpg',
+          bio: 'Claudia bringt einen bodenständigen Ansatz zu Atemarbeit und Mindset, geprägt durch ihre Verbindung zur Natur, zum Körper und zur gegenwärtigen Bewusstheit. Sie schafft Raum für andere, um langsamer zu werden, sich wiederzuverbinden und ihre innere Stärke zu erreichen, besonders in herausfordernden Momenten.\nMit einer Balance aus Intuition und Klarheit unterstützt sie jede Reise mit Empathie und Struktur. Sie schätzt Vorbereitung genauso wie den Höhepunkt und führt andere dazu, stabil, bewusst und offen für das anzukommen, was sich entfaltet.',
+          imagePosition: 'left'
+        },
+        {
+          section: 'coaches',
           name: 'Ina',
           role: 'Dein SasaNdioSasa Coach & Retreat Kreatorin',
           image: '/Ina.jpeg',
           bio: 'Inas Reise ist in Transformation, im Land, in Systemen und im Herzen verwurzelt. Als Coach und Retreat-Kreatorin verbindet sie ihre Arbeit mit der ROOTED™-Methodik, um nachhaltigen Wandel in Menschen und Projekten zu bewirken. Ihre Liebe zur Erde und zu Menschen ist in jedem Retreat, jeder Coaching-Sitzung sichtbar. Ihre Arbeit lädt dich ein, sanfter und weiser zu handeln und eine nachhaltige Auswirkung zu schaffen.',
           website: 'inawalter.com',
           imagePosition: 'left'
+        },
+        {
+          section: 'office',
+          name: 'Edna',
+          role: 'Deine SasaNdioSasa Allrounderin',
+          image: '/Edna.jpeg',
+          bio: 'Ihr Ansatz ist beständig, nachdenklich und bodenständig - sie unterstützt die Arbeit im Hintergrund und hilft dabei, Ideen mit Sorgfalt und Konsequenz in die Tat umzusetzen. Mit einem praktischen Mindset und einer wachsenden Neugier für Systeme und Menschen bringt sie Struktur ein, wo sie benötigt wird, und bleibt dabei offen für das Lernen auf dem Weg.',
+          imagePosition: 'right'
         }
       ]
     }
@@ -169,6 +204,7 @@ const TeamPage: FC = () => {
   const cac = t.team.find(m => m.name.toLowerCase().includes('culture arts center'));
   const allan = t.team.find(m => m.name.toLowerCase() === 'allan');
   const coaches = t.team.filter(m => m.section === 'coaches');
+  const office = t.team.filter(m => m.section === 'office');
 
   // Group team members by section
   const teamBySection: TeamBySection = {
@@ -189,7 +225,7 @@ const TeamPage: FC = () => {
             <img 
               src={member.image} 
               alt={member.name}
-              className={`w-full h-[320px] sm:h-[340px] md:h-[260px] object-cover team-img-desktop hover:scale-105 transition-transform duration-500 ${isAllan ? 'object-top md:object-center' : member.name.toLowerCase() === 'edna' ? 'object-top' : ''}`}
+              className={`w-full h-[320px] object-cover team-img-desktop hover:scale-105 transition-transform duration-500 ${isAllan ? 'object-top md:object-center' : member.name.toLowerCase() === 'edna' ? 'object-top' : ''}`}
               style={isAllan ? {objectPosition: 'top center'} : {}}
             />
           </div>
@@ -337,6 +373,16 @@ const TeamPage: FC = () => {
               {t.coaches}
             </h3>
             {coaches.map(renderTeamMember)}
+          </div>
+        )}
+
+        {/* 5. Office Section */}
+        {office.length > 0 && (
+          <div className="mb-12">
+            <h3 className="font-comfortaa text-2xl md:text-3xl text-brand-heading font-bold mb-6 flex items-center gap-2">
+              {t.office}
+            </h3>
+            {office.map(renderTeamMember)}
           </div>
         )}
       </div>
