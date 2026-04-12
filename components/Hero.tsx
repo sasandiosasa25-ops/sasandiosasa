@@ -107,19 +107,19 @@ export default function Hero() {
   const t = translations[language];
 
   return (
-    <div className="w-screen overflow-x-hidden " style={{ maxWidth: '100vw' }}>
+    <div className="w-full overflow-x-hidden">
       {/* Video Section - Full video visible, especially on small screens */}
       <section 
         ref={sectionRef} 
-        className="relative bg-brand-heading flex items-center justify-center"
-        style={{ width: '100vw', maxWidth: '100vw', overflow: 'visible' }}
+        className="relative w-full bg-brand-heading"
       >
-        <div className="w-full overflow-hidden">
+        <div className="w-full">
           <video
             ref={videoRef}
-            className="w-full h-auto max-h-[90vh] object-contain"
+            className="block w-full h-auto min-w-full"
             loop
             muted
+            autoPlay
             playsInline
             preload="auto"
           >
