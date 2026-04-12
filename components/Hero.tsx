@@ -117,13 +117,13 @@ export default function Hero() {
         <div className="w-full overflow-hidden">
           <video
             ref={videoRef}
-            className="w-full h-[55vh] sm:h-[65vh] md:h-[75vh] lg:h-[85vh] xl:h-[90vh] object-cover"
+            className="w-full h-auto max-h-[90vh] object-contain"
             loop
             muted
             playsInline
             preload="auto"
           >
-            <source src="/homevideo(1).mp4" type="video/mp4" />
+            <source src="/homevideos.mp4" type="video/mp4" />
           </video>
         </div>
         
