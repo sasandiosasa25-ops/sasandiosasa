@@ -18,9 +18,23 @@ export default function Hero() {
 
     if (!videoElement || !sectionElement) return;
 
-    let hasScrolled = false;
+    let hasUserGesture = false;
 
-    // Attempt to play immediately on load if visible
+    const enableAudio = () => {
+      if (!hasUserGesture) {
+        hasUserGesture = true;
+        videoElement.muted = false;
+        videoElement.volume = 1;
+        videoElement.play().catch(() => {
+          // Playback may still be prevented until the user interacts further.
+        });
+
+        window.removeEventListener('scroll', handleGesture);
+        window.removeEventListener('touchstart', handleGesture);
+        window.removeEventListener('pointerdown', handleGesture);
+      }
+    };
+
     const attemptAutoplay = () => {
       if (videoElement.readyState >= 2) {
         videoElement.play().catch((err) => {
@@ -29,21 +43,16 @@ export default function Hero() {
       }
     };
 
-    // Unmute after user scrolls
-    const handleScroll = () => {
-      if (!hasScrolled) {
-        hasScrolled = true;
-        videoElement.muted = false;
-        window.removeEventListener('scroll', handleScroll);
-      }
+    const handleGesture = () => {
+      enableAudio();
     };
 
-    // Try to play as soon as video can play
     videoElement.addEventListener('canplay', attemptAutoplay);
     attemptAutoplay();
 
-    // Listen for scroll to unmute
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleGesture, { passive: true });
+    window.addEventListener('touchstart', handleGesture, { passive: true });
+    window.addEventListener('pointerdown', handleGesture, { passive: true });
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -61,13 +70,13 @@ export default function Hero() {
     );
 
     observer.observe(sectionElement);
-
-    // Trigger animations
     setTimeout(() => setIsVisible(true), 100);
 
     return () => {
       videoElement.removeEventListener('canplay', attemptAutoplay);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleGesture);
+      window.removeEventListener('touchstart', handleGesture);
+      window.removeEventListener('pointerdown', handleGesture);
       observer.disconnect();
     };
   }, []);
@@ -105,22 +114,16 @@ export default function Hero() {
         className="relative bg-brand-heading flex items-center justify-center"
         style={{ width: '100vw', maxWidth: '100vw', overflow: 'visible' }}
       >
-        <div className="w-full flex items-center justify-center">
+        <div className="w-full overflow-hidden">
           <video
             ref={videoRef}
-            style={{ 
-              width: '100%',
-              height: 'auto',
-              display: 'block',
-              maxWidth: '100%',
-              objectFit: 'contain'
-            }}
+            className="w-full h-[55vh] sm:h-[65vh] md:h-[75vh] lg:h-[85vh] xl:h-[90vh] object-cover"
             loop
-            muted={true}
+            muted
             playsInline
             preload="auto"
           >
-            <source src="/pro1.mp4" type="video/mp4" />
+            <source src="/homevideo(1).mp4" type="video/mp4" />
           </video>
         </div>
         
