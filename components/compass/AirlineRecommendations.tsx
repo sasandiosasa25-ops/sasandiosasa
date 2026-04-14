@@ -90,17 +90,7 @@ const AirlineRecommendations = () => {
   const t = translations[language];
 
   return (
-    <section id="airline-recommendations" className="space-y-12 lg:space-y-16">
-      {/* Header */}
-      <div className="relative">
-        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-brand-primary via-brand-secondary to-brand-heading rounded-full opacity-80"></div>
-        <div className="space-y-2">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-heading flex items-center gap-4">
-            <Plane className="w-10 h-10 md:w-12 md:h-12 text-brand-primary flex-shrink-0" />
-            {t.title}
-          </h2>
-        </div>
-      </div>
+    <section id="airline-recommendations" className="space-y-4">
 
       {/* Hero Split Layout */}
       <div className="relative rounded-3xl overflow-hidden shadow-2xl group">

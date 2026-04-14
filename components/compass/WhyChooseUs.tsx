@@ -37,23 +37,18 @@ const WhyChooseUs = () => {
 
   return (
     <section id="why-choose-us" className="space-y-4">
-      <div className="relative">
-        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-amber-500 to-amber-900 rounded-full"></div>
-        <h2 className="text-2xl md:text-3xl font-bold text-amber-900 flex items-center gap-4 mb-4">
-          <Compass className="w-8 h-8 text-amber-900" />
-          {t.title}
-        </h2>
-      </div>
 
       <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg group">
         <img 
-          src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&q=80" 
-          alt="African Landscape" 
-          className="w-full h-full object-cover"
+          src="/vision.jpg" 
+          alt="Vision" 
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-4">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-transparent"></div>
+        <div className="absolute inset-0 flex items-end justify-center p-4">
           <div className="text-center text-white">
-            <p className="text-sm leading-relaxed">{t.intro.map((paragraph, index) => (
+            <p className="text-sm leading-relaxed drop-shadow-lg">{t.intro.map((paragraph, index) => (
               <span key={index}>{paragraph} </span>
             ))}</p>
           </div>

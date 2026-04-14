@@ -57,18 +57,6 @@ const SeasonalAdvice = () => {
 
   return (
     <section id="seasonal-advice" className="space-y-4">
-      <div className="relative">
-        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-brand-primary via-brand-secondary to-brand-heading rounded-full opacity-80"></div>
-        <div className="space-y-2">
-          <h2 className="text-2xl md:text-3xl font-bold text-brand-heading flex items-center gap-4">
-            <Calendar className="w-8 h-8 text-brand-primary flex-shrink-0" />
-            {t.title}
-          </h2>
-          <p className="text-base md:text-lg text-brand-primary/80 italic font-light pl-12">
-            {t.subtitle}
-          </p>
-        </div>
-      </div>
 
       <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg group">
         <img 
