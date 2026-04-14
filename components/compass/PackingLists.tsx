@@ -222,7 +222,9 @@ const PackingLists = () => {
               <div className="relative z-10">
                 <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">{t.peaks.title}</h3>
                 <div className="w-20 h-1 bg-brand-primary mb-6 rounded-full"></div>
-                <p className="text-lg sm:text-xl text-white/90 leading-relaxed">{t.peaks.intro}</p>
+                <div className="bg-[url('/mountain2.jpg')] bg-cover bg-center p-6 rounded-2xl text-white shadow-lg">
+                  <p className="text-lg sm:text-xl leading-relaxed">{t.peaks.intro}</p>
+                </div>
               </div>
             </div>
           </div>
