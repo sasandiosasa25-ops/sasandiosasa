@@ -105,8 +105,9 @@ const TeamPage: FC = () => {
           section: 'coaches',
           name: 'Claudia',
           role: 'Your SasaNdioSasa Breathwork and Mindset Coach',
-          image: '/claudia.jpg',
+          image: '/claudiaog.JPG',
           bio: 'Claudia brings a grounded approach to breathwork and mindset, shaped by her connection to nature, the body, and present awareness. She creates space for others to slow down, reconnect, and access their inner strength, especially in more challenging moments.\nWith a balance of intuition and clarity, she supports each journey with empathy and structure. She values preparation as much as the peak, guiding others to arrive steady, aware, and open to what unfolds.',
+          website: 'https://www.the-art-of-breathing.com/',
           imagePosition: 'left'
         },
         {
@@ -172,8 +173,9 @@ const TeamPage: FC = () => {
           section: 'coaches',
           name: 'Claudia',
           role: 'Deine SasaNdioSasa Atem- und Mindset-Coachin',
-          image: '/claudia.jpg',
+          image: '/claudiaog.JPG',
           bio: 'Claudia bringt einen bodenständigen Ansatz zu Atemarbeit und Mindset, geprägt durch ihre Verbindung zur Natur, zum Körper und zur gegenwärtigen Bewusstheit. Sie schafft Raum für andere, um langsamer zu werden, sich wiederzuverbinden und ihre innere Stärke zu erreichen, besonders in herausfordernden Momenten.\nMit einer Balance aus Intuition und Klarheit unterstützt sie jede Reise mit Empathie und Struktur. Sie schätzt Vorbereitung genauso wie den Höhepunkt und führt andere dazu, stabil, bewusst und offen für das anzukommen, was sich entfaltet.',
+          website: 'https://www.the-art-of-breathing.com/',
           imagePosition: 'left'
         },
         {
@@ -251,6 +253,16 @@ const TeamPage: FC = () => {
                 className="inline-flex items-center gap-1 text-brand-primary hover:underline"
               >
                 <ExternalLink size={18} /> Website
+              </a>
+            )}
+            {member.name === 'Claudia' && (
+              <a
+                href="https://www.the-art-of-breathing.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center"
+              >
+                <img src="/aoblogo.png" alt="AOB Logo" className="w-6 h-6 object-contain" />
               </a>
             )}
             {member.email && (
