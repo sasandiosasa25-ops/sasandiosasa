@@ -92,31 +92,28 @@ const AirlineRecommendations = () => {
   return (
     <section id="airline-recommendations" className="space-y-4">
 
-      {/* Hero Split Layout */}
-      <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-        <div className="flex flex-col lg:flex-row lg:min-h-[600px]">
-          <div className="relative h-48 sm:h-64 md:h-80 lg:h-auto lg:w-1/2 overflow-hidden">
-            <img 
-              src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80" 
-              alt="Airplane" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-brand-heading/70 via-brand-heading/40 to-transparent"></div>
-          </div>
-          
-          <div className="relative lg:w-1/2 flex items-center justify-center p-8 sm:p-10 lg:p-12 xl:p-16 bg-gradient-to-br from-brand-heading via-brand-secondary to-brand-heading overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-brand-primary/5 rounded-full blur-2xl"></div>
-            
-            <div className="relative z-10">
-              <div className="w-16 h-1 bg-brand-primary mb-6 rounded-full"></div>
-              <p className="text-white/95 text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed font-light tracking-wide">
-                {t.intro}
-              </p>
-              <div className="w-16 h-1 bg-brand-primary mt-6 rounded-full ml-auto"></div>
-            </div>
+      <div 
+        className="relative w-full min-h-96 rounded-3xl overflow-hidden shadow-2xl group"
+        style={{
+          backgroundImage: 'url(/Sunrise.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-heading/30 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-96 p-8 sm:p-10 lg:p-12">
+          <div className="max-w-3xl text-center">
+            <p className="text-white text-base sm:text-lg lg:text-xl xl:text-2xl leading-relaxed drop-shadow-lg font-light">
+              {t.intro}
+            </p>
           </div>
         </div>
+
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500"></div>
       </div>
 
       {/* Airlines Grid */}
