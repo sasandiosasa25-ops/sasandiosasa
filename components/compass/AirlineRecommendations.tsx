@@ -132,13 +132,6 @@ const AirlineRecommendations = () => {
       {/* Airlines Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {t.airlines.map((airline, index) => {
-          const isLufthansa = airline.name === 'Lufthansa';
-          const isKLM = airline.name === 'KLM Royal Dutch Airlines';
-          const isDiscover = airline.name === 'Discover Airlines';
-          const isEthiopian = airline.name === 'Ethiopian Airlines';
-          const isTurkish = airline.name === 'Turkish Airlines';
-          const isQatar = airline.name === 'Qatar Airways';
-          const isEmirates = airline.name === 'Emirates';
           const card = (
             <div 
               key={index} 
@@ -175,112 +168,7 @@ const AirlineRecommendations = () => {
               </div>
             </div>
           );
-          if (isLufthansa) {
-            return (
-              <a
-                key={index}
-                href="https://www.lufthansa.com/xx/en/homepage"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-                style={{ textDecoration: 'none' }}
-              >
-                {card}
-              </a>
-            );
-          } else if (isDiscover) {
-            return (
-              <a
-                key={index}
-                href="https://www.discover-airlines.com/xx/en/homepage"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-                style={{ textDecoration: 'none' }}
-              >
-                {card}
-              </a>
-            );
-          } else if (isKLM) {
-            return (
-              <a
-                key={index}
-                href="https://www.klm.co.tz/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-                style={{ textDecoration: 'none' }}
-              >
-                {card}
-              </a>
-            );
-          } else if (isEthiopian) {
-            return (
-              <a
-                key={index}
-                href="https://www.google.com/aclk?sa=L&pf=1&ai=DChsSEwiKpc2T8O2RAxVLkIMHHUnCPIIYACICCAEQABoCZWY&co=1&ase=2&gclid=Cj0KCQiA9t3KBhCQARIsAJOcR7xkB6WUq1B1VTVMUNnkgmhx0gGmiYVnM8Uwwc-kWw-Y3XPUWtbnm1kaAkYREALw_wcB&cid=CAAS3gHkaLEXV9R1hydEf36En8UrBTbS1ZG7PSbKNsPiwF4QlWuLOGBss6xrvySXcAV06r8ICGbYrE6_U1dV_ARhXTkiITWAdpnJv9Xk_feLS6aCr7DHNNeYJwEYHjLvtk-wgat8C1wYH9bJhS4Nn1JNPGOQsN_fqRjLBk0KciG23EfGg3XuD11U37wDAZrTMo9PrvjVghra2yfAJ5yf11XKf7G7CTzm1TuW5neVqZX6lABqFy1bNg-0WvphHI8UbmDciQ8ghanlDweODp-F08y8k-xAvQBOFyqZN_sgGG74FAM&cce=2&category=acrcp_v1_32&sig=AOD64_0MZZ6cRWqvw8HI4WLEtKg2omqHIA&q&nis=4&adurl=https://www.ethiopianairlines.com/en-tz/?gad_source%3D1%26gad_campaignid%3D22368411974%26gbraid%3D0AAAAADFhr_LYbQQIRY6ZVDPolRC9lTAsu%26gclid%3DCj0KCQiA9t3KBhCQARIsAJOcR7xkB6WUq1B1VTVMUNnkgmhx0gGmiYVnM8Uwwc-kWw-Y3XPUWtbnm1kaAkYREALw_wcB&ved=2ahUKEwiaoceT8O2RAxWvhf0HHesLMGgQ0Qx6BAgNEAE"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-                style={{ textDecoration: 'none' }}
-              >
-                {card}
-              </a>
-            );
-            return (
-              <a
-                key={index}
-                href="https://www.klm.co.tz/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-                style={{ textDecoration: 'none' }}
-              >
-                {card}
-              </a>
-            );
-          } else if (isTurkish) {
-            return (
-              <a
-                key={index}
-                href="https://www.turkishairlines.com/en-int/flights/booking/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-                style={{ textDecoration: 'none' }}
-              >
-                {card}
-              </a>
-            );
-          } else if (isQatar) {
-            return (
-              <a
-                key={index}
-                href="https://www.qatarairways.com/en-tz/homepage"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-                style={{ textDecoration: 'none' }}
-              >
-                {card}
-              </a>
-            );
-          } else if (isEmirates) {
-            return (
-              <a
-                key={index}
-                href="https://www.emirates.com/tz/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-                style={{ textDecoration: 'none' }}
-              >
-                {card}
-              </a>
-            );
-          } else {
-            return card;
-          }
+          return card;
         })}
       </div>
 

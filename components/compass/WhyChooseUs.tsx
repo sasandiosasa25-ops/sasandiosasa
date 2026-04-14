@@ -36,35 +36,26 @@ const WhyChooseUs = () => {
   const t = translations[language];
 
   return (
-    <section id="why-choose-us" className="space-y-8">
+    <section id="why-choose-us" className="space-y-4">
       <div className="relative">
         <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-amber-500 to-amber-900 rounded-full"></div>
-        <h2 className="text-4xl md:text-5xl font-bold text-amber-900 flex items-center gap-4 mb-8">
-          <Compass className="w-12 h-12 text-amber-900" />
+        <h2 className="text-2xl md:text-3xl font-bold text-amber-900 flex items-center gap-4 mb-4">
+          <Compass className="w-8 h-8 text-amber-900" />
           {t.title}
         </h2>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 items-center">
-        <div className="space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed">
-          {t.intro.map((paragraph, index) => (
-            <p key={index} className="italic text-gray-600 text-sm sm:text-base">{paragraph}</p>
-          ))}
-        </div>
-        <div className="relative h-48 sm:h-96 rounded-2xl overflow-hidden shadow-2xl">
-          <img 
-            src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&q=80" 
-            alt="African Landscape" 
-            className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-          />
-        </div>
+      <div className="space-y-4 text-sm sm:text-base text-gray-700 leading-relaxed">
+        {t.intro.map((paragraph, index) => (
+          <p key={index} className="italic text-gray-600">{paragraph}</p>
+        ))}
       </div>
 
-      <div className="space-y-6 text-lg text-gray-700 leading-relaxed bg-white p-8 rounded-2xl shadow-lg">
-        <p className="font-medium text-xl text-emerald-800">{t.content}</p>
+      <div className="space-y-4 text-sm text-gray-700 leading-relaxed bg-white p-4 rounded-2xl shadow-lg">
+        <p className="font-medium text-base text-emerald-800">{t.content}</p>
         <p>{t.simone}</p>
         <p>{t.choose}</p>
-        <p className="text-2xl font-semibold text-amber-800 pt-6 border-t-2 border-amber-200">{t.tagline}</p>
+        <p className="text-lg font-semibold text-amber-800 pt-4 border-t-2 border-amber-200">{t.tagline}</p>
       </div>
     </section>
   );
