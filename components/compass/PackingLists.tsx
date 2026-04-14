@@ -211,9 +211,9 @@ const PackingLists = () => {
             className="absolute inset-0 w-full h-full object-cover opacity-70"
           />
           <div className="relative z-10 space-y-6">
-            <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-orange-400">{t.peaks.title}</h3>
+            <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#8c592a]">{t.peaks.title}</h3>
             <div className="w-20 h-1 bg-brand-primary rounded-full"></div>
-            <p className="text-lg sm:text-xl leading-relaxed text-orange-400">{t.peaks.intro}</p>
+            <p className="text-lg sm:text-xl leading-relaxed text-[#8c592a]">{t.peaks.intro}</p>
           </div>
         </div>
 
