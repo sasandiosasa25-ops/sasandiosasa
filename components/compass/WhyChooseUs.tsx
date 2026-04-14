@@ -38,21 +38,35 @@ const WhyChooseUs = () => {
   return (
     <section id="why-choose-us" className="space-y-4">
 
-      <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg group">
-        <img 
-          src="/vision.jpg" 
-          alt="Vision" 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-transparent"></div>
-        <div className="absolute inset-0 flex items-end justify-center p-4">
-          <div className="text-center text-white">
-            <p className="text-sm leading-relaxed drop-shadow-lg">{t.intro.map((paragraph, index) => (
-              <span key={index}>{paragraph} </span>
-            ))}</p>
+      <div 
+        className="relative w-full min-h-96 rounded-2xl overflow-hidden shadow-2xl group"
+        style={{
+          backgroundImage: 'url(/vision.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Multi-layer overlay for text readability and aesthetic */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-96 p-6 sm:p-10 md:p-12">
+          <div className="max-w-3xl text-center space-y-4">
+            <div className="space-y-4">
+              {t.intro.map((paragraph, index) => (
+                <p key={index} className="text-white text-sm sm:text-base lg:text-lg leading-relaxed drop-shadow-lg font-light">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
+
+        {/* Hover effect */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500"></div>
       </div>
 
       <div className="space-y-4 text-sm text-gray-700 leading-relaxed bg-white p-4 rounded-2xl shadow-lg">
