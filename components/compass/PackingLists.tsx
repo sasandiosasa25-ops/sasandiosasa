@@ -203,30 +203,12 @@ const PackingLists = () => {
 
       {/* Peaks Packing Section */}
       <div className="space-y-8 border-t-4 border-brand-border pt-12 lg:pt-16">
-        {/* Peaks Hero Image with Split Layout */}
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-          <div className="flex flex-col lg:flex-row lg:min-h-[700px]">
-            <div className="relative h-48 sm:h-64 md:h-80 lg:h-auto lg:w-3/5 overflow-hidden">
-              <img 
-                src="/kili.jpeg" 
-                alt="Mount Kilimanjaro" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-brand-heading/80 via-brand-heading/50 to-transparent"></div>
-            </div>
-            
-            <div className="relative lg:w-2/5 flex items-center justify-center p-8 sm:p-10 lg:p-12 bg-gradient-to-br from-brand-heading via-brand-secondary to-brand-heading overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-brand-primary/5 rounded-full blur-2xl"></div>
-              
-              <div className="relative z-10">
-                <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">{t.peaks.title}</h3>
-                <div className="w-20 h-1 bg-brand-primary mb-6 rounded-full"></div>
-                <div className="bg-[url('/mountain2.jpg')] bg-cover bg-center p-6 rounded-2xl text-white shadow-lg">
-                  <p className="text-lg sm:text-xl leading-relaxed">{t.peaks.intro}</p>
-                </div>
-              </div>
-            </div>
+        {/* Peaks Hero Section */}
+        <div className="relative bg-[url('/mountain2.jpg')] bg-cover bg-center rounded-3xl overflow-hidden shadow-2xl p-8 sm:p-10 lg:p-12 text-white">
+          <div className="space-y-6">
+            <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold">{t.peaks.title}</h3>
+            <div className="w-20 h-1 bg-brand-primary rounded-full"></div>
+            <p className="text-lg sm:text-xl leading-relaxed">{t.peaks.intro}</p>
           </div>
         </div>
 
