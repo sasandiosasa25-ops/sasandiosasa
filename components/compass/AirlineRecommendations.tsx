@@ -95,7 +95,7 @@ const AirlineRecommendations = () => {
       <div 
         className="relative w-full min-h-96 rounded-3xl overflow-hidden shadow-2xl group"
         style={{
-          backgroundImage: 'url(/Sunrise.jpg)',
+          backgroundImage: 'url(/fly.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
