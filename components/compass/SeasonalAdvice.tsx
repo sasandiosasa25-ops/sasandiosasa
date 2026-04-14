@@ -58,17 +58,31 @@ const SeasonalAdvice = () => {
   return (
     <section id="seasonal-advice" className="space-y-4">
 
-      <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg group">
-        <img 
-          src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&q=80" 
-          alt="Tanzania Wildlife" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-4">
-          <div className="text-center text-white">
-            <p className="text-sm leading-relaxed">{t.intro}</p>
+      <div 
+        className="relative w-full min-h-96 rounded-2xl overflow-hidden shadow-2xl group"
+        style={{
+          backgroundImage: 'url(/sunrise.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Multi-layer overlay for text readability and aesthetic */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/20 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-96 p-6 sm:p-10 md:p-12">
+          <div className="max-w-3xl text-center">
+            <p className="text-white text-sm sm:text-base lg:text-lg leading-relaxed drop-shadow-lg font-light">
+              {t.intro}
+            </p>
           </div>
         </div>
+
+        {/* Hover effect */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500"></div>
       </div>
 
       {/* Season cards with compact styling */}
