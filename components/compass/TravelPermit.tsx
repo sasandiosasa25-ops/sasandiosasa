@@ -67,8 +67,17 @@ const TravelPermit = () => {
         </div>
       </div>
 
-      <div className="text-sm text-gray-700 leading-relaxed mb-4">
-        {t.intro}
+      <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg group mb-4">
+        <img 
+          src="/dar8.jpg" 
+          alt="Passport and Travel" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-4">
+          <div className="text-center text-white">
+            <p className="text-sm leading-relaxed">{t.intro}</p>
+          </div>
+        </div>
       </div>
 
       {/* Official Website Link Card */}

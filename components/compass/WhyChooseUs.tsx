@@ -45,10 +45,19 @@ const WhyChooseUs = () => {
         </h2>
       </div>
 
-      <div className="space-y-4 text-sm sm:text-base text-gray-700 leading-relaxed">
-        {t.intro.map((paragraph, index) => (
-          <p key={index} className="italic text-gray-600">{paragraph}</p>
-        ))}
+      <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg group">
+        <img 
+          src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&q=80" 
+          alt="African Landscape" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-4">
+          <div className="text-center text-white">
+            <p className="text-sm leading-relaxed">{t.intro.map((paragraph, index) => (
+              <span key={index}>{paragraph} </span>
+            ))}</p>
+          </div>
+        </div>
       </div>
 
       <div className="space-y-4 text-sm text-gray-700 leading-relaxed bg-white p-4 rounded-2xl shadow-lg">

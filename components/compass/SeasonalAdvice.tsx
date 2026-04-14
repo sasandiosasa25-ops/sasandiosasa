@@ -70,8 +70,17 @@ const SeasonalAdvice = () => {
         </div>
       </div>
 
-      <div className="text-sm text-gray-700 leading-relaxed mb-4">
-        {t.intro}
+      <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg group">
+        <img 
+          src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&q=80" 
+          alt="Tanzania Wildlife" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-4">
+          <div className="text-center text-white">
+            <p className="text-sm leading-relaxed">{t.intro}</p>
+          </div>
+        </div>
       </div>
 
       {/* Season cards with compact styling */}

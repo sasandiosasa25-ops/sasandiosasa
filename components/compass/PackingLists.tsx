@@ -147,28 +147,17 @@ const PackingLists = () => {
       </div>
 
       {/* Safari Packing Section */}
-      <div className="space-y-8">
-        {/* Safari Hero Image with Split Layout */}
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-          <div className="flex flex-col lg:flex-row lg:min-h-[600px]">
-            <div className="relative h-48 sm:h-64 md:h-80 lg:h-auto lg:w-1/2 overflow-hidden">
-              <img 
-                src="/bag.png" 
-                alt="Safari Vehicle" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-brand-heading/70 via-brand-heading/40 to-transparent"></div>
-            </div>
-            
-            <div className="relative lg:w-1/2 flex items-center justify-center p-8 sm:p-10 lg:p-12 xl:p-16 bg-gradient-to-br from-brand-heading via-brand-secondary to-brand-heading overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-brand-primary/5 rounded-full blur-2xl"></div>
-              
-              <div className="relative z-10">
-                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">{t.safari.title}</h3>
-                <div className="w-16 h-1 bg-brand-primary mb-6 rounded-full"></div>
-                <p className="text-lg sm:text-xl lg:text-2xl text-white/90 italic leading-relaxed">{t.safari.subtitle}</p>
-              </div>
+      <div className="space-y-4">
+        <h3 className="text-lg font-bold text-brand-heading">{t.safari.title}</h3>
+        <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg group">
+          <img 
+            src="/bag.png" 
+            alt="Safari Vehicle" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-4">
+            <div className="text-center text-white">
+              <p className="text-sm leading-relaxed italic">{t.safari.subtitle}</p>
             </div>
           </div>
         </div>
