@@ -223,7 +223,7 @@ const TeamPage: FC = () => {
       <div key={idx} className={`flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 lg:gap-10 items-center mb-12 lg:mb-16`}>
         {/* Image */}
         <div className={`flex-shrink-0 w-full md:w-1/3 lg:w-1/4`}>
-          <div className="relative overflow-hidden rounded-2xl shadow-lg bg-white">
+          <div className="relative overflow-hidden rounded-2xl shadow-lg">
             <img 
               src={member.image} 
               alt={member.name}
@@ -253,16 +253,6 @@ const TeamPage: FC = () => {
                 className="inline-flex items-center gap-1 text-brand-primary hover:underline"
               >
                 <ExternalLink size={18} /> Website
-              </a>
-            )}
-            {member.name === 'Claudia' && (
-              <a
-                href="https://www.the-art-of-breathing.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center"
-              >
-                <img src="/aoblogo.png" alt="AOB Logo" className="w-6 h-6 object-contain" />
               </a>
             )}
             {member.email && (
