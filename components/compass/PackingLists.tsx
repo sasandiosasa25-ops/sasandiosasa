@@ -208,7 +208,7 @@ const PackingLists = () => {
           <img 
             src="/mountain2.jpg" 
             alt="Mountain Background" 
-            className="absolute inset-0 w-full h-full object-cover opacity-70"
+            className="absolute inset-0 w-full h-full object-cover opacity-40"
           />
           <div className="relative z-10 space-y-6">
             <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#8c592a]">{t.peaks.title}</h3>
