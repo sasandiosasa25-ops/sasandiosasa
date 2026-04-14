@@ -61,7 +61,7 @@ const SeasonalAdvice = () => {
       <div 
         className="relative w-full min-h-96 rounded-2xl overflow-hidden shadow-2xl group"
         style={{
-          backgroundImage: 'url(/sunrise.jpg)',
+          backgroundImage: 'url(/Sunrise.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
