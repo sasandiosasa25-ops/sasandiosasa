@@ -110,15 +110,7 @@ const TeamPage: FC = () => {
           website: 'https://www.the-art-of-breathing.com/',
           imagePosition: 'left'
         },
-        {
-          section: 'coaches',
-          name: 'Ina',
-          role: 'Your SasaNdioSasa Coach & Retreat Creator',
-          image: '/Ina.jpeg',
-          bio: 'Ina\'s journey is rooted in transformation, in the land, in systems, and within the heart. As a coach and retreat creator, she merges her work with the ROOTED™ methodology to help sustainable change take root, in people and projects alike. Her love for Earth and people is visible in every retreat, every coaching session, and every conversation. Her work invites you to move more gently and more wisely. To make a long lasting impact.',
-          website: 'inawalter.com',
-          imagePosition: 'left'
-        },
+
         {
           section: 'office',
           name: 'Edna',
@@ -178,15 +170,7 @@ const TeamPage: FC = () => {
           website: 'https://www.the-art-of-breathing.com/',
           imagePosition: 'left'
         },
-        {
-          section: 'coaches',
-          name: 'Ina',
-          role: 'Dein SasaNdioSasa Coach & Retreat Kreatorin',
-          image: '/Ina.jpeg',
-          bio: 'Inas Reise ist in Transformation, im Land, in Systemen und im Herzen verwurzelt. Als Coach und Retreat-Kreatorin verbindet sie ihre Arbeit mit der ROOTED™-Methodik, um nachhaltigen Wandel in Menschen und Projekten zu bewirken. Ihre Liebe zur Erde und zu Menschen ist in jedem Retreat, jeder Coaching-Sitzung sichtbar. Ihre Arbeit lädt dich ein, sanfter und weiser zu handeln und eine nachhaltige Auswirkung zu schaffen.',
-          website: 'inawalter.com',
-          imagePosition: 'left'
-        },
+
         {
           section: 'office',
           name: 'Edna',
