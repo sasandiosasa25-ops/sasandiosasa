@@ -1,5 +1,6 @@
           "use client";
           import React, { FC, useEffect, useState, ReactNode } from 'react';
+          import Image from 'next/image';
           // import { useLanguage } from '@/lib/useLanguage';
           import { ExternalLink, Mail, Leaf, Heart } from 'lucide-react';
 interface Translation {
@@ -85,6 +86,14 @@ const TeamPage: FC = () => {
         },
         {
           section: 'guides',
+          name: 'Peak Planet',
+          role: 'Our trusted Mountain Partner',
+          image: '/peakplanet.jpeg',
+          bio: 'Peak Planet is our trusted mountain partner for Kilimanjaro experiences and the operational force behind Sky & Soul on the mountain. With deep local expertise, experienced guides, and a strong understanding of Kilimanjaro, they create the foundation for journeys that combine adventure, awareness, and meaningful human experience. Together, we bring Kilimanjaro to life beyond the summit.',
+          imagePosition: 'left'
+        },
+        {
+          section: 'guides',
           name: 'Allan',
           role: 'Your SasaNdioSasa Guide',
           image: '/Allan.jpeg',
@@ -141,6 +150,14 @@ const TeamPage: FC = () => {
           role: 'Unser vertrauensvoller Partner',
           image: '/kilidove.jpeg',
           bio: 'Wir sind stolz, Kilidove / Mawe Lodges vorzustellen, einen Partner, der das teilt, was wir am meisten schätzen: tansanische Gastfreundschaft. Jedes Detail, von sorgfältig kuratierten Menüs und lokal bezogenen Lieferanten bis hin zu durchdacht gestaltetem Dekor und Coachings, spiegelt ihr Engagement für Qualität und Authentizität wider. Kilidove / Mawe Lodges arbeitet derzeit auf die Travelife-Nachhaltigkeitszertifizierung hin und verkörpert die SasaNdioSasa-Werte jeden Tag.',
+          imagePosition: 'left'
+        },
+        {
+          section: 'guides',
+          name: 'Peak Planet',
+          role: 'Unser vertrauensvoller Bergpartner',
+          image: '/peakplanet.jpeg',
+          bio: 'Peak Planet ist unser vertrauensvoller Bergpartner für Kilimandscharo-Erlebnisse und die operative Kraft hinter Sky & Soul am Berg. Mit tiefem lokalem Know-how, erfahrenen Guides und einem starken Verständnis für den Kilimandscharo schaffen sie die Grundlage für Reisen, die Abenteuer, Bewusstheit und bedeutungsvolle menschliche Erfahrung verbinden. Gemeinsam erwecken wir den Kilimandscharo jenseits des Gipfels zum Leben.',
           imagePosition: 'left'
         },
         {
@@ -207,11 +224,13 @@ const TeamPage: FC = () => {
       <div key={idx} className={`flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 lg:gap-10 items-center mb-12 lg:mb-16`}>
         {/* Image */}
         <div className={`flex-shrink-0 w-full md:w-1/3 lg:w-1/4`}>
-          <div className="relative overflow-hidden rounded-2xl shadow-lg">
-            <img 
-              src={member.image} 
+          <div className="relative overflow-hidden rounded-2xl shadow-lg w-full h-[320px]">
+            <Image
+              src={member.image}
               alt={member.name}
-              className={`w-full h-[320px] object-cover team-img-desktop hover:scale-105 transition-transform duration-500 ${isAllan ? 'object-top md:object-center' : member.name.toLowerCase() === 'edna' ? 'object-top' : ''}`}
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className={`object-cover team-img-desktop hover:scale-105 transition-transform duration-500 ${isAllan ? 'object-top md:object-center' : member.name.toLowerCase() === 'edna' ? 'object-top' : ''}`}
               style={isAllan ? {objectPosition: 'top center'} : {}}
             />
           </div>
@@ -266,11 +285,13 @@ const TeamPage: FC = () => {
               maxHeight: '320px',
             }}
           >
-            <img
+            <Image
               src="/zebraa.jpeg"
               alt="Zebra Team"
-              className="w-full h-full object-contain md:object-cover object-center opacity-60 zebra-desktop-img"
-              style={{position: 'absolute', top: 0, left: 0, right: 0, zIndex: 0}}
+              fill
+              sizes="100vw"
+              className="absolute inset-0 w-full h-full object-contain md:object-cover object-center opacity-60 zebra-desktop-img"
+              style={{ zIndex: 0 }}
             />
             <div className="relative z-10 flex flex-col items-center justify-center text-center px-2 py-6 w-full">
               <h1 className="font-comfortaa text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-black mb-1 sm:mb-2">
