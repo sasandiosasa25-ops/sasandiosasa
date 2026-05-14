@@ -81,7 +81,7 @@ export default function Testimonials() {
                 </div>
                 
                 <p className="text-white/80 mb-6 md:mb-8 leading-relaxed text-sm md:text-base font-light font-poppins">
-                  "{testimonial.text}"
+                  &quot;{testimonial.text}&quot;
                 </p>
                 
                 <div className="border-t border-white/10 pt-6">

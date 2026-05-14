@@ -87,7 +87,7 @@ const SafariPage = () => {
       <div className="max-w-4xl mx-auto px-6 py-16">
         <div className="prose prose-lg font-poppins text-stone-700 leading-relaxed space-y-6">
           <p>
-            These journeys are not about ticking off destinations. They're about how you walk, what you notice, and how your presence touches the places you move through.
+            These journeys are not about ticking off destinations. They&apos;re about how you walk, what you notice, and how your presence touches the places you move through.
           </p>
           <p>
             We travel in partnership with Tanzanian hosts, with care for land, rhythm, and community. Every journey strengthens trusted networks, respects natural and human resources and invites you to be part of a wider movement.

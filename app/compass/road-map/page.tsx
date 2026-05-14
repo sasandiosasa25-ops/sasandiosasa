@@ -141,7 +141,7 @@ export default function RoadMapPage() {
                 <img src="/map2.jpeg" alt="Map background" className="absolute inset-0 w-full h-full object-cover opacity-60 z-0" style={{objectPosition: 'center'}} />
                 <span className="relative z-10 w-full flex flex-col items-center">
                   <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-2">Road Map</h2>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-medium mb-2">Journey through Tanzania's transformative landscapes</h3>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-medium mb-2">Journey through Tanzania&apos;s transformative landscapes</h3>
                 </span>
               </div>
             </div>

@@ -84,7 +84,7 @@ export default function Manifesto() {
           {/* Quote - Highlighted */}
           <div className="py-8 sm:py-10 lg:py-12 px-6 sm:px-8 lg:px-12 border-l-4 border-brand-primary bg-white/5 backdrop-blur-sm">
             <p className="text-white text-xl sm:text-2xl md:text-3xl font-light italic leading-relaxed">
-              " {text.quote} "
+              &quot; {text.quote} &quot;
             </p>
           </div>
 

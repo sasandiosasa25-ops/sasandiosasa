@@ -224,7 +224,7 @@ details: 'Over four days, the trail takes you from lush forest through alpine me
             Ready to Find Your Peak?
           </h2>
           <p className="hidden sm:block font-poppins text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 leading-relaxed">
-            Every mountain has a story. Let's discover yours together.
+            Every mountain has a story. Let&apos;s discover yours together.
           </p>
           <a
             href="https://tally.so/r/3xe74G"
