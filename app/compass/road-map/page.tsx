@@ -138,7 +138,14 @@ export default function RoadMapPage() {
             {/* Full-width title box with background image */}
             <div className="w-full rounded-xl shadow-lg overflow-hidden mb-1 sm:mb-4" style={{background: 'rgba(0,0,0,0.5)'}}>
               <div className="relative flex flex-col items-center justify-center px-2 sm:px-10 py-4 sm:py-10 min-h-[110px] sm:min-h-[180px] md:min-h-[220px] lg:min-h-[260px]">
-                <img src="/map2.jpeg" alt="Map background" className="absolute inset-0 w-full h-full object-cover opacity-60 z-0" style={{objectPosition: 'center'}} />
+                <Image
+                  src="/map2.jpeg"
+                  alt="Map background"
+                  fill
+                  sizes="100vw"
+                  className="absolute inset-0 object-cover opacity-60 z-0"
+                  style={{objectPosition: 'center'}}
+                />
                 <span className="relative z-10 w-full flex flex-col items-center">
                   <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-2">Road Map</h2>
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-medium mb-2">Journey through Tanzania&apos;s transformative landscapes</h3>

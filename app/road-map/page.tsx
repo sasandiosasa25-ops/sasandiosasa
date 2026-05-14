@@ -428,10 +428,12 @@ It is a place to be close to the water, close to the land, and close to yourself
                       </div>
                     </div>
                     <div className={`relative h-72 sm:h-96 ${experience.id === 'little-tracks' ? 'lg:h-[420px]' : 'lg:h-full'} overflow-hidden border-4 border-brand-primary shadow-2xl flex lg:items-stretch`}>
-                      <img 
-                        src={experience.image} 
+                      <Image
+                        src={experience.image}
                         alt={experience.name}
-                        className="w-full h-full object-cover lg:object-cover lg:h-full"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover lg:object-cover lg:h-full"
                         style={experience.id === 'little-tracks' ? { height: '100%', minHeight: '18rem', maxHeight: '420px' } : { height: '100%', minHeight: '18rem', maxHeight: '700px' }}
                       />
                     </div>
@@ -462,10 +464,12 @@ It is a place to be close to the water, close to the land, and close to yourself
                 <div className="bg-white/5 backdrop-blur-sm border-2 border-brand-primary/30 overflow-hidden">
                   {/* Destination Image */}
                   <div className="relative h-64 sm:h-80 lg:h-96 bg-brand-menu-hover overflow-hidden">
-                    <img 
-                      src={dest.image} 
+                    <Image
+                      src={dest.image}
                       alt={dest.name}
-                      className="w-full h-full object-cover"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
                     />
           
                   </div>

@@ -130,14 +130,17 @@ const AirlineRecommendations = () => {
               {/* Content */}
               <div className="relative z-10 space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center bg-gradient-to-br from-brand-bg-light to-white rounded-2xl shadow-sm group-hover:shadow-md transition-all duration-300 p-3 border border-brand-border">
-                    <img 
-                      src={airlineLogos[airline.name]} 
+                  <div className="relative w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center bg-gradient-to-br from-brand-bg-light to-white rounded-2xl shadow-sm group-hover:shadow-md transition-all duration-300 p-3 border border-brand-border overflow-hidden">
+                    <Image
+                      src={airlineLogos[airline.name]}
                       alt={`${airline.name} logo`}
-                      className="max-w-full max-h-full object-contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 20vw"
+                      className="object-contain"
                       onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        const fallback = e.currentTarget.nextElementSibling;
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.style.display = 'none';
+                        const fallback = target.nextElementSibling;
                         if (fallback && fallback instanceof HTMLElement) fallback.style.display = 'block';
                       }}
                     />
