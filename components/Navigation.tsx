@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -185,11 +186,13 @@ export default function Navigation(): JSX.Element {
           <div className="flex justify-between items-center h-20 md:h-24 lg:h-28">
             {/* Logo - Maximum impact and presence */}
             <Link href="/" className="flex items-center space-x-4 group relative z-10">
-              <div className="relative">
-                <img 
-                  src="/logos.png" 
-                  alt="SasaNdioSasa" 
-                  className="h-24 sm:h-28 md:h-32 lg:h-36 xl:h-40 w-auto object-contain transition-all duration-500 group-hover:scale-105 drop-shadow-2xl"
+              <div className="relative h-24 sm:h-28 md:h-32 lg:h-36 xl:h-40 w-40 sm:w-44 md:w-48 lg:w-52 xl:w-56">
+                <Image
+                  src="/logos.png"
+                  alt="SasaNdioSasa"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 10vw"
+                  className="object-contain transition-all duration-500 group-hover:scale-105 drop-shadow-2xl"
                 />
                 {/* Premium glow effect on hover */}
                 <div className="absolute inset-0 bg-brand-primary/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />

@@ -1,13 +1,15 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Full-page background image */}
-      <img
+      <Image
         src="/policy.jpeg"
         alt="Privacy Policy Background"
-        className="fixed inset-0 w-full h-full object-cover object-center z-0"
+        fill
+        className="fixed inset-0 object-cover object-center z-0"
         style={{ pointerEvents: 'none', userSelect: 'none' }}
       />
       {/* Overlay for readability */}

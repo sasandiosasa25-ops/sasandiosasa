@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Backpack, Check, Compass } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -140,10 +141,12 @@ const PackingLists = () => {
       <div className="space-y-4">
         <h3 className="text-lg font-bold text-brand-heading">{t.safari.title}</h3>
         <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg group">
-          <img 
-            src="/bag.png" 
-            alt="Safari Vehicle" 
-            className="w-full h-full object-cover"
+          <Image
+            src="/bag.png"
+            alt="Safari Vehicle"
+            fill
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-4">
             <div className="text-center text-white">
@@ -205,10 +208,12 @@ const PackingLists = () => {
       <div className="space-y-8 border-t-4 border-brand-border pt-12 lg:pt-16">
         {/* Peaks Hero Section */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl p-8 sm:p-10 lg:p-12">
-          <img 
-            src="/mountain2.jpg" 
-            alt="Mountain Background" 
-            className="absolute inset-0 w-full h-full object-cover opacity-40"
+          <Image
+            src="/mountain2.jpg"
+            alt="Mountain Background"
+            fill
+            sizes="100vw"
+            className="absolute inset-0 object-cover opacity-40"
           />
           <div className="relative z-10 space-y-6">
             <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#8c592a]">{t.peaks.title}</h3>

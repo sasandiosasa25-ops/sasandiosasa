@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { AlertCircle, Check, X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -70,10 +71,13 @@ const FAQs = () => {
 
       {/* Hero Image */}
       <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl mb-8 group">
-        <img 
-          src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1600&q=80" 
-          alt="Travel Safety" 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        <Image
+          src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1600&q=80"
+          alt="Travel Safety"
+          fill
+          unoptimized
+          sizes="100vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-heading/80 via-brand-secondary/60 to-brand-primary/40"></div>
         <div className="absolute inset-0 flex items-center justify-center">

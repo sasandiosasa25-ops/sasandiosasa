@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Heart, BookOpen, Briefcase, Leaf, Trees, Users, ExternalLink } from 'lucide-react';
 
 type GoalSection = {
@@ -273,10 +274,11 @@ export default function ImpactPage() {
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-brand-primary/5 via-white to-brand-secondary/5 pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background image for hero section */}
-        <img
+        <Image
           src="/impact11.jpeg"
           alt="Impact background"
-          className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-40"
+          fill
+          className="absolute inset-0 object-cover object-center z-0 opacity-40"
           style={{ pointerEvents: 'none', userSelect: 'none' }}
         />
         <div className="max-w-7xl mx-auto text-center relative z-10">

@@ -1,4 +1,5 @@
 import { FileText, ExternalLink, Check } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const TravelPermit = () => {
@@ -55,10 +56,12 @@ const TravelPermit = () => {
     <section id="travel-permit" className="space-y-4">
 
       <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg group mb-4">
-        <img 
-          src="/dar8.jpg" 
-          alt="Passport and Travel" 
-          className="w-full h-full object-cover"
+        <Image
+          src="/dar8.jpg"
+          alt="Passport and Travel"
+          fill
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-4">
           <div className="text-center text-white">

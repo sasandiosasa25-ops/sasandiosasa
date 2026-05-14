@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { ArrowRight, MapPin, Heart, Compass } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
@@ -73,10 +74,12 @@ export default function Services() {
             onMouseLeave={() => setHoveredCard(null)}
           >
             <div className="relative w-full h-64 sm:h-72 lg:h-56 xl:h-64 overflow-hidden flex-shrink-0">
-              <img 
-                src="/simbas1.jpeg" 
+              <Image
+                src="/simbas1.jpeg"
                 alt="Safaris"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-heading/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
@@ -118,10 +121,12 @@ export default function Services() {
             onMouseLeave={() => setHoveredCard(null)}
           >
             <div className="relative w-full h-64 sm:h-72 lg:h-56 xl:h-64 overflow-hidden flex-shrink-0">
-              <img 
-                src="/maa1.jpeg" 
+              <Image
+                src="/maa1.jpeg"
                 alt="Inner Safari"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-heading/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
@@ -163,10 +168,12 @@ export default function Services() {
             onMouseLeave={() => setHoveredCard(null)}
           >
             <div className="relative w-full h-64 sm:h-72 lg:h-56 xl:h-64 overflow-hidden flex-shrink-0">
-              <img 
-                src="/hema1.jpeg" 
+              <Image
+                src="/hema1.jpeg"
                 alt="Retreats"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-heading/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>

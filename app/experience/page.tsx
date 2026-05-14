@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Heart, Compass, Users, Calendar, Headphones, MessageCircle, Mountain, Sparkles } from 'lucide-react';
 
@@ -248,10 +249,13 @@ const ExperiencePage = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Image */}
             <div className="relative h-96 md:h-auto rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800&h=1000&fit=crop" 
+              <Image
+                src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800&h=1000&fit=crop"
                 alt="Retreat in Tanzania"
-                className="w-full h-full object-cover"
+                fill
+                unoptimized
+                sizes="100vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-heading/40 to-transparent" />
             </div>

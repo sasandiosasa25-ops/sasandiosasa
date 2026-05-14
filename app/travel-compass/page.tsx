@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Compass, Calendar, Plane, FileText, Backpack, AlertCircle, Heart, Menu, X } from 'lucide-react';
 import AirlineRecommendations from '@/components/compass/AirlineRecommendations';
@@ -105,10 +106,13 @@ const TravelCompassPage = () => {
     <div className="min-h-screen ">
       {/* Hero Section */}
       <div className="relative h-[32vh] sm:h-[40vh] md:h-[60vh] overflow-hidden">
-        <img 
-          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=900&q=80" 
-          alt="Tanzania Landscape" 
-          className="absolute inset-0 w-full h-full object-cover object-center"
+        <Image
+          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=900&q=80"
+          alt="Tanzania Landscape"
+          fill
+          unoptimized
+          sizes="100vw"
+          className="absolute inset-0 object-cover object-center"
           style={{ maxHeight: '320px' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-heading/90 via-brand-secondary/80 to-brand-heading/90" />

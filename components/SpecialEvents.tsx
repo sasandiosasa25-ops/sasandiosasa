@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -81,10 +82,12 @@ export default function SpecialEvents() {
               >
                 {/* Flyer Image - Full Display */}
                 <div className="relative overflow-hidden bg-white aspect-[3/4] sm:aspect-[4/5] md:aspect-[3/4]">
-                  <img
+                  <Image
                     src={event.flyer}
                     alt={event.alt}
-                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                   />
                   {/* Subtle overlay on hover for interactivity */}
                   <div className="absolute inset-0 bg-brand-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

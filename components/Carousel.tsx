@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -132,10 +133,12 @@ const ImageCarousel = () => {
                   <a tabIndex={0} aria-label={image.alt} className="block focus:outline-none focus:ring-4 focus:ring-brand-primary/50 rounded-2xl">
                     <div className="relative w-full h-44 xs:h-56 sm:h-64 md:h-72 lg:h-[22rem] xl:h-[26rem] 2xl:h-[28rem] mx-auto overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-brand-primary/30 group/card border-4 border-brand-border hover:border-brand-primary">
                       {/* Image */}
-                      <img
+                      <Image
                         src={image.url}
                         alt={image.alt}
-                        className="w-full h-full object-contain object-center transition-transform duration-700 group-hover/card:scale-110"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-contain object-center transition-transform duration-700 group-hover/card:scale-110"
                         style={{maxHeight: '100%', minHeight: '100%', maxWidth: '100%'}}
                       />
                       {/* Gradient Overlay for better badge visibility */}

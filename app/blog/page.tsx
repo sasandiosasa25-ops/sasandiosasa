@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function BlogPage() {
@@ -115,10 +116,12 @@ export default function BlogPage() {
             <Card className="overflow-hidden border-0 shadow-xl">
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="relative h-96 lg:h-full">
-                  <img
+                  <Image
                     src={blogPosts[0].image}
                     alt={blogPosts[0].title}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
                   />
                   <Badge className="absolute top-4 left-4 bg-sky-600 text-white">
                     Featured
@@ -169,10 +172,12 @@ export default function BlogPage() {
             {blogPosts.slice(1).map((post) => (
               <Card key={post.id} className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300">
                 <div className="relative h-96 overflow-hidden">
-                  <img
+                  <Image
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <Badge className="absolute top-4 left-4 bg-black/70 text-white">
                     {post.category}

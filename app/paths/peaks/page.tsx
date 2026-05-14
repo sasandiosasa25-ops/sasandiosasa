@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Mountain, ArrowRight, Compass, ChevronDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -106,10 +107,12 @@ details: 'Over four days, the trail takes you from lush forest through alpine me
               <div className="relative h-full flex items-center justify-center p-2 sm:p-4 md:p-8">
                 <div className="relative h-20 min-w-[180px] w-fit sm:h-60 sm:w-full md:h-96 lg:h-[420px] rounded-xl md:rounded-2xl overflow-hidden shadow-2xl bg-white/80 mx-auto flex items-center justify-center transition-all duration-700 ease-in-out" style={{ marginLeft: '0', marginRight: 'auto', maxWidth: '95vw' }}>
                   {/* Image */}
-                  <img 
-                    src={peak.image} 
+                  <Image
+                    src={peak.image}
                     alt={peak.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
                   />
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
@@ -169,10 +172,12 @@ details: 'Over four days, the trail takes you from lush forest through alpine me
               {/* Image */}
               <div className="w-full md:w-1/2">
                 <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl group">
-                  <img 
-                    src={peak.image} 
+                  <Image
+                    src={peak.image}
                     alt={peak.title}
-                    className="w-full h-40 sm:h-64 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>

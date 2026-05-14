@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -185,10 +186,13 @@ export default function GalleryPage() {
                 onClick={() => setSelectedImage(image.id)}
               >
                 <div className="relative aspect-square overflow-hidden">
-                  <img
+                  <Image
                     src={image.src}
                     alt={image.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    fill
+                    unoptimized
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -243,11 +247,14 @@ export default function GalleryPage() {
             </Button>
 
             {/* Image */}
-            <div className="max-w-5xl max-h-[90vh] flex items-center justify-center">
-              <img
+            <div className="max-w-5xl max-h-[90vh] flex items-center justify-center relative">
+              <Image
                 src={selectedImageData.src}
                 alt={selectedImageData.title}
-                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                fill
+                unoptimized
+                sizes="100vw"
+                className="object-contain rounded-lg shadow-2xl"
               />
             </div>
 

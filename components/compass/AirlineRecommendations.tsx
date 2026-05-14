@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Plane } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
