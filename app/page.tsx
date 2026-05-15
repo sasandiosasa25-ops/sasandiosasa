@@ -16,6 +16,7 @@ import HeroIntro from '@/components/HeroIntro';
 import Manifesto from '@/components/Manifesto';
 import SpecialEvents from '@/components/SpecialEvents';
 import CTASection from '@/components/CTA';
+import Partners from '@/components/Partners';
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -190,6 +191,9 @@ export default function HomePage() {
  <Manifesto />
 
  <SpecialEvents />
+
+      {/* Partners Section */}
+      <Partners />
 
       {/* Services Section */}
   
