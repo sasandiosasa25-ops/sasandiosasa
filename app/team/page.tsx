@@ -205,6 +205,7 @@ const TeamPage: FC = () => {
   // Find specific members for custom order
   const kilidove = t.team.find(m => m.name.toLowerCase().includes('kilidove'));
   const cac = t.team.find(m => m.name.toLowerCase().includes('culture arts center'));
+  const peakPlanet = t.team.find(m => m.name.toLowerCase().includes('peak planet'));
   const allan = t.team.find(m => m.name.toLowerCase() === 'allan');
   const coaches = t.team.filter(m => m.section === 'coaches');
   const office = t.team.filter(m => m.section === 'office');
@@ -362,6 +363,16 @@ const TeamPage: FC = () => {
         {cac && (
           <div className="mb-12">
             {renderTeamMember(cac, 0)}
+          </div>
+        )}
+
+        {/* 3. Peak Planet (highlighted for all devices / main domain) */}
+        {peakPlanet && (
+          <div className="mb-12">
+            <div className="relative p-4 rounded-2xl ring-4 ring-brand-primary/10 bg-gradient-to-r from-white to-brand-primary/5">
+              <div className="absolute top-4 right-4 text-xs md:text-sm font-bold text-brand-primary uppercase tracking-wide">Highlighted</div>
+              {renderTeamMember({ ...peakPlanet, role: peakPlanet.role }, 0)}
+            </div>
           </div>
         )}
 
