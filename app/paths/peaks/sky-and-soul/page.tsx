@@ -7,14 +7,15 @@ import { ArrowRight } from 'lucide-react';
 export default function SkyAndSoulPage() {
   return (
     <div className="min-h-screen bg-brand-bg-light">
-      <div className="relative overflow-hidden bg-white min-h-[520px]">
-        <div className="absolute inset-0">
+      <div className="relative overflow-hidden bg-white min-h-[60vh]">
+        <div className="absolute inset-0 overflow-hidden">
           <Image
             src="/hema1.jpeg"
             alt="Sky & Soul at Kilimanjaro"
             fill
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-bottom"
+            style={{ objectPosition: 'center 70%' }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/85 via-brand-secondary/75 to-[#7b4c35]/85" />
         </div>
