@@ -45,6 +45,16 @@ export default function SkyAndSoulPage() {
                 <p>The Off-Mountain experience is designed for people who want to explore the same themes of awareness, routines, breath, mindfulness, and personal movement without climbing the mountain itself. Through guided online sessions and structured practices, participants experience their own journey from wherever they are in the world.</p>
                 <p>Both experiences are inspired by the idea that Kilimanjaro can move people far beyond the summit.</p>
               </div>
+              <div className="mt-6">
+                <a
+                  href="https://skyandsoul.co.tz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary"
+                >
+                  Explore Sky and Soul
+                </a>
+              </div>
             </section>
 
             <section className="grid gap-6 sm:grid-cols-2">
