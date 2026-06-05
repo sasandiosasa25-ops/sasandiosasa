@@ -1,13 +1,24 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function SkyAndSoulPage() {
   return (
     <div className="min-h-screen bg-brand-bg-light">
-      <div className="relative overflow-hidden bg-white">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary via-brand-secondary to-[#7b4c35] opacity-90" />
+      <div className="relative overflow-hidden bg-white min-h-[520px]">
+        <div className="absolute inset-0">
+          <Image
+            src="/hema1.jpeg"
+            alt="Sky & Soul at Kilimanjaro"
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/85 via-brand-secondary/75 to-[#7b4c35]/85" />
+        </div>
+
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 sm:py-32">
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.35em] text-white/80 mb-4">SasaNdioSasa Peaks</p>
