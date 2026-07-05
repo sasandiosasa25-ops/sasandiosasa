@@ -32,12 +32,6 @@ export default function SpecialEvents() {
       alt: 'Special Event 1',
       link: 'https://peakplanet.com/routes/12-day-northern-circuit-sky-and-soul-kilimanjaro-climb/',
     },
-    {
-      id: 2,
-      flyer: '/hiking2.png',
-      alt: 'Special Event 2',
-      link: 'https://peakplanet.com/routes/12-day-northern-circuit-sky-and-soul-kilimanjaro-climb/',
-    },
   ];
 
   const text = content[language];
