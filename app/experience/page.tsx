@@ -1,109 +1,97 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Heart, Compass, Users, Calendar, Headphones, MessageCircle, Mountain, Sparkles } from 'lucide-react';
+import { Heart, Compass, Users, Calendar, Mountain } from 'lucide-react';
 
-// Add the translations object here
 const translations: Record<string, any> = {
   en: {
     title: 'SasaNdioSasa Experiences',
     subtitle: 'A journey of growth, connection, and discovery.',
-    innerSafari: {
-      id: 'inner-safari',
-      title: 'Inner Safari',
-      duration: '6 months, 6 modules',
-      durationDesc: 'A six-month journey with six modules, designed for steady growth.',
-      welcome: 'Welcome to the Inner Safari, a space to arrive, guided by the desire to connect with yourself and the curiosity to feel the ground beneath your feet when you truly pause.',
-      intro: 'This is a journey for those ready to explore their inner landscapes, grow, and connect with others on a similar path.',
-      guide: 'You will be guided by experienced facilitators and supported by a community of fellow travelers.',
-      expectTitle: 'What to Expect',
-      expectDesc: 'Inspiring sessions, reflective practices, and opportunities for deep connection.',
-      rhythmTitle: 'Your Rhythm',
-      rhythmIntro: 'Each module brings a new focus, blending learning, practice, and community.',
-      rhythmItems: [
-        { icon: 'video', title: 'Live Sessions', description: 'Interactive group sessions led by facilitators.' },
-        { icon: 'sunrise', title: 'Morning Practices', description: 'Start your day with intention and clarity.' },
-        { icon: 'message', title: 'Reflection', description: 'Journaling and sharing insights.' },
-        { icon: 'community', title: 'Community', description: 'Connect with others and build lasting relationships.' },
+    beyondSafari: {
+      eyebrow: 'SasaNdioSasa Beyond Safari',
+      title: 'RAW EDGE',
+      subtitle: 'A leadership reset in Tanzania',
+      intro: 'Arrive. Exchange. Integrate.',
+      summary: 'A 21-day executive leadership experience designed for experienced professionals who want to rebuild clarity, resilience, and leadership capacity through structured experiences in Tanzania.',
+      overviewTitle: 'Leadership needs perspective to grow.',
+      overviewBody: 'Leadership rarely breaks down overnight. Under constant responsibility, decision-making becomes reactive, perspective narrows, and performance often replaces presence. RAW EDGE creates intentional distance from familiar environments so leaders can reconnect with clarity, resilience, and conscious leadership.',
+      whyTitle: 'Why RAW EDGE?',
+      whyBody: 'RAW EDGE combines structured reflection, intercultural exchange, meaningful contribution, extraordinary landscapes, and guided integration into one executive experience. Every stage has a clear purpose and supports sustainable leadership long after the journey ends.',
+      points: [
+        'Meaningful leadership reflection',
+        'Intercultural exchange with local communities',
+        'Leadership learning in extraordinary landscapes',
+        'Guided integration back to everyday work',
       ],
-      closing: 'The Inner Safari is a space. You are welcome to arrive, guided by the desire to connect with yourself and the curiosity to feel the ground beneath your feet when you truly pause.',
-      moreInfo: 'More information coming soon'
+      phasesTitle: 'Program at a glance',
+      phases: [
+        { title: 'Arrive', meta: '3 Days • Arusha', description: 'Slow down, settle into the environment, and create space for reflection before the experience unfolds.' },
+        { title: 'Exchange', meta: '14 Days', description: 'Spend seven days in community and cultural exchange, followed by seven days in leadership in the wild across Northern Tanzania.' },
+        { title: 'Integrate', meta: '4 Days • Zanzibar', description: 'Turn insight into action through reflection, conversations, and practical planning for your return home.' },
+      ],
+      tanzaniaTitle: 'Why Tanzania?',
+      tanzaniaBody: 'Tanzania creates conditions that are difficult to replicate elsewhere. Its culture, hospitality, entrepreneurial energy, and extraordinary landscapes invite leaders to step outside familiar routines and experience leadership from a new perspective.',
+      journeyTitle: 'Before. During. Beyond.',
+      journeyBody: 'RAW EDGE begins before arrival and continues after return. Two online preparation sessions help participants set intentions. Two structured integration sessions support the transfer of learning into everyday leadership.',
+      whoTitle: 'Who is it for?',
+      whoBody: 'RAW EDGE is designed for experienced professionals, founders, executives, entrepreneurs, and senior decision-makers with significant leadership responsibility.',
+      impactTitle: 'Meaningful Impact',
+      impactBody: 'Every participation contributes to the long-term work of Ndoto Zetu in Arusha, supporting education, family development, employment, and sustainable community initiatives.',
+      createdTitle: 'Created by Experience',
+      createdBody: 'RAW EDGE brings together Beata’s executive perspective and Simone’s long-term leadership and intercultural work in Tanzania. Together they created an experience that connects leadership with human connection, practical reality, and sustainable growth.',
+      cohortTitle: 'Founding Cohort • November 2026',
+      cohortBody: 'The first cohort is limited to eight participants, creating a highly personal experience with space for reflection and guided integration. Applications are now open until 31 September 2026.',
+      conversationTitle: 'Start the Conversation',
+      conversationBody: 'Participation begins with a personal conversation to explore expectations, suitability, and whether RAW EDGE is the right experience for both the participant and the program.',
     },
-    retreat: {
-      id: 'retreat',
-      title: 'Retreat',
-      duration: 'Several days, twice a year',
-      durationDesc: 'A multi-day, twice-yearly experience for deeper connection and growth.',
-      intro: 'Twice a year, we open the space for a retreat that goes deeper than any single journey. It is an invitation for those who have already traveled with us, participated in a SasaNdioSasa program – and for those ready to truly encounter Tanzania in all its diversity and wisdom.',
-      description: 'These days weave together connection, reflection, and shared experiences with local partners and landscapes. It is a meeting point between nature, culture, and personal growth – with time to explore, create, and simply be.',
-      focus: 'Each retreat has its own focus, designed in collaboration with experienced facilitators from Tanzania and beyond.'
-    }
   },
   de: {
     title: 'SasaNdioSasa Erlebnisse',
     subtitle: 'Eine Reise des Wachstums, der Verbindung und der Entdeckung.',
-    innerSafari: {
-      id: 'inner-safari',
-      title: 'Innere Safari',
-      duration: '6 Monate, 6 Module',
-      durationDesc: 'Eine sechsmonatige Reise mit sechs Modulen, gestaltet für stetiges Wachstum.',
-      welcome: 'Willkommen zur Inneren Safari, einem Raum zum Ankommen, geleitet vom Wunsch, sich mit sich selbst zu verbinden und der Neugier, den Boden unter den Füßen zu spüren, wenn man wirklich innehält.',
-      intro: 'Dies ist eine Reise für diejenigen, die bereit sind, ihre inneren Landschaften zu erkunden, zu wachsen und sich mit anderen auf einem ähnlichen Weg zu verbinden.',
-      guide: 'Du wirst von erfahrenen Moderator:innen begleitet und von einer Gemeinschaft von Mitreisenden unterstützt.',
-      expectTitle: 'Was dich erwartet',
-      expectDesc: 'Inspirierende Sitzungen, reflektierende Praktiken und Möglichkeiten für tiefe Verbindung.',
-      rhythmTitle: 'Dein Rhythmus',
-      rhythmIntro: 'Jedes Modul bringt einen neuen Fokus, der Lernen, Praxis und Gemeinschaft verbindet.',
-      rhythmItems: [
-        { icon: 'video', title: 'Live-Sitzungen', description: 'Interaktive Gruppensitzungen mit Moderator:innen.' },
-        { icon: 'sunrise', title: 'Morgenpraxis', description: 'Starte deinen Tag mit Intention und Klarheit.' },
-        { icon: 'message', title: 'Reflexion', description: 'Journaling und Teilen von Erkenntnissen.' },
-        { icon: 'community', title: 'Gemeinschaft', description: 'Vernetze dich mit anderen und baue dauerhafte Beziehungen auf.' },
+    beyondSafari: {
+      eyebrow: 'SasaNdioSasa Beyond Safari',
+      title: 'RAW EDGE',
+      subtitle: 'Ein Leadership-Reset in Tansania',
+      intro: 'Ankommen. Austausch. Integrieren.',
+      summary: 'Eine 21-tägige Executive-Leadership-Erfahrung für erfahrene Fachkräfte, die Klarheit, Resilienz und Führungsfähigkeit durch strukturierte Erlebnisse in Tansania neu aufbauen möchten.',
+      overviewTitle: 'Führung braucht Perspektive, um zu wachsen.',
+      overviewBody: 'Führung bricht selten über Nacht zusammen. Unter ständigem Druck wird Entscheiden reaktiv, Perspektive schmaler und Leistung ersetzt oft Präsenz. RAW EDGE schafft bewusste Distanz zu vertrauten Umfeldern, damit Führungskräfte sich wieder mit Klarheit, Resilienz und bewusstem Leadership-Verhalten verbinden können.',
+      whyTitle: 'Warum RAW EDGE?',
+      whyBody: 'RAW EDGE verbindet strukturierte Reflexion, interkulturellen Austausch, sinnvolle Beiträge, außergewöhnliche Landschaften und begleitete Integration zu einer Executive-Erfahrung. Jede Phase hat einen klaren Zweck und unterstützt nachhaltige Führung auch nach der Reise.',
+      points: [
+        'Sinnvolle Leadership-Reflexion',
+        'Interkultureller Austausch mit lokalen Gemeinschaften',
+        'Leadership-Lernen in außergewöhnlichen Landschaften',
+        'Begleitete Integration zurück ins Alltagshandeln',
       ],
-      closing: 'Die Innere Safari ist ein Raum. Sie sind willkommen anzukommen, geleitet vom Wunsch, sich mit sich selbst zu verbinden und der Neugier, den Boden unter Ihren Füßen zu spüren, wenn Sie wirklich innehalten.',
-      moreInfo: 'Weitere Informationen werden bald geladen'
+      phasesTitle: 'Programm im Überblick',
+      phases: [
+        { title: 'Ankommen', meta: '3 Tage • Arusha', description: 'Langsamer werden, sich im Umfeld niederlassen und Raum für Reflexion schaffen, bevor die Erfahrung sich entfaltet.' },
+        { title: 'Austausch', meta: '14 Tage', description: 'Sieben Tage in Gemeinschaft und Kultur, gefolgt von sieben Tagen Leadership in der Wildnis im Norden Tansanias.' },
+        { title: 'Integrieren', meta: '4 Tage • Sansibar', description: 'Erkenntnisse in Handlung umsetzen durch Reflexion, Gespräche und praktische Planung für die Rückkehr.' },
+      ],
+      tanzaniaTitle: 'Warum Tansania?',
+      tanzaniaBody: 'Tansania schafft Bedingungen, die sich schwer anderswo replizieren lassen. Seine Kultur, Gastfreundschaft, unternehmerische Energie und außergewöhnlichen Landschaften laden dazu ein, vertraute Routinen zu verlassen und Führung aus neuer Perspektive zu erleben.',
+      journeyTitle: 'Vorher. Während. Danach.',
+      journeyBody: 'RAW EDGE beginnt vor der Ankunft und setzt sich nach der Rückkehr fort. Zwei Online-Vorbereitungssitzungen unterstützen die Zielsetzung. Zwei strukturierte Integrationssitzungen helfen, Lernen in den Alltag zu übertragen.',
+      whoTitle: 'Für wen ist es gedacht?',
+      whoBody: 'RAW EDGE richtet sich an erfahrene Fachkräfte, Gründerinnen und Gründer, Führungskräfte, Unternehmerinnen und Unternehmer sowie Entscheidungsträger mit großer Verantwortung.',
+      impactTitle: 'Sinnvolle Wirkung',
+      impactBody: 'Jede Teilnahme trägt zur langfristigen Arbeit von Ndoto Zetu in Arusha bei und unterstützt Bildung, Familienentwicklung, Beschäftigung und nachhaltige Gemeinschaftsinitiativen.',
+      createdTitle: 'Erstellt durch Erfahrung',
+      createdBody: 'RAW EDGE vereint Beatas executive Perspektive mit Simones langjähriger Leadership- und interkultureller Arbeit in Tansania. Gemeinsam schufen sie eine Erfahrung, die Führung mit menschlicher Verbindung, praktischer Realität und nachhaltigem Wachstum verbindet.',
+      cohortTitle: 'Gründerkohorte • November 2026',
+      cohortBody: 'Die erste Kohorte ist auf acht Teilnehmende begrenzt, damit Raum für Reflexion und begleitete Integration entsteht. Die Bewerbung ist bis zum 31. September 2026 offen.',
+      conversationTitle: 'Starte das Gespräch',
+      conversationBody: 'Die Teilnahme beginnt mit einem persönlichen Gespräch, um Erwartungen, Eignung und die Passung von RAW EDGE für Teilnehmende und Programm zu prüfen.',
     },
-    retreat: {
-      id: 'retreat',
-      title: 'Rückzug',
-      duration: 'Mehrere Tage, zweimal jährlich',
-      durationDesc: 'Ein mehrtägiges, zweimal jährlich stattfindendes Erlebnis für tiefere Verbindung und Wachstum.',
-      intro: 'Zweimal pro Jahr öffnen wir den Raum für einen Rückzug, der tiefer geht als jede einzelne Reise. Es ist eine Einladung für diejenigen, die bereits mit uns gereist sind, an einem SasaNdioSasa-Programm teilgenommen haben – und für diejenigen, die bereit sind, Tansania mit all seiner Vielfalt und Weisheit wirklich zu begegnen.',
-      description: 'Diese Tage verweben Verbindung, Reflexion und gemeinsame Erfahrungen mit lokalen Partnern und Landschaften. Es ist ein Treffpunkt zwischen Natur, Kultur und persönlichem Wachstum – mit Zeit zum Erkunden, Erschaffen und einfach Sein.',
-      focus: 'Jeder Rückzug hat seinen eigenen Fokus, gestaltet in Zusammenarbeit mit erfahrenen Moderatoren aus Tansania und darüber hinaus.'
-    }
-  }
+  },
 };
 
-// Define the ExperiencePage component
-
 const ExperiencePage = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timeout);
-  }, []);
-
   const { language } = useLanguage();
   const t = translations[language];
-
-  const getIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'video':
-        return <Calendar className="w-8 h-8" />;
-      case 'sunrise':
-        return <Sparkles className="w-8 h-8" />;
-      case 'message':
-        return <MessageCircle className="w-8 h-8" />;
-      case 'community':
-        return <Users className="w-8 h-8" />;
-      default:
-        return <Compass className="w-8 h-8" />;
-    }
-  };
 
   return (
     <div className="min-h-screen ">
@@ -130,186 +118,130 @@ const ExperiencePage = () => {
 
       {/* Hero Section removed: no extra open space or broken image */}
 
-      {/* Inner Safari Section */}
-      <div id="inner-safari" className="scroll-mt-20">
-        <div className="w-full px-3 md:px-8 lg:px-16 py-10 flex flex-col gap-6">
-          {/* Title and Duration */}
-          <div className="flex flex-col gap-1 items-start">
-            <h2 className="font-comfortaa text-3xl sm:text-4xl text-brand-heading font-bold">
-              <span className="italic text-brand-primary">SasaNdioSasa</span> {t.innerSafari.title}
-            </h2>
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold mb-1">
-              {t.innerSafari.duration}
+      <div id="beyond-safari" className="scroll-mt-20 bg-stone-50/70">
+        <div className="w-full px-3 md:px-8 lg:px-16 py-10 lg:py-16 flex flex-col gap-8">
+          <div className="flex flex-col gap-3 items-start">
+            <span className="inline-flex items-center rounded-full bg-brand-primary/10 px-3 py-1 text-sm font-semibold uppercase tracking-[0.25em] text-brand-primary">
+              {t.beyondSafari.eyebrow}
             </span>
-            <p className="font-poppins text-xs sm:text-base text-stone-700 leading-relaxed mt-1">
-              {t.innerSafari.durationDesc}
-            </p>
-          </div>
-
-          {/* Welcome */}
-          <div className="bg-white rounded-xl p-5 border border-brand-border shadow-sm">
-            <p className="font-poppins text-lg text-brand-heading leading-relaxed font-semibold">
-              {t.innerSafari.welcome}
-            </p>
-          </div>
-
-          {/* Intro */}
-          <div className="bg-white rounded-xl p-5 border border-brand-border shadow-sm">
-            <p className="font-poppins text-base text-stone-700 leading-relaxed">
-              {t.innerSafari.intro}
-            </p>
-          </div>
-
-          {/* Guide (italic) */}
-          <div className="bg-white rounded-xl p-5 border border-brand-border shadow-sm">
-            <p className="font-poppins text-base text-stone-700 leading-relaxed italic mb-0">
-              {t.innerSafari.guide}
-            </p>
-          </div>
-
-          {/* What to Expect */}
-          <div className="bg-white rounded-xl p-5 border border-brand-border shadow-sm">
-            <div className="flex items-center gap-2 mb-2">
-              <Compass className="w-5 h-5 text-brand-primary" />
-              <h3 className="font-comfortaa text-2xl text-brand-heading font-bold">
-                {t.innerSafari.expectTitle}
-              </h3>
-            </div>
-            <p className="font-poppins text-base text-stone-700 leading-relaxed">
-              {t.innerSafari.expectDesc}
-            </p>
-          </div>
-
-          {/* Your Rhythm */}
-          <div className="bg-white rounded-xl p-5 border border-brand-border shadow-sm">
-            <h3 className="font-comfortaa text-2xl text-brand-heading font-bold mb-2">
-              {t.innerSafari.rhythmTitle}
+            <h2 className="font-comfortaa text-3xl sm:text-4xl md:text-5xl text-brand-heading font-bold leading-tight">
+              <span className="italic text-brand-primary">{t.beyondSafari.title}</span>
+            </h2>
+            <h3 className="font-comfortaa text-2xl sm:text-3xl text-brand-heading font-semibold">
+              {t.beyondSafari.subtitle}
             </h3>
-            <p className="font-poppins text-base text-stone-700 leading-relaxed mb-4">
-              {t.innerSafari.rhythmIntro}
-            </p>
-            <div className="flex flex-col gap-4">
-              {t.innerSafari.rhythmItems.map(
-                (
-                  item: { icon: string; title: string; description: string },
-                  idx: number
-                ) => (
-                <div
-                  key={idx}
-                  className="flex gap-3 items-start bg-brand-primary/5 rounded-lg p-4"
-                >
-                  <div className="w-12 h-12 bg-brand-primary/10 rounded-full flex items-center justify-center mt-1">
-                    <div className="text-brand-primary">
-                      {getIcon(item.icon)}
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-comfortaa text-lg text-brand-heading font-bold mb-1">
-                      {item.title}
-                    </h4>
-                    <p className="font-poppins text-stone-700 leading-relaxed text-sm">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Closing Message */}
-          <div className="bg-gradient-to-r from-brand-menu-hover to-white rounded-xl p-5 border border-brand-border">
-            <p className="font-poppins text-base text-stone-700 leading-relaxed mb-3">
-              {t.innerSafari.closing}
-            </p>
-            <p className="font-poppins text-xs text-brand-primary font-semibold uppercase tracking-wider">
-              {t.innerSafari.moreInfo}
+            <p className="font-poppins text-base sm:text-lg text-stone-700 leading-relaxed max-w-4xl">
+              {t.beyondSafari.summary}
             </p>
           </div>
-        </div>
-      </div>
 
-      {/* Retreat Section */}
-      <div id="retreat" className="scroll-mt-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 py-20">
-          <div className="mb-12">
-            <div className="flex flex-col gap-1 items-start mb-8">
-              <div className="w-12 h-1 bg-brand-primary rounded-full mb-2" />
-              <h2 className="font-comfortaa text-3xl sm:text-4xl md:text-5xl text-brand-heading font-bold">
-                <span className="italic text-brand-primary">SasaNdioSasa</span> {t.retreat.title}
-              </h2>
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-semibold mb-1">
-                {t.retreat.duration}
-              </span>
-              <p className="font-poppins text-xs sm:text-base text-stone-700 leading-relaxed mt-1">
-                {t.retreat.durationDesc}
+          <div className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
+            <div className="bg-white rounded-2xl border border-brand-border p-6 sm:p-8 shadow-sm">
+              <p className="text-sm uppercase tracking-[0.35em] text-brand-primary font-semibold">
+                {t.beyondSafari.intro}
               </p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Image */}
-            <div className="relative h-96 md:h-auto rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800&h=1000&fit=crop"
-                alt="Retreat in Tanzania"
-                fill
-                unoptimized
-                sizes="100vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-heading/40 to-transparent" />
-            </div>
-
-            {/* Content */}
-            <div className="space-y-6">
-              <p className="font-poppins text-lg text-stone-700 leading-relaxed">
-                {t.retreat.intro}
+              <h4 className="font-comfortaa text-2xl text-brand-heading font-bold mt-3">
+                {t.beyondSafari.overviewTitle}
+              </h4>
+              <p className="font-poppins text-base text-stone-700 leading-relaxed mt-4">
+                {t.beyondSafari.overviewBody}
               </p>
-
-              <p className="font-poppins text-lg text-stone-700 leading-relaxed">
-                {t.retreat.description}
-              </p>
-
-              <div className="bg-brand-menu-hover rounded-xl p-6 border border-brand-border">
-                <p className="font-poppins text-lg text-stone-700 leading-relaxed italic">
-                  {t.retreat.focus}
+              <div className="mt-6 rounded-2xl bg-brand-menu-hover border border-brand-border p-5">
+                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">
+                  {t.beyondSafari.whyTitle}
+                </h5>
+                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">
+                  {t.beyondSafari.whyBody}
                 </p>
               </div>
+            </div>
 
-              {/* Features */}
-              <div className="grid grid-cols-2 gap-4 pt-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-brand-primary/10 rounded-full flex items-center justify-center">
-                    <Mountain className="w-5 h-5 text-brand-primary" />
-                  </div>
-                  <span className="font-poppins text-sm text-stone-700 font-medium">
-                    {language === 'en' ? 'Nature' : 'Natur'}
-                  </span>
+            <div className="bg-brand-menu-hover rounded-2xl border border-brand-border p-6 sm:p-8 shadow-sm">
+              <div className="flex items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
+                  <Compass className="h-6 w-6" />
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-brand-primary/10 rounded-full flex items-center justify-center">
-                    <Users className="w-5 h-5 text-brand-primary" />
+                <h4 className="font-comfortaa text-2xl text-brand-heading font-bold">
+                  {language === 'en' ? 'What this experience offers' : 'Was diese Erfahrung bietet'}
+                </h4>
+              </div>
+              <ul className="mt-6 space-y-3">
+                {t.beyondSafari.points.map((point: string, index: number) => (
+                  <li key={index} className="flex items-start gap-3 rounded-xl bg-white/70 p-3">
+                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-primary" />
+                    <span className="font-poppins text-sm sm:text-base text-stone-700">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div id="raw-edge" className="scroll-mt-24 rounded-3xl border border-brand-border bg-white shadow-sm overflow-hidden">
+            <div className="border-b border-brand-border bg-gradient-to-r from-brand-menu-hover to-white p-6 sm:p-8">
+              <p className="text-sm uppercase tracking-[0.35em] text-brand-primary font-semibold">Raw Edge</p>
+              <h4 className="font-comfortaa text-2xl sm:text-3xl text-brand-heading font-bold mt-3">
+                {t.beyondSafari.phasesTitle}
+              </h4>
+              <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3 max-w-3xl">
+                {t.beyondSafari.summary}
+              </p>
+            </div>
+
+            <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-2">
+              {t.beyondSafari.phases.map((phase: { title: string; meta: string; description: string }, index: number) => {
+                const imageSrc = index === 0 ? '/green1.jpeg' : index === 1 ? '/leadwild.jpeg' : '/zanzibar1.jpeg';
+
+                return (
+                  <div key={index} className="rounded-2xl border border-brand-border bg-stone-50/80 p-5">
+                    <div className="relative mb-4 h-48 overflow-hidden rounded-xl">
+                      <Image
+                        src={imageSrc}
+                        alt={phase.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover"
+                        priority={index === 0}
+                      />
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
+                        {index === 0 ? <Calendar className="h-5 w-5" /> : index === 1 ? <Users className="h-5 w-5" /> : <Mountain className="h-5 w-5" />}
+                      </div>
+                      <div>
+                        <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{phase.title}</h5>
+                        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">{phase.meta}</p>
+                      </div>
+                    </div>
+                    <p className="font-poppins text-base text-stone-700 leading-relaxed mt-4">{phase.description}</p>
                   </div>
-                  <span className="font-poppins text-sm text-stone-700 font-medium">
-                    {language === 'en' ? 'Community' : 'Gemeinschaft'}
-                  </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-brand-primary/10 rounded-full flex items-center justify-center">
-                    <Heart className="w-5 h-5 text-brand-primary" />
-                  </div>
-                  <span className="font-poppins text-sm text-stone-700 font-medium">
-                    {language === 'en' ? 'Growth' : 'Wachstum'}
-                  </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-brand-primary/10 rounded-full flex items-center justify-center">
-                    <Compass className="w-5 h-5 text-brand-primary" />
-                  </div>
-                  <span className="font-poppins text-sm text-stone-700 font-medium">
-                    {language === 'en' ? 'Discovery' : 'Entdeckung'}
-                  </span>
-                </div>
+                );
+              })}
+            </div>
+
+            <div className="grid gap-6 border-t border-brand-border bg-stone-50/80 p-6 sm:p-8 lg:grid-cols-2">
+              <div className="rounded-2xl border border-brand-border bg-white p-5">
+                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.tanzaniaTitle}</h5>
+                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.tanzaniaBody}</p>
+              </div>
+              <div className="rounded-2xl border border-brand-border bg-white p-5">
+                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.journeyTitle}</h5>
+                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.journeyBody}</p>
+              </div>
+              <div className="rounded-2xl border border-brand-border bg-white p-5">
+                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.whoTitle}</h5>
+                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.whoBody}</p>
+              </div>
+              <div className="rounded-2xl border border-brand-border bg-white p-5">
+                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.impactTitle}</h5>
+                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.impactBody}</p>
+              </div>
+              <div className="rounded-2xl border border-brand-border bg-white p-5 lg:col-span-2">
+                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.createdTitle}</h5>
+                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.createdBody}</p>
+              </div>
+              <div className="rounded-2xl border border-brand-border bg-white p-5 lg:col-span-2">
+                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.cohortTitle}</h5>
+                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.cohortBody}</p>
               </div>
             </div>
           </div>

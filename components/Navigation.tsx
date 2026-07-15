@@ -88,8 +88,8 @@ export default function Navigation(): JSX.Element {
       sections: [
         {
           items: [
-            { href: '/experience/#inner-safari', label: language === 'de' ? 'Innere Safari' : 'Inner Safari' },
-            { href: '/experience/#retreat', label: language === 'de' ? 'Rückzug' : 'Retreat' },
+            { href: '/experience/#beyond-safari', label: language === 'de' ? 'Beyond Safari' : 'Beyond Safari' },
+            { href: '/experience/#raw-edge', label: 'Raw Edge' },
           ]
         }
       ]
