@@ -34,6 +34,10 @@ const translations: Record<string, any> = {
       tanzaniaBody: 'Tanzania creates conditions that are difficult to replicate elsewhere. Its culture, hospitality, entrepreneurial energy, and extraordinary landscapes invite leaders to step outside familiar routines and experience leadership from a new perspective.',
       journeyTitle: 'Before. During. Beyond.',
       journeyBody: 'RAW EDGE begins before arrival and continues after return. Two online preparation sessions help participants set intentions. Two structured integration sessions support the transfer of learning into everyday leadership.',
+      beforeYouArriveTitle: 'Before You Arrive',
+      beforeYouArriveBody: 'Two online preparation sessions support participants in setting intentions, understanding the program, and consciously stepping away from everyday responsibilities.',
+      afterYouReturnTitle: 'After You Return',
+      afterYouReturnBody: 'Two structured online integration sessions support the practical application of new perspectives, helping participants create lasting impact in both their professional and personal lives.',
       whoTitle: 'Who is it for?',
       whoBody: 'RAW EDGE is designed for experienced professionals, founders, executives, entrepreneurs, and senior decision-makers with significant leadership responsibility.',
       impactTitle: 'Meaningful Impact',
@@ -44,6 +48,7 @@ const translations: Record<string, any> = {
       cohortBody: 'The first cohort is limited to eight participants, creating a highly personal experience with space for reflection and guided integration. Applications are now open until 31 September 2026.',
       conversationTitle: 'Start the Conversation',
       conversationBody: 'Participation begins with a personal conversation to explore expectations, suitability, and whether RAW EDGE is the right experience for both the participant and the program.',
+      conversationClosing: 'Some journeys change how you lead.',
     },
   },
   de: {
@@ -75,6 +80,10 @@ const translations: Record<string, any> = {
       tanzaniaBody: 'Tansania schafft Bedingungen, die sich schwer anderswo replizieren lassen. Seine Kultur, Gastfreundschaft, unternehmerische Energie und außergewöhnlichen Landschaften laden dazu ein, vertraute Routinen zu verlassen und Führung aus neuer Perspektive zu erleben.',
       journeyTitle: 'Vorher. Während. Danach.',
       journeyBody: 'RAW EDGE beginnt vor der Ankunft und setzt sich nach der Rückkehr fort. Zwei Online-Vorbereitungssitzungen unterstützen die Zielsetzung. Zwei strukturierte Integrationssitzungen helfen, Lernen in den Alltag zu übertragen.',
+      beforeYouArriveTitle: 'Bevor du ankommst',
+      beforeYouArriveBody: 'Zwei Online-Vorbereitungssitzungen unterstützen Teilnehmende dabei, Absichten zu formulieren, das Programm zu verstehen und sich bewusst von alltäglichen Verantwortlichkeiten zu lösen.',
+      afterYouReturnTitle: 'Nach deiner Rückkehr',
+      afterYouReturnBody: 'Zwei strukturierte Online-Integrationssitzungen unterstützen die praktische Anwendung neuer Perspektiven und helfen dabei, langfristig Wirkung im beruflichen und privaten Leben zu entfalten.',
       whoTitle: 'Für wen ist es gedacht?',
       whoBody: 'RAW EDGE richtet sich an erfahrene Fachkräfte, Gründerinnen und Gründer, Führungskräfte, Unternehmerinnen und Unternehmer sowie Entscheidungsträger mit großer Verantwortung.',
       impactTitle: 'Sinnvolle Wirkung',
@@ -85,6 +94,7 @@ const translations: Record<string, any> = {
       cohortBody: 'Die erste Kohorte ist auf acht Teilnehmende begrenzt, damit Raum für Reflexion und begleitete Integration entsteht. Die Bewerbung ist bis zum 31. September 2026 offen.',
       conversationTitle: 'Starte das Gespräch',
       conversationBody: 'Die Teilnahme beginnt mit einem persönlichen Gespräch, um Erwartungen, Eignung und die Passung von RAW EDGE für Teilnehmende und Programm zu prüfen.',
+      conversationClosing: 'Einige Reisen verändern, wie du führst.',
     },
   },
 };
@@ -228,6 +238,14 @@ const ExperiencePage = () => {
                 <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.journeyBody}</p>
               </div>
               <div className="rounded-2xl border border-brand-border bg-white p-5">
+                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.beforeYouArriveTitle}</h5>
+                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.beforeYouArriveBody}</p>
+              </div>
+              <div className="rounded-2xl border border-brand-border bg-white p-5">
+                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.afterYouReturnTitle}</h5>
+                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.afterYouReturnBody}</p>
+              </div>
+              <div className="rounded-2xl border border-brand-border bg-white p-5">
                 <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.whoTitle}</h5>
                 <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.whoBody}</p>
               </div>
@@ -242,6 +260,25 @@ const ExperiencePage = () => {
               <div className="rounded-2xl border border-brand-border bg-white p-5 lg:col-span-2">
                 <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.cohortTitle}</h5>
                 <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.cohortBody}</p>
+              </div>
+            </div>
+
+            <div className="border-t border-brand-border bg-stone-50/80 p-6 sm:p-8">
+              <div className="relative overflow-hidden rounded-[2rem] border border-brand-border bg-stone-900 text-white shadow-sm">
+                <Image
+                  src="/leadwild2.jpeg"
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 100vw, 100vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30" />
+                <div className="relative z-10 p-8 sm:p-10 lg:p-12 max-w-3xl">
+                  <p className="text-sm uppercase tracking-[0.35em] text-white/80 font-semibold">Raw Edge</p>
+                  <h5 className="font-comfortaa text-2xl sm:text-3xl font-bold mt-3">{t.beyondSafari.conversationTitle}</h5>
+                  <p className="font-poppins text-base sm:text-lg text-white/90 leading-relaxed mt-4">{t.beyondSafari.conversationBody}</p>
+                  <p className="font-comfortaa text-xl sm:text-2xl italic text-white/95 mt-6">{t.beyondSafari.conversationClosing}</p>
+                </div>
               </div>
             </div>
           </div>
