@@ -144,9 +144,9 @@ export default function ImpactPage() {
           ]
         }
       ],
-      ctaTitle: "Join Us in Making an Impact",
-      ctaText: "Every journey with SasaNdioSasa contributes to sustainable development and positive change in local communities.",
-      ctaButton: "Get in Touch"
+      ctaTitle: "Every Journey Creates Opportunity",
+      ctaText: "Every SasaNdioSasa experience contributes directly to Ndoto Zetu, our long-term community initiative in Tanzania. By joining this journey, you support educational opportunities, strengthen local families and sustain projects that continue long after your return.",
+      ctaButton: "Discover the impact behind your journey."
     },
     de: {
       title: "Unsere Wirkung auf die UN-Nachhaltigkeitsziele",
@@ -257,9 +257,9 @@ export default function ImpactPage() {
           ]
         }
       ],
-      ctaTitle: "Machen Sie mit uns einen Unterschied",
-      ctaText: "Jede Reise mit SasaNdioSasa trägt zu nachhaltiger Entwicklung und positiven Veränderungen in lokalen Gemeinschaften bei.",
-      ctaButton: "Kontakt aufnehmen"
+      ctaTitle: "Jede Reise schafft Möglichkeiten",
+      ctaText: "Jede SasaNdioSasa-Erfahrung trägt direkt zu Ndoto Zetu bei, unserer langfristigen Gemeinschaftsinitiative in Tansania. Mit deiner Teilnahme unterstützt du Bildungsangebote, stärkst lokale Familien und förderst Projekte, die auch nach deiner Rückkehr weiterleben.",
+      ctaButton: "Erfahre die Wirkung hinter deiner Reise."
     }
   };
 
@@ -469,12 +469,12 @@ export default function ImpactPage() {
             {t.ctaText}
           </p>
           <a
-            href="https://tally.so/r/3xe74G"
+            href="https://ndotozetu.or.tz"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-brand-primary hover:bg-brand-menu-hover px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 text-base sm:text-lg md:text-xl font-bold uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center break-words whitespace-pre-line leading-snug max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg mx-auto"
           >
-            {`Explore If This\nJourney Is for You`}
+            {t.ctaButton}
           </a>
         </div>
       </div>
