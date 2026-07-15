@@ -14,7 +14,6 @@ import Testimonials from '@/components/Testmonial';
 import ImageCarousel from '@/components/Carousel';
 import HeroIntro from '@/components/HeroIntro';
 import Manifesto from '@/components/Manifesto';
-import SpecialEvents from '@/components/SpecialEvents';
 import CTASection from '@/components/CTA';
 import Partners from '@/components/Partners';
 
@@ -189,8 +188,6 @@ export default function HomePage() {
       {/* Hero Section */}
  <Hero />
  <Manifesto />
-
- <SpecialEvents />
 
       {/* Partners Section */}
       <Partners />
