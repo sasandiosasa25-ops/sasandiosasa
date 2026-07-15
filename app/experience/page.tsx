@@ -8,7 +8,7 @@ import { Heart, Compass, Users, Calendar, Headphones, MessageCircle, Mountain, S
 // Add the translations object here
 const translations: Record<string, any> = {
   en: {
-    title: 'Experience',
+    title: 'SasaNdioSasa Experiences',
     subtitle: 'A journey of growth, connection, and discovery.',
     innerSafari: {
       id: 'inner-safari',
@@ -42,7 +42,7 @@ const translations: Record<string, any> = {
     }
   },
   de: {
-    title: 'Erfahrung',
+    title: 'SasaNdioSasa Erlebnisse',
     subtitle: 'Eine Reise des Wachstums, der Verbindung und der Entdeckung.',
     innerSafari: {
       id: 'inner-safari',
@@ -320,7 +320,7 @@ const ExperiencePage = () => {
       <div className="bg-brand-heading text-white py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h3 className="font-comfortaa text-4xl md:text-5xl mb-6 font-bold">
-            <span className="italic">SasaNdioSasa</span>
+            <span className="italic">SasaNdioSasa Experiences</span>
           </h3>
           <p className="font-poppins text-xl md:text-2xl text-white/90 mb-4">
             {language === 'en' ? 'Your Time is Now' : 'Deine Zeit ist Jetzt'}

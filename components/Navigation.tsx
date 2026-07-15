@@ -83,7 +83,7 @@ export default function Navigation(): JSX.Element {
     },
 
     { 
-      label: language === 'de' ? 'Erfahrung' : 'Experience',
+      label: language === 'de' ? 'Erlebnisse' : 'Experiences',
       hasDropdown: true,
       sections: [
         {
