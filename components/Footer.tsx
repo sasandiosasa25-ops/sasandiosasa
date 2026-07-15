@@ -37,11 +37,11 @@ export default function Footer() {
       ]
     },
     experience: {
-      title: language === 'de' ? 'Erfahrung' : 'Experience',
+      title: language === 'de' ? 'Erlebnisse' : 'Experiences',
       links: [
-        { href: '/experience/#inner-safari', label: language === 'de' ? 'Innere Safari' : 'Inner Safari' },
-        { href: '/experience/#retreat', label: language === 'de' ? 'Rückzug' : 'Retreat' },
-             ]
+        { href: '/experience/#beyond-safari', label: language === 'de' ? 'SasaNdioSasa Erlebnisse' : 'SasaNdioSasa Experiences' },
+        { href: '/experience/#raw-edge', label: 'Raw Edge' },
+      ]
     },
     travelCompass: {
       title: language === 'de' ? 'Reisekompass' : 'Travel Compass',
