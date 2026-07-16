@@ -83,12 +83,11 @@ export default function Navigation(): JSX.Element {
     },
 
     { 
-      label: language === 'de' ? 'Erlebnisse' : 'Experiences',
+      label: language === 'de' ? 'Beyond Safari' : 'Beyond Safari',
       hasDropdown: true,
       sections: [
         {
           items: [
-            { href: '/experience/#beyond-safari', label: language === 'de' ? 'Beyond Safari' : 'Beyond Safari' },
             { href: '/experience/#raw-edge', label: 'Raw Edge' },
           ]
         }
