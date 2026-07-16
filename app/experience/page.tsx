@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Heart, Compass, Users, Calendar, Mountain } from 'lucide-react';
 
