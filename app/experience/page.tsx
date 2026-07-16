@@ -382,6 +382,11 @@ const ExperiencePage = () => {
                   <h5 className="font-comfortaa text-2xl sm:text-3xl font-bold mt-3">{t.beyondSafari.conversationTitle}</h5>
                   <p className="font-poppins text-base sm:text-lg text-white/90 leading-relaxed mt-4">{t.beyondSafari.conversationBody}</p>
                   <p className="font-comfortaa text-xl sm:text-2xl italic text-white/95 mt-6">{t.beyondSafari.conversationClosing}</p>
+                  <div className="mt-8">
+                    <Link href="#" className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary">
+                      Explore if this journey is for you
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

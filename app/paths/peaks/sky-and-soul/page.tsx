@@ -107,16 +107,18 @@ export default function SkyAndSoulPage() {
           </aside>
         </div>
 
-        <div className="mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div className="space-y-3">
-            <p className="text-sm uppercase tracking-[0.3em] text-stone-500">Leadership in motion</p>
-            <p className="text-base text-stone-700 leading-relaxed max-w-3xl">
-              The summit becomes more than an achievement; it becomes a space to reconnect with clarity, resilience, and the way you lead.
-            </p>
+        <div className="mt-12 rounded-3xl border border-brand-border bg-white p-8 shadow-sm">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="space-y-3">
+              <p className="text-sm uppercase tracking-[0.3em] text-stone-500">Leadership in motion</p>
+              <p className="text-base text-stone-700 leading-relaxed max-w-3xl">
+                The summit becomes more than an achievement; it becomes a space to reconnect with clarity, resilience, and the way you lead.
+              </p>
+            </div>
+            <Link href="#" className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary">
+              Explore if this journey is for you
+            </Link>
           </div>
-          <Link href="/paths/peaks" className="inline-flex items-center gap-2 text-brand-primary font-semibold hover:text-brand-secondary transition-colors">
-            Back to Peaks <ArrowRight className="w-4 h-4" />
-          </Link>
         </div>
       </main>
     </div>
