@@ -228,38 +228,120 @@ const ExperiencePage = () => {
               })}
             </div>
 
-            <div className="grid gap-6 border-t border-brand-border bg-stone-50/80 p-6 sm:p-8 lg:grid-cols-2">
-              <div className="rounded-2xl border border-brand-border bg-white p-5">
-                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.tanzaniaTitle}</h5>
-                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.tanzaniaBody}</p>
+            <div className="grid gap-6 border-t border-brand-border bg-gradient-to-br from-emerald-50/70 via-stone-50 to-brand-menu-hover/80 p-6 sm:p-8 lg:grid-cols-2">
+              <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-brand-primary">
+                    <Compass className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.tanzaniaTitle}</h5>
+                    <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.tanzaniaBody}</p>
+                  </div>
+                </div>
               </div>
-              <div className="rounded-2xl border border-brand-border bg-white p-5">
-                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.journeyTitle}</h5>
-                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.journeyBody}</p>
+              <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-brand-primary">
+                    <Calendar className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.journeyTitle}</h5>
+                    <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.journeyBody}</p>
+                  </div>
+                </div>
               </div>
-              <div className="rounded-2xl border border-brand-border bg-white p-5">
-                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.beforeYouArriveTitle}</h5>
-                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.beforeYouArriveBody}</p>
+              <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-brand-primary">
+                    <Heart className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.beforeYouArriveTitle}</h5>
+                    <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.beforeYouArriveBody}</p>
+                  </div>
+                </div>
               </div>
-              <div className="rounded-2xl border border-brand-border bg-white p-5">
-                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.afterYouReturnTitle}</h5>
-                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.afterYouReturnBody}</p>
+              <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-brand-primary">
+                    <Mountain className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.afterYouReturnTitle}</h5>
+                    <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.afterYouReturnBody}</p>
+                  </div>
+                </div>
               </div>
-              <div className="rounded-2xl border border-brand-border bg-white p-5">
-                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.whoTitle}</h5>
-                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.whoBody}</p>
+              <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-brand-primary">
+                    <Users className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.whoTitle}</h5>
+                    <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.whoBody}</p>
+                  </div>
+                </div>
               </div>
-              <div className="rounded-2xl border border-brand-border bg-white p-5">
-                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.impactTitle}</h5>
-                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.impactBody}</p>
+              <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-brand-primary">
+                    <Heart className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.impactTitle}</h5>
+                    <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.impactBody}</p>
+                  </div>
+                </div>
               </div>
-              <div className="rounded-2xl border border-brand-border bg-white p-5 lg:col-span-2">
-                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.createdTitle}</h5>
-                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.createdBody}</p>
+              <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)] lg:col-span-2">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-brand-primary">
+                    <Users className="h-5 w-5" />
+                  </div>
+                  <div className="w-full">
+                    <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.createdTitle}</h5>
+                    <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.createdBody}</p>
+                    <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                      <div className="flex flex-col items-center rounded-2xl border border-brand-border bg-stone-50/80 p-4">
+                        <div className="relative h-56 w-full max-w-[220px] overflow-hidden rounded-2xl">
+                          <Image
+                            src="/beata.jpeg"
+                            alt="Beata"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 220px"
+                            className="object-cover"
+                          />
+                        </div>
+                        <p className="mt-3 text-sm font-semibold uppercase tracking-[0.25em] text-brand-primary">Beata</p>
+                      </div>
+                      <div className="flex flex-col items-center rounded-2xl border border-brand-border bg-stone-50/80 p-4">
+                        <div className="relative h-56 w-full max-w-[220px] overflow-hidden rounded-2xl">
+                          <Image
+                            src="/simone1.jpeg"
+                            alt="Simone"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 220px"
+                            className="object-cover"
+                          />
+                        </div>
+                        <p className="mt-3 text-sm font-semibold uppercase tracking-[0.25em] text-brand-primary">Simone</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="rounded-2xl border border-brand-border bg-white p-5 lg:col-span-2">
-                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.cohortTitle}</h5>
-                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.cohortBody}</p>
+              <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)] lg:col-span-2">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-brand-primary">
+                    <Calendar className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.cohortTitle}</h5>
+                    <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.cohortBody}</p>
+                  </div>
+                </div>
               </div>
             </div>
 
