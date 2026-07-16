@@ -22,12 +22,12 @@ export default function SkyAndSoulPage() {
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 sm:py-32">
           <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.35em] text-white/80 mb-4">SasaNdioSasa Peaks</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-white/80 mb-4">SasaNdioSasa Beyond Safari</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-comfortaa font-black text-white leading-tight tracking-tight">
-              Sky & Soul
+              Sky & Soul Leadership Summit
             </h1>
             <p className="mt-8 text-base sm:text-lg text-white/90 max-w-2xl leading-relaxed">
-              Kilimanjaro is more than a summit. It becomes a space for breath, awareness, reflection, and perspective.
+              A 12-day executive leadership experience designed for leaders, entrepreneurs and decision-makers ready to step beyond routine and invest in growth.
             </p>
           </div>
         </div>
@@ -37,39 +37,30 @@ export default function SkyAndSoulPage() {
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] items-start">
           <div className="space-y-10">
             <section className="space-y-6">
-              <h2 className="text-3xl sm:text-4xl font-comfortaa font-bold text-brand-heading">Sky & Soul</h2>
+              <h2 className="text-3xl sm:text-4xl font-comfortaa font-bold text-brand-heading">Sky & Soul Leadership Summit</h2>
               <div className="space-y-5 text-base sm:text-lg text-stone-700 leading-relaxed">
-                <p>Kilimanjaro is more than a summit. It becomes a space for breath, awareness, reflection, and perspective.</p>
-                <p>Sky & Soul includes two different experiences inspired by the mountain and the idea of conscious movement.</p>
-                <p>The On-Mountain journey is created for people who want to physically experience Kilimanjaro through a guided expedition in Tanzania. Together with experienced local mountain teams, the journey combines adventure, nature, breathwork, mindfulness, reflection, and personal challenge on Africa’s highest mountain.</p>
-                <p>The Off-Mountain experience is designed for people who want to explore the same themes of awareness, routines, breath, mindfulness, and personal movement without climbing the mountain itself. Through guided online sessions and structured practices, participants experience their own journey from wherever they are in the world.</p>
-                <p>Both experiences are inspired by the idea that Kilimanjaro can move people far beyond the summit.</p>
-              </div>
-              <div className="mt-6">
-                <a
-                  href="https://skyandsoul.co.tz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary"
-                >
-                  Explore Sky and Soul
-                </a>
+                <p>The Sky & Soul Leadership Summit is a 12-day executive leadership experience designed for leaders, entrepreneurs and decision-makers who are ready to step beyond routine and invest in their personal and professional growth.</p>
+                <p>Set on Africa's highest free-standing mountain, the experience combines a guided Kilimanjaro ascent with leadership development, mindfulness, breathwork and intentional reflection. Every stage of the journey is carefully designed to create space for perspective, resilience, self-awareness and authentic leadership.</p>
+                <p>The journey begins with arrival and preparation before participants embark on a nine-day ascent via the Lemosho Route. More than a route to the summit, the mountain offers a unique environment to slow down, reflect, listen, challenge assumptions and reconnect with what truly matters in leadership.</p>
+                <p>Throughout the journey, experienced mountain professionals and Sky & Soul facilitators guide both the ascent and the leadership experience. Through facilitated leadership sessions, mindfulness practices, breathwork and structured reflection, participants explore how they lead through challenge, uncertainty and change. The mountain provides the environment; Sky & Soul provides the framework that transforms each experience into lasting leadership development.</p>
+                <p>The experience concludes with dedicated time for integration, ensuring that insights gained on the mountain become practical tools for everyday leadership, decision-making and collaboration.</p>
+                <p>Participants return with more than the achievement of reaching Africa's highest free-standing mountain. They return with renewed clarity, deeper self-awareness and practical leadership insights that continue to shape the way they lead long after the journey has ended.</p>
               </div>
             </section>
 
             <section className="grid gap-6 sm:grid-cols-2">
               <div className="rounded-3xl border border-brand-border bg-white p-8 shadow-sm">
-                <span className="text-sm uppercase tracking-[0.3em] text-brand-primary">On-Mountain</span>
-                <h3 className="mt-4 text-2xl font-semibold text-brand-heading">A guided expedition with presence</h3>
+                <span className="text-sm uppercase tracking-[0.3em] text-brand-primary">Executive Leadership</span>
+                <h3 className="mt-4 text-2xl font-semibold text-brand-heading">A guided ascent with purpose</h3>
                 <p className="mt-4 text-sm sm:text-base text-stone-600 leading-relaxed">
-                  A physical journey on Kilimanjaro, supported by local mountain teams and designed to bring breath, mindfulness, and personal reflection into every step.
+                  The summit journey combines mountain challenge with facilitated reflection, creating a powerful environment for leadership growth.
                 </p>
               </div>
               <div className="rounded-3xl border border-brand-border bg-white p-8 shadow-sm">
-                <span className="text-sm uppercase tracking-[0.3em] text-brand-primary">Off-Mountain</span>
-                <h3 className="mt-4 text-2xl font-semibold text-brand-heading">An inner journey from wherever you are</h3>
+                <span className="text-sm uppercase tracking-[0.3em] text-brand-primary">Integration</span>
+                <h3 className="mt-4 text-2xl font-semibold text-brand-heading">Insights that continue after the climb</h3>
                 <p className="mt-4 text-sm sm:text-base text-stone-600 leading-relaxed">
-                  Guided online sessions and structured practices that explore the same themes of awareness, movement, breath, and personal growth without climbing the mountain.
+                  Structured integration ensures the lessons from the mountain become practical tools for everyday leadership and collaboration.
                 </p>
               </div>
             </section>
@@ -102,9 +93,9 @@ export default function SkyAndSoulPage() {
 
         <div className="mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="space-y-3">
-            <p className="text-sm uppercase tracking-[0.3em] text-stone-500">Inspired by Kilimanjaro</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-stone-500">Leadership in motion</p>
             <p className="text-base text-stone-700 leading-relaxed max-w-3xl">
-              Sky & Soul is a conversation between mountain and mind. It is an invitation to move more consciously, wherever your journey begins.
+              The summit becomes more than an achievement; it becomes a space to reconnect with clarity, resilience, and the way you lead.
             </p>
           </div>
           <Link href="/paths/peaks" className="inline-flex items-center gap-2 text-brand-primary font-semibold hover:text-brand-secondary transition-colors">

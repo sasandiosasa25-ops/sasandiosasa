@@ -89,6 +89,7 @@ export default function Navigation(): JSX.Element {
         {
           items: [
             { href: '/experience/#raw-edge', label: 'Raw Edge' },
+            { href: '/paths/peaks/sky-and-soul', label: 'Leadership Summit' },
           ]
         }
       ]
