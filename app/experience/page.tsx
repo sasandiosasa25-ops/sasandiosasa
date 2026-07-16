@@ -103,6 +103,26 @@ const ExperiencePage = () => {
   const { language } = useLanguage();
   const t = translations[language];
 
+  const highlightKeywords = (text: string) => {
+    const keywords = language === 'de'
+      ? ['Führung', 'Klarheit', 'Wirkung', 'Alltag', 'Rückkehr', 'Gemeinschaft', 'Lernen', 'Perspektive', 'nachhaltig']
+      : ['leadership', 'clarity', 'impact', 'everyday', 'return', 'community', 'growth', 'perspective', 'sustainable'];
+
+    const pattern = new RegExp(`(${keywords.join('|')})`, 'gi');
+    const parts = text.split(pattern);
+
+    return parts.map((part, index) => {
+      const isKeyword = keywords.some((keyword) => keyword.toLowerCase() === part.toLowerCase());
+      return isKeyword ? (
+        <span key={`${part}-${index}`} className="font-semibold text-brand-primary">
+          {part}
+        </span>
+      ) : (
+        <span key={`${part}-${index}`}>{part}</span>
+      );
+    });
+  };
+
   return (
     <div className="min-h-screen ">
       {/* Experience Title Full Background Section (no open space, larger image) */}
@@ -252,25 +272,15 @@ const ExperiencePage = () => {
                 </div>
               </div>
               <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-brand-primary">
-                    <Heart className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.beforeYouArriveTitle}</h5>
-                    <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.beforeYouArriveBody}</p>
-                  </div>
+                <div>
+                  <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.beforeYouArriveTitle}</h5>
+                  <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{highlightKeywords(t.beyondSafari.beforeYouArriveBody)}</p>
                 </div>
               </div>
               <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-brand-primary">
-                    <Mountain className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.afterYouReturnTitle}</h5>
-                    <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.afterYouReturnBody}</p>
-                  </div>
+                <div>
+                  <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.afterYouReturnTitle}</h5>
+                  <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{highlightKeywords(t.beyondSafari.afterYouReturnBody)}</p>
                 </div>
               </div>
               <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
@@ -285,14 +295,9 @@ const ExperiencePage = () => {
                 </div>
               </div>
               <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-brand-primary">
-                    <Heart className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.impactTitle}</h5>
-                    <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.impactBody}</p>
-                  </div>
+                <div>
+                  <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.impactTitle}</h5>
+                  <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{highlightKeywords(t.beyondSafari.impactBody)}</p>
                 </div>
               </div>
               <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)] lg:col-span-2">
