@@ -6,7 +6,7 @@ import { Heart, Compass, Users, Calendar, Mountain } from 'lucide-react';
 
 const translations: Record<string, any> = {
   en: {
-    title: 'SasaNdioSasa Experiences',
+    title: 'SasaNdioSasa Beyond Safari',
     subtitle: 'A journey of growth, connection, and discovery.',
     beyondSafari: {
       eyebrow: 'SasaNdioSasa Beyond Safari',
@@ -393,7 +393,7 @@ const ExperiencePage = () => {
       <div className="bg-brand-heading text-white py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h3 className="font-comfortaa text-4xl md:text-5xl mb-6 font-bold">
-            <span className="italic">SasaNdioSasa Experiences</span>
+            <span className="italic">SasaNdioSasa Beyond Safari</span>
           </h3>
           <p className="font-poppins text-xl md:text-2xl text-white/90 mb-4">
             {language === 'en' ? 'Your Time is Now' : 'Deine Zeit ist Jetzt'}
