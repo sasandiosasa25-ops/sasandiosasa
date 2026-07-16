@@ -37,7 +37,7 @@ export default function Footer() {
       ]
     },
     experience: {
-      title: language === 'de' ? 'Erlebnisse' : 'Experiences',
+      title: language === 'de' ? 'Beyond Safari' : 'Beyond Safari',
       links: [
         { href: '/experience/#raw-edge', label: 'Raw Edge' },
       ]
