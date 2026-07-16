@@ -123,6 +123,23 @@ const ExperiencePage = () => {
     });
   };
 
+  const applyPhraseHighlight = (text: string, phrases: string[]) => {
+    const escapedPhrases = phrases.map((phrase) => phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    const pattern = new RegExp(`(${escapedPhrases.join('|')})`, 'gi');
+    const parts = text.split(pattern);
+
+    return parts.map((part, index) => {
+      const isMatch = phrases.some((phrase) => phrase.toLowerCase() === part.toLowerCase());
+      return isMatch ? (
+        <span key={`${part}-${index}`} className="font-semibold text-brand-primary">
+          {part}
+        </span>
+      ) : (
+        <span key={`${part}-${index}`}>{part}</span>
+      );
+    });
+  };
+
   return (
     <div className="min-h-screen ">
       {/* Experience Title Full Background Section (no open space, larger image) */}
@@ -274,13 +291,13 @@ const ExperiencePage = () => {
               <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
                 <div>
                   <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.beforeYouArriveTitle}</h5>
-                  <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{highlightKeywords(t.beyondSafari.beforeYouArriveBody)}</p>
+                  <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{applyPhraseHighlight(t.beyondSafari.beforeYouArriveBody, language === 'de' ? ['Absichten', 'Programm', 'Verständnis'] : ['setting intentions', 'understanding the program'])}</p>
                 </div>
               </div>
               <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
                 <div>
                   <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.afterYouReturnTitle}</h5>
-                  <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{highlightKeywords(t.beyondSafari.afterYouReturnBody)}</p>
+                  <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{applyPhraseHighlight(t.beyondSafari.afterYouReturnBody, language === 'de' ? ['neue Perspektiven', 'dauerhafte Wirkung'] : ['new perspectives', 'lasting impact'])}</p>
                 </div>
               </div>
               <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
