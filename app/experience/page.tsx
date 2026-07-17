@@ -292,13 +292,13 @@ const ExperiencePage = () => {
               <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
                 <div>
                   <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.beforeYouArriveTitle}</h5>
-                  <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{applyPhraseHighlight(t.beyondSafari.beforeYouArriveBody, language === 'de' ? ['Absichten', 'Programm', 'Verständnis'] : ['setting intentions', 'understanding the program'])}</p>
+                  <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{applyPhraseHighlight(t.beyondSafari.beforeYouArriveBody, language === 'de' ? ['Zwei Online-Vorbereitungssitzungen', 'Absichten', 'Programm', 'Verständnis'] : ['Two online preparation sessions', 'setting intentions', 'understanding the program'])}</p>
                 </div>
               </div>
               <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
                 <div>
                   <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.afterYouReturnTitle}</h5>
-                  <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{applyPhraseHighlight(t.beyondSafari.afterYouReturnBody, language === 'de' ? ['neue Perspektiven', 'dauerhafte Wirkung'] : ['new perspectives', 'lasting impact'])}</p>
+                  <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{applyPhraseHighlight(t.beyondSafari.afterYouReturnBody, language === 'de' ? ['Zwei strukturierte Online-Integrationssitzungen', 'neue Perspektiven', 'dauerhafte Wirkung'] : ['Two structured online integration sessions', 'new perspectives', 'lasting impact'])}</p>
                 </div>
               </div>
               <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
@@ -371,7 +371,7 @@ const ExperiencePage = () => {
             <div className="border-t border-brand-border bg-stone-50/80 p-6 sm:p-8">
               <div className="relative overflow-hidden rounded-[2rem] border border-brand-border bg-stone-900 text-white shadow-sm">
                 <Image
-                  src="/leadwild2.jpeg"
+                  src="/web1.png"
                   alt=""
                   fill
                   sizes="(max-width: 768px) 100vw, 100vw"
@@ -383,10 +383,17 @@ const ExperiencePage = () => {
                   <h5 className="font-comfortaa text-2xl sm:text-3xl font-bold mt-3">{t.beyondSafari.conversationTitle}</h5>
                   <p className="font-poppins text-base sm:text-lg text-white/90 leading-relaxed mt-4">{t.beyondSafari.conversationBody}</p>
                   <p className="font-comfortaa text-xl sm:text-2xl italic text-white/95 mt-6">{t.beyondSafari.conversationClosing}</p>
-                  <div className="mt-8">
+                  <div className="mt-8 flex flex-col sm:flex-row items-start gap-3">
                     <Link href="#" className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary">
-                      Explore if this journey is for you
+                      Book Your Discovery Call Here.
                     </Link>
+                    <a
+                      href="/RAW%20EDGE.pdf"
+                      download
+                      className="inline-flex items-center justify-center rounded-full bg-white/90 text-brand-primary px-5 py-2 text-sm font-semibold border border-white/20 shadow-sm hover:shadow-md"
+                    >
+                      Download Flyer
+                    </a>
                   </div>
                 </div>
               </div>

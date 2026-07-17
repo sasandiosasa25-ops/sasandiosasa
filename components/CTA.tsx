@@ -9,10 +9,10 @@ export default function CTASection() {
   const { language } = useLanguage();
 
   const content = {
-    en: {
+      en: {
       tagline: "Start your journey",
       heading: "Karibu",
-      buttonText: "Explore If This Journey Is for You",
+      buttonText: "Book Your Discovery Call Here.",
         rating: "Rating",
         awardWinning: "Award-Winning Service",
         travelers: "Happy Travelers",
@@ -20,7 +20,7 @@ export default function CTASection() {
     de: {
       tagline: "Beginnen Sie Ihre Reise",
       heading: "Karibu",
-        buttonText: "Explore If This Journey Is for You",
+        buttonText: "Book Your Discovery Call Here.",
       rating: "Bewertung",
       awardWinning: "Preisgekrönter Service",
       travelers: "Glückliche Reisende",

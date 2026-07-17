@@ -116,7 +116,7 @@ export default function SkyAndSoulPage() {
               </p>
             </div>
             <Link href="#" className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary">
-              Explore if this journey is for you
+              Book Your Discovery Call Here.
             </Link>
           </div>
         </div>

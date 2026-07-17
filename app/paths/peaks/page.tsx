@@ -231,13 +231,13 @@ details: 'Over four days, the trail takes you from lush forest through alpine me
           <p className="hidden sm:block font-poppins text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 leading-relaxed">
             Every mountain has a story. Let&apos;s discover yours together.
           </p>
-          <a
+            <a
             href="https://tally.so/r/3xe74G"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 sm:px-10 py-3 sm:py-5 bg-white text-brand-primary font-poppins font-bold rounded-full hover:shadow-2xl transition-all duration-300 text-base sm:text-lg group"
           >
-            <span>Explore If This Journey is For You</span>
+            <span>Book Your Discovery Call Here.</span>
             <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
