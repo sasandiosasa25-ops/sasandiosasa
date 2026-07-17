@@ -40,7 +40,7 @@ export default function SkyAndSoulPage() {
               <h2 className="text-3xl sm:text-4xl font-comfortaa font-bold text-brand-heading">Sky & Soul Leadership Summit</h2>
               <div className="space-y-5 text-base sm:text-lg text-stone-700 leading-relaxed">
                 <p>The Sky & Soul Leadership Summit is a 12-day executive leadership experience designed for leaders, entrepreneurs and decision-makers who are ready to step beyond routine and invest in their personal and professional growth.</p>
-                <p>Set on Africa's highest free-standing mountain, the experience combines a guided Kilimanjaro ascent with leadership development, mindfulness, breathwork and intentional reflection. Every stage of the journey is carefully designed to create space for perspective, resilience, self-awareness and authentic leadership.</p>
+                <p>Set on Africa&apos;s highest free-standing mountain, the experience combines a guided Kilimanjaro ascent with leadership development, mindfulness, breathwork and intentional reflection. Every stage of the journey is carefully designed to create space for perspective, resilience, self-awareness and authentic leadership.</p>
                 <p>The journey begins with arrival and preparation before participants embark on a nine-day ascent via the Lemosho Route. More than a route to the summit, the mountain offers a unique environment to slow down, reflect, listen, challenge assumptions and reconnect with what truly matters in leadership.</p>
                 <div className="grid gap-4 sm:grid-cols-2 my-2">
                   <div className="relative h-48 overflow-hidden rounded-2xl border border-brand-border">
@@ -52,7 +52,7 @@ export default function SkyAndSoulPage() {
                 </div>
                 <p>Throughout the journey, experienced mountain professionals and Sky & Soul facilitators guide both the ascent and the leadership experience. Through facilitated leadership sessions, mindfulness practices, breathwork and structured reflection, participants explore how they lead through challenge, uncertainty and change. The mountain provides the environment; Sky & Soul provides the framework that transforms each experience into lasting leadership development.</p>
                 <p>The experience concludes with dedicated time for integration, ensuring that insights gained on the mountain become practical tools for everyday leadership, decision-making and collaboration.</p>
-                <p>Participants return with more than the achievement of reaching Africa's highest free-standing mountain. They return with renewed clarity, deeper self-awareness and practical leadership insights that continue to shape the way they lead long after the journey has ended.</p>
+                <p>Participants return with more than the achievement of reaching Africa&apos;s highest free-standing mountain. They return with renewed clarity, deeper self-awareness and practical leadership insights that continue to shape the way they lead long after the journey has ended.</p>
                 <div className="grid gap-4 sm:grid-cols-2 my-2">
                   <div className="relative h-48 overflow-hidden rounded-2xl border border-brand-border">
                     <Image src="/climb2.jpeg" alt="Leadership summit trail view" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
@@ -85,8 +85,8 @@ export default function SkyAndSoulPage() {
           <aside className="space-y-8 rounded-3xl border border-brand-border bg-white p-8 shadow-sm">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-brand-primary">Why Sky & Soul</p>
-              <p className="mt-4 text-sm sm:text-base text-stone-700 leading-relaxed">
-                This offering is for people who want Kilimanjaro’s wisdom without limiting the journey to the summit. It honors the mountain’s energy through presence, practice, and expanded perspective.
+                <p className="mt-4 text-sm sm:text-base text-stone-700 leading-relaxed">
+                This offering is for people who want Kilimanjaro&apos;s wisdom without limiting the journey to the summit. It honors the mountain&apos;s energy through presence, practice, and expanded perspective.
               </p>
             </div>
 
