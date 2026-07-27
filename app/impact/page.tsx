@@ -434,7 +434,7 @@ export default function ImpactPage() {
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-brand-primary font-semibold font-poppins">Focus areas</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-brand-heading font-comfortaa">Additional impact themes</h2>
-              <p className="text-base text-brand-heading/70 mt-2 max-w-2xl font-poppins">Each area below highlights a different way we protect people, wildlife and responsible travel experiences.</p>
+              <p className="text-base text-brand-heading/70 mt-2 max-w-2xl font-poppins">Each area below links to its own dedicated page for a deeper look at our responsible travel practices.</p>
             </div>
           </div>
 
@@ -442,16 +442,16 @@ export default function ImpactPage() {
             {t.focusAreas.map((area: ImpactFocusArea) => (
               <a
                 key={area.id}
-                href={`#${area.id}`}
+                href={`/impact/${area.id}#${area.id}`}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-brand-border/30 bg-brand-primary/5 hover:border-brand-primary hover:shadow-lg transition-all duration-300"
               >
                 <div className="overflow-hidden">
                   <Image
                     src={area.image}
                     alt={area.title}
-                    width={400}
-                    height={220}
-                    className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    width={600}
+                    height={360}
+                    className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
@@ -466,31 +466,6 @@ export default function ImpactPage() {
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 md:pb-12 space-y-6">
-        {t.focusAreas.map((area: ImpactFocusArea, index: number) => (
-          <div
-            key={area.id}
-            id={area.id}
-            className={`scroll-mt-24 overflow-hidden rounded-3xl border border-brand-border/30 bg-white shadow-sm ${index % 2 === 0 ? 'md:grid md:grid-cols-[1.1fr_0.9fr]' : 'md:grid md:grid-cols-[0.9fr_1.1fr]'}`}
-          >
-            <div className="flex flex-col justify-center p-6 md:p-8 lg:p-10">
-              <p className="text-sm uppercase tracking-[0.3em] text-brand-primary font-semibold font-poppins mb-3">Impact focus</p>
-              <h3 className="text-2xl sm:text-3xl font-bold text-brand-heading mb-4 font-comfortaa">{area.title}</h3>
-              <p className="text-base sm:text-lg text-brand-heading/80 leading-relaxed font-poppins whitespace-pre-line">{area.description}</p>
-            </div>
-            <div className="bg-brand-primary/5 p-4 md:p-6 flex items-center justify-center">
-              <Image
-                src={area.image}
-                alt={area.title}
-                width={480}
-                height={320}
-                className="h-48 w-full max-w-md rounded-2xl object-cover shadow-sm"
-              />
-            </div>
-          </div>
-        ))}
       </div>
 
       {/* Goals Details */}

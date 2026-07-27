@@ -101,7 +101,12 @@ export default function Navigation(): JSX.Element {
         {
           items: [
             { href: '/impact', label: language === 'de' ? 'Wirkung Übersicht' : 'Impact Overview' },
-            { href: '/impact', label: language === 'de' ? 'UN-Nachhaltigkeitsziele' : 'UN Sustainability Goals' },
+            { href: '/impact#un-sustainability-goals', label: language === 'de' ? 'UN-Nachhaltigkeitsziele' : 'UN Sustainability Goals' },
+            { href: '/impact/responsible-travel#responsible-travel', label: language === 'de' ? 'Verantwortungsvolles Reisen' : 'Responsible Travel' },
+            { href: '/impact/sustainability#sustainability', label: language === 'de' ? 'Nachhaltigkeit' : 'Sustainability' },
+            { href: '/impact/animal-welfare#animal-welfare', label: language === 'de' ? 'Tierschutz' : 'Animal Welfare' },
+            { href: '/impact/child-protection#child-protection', label: language === 'de' ? 'Kinderschutz' : 'Child Protection & Safeguarding' },
+            { href: '/impact/guest-safety#guest-safety', label: language === 'de' ? 'Gästesicherheit' : 'Guest Safety & Well-being' },
           ]
         }
       ]
