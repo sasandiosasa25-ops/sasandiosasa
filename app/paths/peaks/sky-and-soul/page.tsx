@@ -1,34 +1,21 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import HowItWorks from '@/components/HowItWorks';
 
 export default function SkyAndSoulPage() {
   return (
     <div className="min-h-screen bg-brand-bg-light">
-      <div className="relative overflow-hidden bg-white min-h-[60vh]">
-        <div className="absolute inset-0 overflow-hidden">
-          <Image
-            src="/climb3.jpeg"
-            alt="Sky & Soul Leadership Summit at Kilimanjaro"
-            fill
-            sizes="100vw"
-            className="object-cover object-bottom"
-            style={{ objectPosition: 'center 70%' }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/85 via-brand-secondary/75 to-[#7b4c35]/85" />
-        </div>
-
+      <div className="relative overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary via-brand-secondary to-[#7b4c35] opacity-90" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 sm:py-32">
           <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.35em] text-white/80 mb-4">SasaNdioSasa Beyond Safari</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-white/80 mb-4">SasaNdioSasa Peaks</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-comfortaa font-black text-white leading-tight tracking-tight">
-              Sky & Soul Leadership Summit
+              Sky & Soul
             </h1>
             <p className="mt-8 text-base sm:text-lg text-white/90 max-w-2xl leading-relaxed">
-              A 12-day executive leadership experience designed for leaders, entrepreneurs and decision-makers ready to step beyond routine and invest in growth.
+              Kilimanjaro is more than a summit. It becomes a space for breath, awareness, reflection, and perspective.
             </p>
           </div>
         </div>
@@ -38,46 +25,29 @@ export default function SkyAndSoulPage() {
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] items-start">
           <div className="space-y-10">
             <section className="space-y-6">
-              <h2 className="text-3xl sm:text-4xl font-comfortaa font-bold text-brand-heading">Sky & Soul Leadership Summit</h2>
+              <h2 className="text-3xl sm:text-4xl font-comfortaa font-bold text-brand-heading">Sky & Soul</h2>
               <div className="space-y-5 text-base sm:text-lg text-stone-700 leading-relaxed">
-                <p>The Sky & Soul Leadership Summit is a 12-day executive leadership experience designed for leaders, entrepreneurs and decision-makers who are ready to step beyond routine and invest in their personal and professional growth.</p>
-                <p>Set on Africa&apos;s highest free-standing mountain, the experience combines a guided Kilimanjaro ascent with leadership development, mindfulness, breathwork and intentional reflection. Every stage of the journey is carefully designed to create space for perspective, resilience, self-awareness and authentic leadership.</p>
-                <p>The journey begins with arrival and preparation before participants embark on a nine-day ascent via the Lemosho Route. More than a route to the summit, the mountain offers a unique environment to slow down, reflect, listen, challenge assumptions and reconnect with what truly matters in leadership.</p>
-                <div className="grid gap-4 sm:grid-cols-2 my-2">
-                  <div className="relative h-48 overflow-hidden rounded-2xl border border-brand-border">
-                    <Image src="/climb4.jpeg" alt="Leadership summit preparation view" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
-                  </div>
-                  <div className="relative h-48 overflow-hidden rounded-2xl border border-brand-border">
-                    <Image src="/climb5.jpeg" alt="Leadership summit mountain trail view" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
-                  </div>
-                </div>
-                <p>Throughout the journey, experienced mountain professionals and Sky & Soul facilitators guide both the ascent and the leadership experience. Through facilitated leadership sessions, mindfulness practices, breathwork and structured reflection, participants explore how they lead through challenge, uncertainty and change. The mountain provides the environment; Sky & Soul provides the framework that transforms each experience into lasting leadership development.</p>
-                <p>The experience concludes with dedicated time for integration, ensuring that insights gained on the mountain become practical tools for everyday leadership, decision-making and collaboration.</p>
-                <p>Participants return with more than the achievement of reaching Africa&apos;s highest free-standing mountain. They return with renewed clarity, deeper self-awareness and practical leadership insights that continue to shape the way they lead long after the journey has ended.</p>
-                <div className="grid gap-4 sm:grid-cols-2 my-2">
-                  <div className="relative h-48 overflow-hidden rounded-2xl border border-brand-border">
-                    <Image src="/climb2.jpeg" alt="Leadership summit trail view" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
-                  </div>
-                  <div className="relative h-48 overflow-hidden rounded-2xl border border-brand-border">
-                    <Image src="/climb3.jpeg" alt="Leadership summit mountain view" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
-                  </div>
-                </div>
+                <p>Kilimanjaro is more than a summit. It becomes a space for breath, awareness, reflection, and perspective.</p>
+                <p>Sky & Soul includes two different experiences inspired by the mountain and the idea of conscious movement.</p>
+                <p>The On-Mountain journey is created for people who want to physically experience Kilimanjaro through a guided expedition in Tanzania. Together with experienced local mountain teams, the journey combines adventure, nature, breathwork, mindfulness, reflection, and personal challenge on Africa’s highest mountain.</p>
+                <p>The Off-Mountain experience is designed for people who want to explore the same themes of awareness, routines, breath, mindfulness, and personal movement without climbing the mountain itself. Through guided online sessions and structured practices, participants experience their own journey from wherever they are in the world.</p>
+                <p>Both experiences are inspired by the idea that Kilimanjaro can move people far beyond the summit.</p>
               </div>
             </section>
 
             <section className="grid gap-6 sm:grid-cols-2">
               <div className="rounded-3xl border border-brand-border bg-white p-8 shadow-sm">
-                <span className="text-sm uppercase tracking-[0.3em] text-brand-primary">Executive Leadership</span>
-                <h3 className="mt-4 text-2xl font-semibold text-brand-heading">A guided ascent with purpose</h3>
+                <span className="text-sm uppercase tracking-[0.3em] text-brand-primary">On-Mountain</span>
+                <h3 className="mt-4 text-2xl font-semibold text-brand-heading">A guided expedition with presence</h3>
                 <p className="mt-4 text-sm sm:text-base text-stone-600 leading-relaxed">
-                  The summit journey combines mountain challenge with facilitated reflection, creating a powerful environment for leadership growth.
+                  A physical journey on Kilimanjaro, supported by local mountain teams and designed to bring breath, mindfulness, and personal reflection into every step.
                 </p>
               </div>
               <div className="rounded-3xl border border-brand-border bg-white p-8 shadow-sm">
-                <span className="text-sm uppercase tracking-[0.3em] text-brand-primary">Integration</span>
-                <h3 className="mt-4 text-2xl font-semibold text-brand-heading">Insights that continue after the climb</h3>
+                <span className="text-sm uppercase tracking-[0.3em] text-brand-primary">Off-Mountain</span>
+                <h3 className="mt-4 text-2xl font-semibold text-brand-heading">An inner journey from wherever you are</h3>
                 <p className="mt-4 text-sm sm:text-base text-stone-600 leading-relaxed">
-                  Structured integration ensures the lessons from the mountain become practical tools for everyday leadership and collaboration.
+                  Guided online sessions and structured practices that explore the same themes of awareness, movement, breath, and personal growth without climbing the mountain.
                 </p>
               </div>
             </section>
@@ -86,8 +56,8 @@ export default function SkyAndSoulPage() {
           <aside className="space-y-8 rounded-3xl border border-brand-border bg-white p-8 shadow-sm">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-brand-primary">Why Sky & Soul</p>
-                <p className="mt-4 text-sm sm:text-base text-stone-700 leading-relaxed">
-                This offering is for people who want Kilimanjaro&apos;s wisdom without limiting the journey to the summit. It honors the mountain&apos;s energy through presence, practice, and expanded perspective.
+              <p className="mt-4 text-sm sm:text-base text-stone-700 leading-relaxed">
+                This offering is for people who want Kilimanjaro’s wisdom without limiting the journey to the summit. It honors the mountain’s energy through presence, practice, and expanded perspective.
               </p>
             </div>
 
@@ -108,34 +78,16 @@ export default function SkyAndSoulPage() {
           </aside>
         </div>
 
-        <div className="mx-auto mt-8 max-w-5xl px-2 sm:px-0">
-          <HowItWorks
-            copy={{
-              title: 'How It Works',
-              intro: 'Every journey begins with a thoughtful conversation and is shaped carefully with you so the experience feels personal, well prepared and meaningful.',
-              steps: [
-                { title: 'Discovery Call', body: 'Every journey begins with a conversation. Book a complimentary discovery call so we can understand your interests, goals and expectations.' },
-                { title: 'Your Personal Proposal', body: 'Based on our conversation, we design a personalised experience tailored to your interests, travel style and desired outcomes.' },
-                { title: 'Refine Together', body: 'We review the proposal together and adjust every detail until it perfectly reflects the experience you are looking for.' },
-                { title: 'Confirm & Prepare', body: 'Once your journey is confirmed, you receive all practical travel information, preparation guidance and continuous support to ensure you feel confident and well prepared.' },
-                { title: 'Experience & Integrate', body: 'Your journey does not end when you leave Tanzania. We encourage reflection, integration and meaningful action so the insights continue to create value long after your journey has ended.' },
-              ],
-            }}
-          />
-        </div>
-
-        <div className="mt-12 rounded-3xl border border-brand-border bg-white p-8 shadow-sm">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div className="space-y-3">
-              <p className="text-sm uppercase tracking-[0.3em] text-stone-500">Leadership in motion</p>
-              <p className="text-base text-stone-700 leading-relaxed max-w-3xl">
-                The summit becomes more than an achievement; it becomes a space to reconnect with clarity, resilience, and the way you lead.
-              </p>
-            </div>
-            <Link href="#" className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary">
-              Book Your Discovery Call Here.
-            </Link>
+        <div className="mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div className="space-y-3">
+            <p className="text-sm uppercase tracking-[0.3em] text-stone-500">Inspired by Kilimanjaro</p>
+            <p className="text-base text-stone-700 leading-relaxed max-w-3xl">
+              Sky & Soul is a conversation between mountain and mind. It is an invitation to move more consciously, wherever your journey begins.
+            </p>
           </div>
+          <Link href="/paths/peaks" className="inline-flex items-center gap-2 text-brand-primary font-semibold hover:text-brand-secondary transition-colors">
+            Back to Peaks <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </main>
     </div>
