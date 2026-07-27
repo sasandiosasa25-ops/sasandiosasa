@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { Mountain, ArrowRight, Compass, ChevronDown } from 'lucide-react';
+import HowItWorks from '@/components/HowItWorks';
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
@@ -220,6 +221,22 @@ details: 'Over four days, the trail takes you from lush forest through alpine me
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="mx-auto max-w-5xl px-4 pb-6 sm:px-6 sm:pb-8">
+        <HowItWorks
+          copy={{
+            title: 'How It Works',
+            intro: 'Every journey begins with a thoughtful conversation and is shaped carefully with you so the experience feels personal, well prepared and meaningful.',
+            steps: [
+              { title: 'Discovery Call', body: 'Every journey begins with a conversation. Book a complimentary discovery call so we can understand your interests, goals and expectations.' },
+              { title: 'Your Personal Proposal', body: 'Based on our conversation, we design a personalised experience tailored to your interests, travel style and desired outcomes.' },
+              { title: 'Refine Together', body: 'We review the proposal together and adjust every detail until it perfectly reflects the experience you are looking for.' },
+              { title: 'Confirm & Prepare', body: 'Once your journey is confirmed, you receive all practical travel information, preparation guidance and continuous support to ensure you feel confident and well prepared.' },
+              { title: 'Experience & Integrate', body: 'Your journey does not end when you leave Tanzania. We encourage reflection, integration and meaningful action so the insights continue to create value long after your journey has ended.' },
+            ],
+          }}
+        />
       </div>
 
       {/* Bottom CTA */}

@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import HowItWorks from '@/components/HowItWorks';
 
 export default function SkyAndSoulPage() {
   return (
@@ -105,6 +106,22 @@ export default function SkyAndSoulPage() {
               </div>
             </div>
           </aside>
+        </div>
+
+        <div className="mx-auto mt-8 max-w-5xl px-2 sm:px-0">
+          <HowItWorks
+            copy={{
+              title: 'How It Works',
+              intro: 'Every journey begins with a thoughtful conversation and is shaped carefully with you so the experience feels personal, well prepared and meaningful.',
+              steps: [
+                { title: 'Discovery Call', body: 'Every journey begins with a conversation. Book a complimentary discovery call so we can understand your interests, goals and expectations.' },
+                { title: 'Your Personal Proposal', body: 'Based on our conversation, we design a personalised experience tailored to your interests, travel style and desired outcomes.' },
+                { title: 'Refine Together', body: 'We review the proposal together and adjust every detail until it perfectly reflects the experience you are looking for.' },
+                { title: 'Confirm & Prepare', body: 'Once your journey is confirmed, you receive all practical travel information, preparation guidance and continuous support to ensure you feel confident and well prepared.' },
+                { title: 'Experience & Integrate', body: 'Your journey does not end when you leave Tanzania. We encourage reflection, integration and meaningful action so the insights continue to create value long after your journey has ended.' },
+              ],
+            }}
+          />
         </div>
 
         <div className="mt-12 rounded-3xl border border-brand-border bg-white p-8 shadow-sm">

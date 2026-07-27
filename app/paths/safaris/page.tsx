@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, ChevronRight, MapPin, Calendar, Users, Mountain, Waves, Compass } from 'lucide-react';
+import HowItWorks from '@/components/HowItWorks';
 
 // Safari Journeys Page
 const SafariPage = () => {
@@ -98,6 +99,22 @@ const SafariPage = () => {
         </div>
       </div>
 
+      <div className="max-w-5xl mx-auto px-6 pb-4">
+        <HowItWorks
+          copy={{
+            title: 'How It Works',
+            intro: 'Every journey begins with a thoughtful conversation and is shaped carefully with you so the experience feels personal, well prepared and meaningful.',
+            steps: [
+              { title: 'Discovery Call', body: 'Every journey begins with a conversation. Book a complimentary discovery call so we can understand your interests, goals and expectations.' },
+              { title: 'Your Personal Proposal', body: 'Based on our conversation, we design a personalised experience tailored to your interests, travel style and desired outcomes.' },
+              { title: 'Refine Together', body: 'We review the proposal together and adjust every detail until it perfectly reflects the experience you are looking for.' },
+              { title: 'Confirm & Prepare', body: 'Once your journey is confirmed, you receive all practical travel information, preparation guidance and continuous support to ensure you feel confident and well prepared.' },
+              { title: 'Experience & Integrate', body: 'Your journey does not end when you leave Tanzania. We encourage reflection, integration and meaningful action so the insights continue to create value long after your journey has ended.' },
+            ],
+          }}
+        />
+      </div>
+
       {/* Journey Cards */}
       <div className="max-w-6xl mx-auto px-6 pb-20">
         <div className="space-y-8">
@@ -183,7 +200,19 @@ const SafariPage = () => {
         </div>
       </div>
 
-      {/* ...existing code... */}
+      <div className="mx-auto max-w-5xl px-6 pb-16 pt-4">
+        <div className="rounded-[1.75rem] border border-brand-border bg-white p-6 shadow-sm sm:p-8">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-primary">Ready to begin?</p>
+              <h3 className="mt-2 font-comfortaa text-2xl text-brand-heading font-bold">Book your discovery call and let us shape the right journey for you.</h3>
+            </div>
+            <Link href="#" className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary">
+              Book Your Discovery Call Here.
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

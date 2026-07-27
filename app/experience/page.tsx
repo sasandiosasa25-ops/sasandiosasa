@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Heart, Compass, Users, Calendar, Mountain } from 'lucide-react';
+import HowItWorks from '@/components/HowItWorks';
 
 const translations: Record<string, any> = {
   en: {
@@ -50,6 +51,16 @@ const translations: Record<string, any> = {
       conversationTitle: 'Start the Conversation',
       conversationBody: 'Participation begins with a personal conversation to explore expectations, suitability, and whether RAW EDGE is the right experience for both the participant and the program.',
       conversationClosing: 'Some journeys change how you lead.',
+      howItWorksTitle: 'How It Works',
+      howItWorksIntro: 'Every journey begins with a thoughtful conversation and is shaped carefully with you so the experience feels personal, well prepared and meaningful.',
+      howItWorksSteps: [
+        { title: 'Discovery Call', body: 'Every journey begins with a conversation. Book a complimentary discovery call so we can understand your interests, goals and expectations.' },
+        { title: 'Your Personal Proposal', body: 'Based on our conversation, we design a personalised experience tailored to your interests, travel style and desired outcomes.' },
+        { title: 'Refine Together', body: 'We review the proposal together and adjust every detail until it perfectly reflects the experience you are looking for.' },
+        { title: 'Confirm & Prepare', body: 'Once your journey is confirmed, you receive all practical travel information, preparation guidance and continuous support to ensure you feel confident and well prepared.' },
+        { title: 'Experience & Integrate', body: 'Your journey does not end when you leave Tanzania. We encourage reflection, integration and meaningful action so the insights continue to create value long after your journey has ended.' },
+      ],
+      howItWorksNote: 'These experiences are Beyond Safari, RAW EDGE and the Leadership Summit with SasaNdioSasa Paths, Peaks, Beach and Safaris.',
     },
   },
   de: {
@@ -96,6 +107,16 @@ const translations: Record<string, any> = {
       conversationTitle: 'Starte das Gespräch',
       conversationBody: 'Die Teilnahme beginnt mit einem persönlichen Gespräch, um Erwartungen, Eignung und die Passung von RAW EDGE für Teilnehmende und Programm zu prüfen.',
       conversationClosing: 'Einige Reisen verändern, wie du führst.',
+      howItWorksTitle: 'So funktioniert es',
+      howItWorksIntro: 'Jede Reise beginnt mit einem sorgfältigen Gespräch und wird gemeinsam so gestaltet, dass sie persönlich, gut vorbereitet und sinnvoll erlebt wird.',
+      howItWorksSteps: [
+        { title: 'Erstgespräch', body: 'Jede Reise beginnt mit einem Gespräch. Buche ein kostenloses Erstgespräch, damit wir deine Interessen, Ziele und Erwartungen besser verstehen.' },
+        { title: 'Dein persönlicher Vorschlag', body: 'Auf Basis unseres Gesprächs entwickeln wir eine individuelle Erfahrung, die auf deine Interessen, deinen Reise-Stil und deine gewünschten Ziele zugeschnitten ist.' },
+        { title: 'Gemeinsam verfeinern', body: 'Wir besprechen den Vorschlag gemeinsam und passen jedes Detail so an, dass er perfekt zu der Erfahrung passt, die du suchst.' },
+        { title: 'Bestätigen und vorbereiten', body: 'Sobald deine Reise bestätigt ist, erhältst du alle praktischen Reiseinformationen, Vorbereitungshilfen und kontinuierliche Unterstützung, damit du dich sicher und gut vorbereitet fühlst.' },
+        { title: 'Erleben und integrieren', body: 'Deine Reise endet nicht, wenn du Tansania verlässt. Wir fördern Reflexion, Integration und sinnvolle Umsetzung, damit die Erkenntnisse auch noch lange danach weiter Wirkung entfalten.' },
+      ],
+      howItWorksNote: 'Diese Erfahrungen sind Beyond Safari, RAW EDGE und der Leadership Summit mit SasaNdioSasa Paths, Peaks, Beach und Safaris.',
     },
   },
 };
@@ -400,6 +421,16 @@ const ExperiencePage = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
+        <HowItWorks
+          copy={{
+            title: t.beyondSafari.howItWorksTitle,
+            intro: t.beyondSafari.howItWorksIntro,
+            steps: t.beyondSafari.howItWorksSteps,
+          }}
+        />
       </div>
 
       {/* Call to Action */}
