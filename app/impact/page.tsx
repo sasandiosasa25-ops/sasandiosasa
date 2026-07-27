@@ -9,6 +9,14 @@ type GoalSection = {
   content: string;
 };
 
+type ImpactFocusArea = {
+  id: string;
+  title: string;
+  summary: string;
+  description: string;
+  image: string;
+};
+
 export default function ImpactPage() {
   const [language, setLanguage] = useState('en');
 
@@ -144,6 +152,43 @@ export default function ImpactPage() {
           ]
         }
       ],
+      focusAreas: [
+        {
+          id: "responsible-travel",
+          title: "Responsible Travel",
+          summary: "Every journey is designed in partnership with Tanzanian businesses, guides, experts and communities to create lasting social and economic value.",
+          description: "Every SasaNdioSasa journey is designed and delivered in partnership with Tanzanian businesses, guides, experts and communities. By prioritising local partnerships, creating authentic cultural exchange, supporting community initiatives through Ndoto Zetu and encouraging meaningful connections between travellers and the places they visit, every experience contributes to lasting social, cultural and economic value.\n\nWe continuously review our partnerships, operations and guest experiences to strengthen our positive impact on people, communities and the environment while contributing to the United Nations Sustainable Development Goals.",
+          image: "/safety1.png"
+        },
+        {
+          id: "sustainability",
+          title: "Sustainability",
+          summary: "Sustainability is woven through the planning, delivery and daily choices that shape every experience.",
+          description: "Sustainability is integrated into every stage of our experiences. We work with local suppliers whenever possible, collaborate with businesses that share our values, encourage the responsible use of natural resources and minimise unnecessary waste throughout our operations.\n\nBeyond our journeys, we invest in long-term community development, education and capacity building through Ndoto Zetu and our local partnerships. By regularly reviewing our practices, we aim to continuously improve our environmental, social and economic impact while contributing to a more sustainable future for Tanzania.",
+          image: "/sustain2.png"
+        },
+        {
+          id: "animal-welfare",
+          title: "Animal Welfare",
+          summary: "Wildlife experiences are chosen carefully so animal welfare always comes before entertainment.",
+          description: "Wildlife is one of Tanzania's greatest treasures, and protecting it is a responsibility we take seriously. Every wildlife experience we offer is carefully selected to ensure that animal welfare always comes before entertainment.\n\nWe work exclusively with partners who respect conservation principles, national park regulations and ethical wildlife practices. Our guides encourage guests to observe wildlife responsibly, respect natural animal behaviour and appreciate Tanzania's biodiversity without causing disturbance or harm.",
+          image: "/welfare1.jpeg"
+        },
+        {
+          id: "child-protection",
+          title: "Child Protection & Safeguarding",
+          summary: "We create safe, respectful and responsible experiences for children, communities and guests alike.",
+          description: "At SasaNdioSasa, safeguarding means creating safe, respectful and responsible experiences for children, communities and our guests alike.\n\nThrough our long-term partnership with Ndoto Zetu and our work with local communities, we protect the rights, dignity and wellbeing of every child. We do not support orphanage tourism or activities that expose children for tourism purposes. Instead, we promote community-led initiatives, respect children's privacy and ensure that all interactions are appropriate, respectful and in the best interests of the child.\n\nOur guides, facilitators and partners are expected to treat every guest with professionalism, respect and integrity while fostering responsible interactions with local communities. We encourage our guests to respect local customs, ask permission before taking photographs and engage with people and places in a thoughtful and responsible manner.\n\nSafeguarding is a shared responsibility and forms an integral part of every SasaNdioSasa experience.",
+          image: "/children1.JPG"
+        },
+        {
+          id: "guest-safety",
+          title: "Guest Safety & Well-being",
+          summary: "The safety and wellbeing of guests are at the heart of every journey we plan and deliver.",
+          description: "The safety and wellbeing of our guests are at the heart of every SasaNdioSasa experience. We work with licensed and experienced partners, qualified guides and professional service providers who share our commitment to high operational and safety standards.\n\nBefore and throughout every journey, we provide clear information, appropriate briefings and ongoing support to help guests prepare for and enjoy their experience responsibly. Activities are planned according to local conditions, guest wellbeing and the nature of each programme, with risk awareness and emergency procedures integrated where required.\n\nFor specialised experiences, including mountain expeditions, guests receive detailed preparation guidance and are required to arrange appropriate travel and medical insurance where applicable before the journey begins. This helps ensure they are adequately prepared and protected throughout their experience.\n\nBy combining professional planning, experienced partners and genuine care, we create an environment where guests can feel safe, supported and fully present throughout their journey.",
+          image: "/safety1.png"
+        }
+      ],
       ctaTitle: "Every Journey Creates Opportunity",
       ctaText: "Every SasaNdioSasa experience contributes directly to Ndoto Zetu, our long-term community initiative in Tanzania. By joining this journey, you support educational opportunities, strengthen local families and sustain projects that continue long after your return.",
       ctaButton: "Discover the impact behind your journey."
@@ -257,6 +302,43 @@ export default function ImpactPage() {
           ]
         }
       ],
+      focusAreas: [
+        {
+          id: "responsible-travel",
+          title: "Verantwortungsvolles Reisen",
+          summary: "Jede Reise wird in Partnerschaft mit tansanischen Unternehmen, Guides, Experten und Gemeinschaften geplant, um einen dauerhaften sozialen und wirtschaftlichen Nutzen zu schaffen.",
+          description: "Jede SasaNdioSasa-Reise wird in Partnerschaft mit tansanischen Unternehmen, Guides, Experten und Gemeinschaften geplant und durchgeführt. Indem wir lokale Partnerschaften priorisieren, einen authentischen kulturellen Austausch fördern, Gemeinschaftsinitiativen über Ndoto Zetu unterstützen und sinnvolle Verbindungen zwischen Reisenden und den Orten, die sie besuchen, stärken, trägt jede Erfahrung zu langfristigem sozialem, kulturellem und wirtschaftlichem Wert bei.\n\nWir überprüfen unsere Partnerschaften, Abläufe und Gästeerlebnisse regelmäßig, um unsere positive Wirkung auf Menschen, Gemeinschaften und die Umwelt zu stärken und gleichzeitig zu den Zielen für nachhaltige Entwicklung der Vereinten Nationen beizutragen.",
+          image: "/safety1.png"
+        },
+        {
+          id: "sustainability",
+          title: "Nachhaltigkeit",
+          summary: "Nachhaltigkeit durchzieht die Planung, Durchführung und alltäglichen Entscheidungen jeder Erfahrung.",
+          description: "Nachhaltigkeit ist in jeder Phase unserer Erfahrungen verankert. Wir arbeiten wann immer möglich mit lokalen Lieferanten zusammen, kooperieren mit Unternehmen, die unsere Werte teilen, fördern den verantwortungsvollen Umgang mit natürlichen Ressourcen und minimieren unnötigen Abfall in unserem Betrieb.\n\nÜber unsere Reisen hinaus investieren wir in langfristige Gemeinschaftsentwicklung, Bildung und Kapazitätsaufbau über Ndoto Zetu und unsere lokalen Partnerschaften. Durch regelmäßige Überprüfung unserer Praktiken wollen wir unsere Umwelt-, Sozial- und Wirtschaftswirkung kontinuierlich verbessern und zu einer nachhaltigeren Zukunft für Tansania beitragen.",
+          image: "/sustain2.png"
+        },
+        {
+          id: "animal-welfare",
+          title: "Tierschutz",
+          summary: "Wildtiererlebnisse werden sorgfältig ausgewählt, damit das Wohl der Tiere immer vor Unterhaltung steht.",
+          description: "Wildtiere sind einer der größten Schätze Tansanias, und ihr Schutz ist eine Verantwortung, die wir ernst nehmen. Jede Wildtiererfahrung, die wir anbieten, wird sorgfältig ausgewählt, damit das Wohl der Tiere immer vor Unterhaltung steht.\n\nWir arbeiten ausschließlich mit Partnern zusammen, die Naturschutzprinzipien, nationale Parkvorschriften und ethische Wildtierpraktiken respektieren. Unsere Guides ermutigen Gäste, Wildtiere verantwortungsvoll zu beobachten, natürliches Verhalten zu respektieren und die Biodiversität Tansanias zu würdigen, ohne Störung oder Schaden zu verursachen.",
+          image: "/welfare1.jpeg"
+        },
+        {
+          id: "child-protection",
+          title: "Kinderschutz und Schutzmaßnahmen",
+          summary: "Wir schaffen sichere, respektvolle und verantwortungsvolle Erfahrungen für Kinder, Gemeinschaften und Gäste.",
+          description: "Bei SasaNdioSasa bedeutet Schutz, sichere, respektvolle und verantwortungsvolle Erfahrungen für Kinder, Gemeinschaften und unsere Gäste gleichermaßen zu schaffen.\n\nDurch unsere langfristige Partnerschaft mit Ndoto Zetu und unsere Arbeit mit lokalen Gemeinschaften schützen wir die Rechte, Würde und das Wohlbefinden jedes Kindes. Wir unterstützen keinen Waisenhaus-Tourismus oder Aktivitäten, die Kinder zu Tourismuszwecken ausstellen. Stattdessen fördern wir gemeinschaftsgeleitete Initiativen, respektieren die Privatsphäre von Kindern und stellen sicher, dass alle Interaktionen angemessen, respektvoll und im besten Interesse des Kindes sind.\n\nUnsere Guides, Moderatoren und Partner werden erwartet, jeden Gast professionell, respektvoll und mit Integrität zu behandeln und verantwortungsvolle Interaktionen mit lokalen Gemeinschaften zu fördern. Wir ermutigen unsere Gäste, lokale Bräuche zu respektieren, vor dem Fotografieren um Erlaubnis zu bitten und sich auf überlegte Weise mit Menschen und Orten auseinanderzusetzen.\n\nSchutz ist eine gemeinsame Verantwortung und ein integraler Bestandteil jeder SasaNdioSasa-Erfahrung.",
+          image: "/children1.JPG"
+        },
+        {
+          id: "guest-safety",
+          title: "Gästesicherheit und Wohlbefinden",
+          summary: "Die Sicherheit und das Wohlbefinden der Gäste stehen im Mittelpunkt jeder von uns geplanten Reise.",
+          description: "Die Sicherheit und das Wohlbefinden unserer Gäste stehen im Mittelpunkt jeder SasaNdioSasa-Erfahrung. Wir arbeiten mit lizenzierten und erfahrenen Partnern, qualifizierten Guides und professionellen Dienstleistern zusammen, die unser Engagement für hohe operative und Sicherheitsstandards teilen.\n\nVor und während jeder Reise geben wir klare Informationen, passende Einweisungen und laufende Unterstützung, damit Gäste sich verantwortungsvoll vorbereiten und ihre Erfahrung genießen können. Aktivitäten werden entsprechend den lokalen Bedingungen, dem Wohlbefinden der Gäste und der Art jedes Programms geplant, wobei Risikoaufklärung und Notfallverfahren nach Bedarf integriert werden.\n\nFür spezielle Erlebnisse, einschließlich Bergexpeditionen, erhalten Gäste detaillierte Vorbereitungsanleitungen und müssen vor Reisebeginn geeignete Reise- und Krankenzusatzversicherungen arrangieren, sofern dies erforderlich ist. Dadurch werden sie angemessen vorbereitet und während ihrer Erfahrung geschützt.\n\nDurch professionelle Planung, erfahrene Partner und echte Fürsorge schaffen wir eine Umgebung, in der sich Gäste sicher, unterstützt und vollständig präsent fühlen können.",
+          image: "/safety1.png"
+        }
+      ],
       ctaTitle: "Jede Reise schafft Möglichkeiten",
       ctaText: "Jede SasaNdioSasa-Erfahrung trägt direkt zu Ndoto Zetu bei, unserer langfristigen Gemeinschaftsinitiative in Tansania. Mit deiner Teilnahme unterstützt du Bildungsangebote, stärkst lokale Familien und förderst Projekte, die auch nach deiner Rückkehr weiterleben.",
       ctaButton: "Erfahre die Wirkung hinter deiner Reise."
@@ -343,6 +425,72 @@ export default function ImpactPage() {
             );
           })}
         </div>
+      </div>
+
+      {/* Focus Areas Submenu */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div className="bg-white border border-brand-border/30 rounded-3xl p-6 md:p-8 shadow-sm">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-brand-primary font-semibold font-poppins">Focus areas</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-brand-heading font-comfortaa">Additional impact themes</h2>
+              <p className="text-base text-brand-heading/70 mt-2 max-w-2xl font-poppins">Each area below highlights a different way we protect people, wildlife and responsible travel experiences.</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {t.focusAreas.map((area: ImpactFocusArea) => (
+              <a
+                key={area.id}
+                href={`#${area.id}`}
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-brand-border/30 bg-brand-primary/5 hover:border-brand-primary hover:shadow-lg transition-all duration-300"
+              >
+                <div className="overflow-hidden">
+                  <Image
+                    src={area.image}
+                    alt={area.title}
+                    width={400}
+                    height={220}
+                    className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="text-xl font-bold text-brand-heading font-poppins mb-3">{area.title}</h3>
+                  <p className="text-sm sm:text-base text-brand-heading/70 leading-relaxed font-poppins flex-1">{area.summary}</p>
+                  <span className="mt-4 inline-flex items-center text-brand-primary font-semibold">
+                    Read more
+                    <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 md:pb-12 space-y-6">
+        {t.focusAreas.map((area: ImpactFocusArea, index: number) => (
+          <div
+            key={area.id}
+            id={area.id}
+            className={`scroll-mt-24 overflow-hidden rounded-3xl border border-brand-border/30 bg-white shadow-sm ${index % 2 === 0 ? 'md:grid md:grid-cols-[1.1fr_0.9fr]' : 'md:grid md:grid-cols-[0.9fr_1.1fr]'}`}
+          >
+            <div className="flex flex-col justify-center p-6 md:p-8 lg:p-10">
+              <p className="text-sm uppercase tracking-[0.3em] text-brand-primary font-semibold font-poppins mb-3">Impact focus</p>
+              <h3 className="text-2xl sm:text-3xl font-bold text-brand-heading mb-4 font-comfortaa">{area.title}</h3>
+              <p className="text-base sm:text-lg text-brand-heading/80 leading-relaxed font-poppins whitespace-pre-line">{area.description}</p>
+            </div>
+            <div className="bg-brand-primary/5 p-4 md:p-6 flex items-center justify-center">
+              <Image
+                src={area.image}
+                alt={area.title}
+                width={480}
+                height={320}
+                className="h-48 w-full max-w-md rounded-2xl object-cover shadow-sm"
+              />
+            </div>
+          </div>
+        ))}
       </div>
 
       {/* Goals Details */}
