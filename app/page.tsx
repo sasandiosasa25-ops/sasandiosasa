@@ -16,6 +16,7 @@ import HeroIntro from '@/components/HeroIntro';
 import Manifesto from '@/components/Manifesto';
 import CTASection from '@/components/CTA';
 import Partners from '@/components/Partners';
+import HowItWorks from '@/components/HowItWorks';
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -102,6 +103,28 @@ export default function HomePage() {
   };
 
   const t = translations[language];
+
+  const howItWorksCopy = {
+    title: language === 'de' ? 'So funktioniert es' : 'How It Works',
+    intro: language === 'de'
+      ? 'Jede Reise beginnt mit einem sorgfältigen Gespräch und wird gemeinsam so gestaltet, dass sie persönlich, gut vorbereitet und sinnvoll erlebt wird.'
+      : 'Every journey begins with a thoughtful conversation and is shaped carefully with you so the experience feels personal, well prepared and meaningful.',
+    steps: language === 'de'
+      ? [
+          { title: 'Erstgespräch', body: 'Beginne mit einem kostenlosen Gespräch, damit wir deine Ziele und Erwartungen besser verstehen.' },
+          { title: 'Persönlicher Vorschlag', body: 'Wir gestalten eine individuelle Reise, die zu deinen Interessen und deinem Stil passt.' },
+          { title: 'Gemeinsam verfeinern', body: 'Wir passen jedes Detail so an, dass es genau zu dir passt.' },
+          { title: 'Bestätigen & vorbereiten', body: 'Du erhältst alle Reiseinformationen und Unterstützung für eine entspannte Vorbereitung.' },
+          { title: 'Erleben & integrieren', body: 'Die Reise begleitet dich auch nach der Rückkehr mit Reflexion und nachhaltiger Wirkung.' },
+        ]
+      : [
+          { title: 'Discovery Call', body: 'Start with a complimentary conversation so we can understand your goals and expectations.' },
+          { title: 'Your Personal Proposal', body: 'We shape a trip that fits your interests, style, and desired experience.' },
+          { title: 'Refine Together', body: 'We adjust every detail until the experience feels exactly right for you.' },
+          { title: 'Confirm & Prepare', body: 'You receive all travel details and support so you feel prepared and confident.' },
+          { title: 'Experience & Integrate', body: 'The experience continues beyond the trip with reflection, learning, and lasting impact.' },
+        ],
+  };
 
   const destinations = [
     {
@@ -198,7 +221,9 @@ export default function HomePage() {
       {/* Destinations Grid */}
    <ImageCarousel />
 
-    
+      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
+        <HowItWorks copy={howItWorksCopy} compact />
+      </div>
 
       {/* CTA Section */}
      <CTASection />

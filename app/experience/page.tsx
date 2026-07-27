@@ -390,7 +390,16 @@ const ExperiencePage = () => {
             </div>
 
             <div className="border-t border-brand-border bg-stone-50/80 p-6 sm:p-8">
-              <div className="relative overflow-hidden rounded-[2rem] border border-brand-border bg-stone-900 text-white shadow-sm">
+              <div className="mx-auto max-w-6xl px-0 py-4 sm:py-6">
+                <HowItWorks
+                  copy={{
+                    title: t.beyondSafari.howItWorksTitle,
+                    intro: t.beyondSafari.howItWorksIntro,
+                    steps: t.beyondSafari.howItWorksSteps,
+                  }}
+                />
+              </div>
+              <div className="relative mt-8 overflow-hidden rounded-[2rem] border border-brand-border bg-stone-900 text-white shadow-sm">
                 <Image
                   src="/web1.png"
                   alt=""
@@ -421,16 +430,6 @@ const ExperiencePage = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
-        <HowItWorks
-          copy={{
-            title: t.beyondSafari.howItWorksTitle,
-            intro: t.beyondSafari.howItWorksIntro,
-            steps: t.beyondSafari.howItWorksSteps,
-          }}
-        />
       </div>
 
       {/* Call to Action */}
