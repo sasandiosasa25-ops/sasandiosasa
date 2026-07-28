@@ -258,7 +258,7 @@ const ExperiencePage = () => {
 
             <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-2">
               {t.beyondSafari.phases.map((phase: { title: string; meta: string; description: string }, index: number) => {
-                const imageSrc = index === 0 ? '/green1.jpeg' : index === 1 ? '/leadwild.jpeg' : '/zanzibar1.jpeg';
+                const imageSrc = index === 0 ? '/safety5.png' : index === 1 ? '/responsible.png' : '/intergrate.png';
 
                 return (
                   <div key={index} className="rounded-2xl border border-brand-border bg-stone-50/80 p-5">

@@ -158,7 +158,7 @@ export default function ImpactPage() {
           title: "Responsible Travel",
           summary: "Every journey is designed in partnership with Tanzanian businesses, guides, experts and communities to create lasting social and economic value.",
           description: "Every SasaNdioSasa journey is designed and delivered in partnership with Tanzanian businesses, guides, experts and communities. By prioritising local partnerships, creating authentic cultural exchange, supporting community initiatives through Ndoto Zetu and encouraging meaningful connections between travellers and the places they visit, every experience contributes to lasting social, cultural and economic value.\n\nWe continuously review our partnerships, operations and guest experiences to strengthen our positive impact on people, communities and the environment while contributing to the United Nations Sustainable Development Goals.",
-          image: "/safety1.png"
+          image: "/rawedge1.png"
         },
         {
           id: "sustainability",
@@ -186,7 +186,7 @@ export default function ImpactPage() {
           title: "Guest Safety & Well-being",
           summary: "The safety and wellbeing of guests are at the heart of every journey we plan and deliver.",
           description: "The safety and wellbeing of our guests are at the heart of every SasaNdioSasa experience. We work with licensed and experienced partners, qualified guides and professional service providers who share our commitment to high operational and safety standards.\n\nBefore and throughout every journey, we provide clear information, appropriate briefings and ongoing support to help guests prepare for and enjoy their experience responsibly. Activities are planned according to local conditions, guest wellbeing and the nature of each programme, with risk awareness and emergency procedures integrated where required.\n\nFor specialised experiences, including mountain expeditions, guests receive detailed preparation guidance and are required to arrange appropriate travel and medical insurance where applicable before the journey begins. This helps ensure they are adequately prepared and protected throughout their experience.\n\nBy combining professional planning, experienced partners and genuine care, we create an environment where guests can feel safe, supported and fully present throughout their journey.",
-          image: "/safety1.png"
+          image: "/rawedge2.png"
         }
       ],
       ctaTitle: "Every Journey Creates Opportunity",
@@ -308,7 +308,7 @@ export default function ImpactPage() {
           title: "Verantwortungsvolles Reisen",
           summary: "Jede Reise wird in Partnerschaft mit tansanischen Unternehmen, Guides, Experten und Gemeinschaften geplant, um einen dauerhaften sozialen und wirtschaftlichen Nutzen zu schaffen.",
           description: "Jede SasaNdioSasa-Reise wird in Partnerschaft mit tansanischen Unternehmen, Guides, Experten und Gemeinschaften geplant und durchgeführt. Indem wir lokale Partnerschaften priorisieren, einen authentischen kulturellen Austausch fördern, Gemeinschaftsinitiativen über Ndoto Zetu unterstützen und sinnvolle Verbindungen zwischen Reisenden und den Orten, die sie besuchen, stärken, trägt jede Erfahrung zu langfristigem sozialem, kulturellem und wirtschaftlichem Wert bei.\n\nWir überprüfen unsere Partnerschaften, Abläufe und Gästeerlebnisse regelmäßig, um unsere positive Wirkung auf Menschen, Gemeinschaften und die Umwelt zu stärken und gleichzeitig zu den Zielen für nachhaltige Entwicklung der Vereinten Nationen beizutragen.",
-          image: "/safety1.png"
+          image: "/rawedge1.png"
         },
         {
           id: "sustainability",
@@ -336,7 +336,7 @@ export default function ImpactPage() {
           title: "Gästesicherheit und Wohlbefinden",
           summary: "Die Sicherheit und das Wohlbefinden der Gäste stehen im Mittelpunkt jeder von uns geplanten Reise.",
           description: "Die Sicherheit und das Wohlbefinden unserer Gäste stehen im Mittelpunkt jeder SasaNdioSasa-Erfahrung. Wir arbeiten mit lizenzierten und erfahrenen Partnern, qualifizierten Guides und professionellen Dienstleistern zusammen, die unser Engagement für hohe operative und Sicherheitsstandards teilen.\n\nVor und während jeder Reise geben wir klare Informationen, passende Einweisungen und laufende Unterstützung, damit Gäste sich verantwortungsvoll vorbereiten und ihre Erfahrung genießen können. Aktivitäten werden entsprechend den lokalen Bedingungen, dem Wohlbefinden der Gäste und der Art jedes Programms geplant, wobei Risikoaufklärung und Notfallverfahren nach Bedarf integriert werden.\n\nFür spezielle Erlebnisse, einschließlich Bergexpeditionen, erhalten Gäste detaillierte Vorbereitungsanleitungen und müssen vor Reisebeginn geeignete Reise- und Krankenzusatzversicherungen arrangieren, sofern dies erforderlich ist. Dadurch werden sie angemessen vorbereitet und während ihrer Erfahrung geschützt.\n\nDurch professionelle Planung, erfahrene Partner und echte Fürsorge schaffen wir eine Umgebung, in der sich Gäste sicher, unterstützt und vollständig präsent fühlen können.",
-          image: "/safety1.png"
+          image: "/rawedge2.png"
         }
       ],
       ctaTitle: "Jede Reise schafft Möglichkeiten",
@@ -445,13 +445,13 @@ export default function ImpactPage() {
                 href={`/impact/${area.id}#${area.id}`}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-brand-border/30 bg-brand-primary/5 hover:border-brand-primary hover:shadow-lg transition-all duration-300"
               >
-                <div className="overflow-hidden">
+                <div className="relative w-full overflow-hidden aspect-[4/3] sm:aspect-[16/10]">
                   <Image
                     src={area.image}
                     alt={area.title}
                     width={600}
                     height={360}
-                    className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
