@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
-export default function SkyAndSoulPage() {
+export default function LeadershipSummitPage() {
   return (
     <div className="min-h-screen bg-brand-bg-light">
       <div className="relative overflow-hidden bg-white min-h-[60vh]">
@@ -20,7 +20,7 @@ export default function SkyAndSoulPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/85 via-brand-secondary/75 to-[#7b4c35]/85" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 sm:py-32">
           <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.35em] text-white/80 mb-4">SasaNdioSasa Beyond Summit</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-white/80 mb-4">SasaNdioSasa Beyond Safari</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-comfortaa font-black text-white leading-tight tracking-tight">
               Leadership Summit
             </h1>
@@ -93,8 +93,8 @@ export default function SkyAndSoulPage() {
               This is more than a climb. It is a journey into clarity, courage, and conscious leadership.
             </p>
           </div>
-          <Link href="/paths/peaks" className="inline-flex items-center gap-2 text-brand-primary font-semibold hover:text-brand-secondary transition-colors">
-            Back to Peaks <ArrowRight className="w-4 h-4" />
+          <Link href="/experience" className="inline-flex items-center gap-2 text-brand-primary font-semibold hover:text-brand-secondary transition-colors">
+            Back to Beyond Safari <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </main>

@@ -40,7 +40,7 @@ export default function Footer() {
       title: language === 'de' ? 'Beyond Safari' : 'Beyond Safari',
       links: [
         { href: '/experience/#raw-edge', label: 'Raw Edge' },
-        { href: '/paths/peaks/sky-and-soul', label: language === 'de' ? 'Sky & Soul Leadership Summit' : 'Sky & Soul Leadership Summit' },
+        { href: '/experience/leadership-summit', label: language === 'de' ? 'Leadership Summit' : 'Leadership Summit' },
       ]
     },
     travelCompass: {
