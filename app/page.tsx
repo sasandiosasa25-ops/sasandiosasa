@@ -15,7 +15,6 @@ import ImageCarousel from '@/components/Carousel';
 import HeroIntro from '@/components/HeroIntro';
 import Manifesto from '@/components/Manifesto';
 import CTASection from '@/components/CTA';
-import Partners from '@/components/Partners';
 import HowItWorks from '@/components/HowItWorks';
 
 export default function HomePage() {
@@ -211,9 +210,6 @@ export default function HomePage() {
       {/* Hero Section */}
  <Hero />
  <Manifesto />
-
-      {/* Partners Section */}
-      <Partners />
 
       {/* Services Section */}
   
