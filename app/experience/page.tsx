@@ -418,7 +418,7 @@ const ExperiencePage = () => {
                       Book Your Discovery Call Here.
                     </Link>
                     <a
-                      href="/RAW%20EDGE%20(2)%20(1).pdf"
+                      href="/RAW EDGE.pdf"
                       download
                       className="inline-flex items-center justify-center rounded-full bg-white/90 text-brand-primary px-5 py-2 text-sm font-semibold border border-white/20 shadow-sm hover:shadow-md"
                     >
