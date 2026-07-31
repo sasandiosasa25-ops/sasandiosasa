@@ -132,7 +132,7 @@ export default function LeadershipSummitPage() {
                 The summit becomes more than an achievement; it becomes a space to reconnect with clarity, resilience, and the way you lead.
               </p>
             </div>
-            <Link href="#" className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary">
+            <Link href="https://tally.so/r/zxoPrg" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary">
               Book Your Discovery Call Here.
             </Link>
           </div>

@@ -249,7 +249,7 @@ details: 'Over four days, the trail takes you from lush forest through alpine me
             Every mountain has a story. Let&apos;s discover yours together.
           </p>
             <a
-            href="https://tally.so/r/3xe74G"
+            href="https://tally.so/r/zxoPrg"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 sm:px-10 py-3 sm:py-5 bg-white text-brand-primary font-poppins font-bold rounded-full hover:shadow-2xl transition-all duration-300 text-base sm:text-lg group"

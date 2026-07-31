@@ -192,7 +192,7 @@ const SafariPage = () => {
                       <p key={i} className="mb-2 last:mb-0">{para.trim()}</p>
                     ))}
                   </div>
-                  <button className="px-6 py-3 bg-brand-primary hover:bg-brand-secondary text-white font-poppins rounded-full transition-colors duration-300">Connect With Us</button>
+                  <Link href="https://tally.so/r/zxoPrg" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 bg-brand-primary hover:bg-brand-secondary text-white font-poppins rounded-full transition-colors duration-300">Connect With Us</Link>
                 </div>
               )}
             </div>
@@ -207,7 +207,7 @@ const SafariPage = () => {
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-primary">Ready to begin?</p>
               <h3 className="mt-2 font-comfortaa text-2xl text-brand-heading font-bold">Book your discovery call and let us shape the right journey for you.</h3>
             </div>
-            <Link href="#" className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary">
+            <Link href="https://tally.so/r/zxoPrg" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary">
               Book Your Discovery Call Here.
             </Link>
           </div>
