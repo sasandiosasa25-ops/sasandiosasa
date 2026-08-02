@@ -34,8 +34,6 @@ const translations: Record<string, any> = {
       ],
       tanzaniaTitle: 'Why Tanzania?',
       tanzaniaBody: 'Tanzania creates conditions that are difficult to replicate elsewhere. Its culture, hospitality, entrepreneurial energy, and extraordinary landscapes invite leaders to step outside familiar routines and experience leadership from a new perspective.',
-      journeyTitle: 'Before. During. Beyond.',
-      journeyBody: 'RAW EDGE begins before arrival and continues after return. Two online preparation sessions help participants set intentions. Two structured integration sessions support the transfer of learning into everyday leadership.',
       beforeYouArriveTitle: 'Before You Arrive',
       beforeYouArriveBody: 'Two online preparation sessions support participants in setting intentions, understanding the program, and consciously stepping away from everyday responsibilities.',
       afterYouReturnTitle: 'After You Return',
@@ -46,8 +44,8 @@ const translations: Record<string, any> = {
       impactBody: 'Every participation contributes to the long-term work of Ndoto Zetu in Arusha, supporting education, family development, employment, and sustainable community initiatives.',
       createdTitle: 'Created by Experience',
       createdBody: 'RAW EDGE brings together Beata’s executive perspective and Simone’s long-term leadership and intercultural work in Tanzania. Together they created an experience that connects leadership with human connection, practical reality, and sustainable growth.',
-      cohortTitle: 'Founding Cohort • November 2026',
-      cohortBody: 'The first cohort is limited to eight participants, creating a highly personal experience with space for reflection and guided integration. Applications are now open until 31 September 2026.',
+      cohortTitle: 'FOUNDING COHORT 2026',
+      cohortBody: 'Applications are now open. Participation is limited to a carefully selected cohort to ensure meaningful exchange, personal attention, and lasting connections. Reach out for further information.',
       conversationTitle: 'Start the Conversation',
       conversationBody: 'Participation begins with a personal conversation to explore expectations, suitability, and whether RAW EDGE is the right experience for both the participant and the program.',
       conversationClosing: 'Some journeys change how you lead.',
@@ -90,8 +88,6 @@ const translations: Record<string, any> = {
       ],
       tanzaniaTitle: 'Warum Tansania?',
       tanzaniaBody: 'Tansania schafft Bedingungen, die sich schwer anderswo replizieren lassen. Seine Kultur, Gastfreundschaft, unternehmerische Energie und außergewöhnlichen Landschaften laden dazu ein, vertraute Routinen zu verlassen und Führung aus neuer Perspektive zu erleben.',
-      journeyTitle: 'Vorher. Während. Danach.',
-      journeyBody: 'RAW EDGE beginnt vor der Ankunft und setzt sich nach der Rückkehr fort. Zwei Online-Vorbereitungssitzungen unterstützen die Zielsetzung. Zwei strukturierte Integrationssitzungen helfen, Lernen in den Alltag zu übertragen.',
       beforeYouArriveTitle: 'Bevor du ankommst',
       beforeYouArriveBody: 'Zwei Online-Vorbereitungssitzungen unterstützen Teilnehmende dabei, Absichten zu formulieren, das Programm zu verstehen und sich bewusst von alltäglichen Verantwortlichkeiten zu lösen.',
       afterYouReturnTitle: 'Nach deiner Rückkehr',
@@ -102,8 +98,8 @@ const translations: Record<string, any> = {
       impactBody: 'Jede Teilnahme trägt zur langfristigen Arbeit von Ndoto Zetu in Arusha bei und unterstützt Bildung, Familienentwicklung, Beschäftigung und nachhaltige Gemeinschaftsinitiativen.',
       createdTitle: 'Erstellt durch Erfahrung',
       createdBody: 'RAW EDGE vereint Beatas executive Perspektive mit Simones langjähriger Leadership- und interkultureller Arbeit in Tansania. Gemeinsam schufen sie eine Erfahrung, die Führung mit menschlicher Verbindung, praktischer Realität und nachhaltigem Wachstum verbindet.',
-      cohortTitle: 'Gründerkohorte • November 2026',
-      cohortBody: 'Die erste Kohorte ist auf acht Teilnehmende begrenzt, damit Raum für Reflexion und begleitete Integration entsteht. Die Bewerbung ist bis zum 31. September 2026 offen.',
+      cohortTitle: 'GRÜNDERKOHORTE 2026',
+      cohortBody: 'Bewerbungen sind jetzt geöffnet. Die Teilnahme ist auf eine sorgfältig ausgewählte Kohorte begrenzt, um einen bedeutungsvollen Austausch, persönliche Aufmerksamkeit und dauerhafte Verbindungen zu ermöglichen. Für weitere Informationen melde dich gerne.',
       conversationTitle: 'Starte das Gespräch',
       conversationBody: 'Die Teilnahme beginnt mit einem persönlichen Gespräch, um Erwartungen, Eignung und die Passung von RAW EDGE für Teilnehmende und Programm zu prüfen.',
       conversationClosing: 'Einige Reisen verändern, wie du führst.',
@@ -300,17 +296,6 @@ const ExperiencePage = () => {
                 </div>
               </div>
               <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
-                <div className="flex items-start gap-3">
-                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-brand-primary">
-                    <Calendar className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.journeyTitle}</h5>
-                    <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.journeyBody}</p>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)]">
                 <div>
                   <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.beforeYouArriveTitle}</h5>
                   <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{applyPhraseHighlight(t.beyondSafari.beforeYouArriveBody, language === 'de' ? ['Zwei Online-Vorbereitungssitzungen', 'Absichten', 'Programm', 'Verständnis'] : ['Two online preparation sessions', 'setting intentions', 'understanding the program'])}</p>
@@ -341,9 +326,6 @@ const ExperiencePage = () => {
               </div>
               <div className="rounded-3xl border border-emerald-100 bg-white/90 p-5 shadow-[0_8px_30px_rgba(36,64,46,0.06)] lg:col-span-2">
                 <div className="flex items-start gap-3">
-                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-brand-primary">
-                    <Users className="h-5 w-5" />
-                  </div>
                   <div className="w-full">
                     <h5 className="font-comfortaa text-xl text-brand-heading font-bold">{t.beyondSafari.createdTitle}</h5>
                     <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">{t.beyondSafari.createdBody}</p>
