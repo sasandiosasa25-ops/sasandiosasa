@@ -160,29 +160,6 @@ const ExperiencePage = () => {
 
   return (
     <div className="min-h-screen ">
-      {/* Experience Title Full Background Section (no open space, larger image) */}
-      <div
-        className="relative flex items-center justify-center overflow-hidden w-full h-32 sm:h-40 md:h-48 lg:h-56"
-        style={{
-          backgroundImage: 'url(/experience11.jpeg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center bottom',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        <div className="absolute inset-0 bg-black/30" style={{ zIndex: 1 }} />
-        <div className="relative z-10 text-center w-full px-2 sm:px-4 flex flex-col items-center justify-center">
-          <h1 className="font-comfortaa text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-2 font-black tracking-tight drop-shadow-lg">
-            <span className="italic text-white">{t.title}</span>
-          </h1>
-          <p className="font-poppins text-sm xs:text-base sm:text-lg md:text-xl text-white/95 font-semibold">
-            {t.subtitle}
-          </p>
-        </div>
-      </div>
-
-      {/* Hero Section removed: no extra open space or broken image */}
-
       <div id="beyond-safari" className="scroll-mt-20">
         <div className="w-full px-3 md:px-8 lg:px-16 py-10 lg:py-16 flex flex-col gap-8">
           <div id="raw-edge" className="scroll-mt-24 relative overflow-hidden rounded-3xl border border-brand-border shadow-sm min-h-[320px] sm:min-h-[380px]">
