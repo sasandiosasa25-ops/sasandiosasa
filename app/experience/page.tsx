@@ -185,19 +185,30 @@ const ExperiencePage = () => {
 
       <div id="beyond-safari" className="scroll-mt-20 bg-stone-50/70">
         <div className="w-full px-3 md:px-8 lg:px-16 py-10 lg:py-16 flex flex-col gap-8">
-          <div className="flex flex-col gap-3 items-start">
-            <span className="inline-flex items-center rounded-full bg-brand-primary/10 px-3 py-1 text-sm font-semibold uppercase tracking-[0.25em] text-brand-primary">
-              {t.beyondSafari.eyebrow}
-            </span>
-            <h2 className="font-comfortaa text-3xl sm:text-4xl md:text-5xl text-brand-heading font-bold leading-tight">
-              <span className="italic text-brand-primary">{t.beyondSafari.title}</span>
-            </h2>
-            <h3 className="font-comfortaa text-2xl sm:text-3xl text-brand-heading font-semibold">
-              {t.beyondSafari.subtitle}
-            </h3>
-            <p className="font-poppins text-base sm:text-lg text-stone-700 leading-relaxed max-w-4xl">
-              {t.beyondSafari.summary}
-            </p>
+          <div id="raw-edge" className="scroll-mt-24 relative overflow-hidden rounded-3xl border border-brand-border shadow-sm min-h-[320px] sm:min-h-[380px]">
+            <Image
+              src="/nolimit.png"
+              alt="RAW EDGE background"
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
+            <div className="relative z-10 flex min-h-[320px] sm:min-h-[380px] flex-col justify-end gap-3 p-6 sm:p-8 md:p-10 lg:p-12 text-white">
+              <span className="inline-flex items-center rounded-full bg-white/15 px-3 py-1 text-sm font-semibold uppercase tracking-[0.25em] text-white/90 backdrop-blur-sm w-fit">
+                {t.beyondSafari.eyebrow}
+              </span>
+              <h2 className="font-comfortaa text-3xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow-sm">
+                <span className="italic text-white">{t.beyondSafari.title}</span>
+              </h2>
+              <h3 className="font-comfortaa text-2xl sm:text-3xl font-semibold text-white/95 drop-shadow-sm">
+                {t.beyondSafari.subtitle}
+              </h3>
+              <p className="font-poppins text-base sm:text-lg text-white/90 leading-relaxed max-w-4xl drop-shadow-sm">
+                {t.beyondSafari.summary}
+              </p>
+            </div>
           </div>
 
           <div className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
@@ -241,7 +252,7 @@ const ExperiencePage = () => {
             </div>
           </div>
 
-          <div id="raw-edge" className="scroll-mt-24 rounded-3xl border border-brand-border bg-white shadow-sm overflow-hidden">
+          <div className="rounded-3xl border border-brand-border bg-white shadow-sm overflow-hidden">
             <div className="border-b border-brand-border bg-gradient-to-r from-brand-menu-hover to-white p-6 sm:p-8">
               <p className="text-sm uppercase tracking-[0.35em] text-brand-primary font-semibold">Raw Edge</p>
               <h4 className="font-comfortaa text-2xl sm:text-3xl text-brand-heading font-bold mt-3">
