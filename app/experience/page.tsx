@@ -183,7 +183,7 @@ const ExperiencePage = () => {
 
       {/* Hero Section removed: no extra open space or broken image */}
 
-      <div id="beyond-safari" className="scroll-mt-20 bg-stone-50/70">
+      <div id="beyond-safari" className="scroll-mt-20">
         <div className="w-full px-3 md:px-8 lg:px-16 py-10 lg:py-16 flex flex-col gap-8">
           <div id="raw-edge" className="scroll-mt-24 relative overflow-hidden rounded-3xl border border-brand-border shadow-sm min-h-[320px] sm:min-h-[380px]">
             <Image
@@ -208,47 +208,6 @@ const ExperiencePage = () => {
               <p className="font-poppins text-base sm:text-lg text-white/90 leading-relaxed max-w-4xl drop-shadow-sm">
                 {t.beyondSafari.summary}
               </p>
-            </div>
-          </div>
-
-          <div className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
-            <div className="bg-white rounded-2xl border border-brand-border p-6 sm:p-8 shadow-sm">
-              <p className="text-sm uppercase tracking-[0.35em] text-brand-primary font-semibold">
-                {t.beyondSafari.intro}
-              </p>
-              <h4 className="font-comfortaa text-2xl text-brand-heading font-bold mt-3">
-                {t.beyondSafari.overviewTitle}
-              </h4>
-              <p className="font-poppins text-base text-stone-700 leading-relaxed mt-4">
-                {t.beyondSafari.overviewBody}
-              </p>
-              <div className="mt-6 rounded-2xl bg-brand-menu-hover border border-brand-border p-5">
-                <h5 className="font-comfortaa text-xl text-brand-heading font-bold">
-                  {t.beyondSafari.whyTitle}
-                </h5>
-                <p className="font-poppins text-base text-stone-700 leading-relaxed mt-3">
-                  {t.beyondSafari.whyBody}
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-brand-menu-hover rounded-2xl border border-brand-border p-6 sm:p-8 shadow-sm">
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
-                  <Compass className="h-6 w-6" />
-                </div>
-                <h4 className="font-comfortaa text-2xl text-brand-heading font-bold">
-                  {language === 'en' ? 'What this experience offers' : 'Was diese Erfahrung bietet'}
-                </h4>
-              </div>
-              <ul className="mt-6 space-y-3">
-                {t.beyondSafari.points.map((point: string, index: number) => (
-                  <li key={index} className="flex items-start gap-3 rounded-xl bg-white/70 p-3">
-                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-brand-primary" />
-                    <span className="font-poppins text-sm sm:text-base text-stone-700">{point}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
 
