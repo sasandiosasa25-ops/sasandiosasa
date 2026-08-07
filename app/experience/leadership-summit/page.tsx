@@ -15,7 +15,9 @@ export default function LeadershipSummitPage() {
             alt="Sky & Soul Leadership Summit at Kilimanjaro"
             fill
             sizes="100vw"
-            className="object-cover object-bottom"
+            quality={100}
+            priority
+            className="object-cover object-bottom scale-[1.03] contrast-[1.05] brightness-[1.02]"
             style={{ objectPosition: 'center 70%' }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/85 via-brand-secondary/75 to-[#7b4c35]/85" />
@@ -45,10 +47,10 @@ export default function LeadershipSummitPage() {
                 <p>The journey begins with arrival and preparation before participants embark on a nine-day ascent via the Lemosho Route. More than a route to the summit, the mountain offers a unique environment to slow down, reflect, listen, challenge assumptions and reconnect with what truly matters in leadership.</p>
                 <div className="grid gap-4 sm:grid-cols-2 my-2">
                   <div className="relative h-48 overflow-hidden rounded-2xl border border-brand-border">
-                    <Image src="/climb4.jpeg" alt="Leadership summit preparation view" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+                    <Image src="/climb4.jpeg" alt="Leadership summit preparation view" fill sizes="(max-width: 768px) 100vw, 50vw" quality={100} className="object-cover scale-[1.03] contrast-[1.05] brightness-[1.02]" />
                   </div>
                   <div className="relative h-48 overflow-hidden rounded-2xl border border-brand-border">
-                    <Image src="/climb5.jpeg" alt="Leadership summit mountain trail view" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+                    <Image src="/climb5.jpeg" alt="Leadership summit mountain trail view" fill sizes="(max-width: 768px) 100vw, 50vw" quality={100} className="object-cover scale-[1.03] contrast-[1.05] brightness-[1.02]" />
                   </div>
                 </div>
                 <p>Throughout the journey, experienced mountain professionals and Sky & Soul facilitators guide both the ascent and the leadership experience. Through facilitated leadership sessions, mindfulness practices, breathwork and structured reflection, participants explore how they lead through challenge, uncertainty and change. The mountain provides the environment; Sky & Soul provides the framework that transforms each experience into lasting leadership development.</p>
@@ -56,10 +58,10 @@ export default function LeadershipSummitPage() {
                 <p>Participants return with more than the achievement of reaching Africa&apos;s highest free-standing mountain. They return with renewed clarity, deeper self-awareness and practical leadership insights that continue to shape the way they lead long after the journey has ended.</p>
                 <div className="grid gap-4 sm:grid-cols-2 my-2">
                   <div className="relative h-48 overflow-hidden rounded-2xl border border-brand-border">
-                    <Image src="/climb2.jpeg" alt="Leadership summit trail view" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+                    <Image src="/climb2.jpeg" alt="Leadership summit trail view" fill sizes="(max-width: 768px) 100vw, 50vw" quality={100} className="object-cover scale-[1.03] contrast-[1.05] brightness-[1.02]" />
                   </div>
                   <div className="relative h-48 overflow-hidden rounded-2xl border border-brand-border">
-                    <Image src="/climb3.jpeg" alt="Leadership summit mountain view" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+                    <Image src="/climb3.jpeg" alt="Leadership summit mountain view" fill sizes="(max-width: 768px) 100vw, 50vw" quality={100} className="object-cover scale-[1.03] contrast-[1.05] brightness-[1.02]" />
                   </div>
                 </div>
               </div>
@@ -122,7 +124,7 @@ export default function LeadershipSummitPage() {
           <div className="mt-8 space-y-4">
             <div className="relative overflow-hidden rounded-3xl border border-brand-border p-5 min-h-[240px] shadow-sm">
               <div className="absolute inset-0">
-                <Image src="/melia.png" alt="Melia Arusha hotel" fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover object-center" />
+                <Image src="/melia.png" alt="Melia Arusha hotel" fill sizes="(max-width: 768px) 100vw, 60vw" quality={100} className="object-cover object-center scale-[1.03] contrast-[1.05] brightness-[1.02]" />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#123b41]/85 via-[#1d4c4f]/70 to-[#3f6f64]/55" />
               </div>
               <div className="relative z-10 max-w-3xl">
@@ -151,7 +153,7 @@ export default function LeadershipSummitPage() {
 
             <div className="relative overflow-hidden rounded-3xl border border-brand-border p-6 sm:p-8 min-h-[420px] shadow-sm">
               <div className="absolute inset-0">
-                <Image src="/leadership.png" alt="Leadership journey across the mountain" fill sizes="(max-width: 768px) 100vw, 90vw" className="object-cover object-center" />
+                <Image src="/leadership.png" alt="Leadership journey across the mountain" fill sizes="(max-width: 768px) 100vw, 90vw" quality={100} className="object-cover object-center scale-[1.03] contrast-[1.05] brightness-[1.02]" />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#1b3b3d]/90 via-[#2d655d]/75 to-[#748d3a]/55" />
               </div>
               <div className="relative z-10">
@@ -201,13 +203,38 @@ export default function LeadershipSummitPage() {
 
               <div className="relative overflow-hidden rounded-2xl border border-brand-border p-5 min-h-[260px] shadow-sm">
                 <div className="absolute inset-0">
-                  <Image src="/beyond.png" alt="Beyond the summit reflection" fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover object-center" />
+                  <Image src="/beyond.png" alt="Beyond the summit reflection" fill sizes="(max-width: 768px) 100vw, 60vw" quality={100} className="object-cover object-center scale-[1.03] contrast-[1.05] brightness-[1.02]" />
                   <div className="absolute inset-0 bg-gradient-to-br from-[#1f3f3d]/85 via-[#2f5f57]/75 to-[#7c8a3f]/55" />
                 </div>
                 <div className="relative z-10 max-w-3xl">
                   <h4 className="text-lg font-semibold text-white">Day 11 | Recovery &amp; Integration</h4>
                   <p className="mt-2 text-sm leading-6 text-white/90"><span className="font-semibold text-[#e5d8b8]">Accommodation:</span> Melia Arusha</p>
                   <p className="mt-2 text-sm leading-6 text-white/90">Return to Melia Arusha to slow down, recover and celebrate your achievement. Enjoy an included massage before coming together for a guided integration session. Together, we reflect on the experience, connect the knowledge from the mountain with everyday leadership and explore how lasting change begins once the climb is over.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative overflow-hidden rounded-3xl border border-brand-border p-6 sm:p-8 min-h-[360px] shadow-sm">
+              <div className="absolute inset-0">
+                <Image src="/beyond.png" alt="Recovery and integration after the summit" fill sizes="(max-width: 768px) 100vw, 90vw" quality={100} className="object-cover object-center scale-[1.03] contrast-[1.05] brightness-[1.02]" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1e3d3d]/90 via-[#2f5e57]/75 to-[#798f3b]/55" />
+              </div>
+              <div className="relative z-10">
+                <h4 className="text-lg font-semibold text-white">Days 9–11 | From Summit to Integration</h4>
+                <p className="mt-2 max-w-3xl text-sm leading-6 text-white/90">The final stretch shifts from ascent to recovery, reflection, and carrying the lessons of the mountain into everyday leadership.</p>
+                <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm">
+                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 9 | Preparing for the Summit</p>
+                    <p className="mt-1 text-sm leading-6 text-white/90">The final preparation night aligns body, breath, and focus before the ascent begins.</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm">
+                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 10 | Reaching the Roof of Africa</p>
+                    <p className="mt-1 text-sm leading-6 text-white/90">A dawn summit push brings the expedition to its defining milestone and deepest sense of achievement.</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm md:col-span-2 xl:col-span-1">
+                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 11 | Recovery &amp; Integration</p>
+                    <p className="mt-1 text-sm leading-6 text-white/90">You return to base, recover, and begin translating the experience into lasting leadership insight.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -222,7 +249,7 @@ export default function LeadershipSummitPage() {
           <div className="mt-8 overflow-hidden rounded-3xl border border-brand-border shadow-sm">
             <div className="relative min-h-[260px]">
               <div className="absolute inset-0">
-                <Image src="/onmountain.png" alt="On the mountain experience" fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover object-center" />
+                <Image src="/onmountain.png" alt="On the mountain experience" fill sizes="(max-width: 768px) 100vw, 60vw" quality={100} className="object-cover object-center scale-[1.03] contrast-[1.05] brightness-[1.02]" />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#112f31]/80 via-[#214b43]/70 to-[#587a4c]/55" />
               </div>
               <div className="relative z-10 p-6 sm:p-8">
