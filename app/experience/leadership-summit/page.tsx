@@ -149,64 +149,45 @@ export default function LeadershipSummitPage() {
               </div>
             </div>
 
-            <div className="grid gap-4 lg:grid-cols-2">
-              <div className="rounded-2xl border border-brand-border bg-white p-5 shadow-sm">
-                <h4 className="text-lg font-semibold text-brand-secondary">Day 4 | Expanding Your Perspective</h4>
-                <p className="mt-2 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Camp:</span> Shira One Camp</p>
-                <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Altitude:</span> 3,500 m | 11,500 ft</p>
-                <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Hiking:</span> 5 to 6 hours</p>
-                <p className="mt-2 text-sm leading-6 text-stone-700">Leaving the rainforest behind, the landscape opens dramatically. As the altitude changes, so does your perspective. Every stage of the climb introduces a new leadership principle, inviting you to strengthen awareness, focus and the ability to lead yourself before leading others. Guided reflections and practical exercises help translate every experience on the mountain into insights that last far beyond the expedition.</p>
+            <div className="relative overflow-hidden rounded-3xl border border-brand-border p-6 sm:p-8 min-h-[420px] shadow-sm">
+              <div className="absolute inset-0">
+                <Image src="/leadership.png" alt="Leadership journey across the mountain" fill sizes="(max-width: 768px) 100vw, 90vw" className="object-cover object-center" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1b3b3d]/90 via-[#2d655d]/75 to-[#748d3a]/55" />
               </div>
-
-              <div className="relative overflow-hidden rounded-2xl border border-brand-border p-5 min-h-[260px] shadow-sm">
-                <div className="absolute inset-0">
-                  <Image src="/leadership.png" alt="Leadership reflection scene" fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover object-center" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#224b4b]/85 via-[#2f6a63]/70 to-[#7d8e30]/50" />
-                </div>
-                <div className="relative z-10 max-w-3xl">
-                  <h4 className="text-lg font-semibold text-white">Day 5 | Leading Through Challenge</h4>
-                  <p className="mt-2 text-sm leading-6 text-white/90"><span className="font-semibold text-[#e5d8b8]">Camp:</span> Shira Cathedral Camp</p>
-                  <p className="mt-1 text-sm leading-6 text-white/90"><span className="font-semibold text-[#e5d8b8]">Altitude:</span> 3,900 m | 12,800 ft</p>
-                  <p className="mt-1 text-sm leading-6 text-white/90"><span className="font-semibold text-[#e5d8b8]">Hiking:</span> 4 to 5 hours</p>
-                  <p className="mt-2 text-sm leading-6 text-white/90">As the environment becomes more demanding, resilience, adaptability and conscious decision making become increasingly important. Rather than avoiding challenges, you learn to work with them. Every stage of the climb becomes an opportunity to strengthen the mindset and habits that define exceptional leadership.</p>
+              <div className="relative z-10">
+                <h4 className="text-lg font-semibold text-white">Days 4–8 | The Mountain Becomes Your Teacher</h4>
+                <p className="mt-2 max-w-3xl text-sm leading-6 text-white/90">From the first high camp to the approach of summit day, the mountain invites a deeper leadership practice: awareness, steadiness, patience, and trust under pressure.</p>
+                <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm">
+                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 4 | Expanding Your Perspective</p>
+                    <p className="mt-1 text-sm leading-6 text-white/90">The landscape opens and the climb sharpens awareness, focus, and self-leadership.</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm">
+                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 5 | Leading Through Challenge</p>
+                    <p className="mt-1 text-sm leading-6 text-white/90">Resilience and adaptability grow as the environment becomes more demanding.</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm">
+                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 6 | Strength Through Stability</p>
+                    <p className="mt-1 text-sm leading-6 text-white/90">Consistency and calm thinking become the foundation for steadier leadership.</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm">
+                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 7 | Seeing Beyond the Obvious</p>
+                    <p className="mt-1 text-sm leading-6 text-white/90">The mountain invites better observation, clearer judgement, and more intentional action.</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm md:col-span-2 xl:col-span-1">
+                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 8 | Embracing the Unknown</p>
+                    <p className="mt-1 text-sm leading-6 text-white/90">Curiosity and openness begin to replace control as summit day approaches.</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="grid gap-4 lg:grid-cols-2">
-              <div className="rounded-2xl border border-brand-border bg-white p-5 shadow-sm">
-                <h4 className="text-lg font-semibold text-brand-secondary">Day 6 | Strength Through Stability</h4>
-                <p className="mt-2 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Camp:</span> Moir Hut</p>
-                <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Altitude:</span> 4,200 m | 13,800 ft</p>
-                <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Hiking:</span> 5 to 6 hours</p>
-                <p className="mt-2 text-sm leading-6 text-stone-700">Progress is no longer measured by speed but by consistency. Higher altitude rewards calm thinking, clear priorities and trust in your own judgement. Through guided practices and reflection, you discover how stability under pressure becomes one of the most valuable leadership skills.</p>
-              </div>
-
-              <div className="rounded-2xl border border-brand-border bg-white p-5 shadow-sm">
-                <h4 className="text-lg font-semibold text-brand-primary">Day 7 | Seeing Beyond the Obvious</h4>
-                <p className="mt-2 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Camp:</span> Buffalo Camp</p>
-                <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Altitude:</span> 4,000 m | 13,100 ft</p>
-                <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Hiking:</span> 5 to 6 hours</p>
-                <p className="mt-2 text-sm leading-6 text-stone-700">With breathtaking views across the mountain, the invitation is to slow down and observe. Great leaders rarely react to everything around them. They notice patterns, create space for better decisions and act with intention. The mountain offers the perfect environment to practice exactly that.</p>
-              </div>
-            </div>
-
-            <div className="grid gap-4 lg:grid-cols-2">
-              <div className="rounded-2xl border border-brand-border bg-white p-5 shadow-sm">
-                <h4 className="text-lg font-semibold text-brand-secondary">Day 8 | Embracing the Unknown</h4>
-                <p className="mt-2 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Camp:</span> Third Cave Camp</p>
-                <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Altitude:</span> 3,900 m | 12,800 ft</p>
-                <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Hiking:</span> 4 to 5 hours</p>
-                <p className="mt-2 text-sm leading-6 text-stone-700">As summit day approaches, recovery becomes preparation. Curiosity, flexibility and openness replace control, allowing both body and mind to adapt to the journey ahead. Some of the strongest leadership insights emerge when we stop trying to control every outcome and learn to work with what the moment offers.</p>
-              </div>
-
-              <div className="rounded-2xl border border-brand-border bg-white p-5 shadow-sm">
-                <h4 className="text-lg font-semibold text-brand-primary">Day 9 | Preparing for the Summit</h4>
-                <p className="mt-2 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Camp:</span> Kibo Camp</p>
-                <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Altitude:</span> 4,700 m | 15,400 ft</p>
-                <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Hiking:</span> 4 to 5 hours</p>
-                <p className="mt-2 text-sm leading-6 text-stone-700">The final day before the summit is intentionally quieter. Body, breath and mind are aligned while the focus shifts from preparation to trust. Everything needed for the ascent has already been built. Tonight is about applying it.</p>
-              </div>
+            <div className="rounded-2xl border border-brand-border bg-white p-5 shadow-sm">
+              <h4 className="text-lg font-semibold text-brand-primary">Day 9 | Preparing for the Summit</h4>
+              <p className="mt-2 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Camp:</span> Kibo Camp</p>
+              <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Altitude:</span> 4,700 m | 15,400 ft</p>
+              <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Hiking:</span> 4 to 5 hours</p>
+              <p className="mt-2 text-sm leading-6 text-stone-700">The final day before the summit is intentionally quieter. Body, breath and mind are aligned while the focus shifts from preparation to trust. Everything needed for the ascent has already been built. Tonight is about applying it.</p>
             </div>
 
             <div className="grid gap-4 lg:grid-cols-2">
