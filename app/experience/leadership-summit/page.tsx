@@ -184,40 +184,33 @@ export default function LeadershipSummitPage() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-brand-border bg-white p-5 shadow-sm">
-              <h4 className="text-lg font-semibold text-brand-primary">Day 9 | Preparing for the Summit</h4>
-              <p className="mt-2 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Camp:</span> Kibo Camp</p>
-              <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Altitude:</span> 4,700 m | 15,400 ft</p>
-              <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Hiking:</span> 4 to 5 hours</p>
-              <p className="mt-2 text-sm leading-6 text-stone-700">The final day before the summit is intentionally quieter. Body, breath and mind are aligned while the focus shifts from preparation to trust. Everything needed for the ascent has already been built. Tonight is about applying it.</p>
-            </div>
-
-            <div className="grid gap-4 lg:grid-cols-2">
-              <div className="rounded-2xl border border-brand-border bg-white p-5 shadow-sm">
-                <h4 className="text-lg font-semibold text-brand-secondary">Day 10 | Reaching the Roof of Africa</h4>
-                <p className="mt-2 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Route:</span> Kibo Camp → Uhuru Peak → Millennium Camp</p>
-                <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Highest Point:</span> 5,895 m | 19,341 ft</p>
-                <p className="mt-1 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Accommodation:</span> Millennium Camp | 3,800 m | 12,500 ft</p>
-                <p className="mt-2 text-sm leading-6 text-stone-700">In the early hours of the morning, you begin the final ascent to Uhuru Peak, the Roof of Africa. One step at a time, you reach the summit before beginning the descent. Reaching Uhuru Peak is the milestone. The person returning home is the achievement.</p>
+            <div className="relative overflow-hidden rounded-3xl border border-brand-border p-6 sm:p-8 min-h-[360px] shadow-sm">
+              <div className="absolute inset-0">
+                <Image src="/beyond.png" alt="Days 9–12 closing journey" fill sizes="(max-width: 768px) 100vw, 90vw" quality={100} className="object-cover object-center scale-[1.03] contrast-[1.05] brightness-[1.02]" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1f3f3d]/80 via-[#2f5f57]/65 to-[#7c8a3f]/45" />
               </div>
-
-              <div className="relative overflow-hidden rounded-2xl border border-brand-border p-5 min-h-[260px] shadow-sm">
-                <div className="absolute inset-0">
-                  <Image src="/beyond.png" alt="Beyond the summit reflection" fill sizes="(max-width: 768px) 100vw, 60vw" quality={100} className="object-cover object-center scale-[1.03] contrast-[1.05] brightness-[1.02]" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#1f3f3d]/80 via-[#2f5f57]/65 to-[#7c8a3f]/45" />
-                </div>
-                <div className="relative z-10 max-w-3xl">
-                  <h4 className="text-lg font-semibold text-white">Day 11 | Recovery &amp; Integration</h4>
-                  <p className="mt-2 text-sm leading-6 text-white/90"><span className="font-semibold text-[#e5d8b8]">Accommodation:</span> Melia Arusha</p>
-                  <p className="mt-2 text-sm leading-6 text-white/90">Return to Melia Arusha to slow down, recover and celebrate your achievement. Enjoy an included massage before coming together for a guided integration session. Together, we reflect on the experience, connect the knowledge from the mountain with everyday leadership and explore how lasting change begins once the climb is over.</p>
+              <div className="relative z-10">
+                <h4 className="text-lg font-semibold text-white">Days 9–12 | Summit, Recovery, and Carrying It Forward</h4>
+                <p className="mt-2 max-w-3xl text-sm leading-6 text-white/90">The closing stretch moves from the summit itself into recovery, integration, and the return home with clearer purpose and lasting insight.</p>
+                <div className="mt-5 grid gap-3 md:grid-cols-2">
+                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm">
+                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 9 | Preparing for the Summit</p>
+                    <p className="mt-1 text-sm leading-6 text-white/90">The final preparation night aligns body, breath, and focus before the ascent begins.</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm">
+                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 10 | Reaching the Roof of Africa</p>
+                    <p className="mt-1 text-sm leading-6 text-white/90">A dawn summit push brings the expedition to its defining milestone and deepest sense of achievement.</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm">
+                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 11 | Recovery &amp; Integration</p>
+                    <p className="mt-1 text-sm leading-6 text-white/90">You return to base, recover, and begin translating the experience into lasting leadership insight.</p>
+                  </div>
+                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm">
+                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 12 | Carrying It Forward</p>
+                    <p className="mt-1 text-sm leading-6 text-white/90">The journey closes with reflection, gratitude, and a renewed sense of how the mountain continues to shape leadership long after the climb.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="rounded-2xl border border-brand-border bg-white p-5 shadow-sm">
-              <h4 className="text-lg font-semibold text-brand-secondary">Day 12 | Carrying It Forward</h4>
-              <p className="mt-2 text-sm leading-6 text-stone-700"><span className="font-semibold text-brand-heading">Departure:</span> Kilimanjaro International Airport (JRO) or Arusha Airport (ARK)</p>
-              <p className="mt-2 text-sm leading-6 text-stone-700">After breakfast, we gather one final time for a closing session, celebrating the journey we have shared and reflecting on how its lessons will continue long after leaving Tanzania. Afterwards, we transfer you to the airport for your journey home.</p>
             </div>
           </div>
 
