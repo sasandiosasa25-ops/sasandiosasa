@@ -125,7 +125,7 @@ export default function LeadershipSummitPage() {
             <div className="relative overflow-hidden rounded-3xl border border-brand-border p-5 min-h-[240px] shadow-sm">
               <div className="absolute inset-0">
                 <Image src="/melia.png" alt="Melia Arusha hotel" fill sizes="(max-width: 768px) 100vw, 60vw" quality={100} className="object-cover object-center scale-[1.03] contrast-[1.05] brightness-[1.02]" />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#123b41]/85 via-[#1d4c4f]/70 to-[#3f6f64]/55" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#123b41]/80 via-[#1d4c4f]/65 to-[#3f6f64]/45" />
               </div>
               <div className="relative z-10 max-w-3xl">
                 <h4 className="text-lg font-semibold text-white">Day 1 | Arrival &amp; Opening</h4>
@@ -154,7 +154,7 @@ export default function LeadershipSummitPage() {
             <div className="relative overflow-hidden rounded-3xl border border-brand-border p-6 sm:p-8 min-h-[420px] shadow-sm">
               <div className="absolute inset-0">
                 <Image src="/leadership.png" alt="Leadership journey across the mountain" fill sizes="(max-width: 768px) 100vw, 90vw" quality={100} className="object-cover object-center scale-[1.03] contrast-[1.05] brightness-[1.02]" />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#1b3b3d]/90 via-[#2d655d]/75 to-[#748d3a]/55" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1b3b3d]/80 via-[#2d655d]/65 to-[#748d3a]/45" />
               </div>
               <div className="relative z-10">
                 <h4 className="text-lg font-semibold text-white">Days 4–8 | The Mountain Becomes Your Teacher</h4>
@@ -204,37 +204,12 @@ export default function LeadershipSummitPage() {
               <div className="relative overflow-hidden rounded-2xl border border-brand-border p-5 min-h-[260px] shadow-sm">
                 <div className="absolute inset-0">
                   <Image src="/beyond.png" alt="Beyond the summit reflection" fill sizes="(max-width: 768px) 100vw, 60vw" quality={100} className="object-cover object-center scale-[1.03] contrast-[1.05] brightness-[1.02]" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#1f3f3d]/85 via-[#2f5f57]/75 to-[#7c8a3f]/55" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#1f3f3d]/80 via-[#2f5f57]/65 to-[#7c8a3f]/45" />
                 </div>
                 <div className="relative z-10 max-w-3xl">
                   <h4 className="text-lg font-semibold text-white">Day 11 | Recovery &amp; Integration</h4>
                   <p className="mt-2 text-sm leading-6 text-white/90"><span className="font-semibold text-[#e5d8b8]">Accommodation:</span> Melia Arusha</p>
                   <p className="mt-2 text-sm leading-6 text-white/90">Return to Melia Arusha to slow down, recover and celebrate your achievement. Enjoy an included massage before coming together for a guided integration session. Together, we reflect on the experience, connect the knowledge from the mountain with everyday leadership and explore how lasting change begins once the climb is over.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden rounded-3xl border border-brand-border p-6 sm:p-8 min-h-[360px] shadow-sm">
-              <div className="absolute inset-0">
-                <Image src="/beyond.png" alt="Recovery and integration after the summit" fill sizes="(max-width: 768px) 100vw, 90vw" quality={100} className="object-cover object-center scale-[1.03] contrast-[1.05] brightness-[1.02]" />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#1e3d3d]/90 via-[#2f5e57]/75 to-[#798f3b]/55" />
-              </div>
-              <div className="relative z-10">
-                <h4 className="text-lg font-semibold text-white">Days 9–11 | From Summit to Integration</h4>
-                <p className="mt-2 max-w-3xl text-sm leading-6 text-white/90">The final stretch shifts from ascent to recovery, reflection, and carrying the lessons of the mountain into everyday leadership.</p>
-                <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm">
-                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 9 | Preparing for the Summit</p>
-                    <p className="mt-1 text-sm leading-6 text-white/90">The final preparation night aligns body, breath, and focus before the ascent begins.</p>
-                  </div>
-                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm">
-                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 10 | Reaching the Roof of Africa</p>
-                    <p className="mt-1 text-sm leading-6 text-white/90">A dawn summit push brings the expedition to its defining milestone and deepest sense of achievement.</p>
-                  </div>
-                  <div className="rounded-2xl border border-white/20 bg-white/10 p-3 backdrop-blur-sm md:col-span-2 xl:col-span-1">
-                    <p className="text-sm font-semibold text-[#e5d8b8]">Day 11 | Recovery &amp; Integration</p>
-                    <p className="mt-1 text-sm leading-6 text-white/90">You return to base, recover, and begin translating the experience into lasting leadership insight.</p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -250,7 +225,7 @@ export default function LeadershipSummitPage() {
             <div className="relative min-h-[260px]">
               <div className="absolute inset-0">
                 <Image src="/onmountain.png" alt="On the mountain experience" fill sizes="(max-width: 768px) 100vw, 60vw" quality={100} className="object-cover object-center scale-[1.03] contrast-[1.05] brightness-[1.02]" />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#112f31]/80 via-[#214b43]/70 to-[#587a4c]/55" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#112f31]/75 via-[#214b43]/60 to-[#587a4c]/45" />
               </div>
               <div className="relative z-10 p-6 sm:p-8">
                 <h4 className="text-lg font-semibold text-white">Your Leadership Journey</h4>
