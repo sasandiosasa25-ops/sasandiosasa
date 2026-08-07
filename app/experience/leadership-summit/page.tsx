@@ -120,11 +120,17 @@ export default function LeadershipSummitPage() {
           </div>
 
           <div className="mt-8 space-y-4">
-            <div className="rounded-2xl border border-brand-border bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 p-5">
-              <h4 className="text-lg font-semibold text-brand-primary">Day 1 | Arrival &amp; Opening</h4>
-              <p className="mt-2 text-sm leading-relaxed text-stone-700"><span className="font-semibold text-brand-heading">Arrival:</span> Kilimanjaro International Airport (JRO) or Arusha Airport (ARK)</p>
-              <p className="mt-1 text-sm leading-relaxed text-stone-700"><span className="font-semibold text-brand-heading">Accommodation:</span> Melia Arusha</p>
-              <p className="mt-2 text-sm leading-relaxed text-stone-700">Arrive in Tanzania and transfer to Melia Arusha. The evening marks the official start of the Sky &amp; Soul Leadership Journey. During our Networking Cocktail and opening session, you will meet the group, discover the journey ahead and be introduced to the practical leadership, mindfulness and performance tools that will accompany you throughout the experience.</p>
+            <div className="relative overflow-hidden rounded-2xl border border-brand-border p-5 min-h-[220px]">
+              <div className="absolute inset-0">
+                <Image src="/melia.png" alt="Melia Arusha hotel" fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#123b41]/85 via-[#1d4c4f]/75 to-[#3f6f64]/60" />
+              </div>
+              <div className="relative z-10">
+                <h4 className="text-lg font-semibold text-white">Day 1 | Arrival &amp; Opening</h4>
+                <p className="mt-2 text-sm leading-relaxed text-white/90"><span className="font-semibold text-brand-secondary">Arrival:</span> Kilimanjaro International Airport (JRO) or Arusha Airport (ARK)</p>
+                <p className="mt-1 text-sm leading-relaxed text-white/90"><span className="font-semibold text-brand-secondary">Accommodation:</span> Melia Arusha</p>
+                <p className="mt-2 text-sm leading-relaxed text-white/90">Arrive in Tanzania and transfer to Melia Arusha. The evening marks the official start of the Sky &amp; Soul Leadership Journey. During our Networking Cocktail and opening session, you will meet the group, discover the journey ahead and be introduced to the practical leadership, mindfulness and performance tools that will accompany you throughout the experience.</p>
+              </div>
             </div>
 
             <div className="rounded-2xl border border-brand-border p-5">
@@ -149,12 +155,18 @@ export default function LeadershipSummitPage() {
               <p className="mt-2 text-sm leading-relaxed text-stone-700">Leaving the rainforest behind, the landscape opens dramatically. As the altitude changes, so does your perspective. Every stage of the climb introduces a new leadership principle, inviting you to strengthen awareness, focus and the ability to lead yourself before leading others. Guided reflections and practical exercises help translate every experience on the mountain into insights that last far beyond the expedition.</p>
             </div>
 
-            <div className="rounded-2xl border border-brand-border p-5">
-              <h4 className="text-lg font-semibold text-brand-primary">Day 5 | Leading Through Challenge</h4>
-              <p className="mt-2 text-sm leading-relaxed text-stone-700"><span className="font-semibold text-brand-heading">Camp:</span> Shira Cathedral Camp</p>
-              <p className="mt-1 text-sm leading-relaxed text-stone-700"><span className="font-semibold text-brand-heading">Altitude:</span> 3,900 m | 12,800 ft</p>
-              <p className="mt-1 text-sm leading-relaxed text-stone-700"><span className="font-semibold text-brand-heading">Hiking:</span> 4 to 5 hours</p>
-              <p className="mt-2 text-sm leading-relaxed text-stone-700">As the environment becomes more demanding, resilience, adaptability and conscious decision making become increasingly important. Rather than avoiding challenges, you learn to work with them. Every stage of the climb becomes an opportunity to strengthen the mindset and habits that define exceptional leadership.</p>
+            <div className="relative overflow-hidden rounded-2xl border border-brand-border p-5 min-h-[220px]">
+              <div className="absolute inset-0">
+                <Image src="/leadership.png" alt="Leadership reflection scene" fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#224b4b]/85 via-[#2f6a63]/70 to-[#7d8e30]/50" />
+              </div>
+              <div className="relative z-10">
+                <h4 className="text-lg font-semibold text-white">Day 5 | Leading Through Challenge</h4>
+                <p className="mt-2 text-sm leading-relaxed text-white/90"><span className="font-semibold text-brand-secondary">Camp:</span> Shira Cathedral Camp</p>
+                <p className="mt-1 text-sm leading-relaxed text-white/90"><span className="font-semibold text-brand-secondary">Altitude:</span> 3,900 m | 12,800 ft</p>
+                <p className="mt-1 text-sm leading-relaxed text-white/90"><span className="font-semibold text-brand-secondary">Hiking:</span> 4 to 5 hours</p>
+                <p className="mt-2 text-sm leading-relaxed text-white/90">As the environment becomes more demanding, resilience, adaptability and conscious decision making become increasingly important. Rather than avoiding challenges, you learn to work with them. Every stage of the climb becomes an opportunity to strengthen the mindset and habits that define exceptional leadership.</p>
+              </div>
             </div>
 
             <div className="rounded-2xl border border-brand-border p-5">
@@ -197,10 +209,16 @@ export default function LeadershipSummitPage() {
               <p className="mt-2 text-sm leading-relaxed text-stone-700">In the early hours of the morning, you begin the final ascent to Uhuru Peak, the Roof of Africa. One step at a time, you reach the summit before beginning the descent. Reaching Uhuru Peak is the milestone. The person returning home is the achievement.</p>
             </div>
 
-            <div className="rounded-2xl border border-brand-border bg-gradient-to-br from-brand-secondary/5 to-brand-primary/5 p-5">
-              <h4 className="text-lg font-semibold text-brand-primary">Day 11 | Recovery &amp; Integration</h4>
-              <p className="mt-2 text-sm leading-relaxed text-stone-700"><span className="font-semibold text-brand-heading">Accommodation:</span> Melia Arusha</p>
-              <p className="mt-2 text-sm leading-relaxed text-stone-700">Return to Melia Arusha to slow down, recover and celebrate your achievement. Enjoy an included massage before coming together for a guided integration session. Together, we reflect on the experience, connect the knowledge from the mountain with everyday leadership and explore how lasting change begins once the climb is over.</p>
+            <div className="relative overflow-hidden rounded-2xl border border-brand-border p-5 min-h-[220px]">
+              <div className="absolute inset-0">
+                <Image src="/beyond.png" alt="Beyond the summit reflection" fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1f3f3d]/85 via-[#2f5f57]/75 to-[#7c8a3f]/55" />
+              </div>
+              <div className="relative z-10">
+                <h4 className="text-lg font-semibold text-white">Day 11 | Recovery &amp; Integration</h4>
+                <p className="mt-2 text-sm leading-relaxed text-white/90"><span className="font-semibold text-brand-secondary">Accommodation:</span> Melia Arusha</p>
+                <p className="mt-2 text-sm leading-relaxed text-white/90">Return to Melia Arusha to slow down, recover and celebrate your achievement. Enjoy an included massage before coming together for a guided integration session. Together, we reflect on the experience, connect the knowledge from the mountain with everyday leadership and explore how lasting change begins once the climb is over.</p>
+              </div>
             </div>
 
             <div className="rounded-2xl border border-brand-border p-5">
@@ -221,9 +239,15 @@ export default function LeadershipSummitPage() {
                 <h5 className="text-base font-semibold text-brand-heading">Preparation Day</h5>
                 <p className="mt-1 text-sm leading-relaxed text-stone-700">Build your leadership toolkit through practical workshops, mindfulness, expedition preparation and shared experiences. This is where the team is built and the journey truly begins.</p>
               </div>
-              <div>
-                <h5 className="text-base font-semibold text-brand-heading">On the Mountain</h5>
-                <p className="mt-1 text-sm leading-relaxed text-stone-700">The mountain becomes your coach. Experienced, certified and coached Guides, along side with guided recordings, practical tools and daily reflections support your experience and growth journey.</p>
+              <div className="relative overflow-hidden rounded-2xl border border-brand-border p-4">
+                <div className="absolute inset-0">
+                  <Image src="/onmountain.png" alt="On the mountain experience" fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#112f31]/80 via-[#214b43]/70 to-[#587a4c]/50" />
+                </div>
+                <div className="relative z-10">
+                  <h5 className="text-base font-semibold text-white">On the Mountain</h5>
+                  <p className="mt-1 text-sm leading-relaxed text-white/90">The mountain becomes your coach. Experienced, certified and coached Guides, along side with guided recordings, practical tools and daily reflections support your experience and growth journey.</p>
+                </div>
               </div>
               <div>
                 <h5 className="text-base font-semibold text-brand-heading">Beyond the Summit</h5>
