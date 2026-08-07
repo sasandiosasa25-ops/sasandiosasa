@@ -270,7 +270,7 @@ export default function LeadershipSummitPage() {
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3">
-              <Link href="https://tally.so/r/zxoPrg" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary">
+              <Link href="https://tally.so/r/aQXXq2" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-secondary">
                 Book Your Discovery Call Here.
               </Link>
               <a
