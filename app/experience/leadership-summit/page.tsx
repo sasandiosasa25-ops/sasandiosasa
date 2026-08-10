@@ -116,7 +116,7 @@ export default function LeadershipSummitPage() {
             <h3 className="mt-3 text-2xl sm:text-3xl font-comfortaa font-bold text-stone-200">
               The Sky &amp; Soul Experience
             </h3>
-            <p className="mt-4 text-base leading-relaxed text-white/78">
+            <p className="mt-4 text-base leading-relaxed text-white">
               A 12-day leadership journey shaped to move from arrival and preparation into expedition, reflection, and lasting integration.
             </p>
           </div>
@@ -125,68 +125,68 @@ export default function LeadershipSummitPage() {
             <div className="rounded-3xl border border-white/12 bg-white/8 p-5 min-h-[240px] shadow-sm backdrop-blur-md">
               <div className="max-w-3xl">
                 <h4 className="text-lg font-semibold text-stone-200">Day 1 | Arrival &amp; Opening</h4>
-                <p className="mt-2 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Arrival:</span> Kilimanjaro International Airport (JRO) or Arusha Airport (ARK)</p>
-                <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Accommodation:</span> Melia Arusha</p>
-                <p className="mt-2 text-sm leading-6 text-white/86">Arrive in Tanzania and transfer to Melia Arusha. The evening marks the official start of the Sky &amp; Soul Leadership Journey. During our Networking Cocktail and opening session, you will meet the group, discover the journey ahead and be introduced to the practical leadership, mindfulness and performance tools that will accompany you throughout the experience.</p>
+                <p className="mt-2 text-sm leading-6 text-white"><span className="font-semibold text-white">Arrival:</span> Kilimanjaro International Airport (JRO) or Arusha Airport (ARK)</p>
+                <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Accommodation:</span> Melia Arusha</p>
+                <p className="mt-2 text-sm leading-6 text-white">Arrive in Tanzania and transfer to Melia Arusha. The evening marks the official start of the Sky &amp; Soul Leadership Journey. During our Networking Cocktail and opening session, you will meet the group, discover the journey ahead and be introduced to the practical leadership, mindfulness and performance tools that will accompany you throughout the experience.</p>
               </div>
             </div>
 
             <div className="grid gap-4 lg:grid-cols-2">
               <div className="rounded-2xl border border-white/12 bg-white/8 p-5 shadow-sm backdrop-blur-md">
                 <h4 className="text-lg font-semibold text-stone-200">Day 2 | Building Your Leadership Toolkit</h4>
-                <p className="mt-2 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Accommodation:</span> Melia Arusha</p>
-                <p className="mt-2 text-sm leading-6 text-white/86">Great expeditions begin with preparation. Today combines expedition planning and equipment preparation with an immersive leadership experience designed to prepare both body and mind. Together, we explore practical tools for focus, resilience, decision making and self leadership. By the end of the day, you will have a toolkit that supports you on the mountain and long after you return home.</p>
+                <p className="mt-2 text-sm leading-6 text-white"><span className="font-semibold text-white">Accommodation:</span> Melia Arusha</p>
+                <p className="mt-2 text-sm leading-6 text-white">Great expeditions begin with preparation. Today combines expedition planning and equipment preparation with an immersive leadership experience designed to prepare both body and mind. Together, we explore practical tools for focus, resilience, decision making and self leadership. By the end of the day, you will have a toolkit that supports you on the mountain and long after you return home.</p>
               </div>
 
               <div className="rounded-2xl border border-white/12 bg-white/8 p-5 shadow-sm backdrop-blur-md">
                 <h4 className="text-lg font-semibold text-stone-200">Day 3 | The Mountain Takes Over</h4>
-                <p className="mt-2 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Route:</span> Londorossi Gate to Mti Mkubwa Camp</p>
-                <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Camp:</span> Mti Mkubwa Camp</p>
-                <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Altitude:</span> 2,650 m | 8,694 ft</p>
-                <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Hiking:</span> 3 to 4 hours</p>
-                <p className="mt-2 text-sm leading-6 text-white/86">After breakfast, we travel to Kilimanjaro National Park, where the climb begins. From this point forward, the mountain becomes your learning environment. Supported by our experienced mountain team, guided audio sessions, daily reflections and practical exercises accompany your journey, turning every challenge into an opportunity to learn through experience.</p>
+                <p className="mt-2 text-sm leading-6 text-white"><span className="font-semibold text-white">Route:</span> Londorossi Gate to Mti Mkubwa Camp</p>
+                <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Camp:</span> Mti Mkubwa Camp</p>
+                <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Altitude:</span> 2,650 m | 8,694 ft</p>
+                <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Hiking:</span> 3 to 4 hours</p>
+                <p className="mt-2 text-sm leading-6 text-white">After breakfast, we travel to Kilimanjaro National Park, where the climb begins. From this point forward, the mountain becomes your learning environment. Supported by our experienced mountain team, guided audio sessions, daily reflections and practical exercises accompany your journey, turning every challenge into an opportunity to learn through experience.</p>
               </div>
             </div>
 
             <div className="rounded-3xl border border-white/12 bg-white/8 p-6 sm:p-8 min-h-[420px] shadow-sm backdrop-blur-md">
               <div>
                 <h4 className="text-lg font-semibold text-stone-200">Days 4–8 | The Mountain Becomes Your Teacher</h4>
-                <p className="mt-2 max-w-3xl text-sm leading-6 text-white/80">From the first high camp to the approach of summit day, the mountain invites a deeper leadership practice: awareness, steadiness, patience, and trust under pressure.</p>
+                <p className="mt-2 max-w-3xl text-sm leading-6 text-white">From the first high camp to the approach of summit day, the mountain invites a deeper leadership practice: awareness, steadiness, patience, and trust under pressure.</p>
                 <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                   <div className="rounded-2xl border border-white/12 bg-white/10 p-3 backdrop-blur-sm">
                     <p className="text-sm font-semibold text-stone-200">Day 4 | Expanding Your Perspective</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Camp:</span> Shira One Camp</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Altitude:</span> 3,500 m | 11,500 ft</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Hiking:</span> 5 to 6 hours</p>
-                    <p className="mt-1 text-sm leading-6 text-white/86">Leaving the rainforest behind, the landscape opens dramatically. As the altitude changes, so does your perspective. Every stage of the climb introduces a new leadership principle, inviting you to strengthen awareness, focus and the ability to lead yourself before leading others. Guided reflections and practical exercises help translate every experience on the mountain into insights that last far beyond the expedition.</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Camp:</span> Shira One Camp</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Altitude:</span> 3,500 m | 11,500 ft</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Hiking:</span> 5 to 6 hours</p>
+                    <p className="mt-1 text-sm leading-6 text-white">Leaving the rainforest behind, the landscape opens dramatically. As the altitude changes, so does your perspective. Every stage of the climb introduces a new leadership principle, inviting you to strengthen awareness, focus and the ability to lead yourself before leading others. Guided reflections and practical exercises help translate every experience on the mountain into insights that last far beyond the expedition.</p>
                   </div>
                   <div className="rounded-2xl border border-white/12 bg-white/10 p-3 backdrop-blur-sm">
                     <p className="text-sm font-semibold text-stone-200">Day 5 | Leading Through Challenge</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Camp:</span> Shira Cathedral Camp</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Altitude:</span> 3,900 m | 12,800 ft</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Hiking:</span> 4 to 5 hours</p>
-                    <p className="mt-1 text-sm leading-6 text-white/86">As the environment becomes more demanding, resilience, adaptability and conscious decision making become increasingly important. Rather than avoiding challenges, you learn to work with them. Every stage of the climb becomes an opportunity to strengthen the mindset and habits that define exceptional leadership.</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Camp:</span> Shira Cathedral Camp</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Altitude:</span> 3,900 m | 12,800 ft</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Hiking:</span> 4 to 5 hours</p>
+                    <p className="mt-1 text-sm leading-6 text-white">As the environment becomes more demanding, resilience, adaptability and conscious decision making become increasingly important. Rather than avoiding challenges, you learn to work with them. Every stage of the climb becomes an opportunity to strengthen the mindset and habits that define exceptional leadership.</p>
                   </div>
                   <div className="rounded-2xl border border-white/12 bg-white/10 p-3 backdrop-blur-sm">
                     <p className="text-sm font-semibold text-stone-200">Day 6 | Strength Through Stability</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Camp:</span> Moir Hut</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Altitude:</span> 4,200 m | 13,800 ft</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Hiking:</span> 5 to 6 hours</p>
-                    <p className="mt-1 text-sm leading-6 text-white/86">Progress is no longer measured by speed but by consistency. Higher altitude rewards calm thinking, clear priorities and trust in your own judgement. Through guided practices and reflection, you discover how stability under pressure becomes one of the most valuable leadership skills.</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Camp:</span> Moir Hut</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Altitude:</span> 4,200 m | 13,800 ft</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Hiking:</span> 5 to 6 hours</p>
+                    <p className="mt-1 text-sm leading-6 text-white">Progress is no longer measured by speed but by consistency. Higher altitude rewards calm thinking, clear priorities and trust in your own judgement. Through guided practices and reflection, you discover how stability under pressure becomes one of the most valuable leadership skills.</p>
                   </div>
                   <div className="rounded-2xl border border-white/12 bg-white/10 p-3 backdrop-blur-sm">
                     <p className="text-sm font-semibold text-stone-200">Day 7 | Seeing Beyond the Obvious</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Camp:</span> Buffalo Camp</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Altitude:</span> 4,000 m | 13,100 ft</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Hiking:</span> 5 to 6 hours</p>
-                    <p className="mt-1 text-sm leading-6 text-white/86">With breathtaking views across the mountain, the invitation is to slow down and observe. Great leaders rarely react to everything around them. They notice patterns, create space for better decisions and act with intention. The mountain offers the perfect environment to practice exactly that.</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Camp:</span> Buffalo Camp</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Altitude:</span> 4,000 m | 13,100 ft</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Hiking:</span> 5 to 6 hours</p>
+                    <p className="mt-1 text-sm leading-6 text-white">With breathtaking views across the mountain, the invitation is to slow down and observe. Great leaders rarely react to everything around them. They notice patterns, create space for better decisions and act with intention. The mountain offers the perfect environment to practice exactly that.</p>
                   </div>
                   <div className="rounded-2xl border border-white/12 bg-white/10 p-3 backdrop-blur-sm md:col-span-2 xl:col-span-1">
                     <p className="text-sm font-semibold text-stone-200">Day 8 | Embracing the Unknown</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Camp:</span> Third Cave Camp</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Altitude:</span> 3,900 m | 12,800 ft</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Hiking:</span> 4 to 5 hours</p>
-                    <p className="mt-1 text-sm leading-6 text-white/86">As summit day approaches, recovery becomes preparation. Curiosity, flexibility and openness replace control, allowing both body and mind to adapt to the journey ahead. Some of the strongest leadership insights emerge when we stop trying to control every outcome and learn to work with what the moment offers.</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Camp:</span> Third Cave Camp</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Altitude:</span> 3,900 m | 12,800 ft</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Hiking:</span> 4 to 5 hours</p>
+                    <p className="mt-1 text-sm leading-6 text-white">As summit day approaches, recovery becomes preparation. Curiosity, flexibility and openness replace control, allowing both body and mind to adapt to the journey ahead. Some of the strongest leadership insights emerge when we stop trying to control every outcome and learn to work with what the moment offers.</p>
                   </div>
                 </div>
               </div>
@@ -195,34 +195,34 @@ export default function LeadershipSummitPage() {
             <div className="rounded-3xl border border-white/12 bg-white/8 p-6 sm:p-8 min-h-[360px] shadow-sm backdrop-blur-md">
               <div>
                 <h4 className="text-lg font-semibold text-stone-200">Days 9–12 | Summit, Recovery, and Carrying It Forward</h4>
-                <p className="mt-2 max-w-3xl text-sm leading-6 text-white/80">The closing stretch moves from the summit itself into recovery, integration, and the return home with clearer purpose and lasting insight.</p>
+                <p className="mt-2 max-w-3xl text-sm leading-6 text-white">The closing stretch moves from the summit itself into recovery, integration, and the return home with clearer purpose and lasting insight.</p>
                 <div className="mt-5 grid gap-3 md:grid-cols-2">
                   <div className="rounded-2xl border border-white/12 bg-white/10 p-3 backdrop-blur-sm">
                     <p className="text-sm font-semibold text-stone-200">Day 9 | Preparing for the Summit</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Camp:</span> Kibo Camp</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Altitude:</span> 4,700 m | 15,400 ft</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Hiking:</span> 4 to 5 hours</p>
-                    <p className="mt-1 text-sm leading-6 text-white/86">The final day before the summit is intentionally quieter. Body, breath and mind are aligned while the focus shifts from preparation to trust. Everything needed for the ascent has already been built. Tonight is about applying it.</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Camp:</span> Kibo Camp</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Altitude:</span> 4,700 m | 15,400 ft</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Hiking:</span> 4 to 5 hours</p>
+                    <p className="mt-1 text-sm leading-6 text-white">The final day before the summit is intentionally quieter. Body, breath and mind are aligned while the focus shifts from preparation to trust. Everything needed for the ascent has already been built. Tonight is about applying it.</p>
                   </div>
                   <div className="rounded-2xl border border-white/12 bg-white/10 p-3 backdrop-blur-sm">
                     <p className="text-sm font-semibold text-stone-200">Day 10 | Reaching the Roof of Africa</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Route:</span> Kibo Camp → Uhuru Peak → Millennium Camp</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Highest Point:</span> 5,895 m | 19,341 ft</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Accommodation:</span> Millennium Camp | 3,800 m | 12,500 ft</p>
-                    <p className="mt-1 text-sm leading-6 text-white/86">In the early hours of the morning, you begin the final ascent to Uhuru Peak, the Roof of Africa. One step at a time, you reach the summit before beginning the descent. Reaching Uhuru Peak is the milestone. The person returning home is the achievement.</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Route:</span> Kibo Camp → Uhuru Peak → Millennium Camp</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Highest Point:</span> 5,895 m | 19,341 ft</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Accommodation:</span> Millennium Camp | 3,800 m | 12,500 ft</p>
+                    <p className="mt-1 text-sm leading-6 text-white">In the early hours of the morning, you begin the final ascent to Uhuru Peak, the Roof of Africa. One step at a time, you reach the summit before beginning the descent. Reaching Uhuru Peak is the milestone. The person returning home is the achievement.</p>
                   </div>
                   <div className="rounded-2xl border border-white/12 bg-white/10 p-3 backdrop-blur-sm">
                     <p className="text-sm font-semibold text-stone-200">Day 11 | Recovery &amp; Integration</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Camp:</span> Mweka Camp</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Altitude:</span> 1,640 m | 5,381 ft</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Hiking:</span> 3 to 4 hours</p>
-                    <p className="mt-1 text-sm leading-6 text-white/86">You return to base, recover, and begin translating the experience into lasting leadership insight.</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Camp:</span> Mweka Camp</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Altitude:</span> 1,640 m | 5,381 ft</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Hiking:</span> 3 to 4 hours</p>
+                    <p className="mt-1 text-sm leading-6 text-white">You return to base, recover, and begin translating the experience into lasting leadership insight.</p>
                   </div>
                   <div className="rounded-2xl border border-white/12 bg-white/10 p-3 backdrop-blur-sm">
                     <p className="text-sm font-semibold text-stone-200">Day 12 | Carrying It Forward</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Camp:</span> Arusha / Moshi</p>
-                    <p className="mt-1 text-sm leading-6 text-white/80"><span className="font-semibold text-[#dbfffd]">Hiking:</span> 0 to 1 hours</p>
-                    <p className="mt-1 text-sm leading-6 text-white/86">The journey closes with reflection, gratitude, and a renewed sense of how the mountain continues to shape leadership long after the climb.</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Camp:</span> Arusha / Moshi</p>
+                    <p className="mt-1 text-sm leading-6 text-white"><span className="font-semibold text-white">Hiking:</span> 0 to 1 hours</p>
+                    <p className="mt-1 text-sm leading-6 text-white">The journey closes with reflection, gratitude, and a renewed sense of how the mountain continues to shape leadership long after the climb.</p>
                   </div>
                 </div>
               </div>
@@ -234,19 +234,19 @@ export default function LeadershipSummitPage() {
             <div className="mt-4 grid gap-4 md:grid-cols-2">
               <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur-sm">
                 <h5 className="text-base font-semibold text-stone-200">Before the Mountain</h5>
-                <p className="mt-1 text-sm leading-6 text-white/86">Receive simple preparation practices, reflection prompts and training recommendations before your arrival. An optional Leadership Alignment Call helps you prepare with confidence and clarity.</p>
+                <p className="mt-1 text-sm leading-6 text-white">Receive simple preparation practices, reflection prompts and training recommendations before your arrival. An optional Leadership Alignment Call helps you prepare with confidence and clarity.</p>
               </div>
               <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur-sm">
                 <h5 className="text-base font-semibold text-stone-200">Preparation Day</h5>
-                <p className="mt-1 text-sm leading-6 text-white/86">Build your leadership toolkit through practical workshops, mindfulness, expedition preparation and shared experiences. This is where the team is built and the journey truly begins.</p>
+                <p className="mt-1 text-sm leading-6 text-white">Build your leadership toolkit through practical workshops, mindfulness, expedition preparation and shared experiences. This is where the team is built and the journey truly begins.</p>
               </div>
               <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur-sm">
                 <h5 className="text-base font-semibold text-stone-200">On the Mountain</h5>
-                <p className="mt-1 text-sm leading-6 text-white/86">The mountain becomes your coach. Experienced, certified and coached Guides, along side with guided recordings, practical tools and daily reflections support your experience and growth journey.</p>
+                <p className="mt-1 text-sm leading-6 text-white">The mountain becomes your coach. Experienced, certified and coached Guides, along side with guided recordings, practical tools and daily reflections support your experience and growth journey.</p>
               </div>
               <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur-sm">
                 <h5 className="text-base font-semibold text-stone-200">Beyond the Summit</h5>
-                <p className="mt-1 text-sm leading-6 text-white/86">We offer continuing your development through executive coaching, leadership workshops or peer learning groups, turning mountain insights into lasting leadership impact.</p>
+                <p className="mt-1 text-sm leading-6 text-white">We offer continuing your development through executive coaching, leadership workshops or peer learning groups, turning mountain insights into lasting leadership impact.</p>
               </div>
             </div>
           </div>
