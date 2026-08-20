@@ -110,8 +110,12 @@ export default function LeadershipSummitPage() {
           </aside>
         </div>
 
-        <section className="mt-12 overflow-hidden rounded-3xl border border-[#099990]/25 bg-gradient-to-br from-[#0f6f6c] via-[#099990] to-[#7ecbc5] p-6 shadow-[0_18px_50px_rgba(9,153,144,0.18)] sm:p-8">
-          <div className="max-w-3xl">
+        <section className="leadership-program relative isolate mt-12 overflow-hidden rounded-3xl border border-[#b8cbd9] bg-[#eaf1f6] p-6 shadow-[0_18px_50px_rgba(23,50,77,0.12)] sm:p-8">
+          <div className="pointer-events-none absolute -right-8 bottom-0 z-[-1] h-[42%] w-[48%] opacity-[0.11] sm:h-[55%] sm:w-[38%]" aria-hidden="true">
+            <div className="absolute inset-x-0 bottom-0 h-full bg-[#17324d] [clip-path:polygon(0_100%,0_68%,10%_58%,18%_70%,31%_38%,40%_55%,52%_22%,63%_48%,74%_31%,85%_58%,100%_42%,100%_100%)]" />
+          </div>
+
+          <div className="relative max-w-3xl">
             <p className="text-sm uppercase tracking-[0.3em] text-[#dff8f5]">Program</p>
             <h3 className="mt-3 text-2xl sm:text-3xl font-comfortaa font-bold text-stone-200">
               The Sky &amp; Soul Experience

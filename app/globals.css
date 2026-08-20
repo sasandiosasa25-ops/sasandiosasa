@@ -80,3 +80,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+.leadership-program .text-white,
+.leadership-program .text-stone-200 {
+  color: #17324d !important;
+}
+
+.leadership-program [class~="bg-white/8"],
+.leadership-program [class~="bg-white/10"] {
+  background-color: rgba(255, 255, 255, 0.72) !important;
+}
+
+.leadership-program [class~="border-white/12"] {
+  border-color: rgba(23, 50, 77, 0.14) !important;
+}
