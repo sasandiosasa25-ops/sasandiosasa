@@ -69,14 +69,14 @@ export default function LeadershipSummitPage() {
 
             <section className="grid gap-6 sm:grid-cols-2">
               <div className="rounded-3xl border border-brand-border bg-white p-8 shadow-sm">
-                <span className="text-sm uppercase tracking-[0.3em] text-[#099990]">Executive Leadership</span>
+                <span className="text-sm uppercase tracking-[0.3em] text-[#17324d]">Executive Leadership</span>
                 <h3 className="mt-4 text-2xl font-semibold text-stone-600">A guided ascent with purpose</h3>
                 <p className="mt-4 text-sm sm:text-base text-stone-600 leading-relaxed">
                   The summit journey combines mountain challenge with facilitated reflection, creating a powerful environment for leadership growth.
                 </p>
               </div>
               <div className="rounded-3xl border border-brand-border bg-white p-8 shadow-sm">
-                <span className="text-sm uppercase tracking-[0.3em] text-[#099990]">Integration</span>
+                <span className="text-sm uppercase tracking-[0.3em] text-[#17324d]">Integration</span>
                 <h3 className="mt-4 text-2xl font-semibold text-stone-600">Insights that continue after the climb</h3>
                 <p className="mt-4 text-sm sm:text-base text-stone-600 leading-relaxed">
                   Structured integration ensures the lessons from the mountain become practical tools for everyday leadership and collaboration.
@@ -87,7 +87,7 @@ export default function LeadershipSummitPage() {
 
           <aside className="space-y-8 rounded-3xl border border-brand-border bg-white p-8 shadow-sm">
             <div>
-              <p className="text-sm uppercase tracking-[0.3em] text-[#099990]">Why Sky & Soul</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#17324d]">Why Sky & Soul</p>
               <p className="mt-4 text-sm sm:text-base text-stone-700 leading-relaxed">
                 This offering is for people who want Kilimanjaro&apos;s wisdom without limiting the journey to the summit. It honors the mountain&apos;s energy through presence, practice, and expanded perspective.
               </p>
@@ -95,15 +95,15 @@ export default function LeadershipSummitPage() {
 
             <div className="space-y-3">
               <div className="rounded-2xl bg-brand-primary/10 p-4">
-                <p className="text-sm uppercase tracking-[0.25em] text-[#099990]">Intention</p>
+                <p className="text-sm uppercase tracking-[0.25em] text-[#17324d]">Intention</p>
                 <p className="mt-2 text-base text-stone-600">Move with awareness, not just distance.</p>
               </div>
               <div className="rounded-2xl bg-brand-secondary/10 p-4">
-                <p className="text-sm uppercase tracking-[0.25em] text-[#099990]">Connection</p>
+                <p className="text-sm uppercase tracking-[0.25em] text-[#17324d]">Connection</p>
                 <p className="mt-2 text-base text-stone-600">Feel the mountain&apos;s guidance through breath and presence.</p>
               </div>
               <div className="rounded-2xl bg-brand-primary/10 p-4">
-                <p className="text-sm uppercase tracking-[0.25em] text-[#099990]">Choice</p>
+                <p className="text-sm uppercase tracking-[0.25em] text-[#17324d]">Choice</p>
                 <p className="mt-2 text-base text-stone-600">Choose the experience that fits your path, whether on or off the mountain.</p>
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function LeadershipSummitPage() {
           </div>
 
           <div className="relative max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#dff8f5]">Program</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#17324d]">Program</p>
             <h3 className="mt-3 text-2xl sm:text-3xl font-comfortaa font-bold text-stone-200">
               The Sky &amp; Soul Experience
             </h3>
@@ -281,13 +281,13 @@ export default function LeadershipSummitPage() {
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3">
-              <Link href="https://tally.so/r/aQXXq2" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-[#099990] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#099990]">
+              <Link href="https://tally.so/r/aQXXq2" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-[#17324d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#10263a]">
                 Book Your Discovery Call Here.
               </Link>
               <a
                 href="/Sky%20and%20soul%20leadership%20summit.pdf"
                 download
-                className="inline-flex items-center justify-center rounded-full bg-[#099990] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#099990]"
+                className="inline-flex items-center justify-center rounded-full bg-[#17324d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#10263a]"
               >
                 Download Flyer
               </a>
