@@ -37,7 +37,18 @@ export default function SkyAndSoulPage() {
             <section className="space-y-6">
               <h2 className="text-3xl sm:text-4xl font-comfortaa font-bold text-brand-heading">The Sky &amp; Soul experience</h2>
               <div className="space-y-5 text-base sm:text-lg text-stone-700 leading-relaxed">
-                <p>Sky &amp; Soul is a transformative Kilimanjaro experience that blends adventure, reflection, and conscious leadership. It is designed for those who want to go beyond the ordinary and step into a deeper connection with themselves, their purpose, and the world around them.</p>
+                <p>
+                  Sky &amp; Soul is a transformative Kilimanjaro experience that blends adventure, reflection, and{' '}
+                  <a
+                    href="https://www.sasandiosasa.co.tz/experience/leadership-summit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-primary underline underline-offset-4 hover:text-brand-secondary"
+                  >
+                    conscious leadership
+                  </a>
+                  . It is designed for those who want to go beyond the ordinary and step into a deeper connection with themselves, their purpose, and the world around them.
+                </p>
                 <p>The journey invites participants to move with intention through a powerful landscape, guided by breath, presence, and shared reflection. Every step on the mountain becomes part of a wider conversation about resilience, awareness, and personal growth.</p>
                 <p>What makes Sky &amp; Soul distinctive is the balance between challenge and meaning. The climb offers physical endurance and extraordinary scenery, while the experience creates space for insight, conversation, and lasting perspective.</p>
               </div>
