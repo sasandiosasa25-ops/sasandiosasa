@@ -12,6 +12,14 @@ const TravelPermit = () => {
       intro: 'Please apply for your visa or travel permit online via the official Tanzanian Immigration website:',
       websiteTitle: 'Tanzania Electronic Visa Application System',
       website: 'visa.immigration.go.tz',
+      insuranceTitle: 'Zanzibar Mandatory Travel Insurance',
+      insuranceText: [
+        'Travelling to Zanzibar? All international visitors are required to have the official Zanzibar Inbound Travel Insurance before entering the island.',
+        'The insurance is issued by Zanzibar Insurance Corporation (ZIC) and covers stays of up to 92 days. Your regular international travel insurance does not replace this mandatory cover.',
+        'We recommend arranging it online before you travel and keeping your insurance certificate with QR code ready for arrival.'
+      ],
+      insuranceLinkLabel: 'Apply for your Zanzibar Travel Insurance here:',
+      insuranceUrl: 'https://inbound.visitzanzibar.go.tz/',
       prepareTitle: 'Prepare Before You Apply',
       prepareText: 'Make sure you have the following ready before starting your online application:',
       guidelinesText: 'You are welcome to view the official details and guidelines:',
@@ -33,6 +41,14 @@ const TravelPermit = () => {
       intro: 'Bitte beantragen Sie Ihr Visum oder Ihre Reisegenehmigung online über die offizielle tansanische Einwanderungswebsite:',
       websiteTitle: 'Tansania Elektronisches Visum-Antragssystem',
       website: 'visa.immigration.go.tz',
+      insuranceTitle: 'Obligatorische Reiseversicherung für Sansibar',
+      insuranceText: [
+        'Reisen Sie nach Sansibar? Alle internationalen Besucher müssen vor der Einreise auf die Insel eine offizielle Zanzibar Inbound Travel Insurance besitzen.',
+        'Die Versicherung wird von der Zanzibar Insurance Corporation (ZIC) ausgegeben und gilt für Aufenthalte bis zu 92 Tagen. Ihre normale internationale Reiseversicherung ersetzt diese Pflichtversicherung nicht.',
+        'Wir empfehlen, sie vor der Reise online zu organisieren und das Versicherungszertifikat mit QR-Code für die Ankunft bereitzuhalten.'
+      ],
+      insuranceLinkLabel: 'Beantragen Sie hier Ihre Reiseversicherung für Sansibar:',
+      insuranceUrl: 'https://inbound.visitzanzibar.go.tz/',
       prepareTitle: 'Vorbereiten vor der Antragstellung',
       prepareText: 'Stellen Sie sicher, dass Sie folgendes bereit haben, bevor Sie Ihren Online-Antrag starten:',
       guidelinesText: 'Sie können gerne die offiziellen Details und Richtlinien einsehen:',
@@ -82,6 +98,31 @@ const TravelPermit = () => {
           >
             {t.website}
             <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+          </a>
+        </div>
+      </div>
+
+      {/* Zanzibar Travel Insurance */}
+      <div className="group relative bg-gradient-to-br from-amber-50 via-white to-brand-bg-light p-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-amber-500 overflow-hidden">
+        <div className="relative z-10 space-y-3">
+          <div className="flex items-center gap-2">
+            <Check className="w-5 h-5 text-amber-600" />
+            <h3 className="text-lg font-bold text-brand-heading">{t.insuranceTitle}</h3>
+          </div>
+          <div className="space-y-2 text-sm text-gray-700 leading-relaxed">
+            {t.insuranceText.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+          <p className="text-sm font-medium text-gray-800">{t.insuranceLinkLabel}</p>
+          <a
+            href={t.insuranceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-brand-primary font-semibold text-sm hover:text-brand-secondary"
+          >
+            {t.insuranceUrl}
+            <ExternalLink className="w-4 h-4" />
           </a>
         </div>
       </div>
