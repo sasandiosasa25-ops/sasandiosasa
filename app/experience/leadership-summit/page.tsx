@@ -32,6 +32,17 @@ export default function LeadershipSummitPage() {
             <p className="mt-8 text-base sm:text-lg text-white/90 max-w-2xl leading-relaxed">
               A 12-day executive leadership experience designed for leaders, entrepreneurs and decision-makers ready to step beyond routine and invest in growth.
             </p>
+            <div className="mt-8">
+              <a
+                href="https://tally.so/r/eqX77x"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-[#0f2f46] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#0f2f46]/30 transition hover:bg-[#173d59] focus:outline-none focus:ring-2 focus:ring-white/70"
+              >
+                Apply now
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
