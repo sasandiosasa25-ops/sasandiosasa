@@ -12,6 +12,10 @@ const TravelPermit = () => {
       intro: 'Please apply for your visa or travel permit online via the official Tanzanian Immigration website:',
       websiteTitle: 'Tanzania Electronic Visa Application System',
       website: 'visa.immigration.go.tz',
+      nationalInsuranceTitle: 'Tanzania Inbound Travel Insurance',
+      nationalInsuranceText: 'According to The Citizen, foreign visitors entering Tanzania must have inbound travel insurance from 1 October 2026. The reported premium is US$44. This national requirement is separate from Zanzibar’s island-specific insurance listed below; check official guidance before travelling.',
+      nationalInsuranceLinkLabel: 'Read the report from The Citizen',
+      nationalInsuranceUrl: 'https://www.thecitizen.co.tz/tanzania/news/national/foreign-visitors-entering-tanzania-must-have-44-travel-insurance-from-october-5610270',
       insuranceTitle: 'Zanzibar Mandatory Travel Insurance',
       insuranceText: [
         'Travelling to Zanzibar? All international visitors are required to have the official Zanzibar Inbound Travel Insurance before entering the island.',
@@ -41,6 +45,10 @@ const TravelPermit = () => {
       intro: 'Bitte beantragen Sie Ihr Visum oder Ihre Reisegenehmigung online über die offizielle tansanische Einwanderungswebsite:',
       websiteTitle: 'Tansania Elektronisches Visum-Antragssystem',
       website: 'visa.immigration.go.tz',
+      nationalInsuranceTitle: 'Einreiseversicherung für Tansania',
+      nationalInsuranceText: 'Laut The Citizen benötigen ausländische Besucher, die nach Tansania einreisen, ab dem 1. Oktober 2026 eine Einreiseversicherung. Die angegebene Prämie beträgt 44 US-Dollar. Diese landesweite Vorgabe gilt zusätzlich zur unten beschriebenen, gesonderten Versicherung für Sansibar. Bitte prüfen Sie vor der Reise die offiziellen Informationen.',
+      nationalInsuranceLinkLabel: 'Bericht von The Citizen lesen',
+      nationalInsuranceUrl: 'https://www.thecitizen.co.tz/tanzania/news/national/foreign-visitors-entering-tanzania-must-have-44-travel-insurance-from-october-5610270',
       insuranceTitle: 'Obligatorische Reiseversicherung für Sansibar',
       insuranceText: [
         'Reisen Sie nach Sansibar? Alle internationalen Besucher müssen vor der Einreise auf die Insel eine offizielle Zanzibar Inbound Travel Insurance besitzen.',
@@ -98,6 +106,23 @@ const TravelPermit = () => {
           >
             {t.website}
             <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+          </a>
+        </div>
+      </div>
+
+      {/* Tanzania-wide Travel Insurance */}
+      <div className="relative bg-white p-4 rounded-2xl shadow-lg border-l-4 border-brand-secondary">
+        <div className="space-y-2">
+          <h3 className="text-lg font-bold text-brand-heading">{t.nationalInsuranceTitle}</h3>
+          <p className="text-sm text-gray-700 leading-relaxed">{t.nationalInsuranceText}</p>
+          <a
+            href={t.nationalInsuranceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-brand-primary font-semibold text-sm hover:text-brand-secondary"
+          >
+            {t.nationalInsuranceLinkLabel}
+            <ExternalLink className="w-4 h-4" />
           </a>
         </div>
       </div>
